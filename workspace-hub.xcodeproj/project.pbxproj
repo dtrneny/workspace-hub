@@ -14,6 +14,8 @@
 		635667B22BA2D5FD00A0AD36 /* workspace_hubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635667B12BA2D5FD00A0AD36 /* workspace_hubTests.swift */; };
 		635667BC2BA2D5FD00A0AD36 /* workspace_hubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635667BB2BA2D5FD00A0AD36 /* workspace_hubUITests.swift */; };
 		635667BE2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */; };
+		638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DA2BA8B84F00105C6E /* RootViewModel.swift */; };
+		638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DF2BA8B8DC00105C6E /* SplashView.swift */; };
 		63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */; };
 		63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8C2BA42E0100166BCD /* FirebaseAuth */; };
 		63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */; };
@@ -57,6 +59,8 @@
 		635667B72BA2D5FD00A0AD36 /* workspace-hubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "workspace-hubUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		635667BB2BA2D5FD00A0AD36 /* workspace_hubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubUITests.swift; sourceTree = "<group>"; };
 		635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		638D30DA2BA8B84F00105C6E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		638D30DF2BA8B8DC00105C6E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModel.swift; sourceTree = "<group>"; };
 		63ECEB962BA432EF00166BCD /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
@@ -193,9 +197,18 @@
 			path = FirestoreService;
 			sourceTree = "<group>";
 		};
+		638D30DC2BA8B8BF00105C6E /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				638D30DF2BA8B8DC00105C6E /* SplashView.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				638D30DC2BA8B8BF00105C6E /* SplashView */,
 				638D30D62BA8B2A500105C6E /* FruitListView */,
 				63ECEBB32BA5C40300166BCD /* RootView */,
 			);
@@ -230,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				63ECEBB62BA5C47700166BCD /* RootView.swift */,
+				638D30DA2BA8B84F00105C6E /* RootViewModel.swift */,
 			);
 			path = RootView;
 			sourceTree = "<group>";
@@ -398,8 +412,10 @@
 				63ECEB942BA432AC00166BCD /* FruitListViewModel.swift in Sources */,
 				63ECEBA02BA46BAE00166BCD /* FirestoreService.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
+				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
+				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
