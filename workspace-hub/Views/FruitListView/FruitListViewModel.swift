@@ -15,6 +15,7 @@ class FruitListViewModel: ViewModelProtocol {
     @Published var fruits: [Fruit] = []
     @Published var state: ViewState = .idle
     @Published var fruitName: String = ""
+    @Published var name: String = ""
     
     init(fruitRepository: FruitRepositoryProtocol) {
         self.fruitRepository = fruitRepository

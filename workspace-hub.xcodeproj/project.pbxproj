@@ -16,6 +16,11 @@
 		635667BE2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */; };
 		638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DA2BA8B84F00105C6E /* RootViewModel.swift */; };
 		638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DF2BA8B8DC00105C6E /* SplashView.swift */; };
+		63C467B62BA99D840081E7EA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467B52BA99D840081E7EA /* TextInput.swift */; };
+		63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B82BAA05760081E7EA /* Inter-Medium.ttf */; };
+		63C467BC2BAA05770081E7EA /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B92BAA05770081E7EA /* Inter-Regular.ttf */; };
+		63C467BD2BAA05770081E7EA /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467BA2BAA05770081E7EA /* Inter-SemiBold.ttf */; };
+		63C467C02BAA068E0081E7EA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467BF2BAA068E0081E7EA /* Font.swift */; };
 		63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */; };
 		63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8C2BA42E0100166BCD /* FirebaseAuth */; };
 		63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */; };
@@ -61,6 +66,12 @@
 		635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		638D30DA2BA8B84F00105C6E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		638D30DF2BA8B8DC00105C6E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		63C467B52BA99D840081E7EA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
+		63C467B82BAA05760081E7EA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		63C467B92BAA05770081E7EA /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		63C467BA2BAA05770081E7EA /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		63C467BE2BAA05AE0081E7EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		63C467BF2BAA068E0081E7EA /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModel.swift; sourceTree = "<group>"; };
 		63ECEB962BA432EF00166BCD /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
@@ -124,10 +135,13 @@
 		6356679A2BA2D5FC00A0AD36 /* workspace-hub */ = {
 			isa = PBXGroup;
 			children = (
+				63C467BE2BAA05AE0081E7EA /* Info.plist */,
+				63C467B72BA9A22C0081E7EA /* Fonts */,
 				63ECEBD02BA6F13C00166BCD /* Utils */,
 				63ECEBA12BA46CD600166BCD /* Repositories */,
 				63ECEB9E2BA46B9D00166BCD /* Services */,
 				63ECEB952BA432DC00166BCD /* Models */,
+				63C467B32BA99D580081E7EA /* Components */,
 				63ECEB882BA42AA500166BCD /* Views */,
 				6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */,
 				6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */,
@@ -203,6 +217,33 @@
 				638D30DF2BA8B8DC00105C6E /* SplashView.swift */,
 			);
 			path = SplashView;
+			sourceTree = "<group>";
+		};
+		63C467B32BA99D580081E7EA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				63C467B42BA99D660081E7EA /* TextInput */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		63C467B42BA99D660081E7EA /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				63C467B52BA99D840081E7EA /* TextInput.swift */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		63C467B72BA9A22C0081E7EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				63C467B82BAA05760081E7EA /* Inter-Medium.ttf */,
+				63C467B92BAA05770081E7EA /* Inter-Regular.ttf */,
+				63C467BA2BAA05770081E7EA /* Inter-SemiBold.ttf */,
+				63C467BF2BAA068E0081E7EA /* Font.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		63ECEB882BA42AA500166BCD /* Views */ = {
@@ -377,6 +418,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C467BD2BAA05770081E7EA /* Inter-SemiBold.ttf in Resources */,
+				63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */,
+				63C467BC2BAA05770081E7EA /* Inter-Regular.ttf in Resources */,
 				635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */,
 				635667A02BA2D5FD00A0AD36 /* Assets.xcassets in Resources */,
 				63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */,
@@ -406,8 +450,10 @@
 			files = (
 				63ECEBA62BA46E7900166BCD /* FruitRepository.swift in Sources */,
 				63ECEB992BA4376A00166BCD /* FruitListView.swift in Sources */,
+				63C467C02BAA068E0081E7EA /* Font.swift in Sources */,
 				63ECEBA42BA46E2E00166BCD /* FruitRepositoryProtocol.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
+				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				63ECEB972BA432EF00166BCD /* Fruit.swift in Sources */,
 				63ECEB942BA432AC00166BCD /* FruitListViewModel.swift in Sources */,
 				63ECEBA02BA46BAE00166BCD /* FirestoreService.swift in Sources */,
@@ -583,11 +629,13 @@
 				DEVELOPMENT_TEAM = J876PKT47L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workspace-hub/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -612,11 +660,13 @@
 				DEVELOPMENT_TEAM = J876PKT47L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workspace-hub/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
