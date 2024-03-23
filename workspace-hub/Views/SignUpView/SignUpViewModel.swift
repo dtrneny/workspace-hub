@@ -14,5 +14,14 @@ class SignUpViewModel: ViewModelProtocol {
     @Published var email: String = ""
     @Published var password: String = ""
     @Published var passwordConfirmation: String = ""
-    @Published var notificationsSubscription: Bool = true
+    
+    func registerUser() {
+        AuthService.shared.createRootUser(email: email, password: password) { (user, error) in
+            if let error = error {
+                print("Error posting fruits: \(error.localizedDescription)")
+            } else {
+                print(user ?? "nah")
+            }
+        }
+    }
 }

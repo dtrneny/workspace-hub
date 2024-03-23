@@ -8,63 +8,63 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @EnvironmentObject var router: Router
+
     var body: some View {
-        NavigationView(content: {
-            VStack{
-                Spacer()
-                Image("logo")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 150, height: 150)
-                    .padding(.bottom, 30)
-                Text("Workspace Hub")
-                    .font(.system(size: 32))
-                    .bold()
-                    .padding(.bottom, 5)
-                Text("Now your workspaces are in one place and always under control")
-                    .font(.system(size: 17))
-                    .foregroundColor(.grey700)
-                    .multilineTextAlignment(.center)
-                Spacer()
-                NavigationLink(destination: SignInView()) {
-                    Text("Sign in")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.secondary900)
-                        .cornerRadius(10)
+            VStack {
+                VStack (alignment: .center) {
+                    VStack {
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 150, height: 150)
+                            .padding(.bottom, 30)
+                        
+                        Text("Workspace Hub")
+                            .foregroundColor(.secondary900)
+                            .padding(.bottom, 5)
+                            .font(.inter(30.0))
+                            .fontWeight(.bold)
+                        
+                        Text("Now your workspaces are in one place and always under control")
+                            .foregroundColor(.grey700)
+                            .multilineTextAlignment(.center)
+                            .font(.inter(16.0))
+                    }
+                    .padding(.bottom, 50)
+                    
+                    VStack (spacing: 10) {
+                        
+                        Button(action: {
+                            router.navigate(to: .signIn)
+                        }, label: {
+                            Text("Sign in")
+                        })
+                        .filledButtonStyle()
+                        
+                        Button(action: {
+                            router.navigate(to: .signUp)
+                        }, label: {
+                            Text("Create an account")
+                        })
+                        .filledButtonStyle()
+                        
+                        Button(action: {
+                            print("Continue as guest")
+                        }, label: {
+                            Text("Continue as guest")
+                        })
+                        .borderedButtonStyle()
+                        
+                    }
                 }
-                .padding(.bottom, 5)
-                NavigationLink(destination: SignUpView()) {
-                    Text("Create an account")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.secondary900)
-                        .cornerRadius(10)
-                }
-                .padding(.bottom, 5)
-                NavigationLink(destination: Text("Destination")) {
-                    Text("Continue as guest")
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.black)
-                        .padding()
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.gray, lineWidth: 1)
-                        )
-                        .background(
-                            RoundedRectangle(cornerRadius: 10)
-                                .fill(Color.white)
-                        )
-                }
-                .padding(.bottom, 5)
-                Spacer()
+                .padding()
             }
-            .padding([.leading, .trailing], 20)
-//            .navigationBarBackButtonHidden()
-        })
-    }
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity
+            )
+            .background(.white)    }
 }
 
 #Preview {

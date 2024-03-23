@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TextInput: View {
     @Binding var value: String
+    @FocusState private var isFocused: Bool
+    
     var placeholder: String? = nil
     var label: String? = nil
     
@@ -17,34 +19,24 @@ struct TextInput: View {
             if let labelText = label {
                 Text(labelText)
                 .foregroundStyle(.secondary900)
-                .font(
-                    .baseFont(
-                        font: .inter,
-                        style: .regular,
-                        size: .label
-                    )
-                )
+                .font(.inter(14.0))
             }
-            // MARK: This could by achieved by many ways, but this leaves us room for leading and trailing icons
-            HStack(alignment: .top) {
-                TextField(
-                    placeholder ?? "Enter text",
-                    text: $value
-                )
-                .foregroundStyle(.grey700)
-                .font(
-                    .baseFont(
-                        font: .inter,
-                        style: .regular,
-                        size: .base
-                    )
-                )
-            }
+  
+            TextField(
+                "",
+                text: $value,
+                prompt: Text(placeholder ?? "Enter text").foregroundStyle(.grey300)
+            )
+            .focused($isFocused)
+            .tint(.black)
+            .foregroundStyle(.grey700)
+            .font(.inter(16.0))
             .padding(16)
             .overlay(
                 RoundedRectangle(cornerRadius: 8)
                 .stroke(.grey300, lineWidth: 1)
             )
+            .onTapGesture { isFocused = true }
         }
     }
 }

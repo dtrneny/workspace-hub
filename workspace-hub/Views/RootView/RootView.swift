@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct RootView: View {
-    
+
     @StateObject private var viewModel = RootViewModel()
+    @ObservedObject var router = Router()
     
     var body: some View {
         VStack {
@@ -17,9 +18,10 @@ struct RootView: View {
             case .loading:
                 SplashView()
             default:
-                FruitListView()
+                OnboardingView()
             }
         }
+        .modifier(RouterModifier(router: router))
         .onAppear {
             // MARK: For testing purposes is there deadline, but its total UX violation
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

@@ -22,7 +22,7 @@ struct SplashView: View {
                 .padding()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.secondary900)
+        .background(.secondary900)
     }
 }
 

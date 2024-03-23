@@ -15,7 +15,11 @@ struct FruitListView: View {
         VStack {
             Section {
                 HStack {
-                    TextInput(value: $viewModel.name, placeholder: "testing", label: "Test")
+                    TextInput(
+                        value: $viewModel.name,
+                        placeholder: "Enter fruit name",
+                        label: "Fruit name"
+                    )
                     Button("Submit") {
                         viewModel.addFruit(fruit: Fruit(name: viewModel.name))
                         viewModel.name = ""
