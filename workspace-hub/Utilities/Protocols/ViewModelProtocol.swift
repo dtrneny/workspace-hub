@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 protocol ViewModelProtocol: ObservableObject {
     associatedtype State
     var state: State { get set }

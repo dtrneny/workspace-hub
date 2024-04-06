@@ -9,28 +9,28 @@ import SwiftUI
 
 struct FruitListView: View {
     
-    @StateObject private var viewModel = FruitListViewModel(fruitRepository: FruitRepository())
+    @StateObject private var viewModel = FruitListViewModel(accountService: AccountService())
     
     var body: some View {
         VStack {
             Section {
                 HStack {
-                    TextInput(
-                        value: $viewModel.name,
-                        placeholder: "Enter fruit name",
-                        label: "Fruit name"
-                    )
-                    Button("Submit") {
-                        viewModel.addFruit(fruit: Fruit(name: viewModel.name))
-                        viewModel.name = ""
+                    Button("Test") {
+                        Task {
+                            await viewModel.getAccounts()
+                        }
                     }
                 }.padding(16)
             }
             Divider()
-            List(viewModel.fruits, id: \.id) { fruit in
-                Text(fruit.name)
+            List(viewModel.accounts, id: \.id) { account in
+                Text(account.fullname)
             }
-            .onAppear { viewModel.fetchFruits() }
+            .onAppear {
+                Task {
+                    await viewModel.getAccounts()
+                }
+            }
             
         }
     }

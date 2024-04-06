@@ -2,24 +2,23 @@
 //  Router.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 22.03.2024.
+//  Created by Dalibor Trněný on 03.04.2024.
 //
 
 import Foundation
 import SwiftUI
 
-final class Router: ObservableObject {
-    @Published var navPath = NavigationPath()
+class Router : ObservableObject {
     
-    func navigate(to route: Route) {
-        navPath.append(route)
+    @Published var history = NavigationPath()
+    
+    func navigate(route: RouterPaths)  {
+        history.append(route)
     }
     
-    func navigateBack() {
-        navPath.removeLast()
-    }
-    
-    func navigateToRoot() {
-        navPath.removeLast(navPath.count)
+    func pop()  {
+        if (!history.isEmpty) {
+            history.removeLast()
+        }
     }
 }

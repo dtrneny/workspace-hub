@@ -8,25 +8,25 @@
 import SwiftUI
 
 struct RootView: View {
-
+    
     @StateObject private var viewModel = RootViewModel()
-    @ObservedObject var router = Router()
+    @StateObject private var router = Router()
     
     var body: some View {
-        VStack {
-            switch viewModel.state {
-            case .loading:
-                SplashView()
-            default:
-                OnboardingView()
-            }
-        }
-        .modifier(RouterModifier(router: router))
-        .onAppear {
-            // MARK: For testing purposes is there deadline, but its total UX violation
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                viewModel.state = .idle
-            }
+        switch viewModel.state {
+        case .loading:
+            SplashView()
+                .onAppear {
+                    // MARK: For testing purposes is there deadline, but its total UX violation
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        viewModel.state = .idle
+                        router.navigate(route: .signIn)
+                    }
+                }
+        default:
+            RouterView()
+                .environmentObject(router)
+            
         }
     }
 }

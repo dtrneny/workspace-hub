@@ -8,39 +8,28 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class FruitListViewModel: ViewModelProtocol {
     
-    let fruitRepository: FruitRepositoryProtocol
+    let accountService: AccountServiceProtocol
 
-    @Published var fruits: [Fruit] = []
+    @Published var accounts: [Account] = []
     @Published var state: ViewState = .idle
     @Published var fruitName: String = ""
     @Published var name: String = ""
     
-    init(fruitRepository: FruitRepositoryProtocol) {
-        self.fruitRepository = fruitRepository
-    }
-    
-    func addFruit(fruit: Fruit) {
-        fruitRepository.addFruit(fruit: fruit, completion: { success, error in
-            if let error = error {
-                print("Error posting fruits: \(error.localizedDescription)")
-            } else {
-                print("Added \(fruit.name)")
-            }
-        })
+    init(accountService: AccountServiceProtocol) {
+        self.accountService = accountService
     }
     
     
-    func fetchFruits() {
-        fruitRepository.fetchFruits { [weak self] fruits, error in
-            guard let self = self else { return }
-            
-            if let error = error {
-                print("Error fetching fruits: \(error.localizedDescription)")
-            } else {
-                self.fruits = fruits ?? []
-            }
+    func getAccounts() async {
+        do {
+            let data = try await accountService.getAccounts()
+            accounts = data
+        }
+        catch {
+            print(error)
         }
     }
 }

@@ -7,10 +7,11 @@
 
 import Foundation
 import Firebase
+import SwiftUI
 
 class RootViewModel: ViewModelProtocol {
     @Published var state: ViewState = .loading
-    
+
     init() {
         FirebaseApp.configure()
     }

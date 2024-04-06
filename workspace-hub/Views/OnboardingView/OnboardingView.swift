@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @EnvironmentObject var router: Router
-
     var body: some View {
             VStack {
                 VStack (alignment: .center) {
@@ -36,14 +34,14 @@ struct OnboardingView: View {
                     VStack (spacing: 10) {
                         
                         Button(action: {
-                            router.navigate(to: .signIn)
+                            print("Login")
                         }, label: {
                             Text("Sign in")
                         })
                         .filledButtonStyle()
                         
                         Button(action: {
-                            router.navigate(to: .signUp)
+                            print("Sign up")
                         }, label: {
                             Text("Create an account")
                         })
