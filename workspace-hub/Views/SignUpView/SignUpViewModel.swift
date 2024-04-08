@@ -31,7 +31,7 @@ class SignUpViewModel: ViewModelProtocol {
     }
     
     var passwordsMatch: Bool {
-        return (!password.value.isEmpty && !confPassword.value.isEmpty) && (password.value == confPassword.value)
+        return  password.value == confPassword.value
 
     }
     

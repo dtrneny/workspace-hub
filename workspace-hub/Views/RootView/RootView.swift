@@ -21,7 +21,7 @@ struct RootView: View {
                         viewModel.state = .idle
                         
                         if (viewModel.checkForCurrentUser()) {
-                            router.navigate(route: .dashboard)
+                            router.navigate(route: .workspaces)
                             return
                         }
                         

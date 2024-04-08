@@ -21,7 +21,7 @@ struct SignInView: View {
             Button("Sign in") {
                 Task {
                     if (await viewModel.signIn()) {
-                        router.navigate(route: .dashboard)
+                        router.navigate(route: .workspaces)
                     }
                 }
             }

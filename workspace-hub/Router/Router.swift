@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-class Router : ObservableObject {
+class Router: ObservableObject {
     
-    @Published var history = NavigationPath()
+    @Published var history: NavigationPath = NavigationPath()
     
     func navigate(route: RouterPaths)  {
         history.append(route)

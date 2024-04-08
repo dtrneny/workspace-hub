@@ -56,7 +56,7 @@ extension SignUpView {
                     placeholder: "Enter your password",
                     label: "Confirm password"
                 )
-                if(!viewModel.passwordsMatch) {
+                if((!viewModel.confPassword.value.isEmpty && !viewModel.password.value.isEmpty) && !viewModel.passwordsMatch) {
                     ErrorMessage(error: "Passwords are not matching.")
                 }
             }

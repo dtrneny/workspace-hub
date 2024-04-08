@@ -13,6 +13,7 @@ struct workspace_hubApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .background(.white)
         }
     }
 }

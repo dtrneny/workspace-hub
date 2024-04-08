@@ -7,8 +7,18 @@
 
 import Foundation
 
-enum RouterPaths : String , Hashable {
-    case signIn
-    case signUp
-    case dashboard
+enum RouterPaths: String, Hashable {
+    case signIn = "signIn"
+    case signUp = "singUp"
+    case workspaces = "workspaces/home"
 }
+
+//struct Route {
+//    var tab: TabPaths? = nil
+//    var path: RouterPaths
+//}
+//
+//enum TabPaths: String, Hashable {
+//    case workspaces
+//    case groups
+//}

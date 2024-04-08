@@ -12,17 +12,19 @@ enum ViewFactory {
     
     @ViewBuilder
     static func viewForDestination(_ path: RouterPaths) -> some View {
-        RouterContainerView {
-            switch path {
-            case .signIn:
+        switch path {
+        case .signIn:
+            RouterContainerView {
                 SignInView()
                     .routerBarBackArrowHidden(true)
-            case .signUp:
-                SignUpView()
-            case .dashboard:
-                FruitListView()
-                    .routerBarBackArrowHidden(true)
             }
+        case .signUp:
+            RouterContainerView {
+                SignUpView()
+                    .routerBarBackArrowHidden(false)
+            }
+        case .workspaces:
+            RootTabView()
         }
     }
 }

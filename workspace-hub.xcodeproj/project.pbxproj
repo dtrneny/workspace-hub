@@ -53,8 +53,8 @@
 		63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8C2BA42E0100166BCD /* FirebaseAuth */; };
 		63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */; };
 		63ECEB912BA42E0100166BCD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB902BA42E0100166BCD /* FirebaseFirestoreSwift */; };
-		63ECEB942BA432AC00166BCD /* FruitListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */; };
-		63ECEB992BA4376A00166BCD /* FruitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEB982BA4376A00166BCD /* FruitListView.swift */; };
+		63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEB932BA432AC00166BCD /* RootTabViewModel.swift */; };
+		63ECEB992BA4376A00166BCD /* RootTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEB982BA4376A00166BCD /* RootTabView.swift */; };
 		63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEBB62BA5C47700166BCD /* RootView.swift */; };
 		63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEBCB2BA6E67E00166BCD /* ViewModelProtocol.swift */; };
 		63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEBCE2BA6E69400166BCD /* ViewState.swift */; };
@@ -126,8 +126,8 @@
 		63C9DF752BC3F2070075ABDA /* NonEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmpty.swift; sourceTree = "<group>"; };
 		63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModel.swift; sourceTree = "<group>"; };
-		63ECEB982BA4376A00166BCD /* FruitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListView.swift; sourceTree = "<group>"; };
+		63ECEB932BA432AC00166BCD /* RootTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewModel.swift; sourceTree = "<group>"; };
+		63ECEB982BA4376A00166BCD /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		63ECEBB62BA5C47700166BCD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		63ECEBCB2BA6E67E00166BCD /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		63ECEBCE2BA6E69400166BCD /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
@@ -255,13 +255,13 @@
 			path = "workspace-hubUITests";
 			sourceTree = "<group>";
 		};
-		638D30D62BA8B2A500105C6E /* FruitListView */ = {
+		638D30D62BA8B2A500105C6E /* RootTabView */ = {
 			isa = PBXGroup;
 			children = (
-				63ECEB982BA4376A00166BCD /* FruitListView.swift */,
-				63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */,
+				63ECEB982BA4376A00166BCD /* RootTabView.swift */,
+				63ECEB932BA432AC00166BCD /* RootTabViewModel.swift */,
 			);
-			path = FruitListView;
+			path = RootTabView;
 			sourceTree = "<group>";
 		};
 		638D30D82BA8B3BB00105C6E /* Protocols */ = {
@@ -321,7 +321,7 @@
 				63BD38152BBDE82700D62EAE /* RouterPaths.swift */,
 				63C9DF4F2BBF2D100075ABDA /* RouterPreferenceKeys.swift */,
 				63C9DF512BBF32820075ABDA /* ViewFactory.swift */,
-				63C9DF532BBF35210075ABDA /* components */,
+				63C9DF532BBF35210075ABDA /* Components */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -359,14 +359,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		63C9DF532BBF35210075ABDA /* components */ = {
+		63C9DF532BBF35210075ABDA /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				63BD38192BBDE8FE00D62EAE /* RouterView.swift */,
 				63C9DF4B2BBF20050075ABDA /* RouterContainerView.swift */,
 				63C9DF492BBF1F690075ABDA /* RouterBar.swift */,
 			);
-			path = components;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		63C9DF6D2BC3EBF80075ABDA /* Validation */ = {
@@ -402,7 +402,7 @@
 				2E0AEBBE2BACAB1500452744 /* SingInView */,
 				2E0AEBB92BACA0B700452744 /* OnboardingView */,
 				638D30DC2BA8B8BF00105C6E /* SplashView */,
-				638D30D62BA8B2A500105C6E /* FruitListView */,
+				638D30D62BA8B2A500105C6E /* RootTabView */,
 				63ECEBB32BA5C40300166BCD /* RootView */,
 			);
 			path = Views;
@@ -620,7 +620,7 @@
 				63C9DF4A2BBF1F690075ABDA /* RouterBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
 				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
-				63ECEB992BA4376A00166BCD /* FruitListView.swift in Sources */,
+				63ECEB992BA4376A00166BCD /* RootTabView.swift in Sources */,
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
@@ -634,7 +634,7 @@
 				63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
-				63ECEB942BA432AC00166BCD /* FruitListViewModel.swift in Sources */,
+				63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
