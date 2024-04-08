@@ -15,5 +15,9 @@ class RootViewModel: ViewModelProtocol {
     init() {
         FirebaseApp.configure()
     }
-
+    
+    func checkForCurrentUser() -> Bool {
+        let user = AuthService.shared.getCurrentUser()
+        return user != nil
+    }
 }

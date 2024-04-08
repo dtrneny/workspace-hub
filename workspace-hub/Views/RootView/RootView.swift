@@ -17,9 +17,14 @@ struct RootView: View {
         case .loading:
             SplashView()
                 .onAppear {
-                    // MARK: For testing purposes is there deadline, but its total UX violation
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                         viewModel.state = .idle
+                        
+                        if (viewModel.checkForCurrentUser()) {
+                            router.navigate(route: .dashboard)
+                            return
+                        }
+                        
                         router.navigate(route: .signIn)
                     }
                 }

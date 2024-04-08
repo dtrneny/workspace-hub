@@ -37,7 +37,7 @@ struct RouterContainerView<Content: View>: View {
 }
 
 #Preview {
-    return RouterContainerView {
+    RouterContainerView {
         ZStack {
             Color.black.ignoresSafeArea()
         }

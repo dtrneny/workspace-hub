@@ -10,17 +10,16 @@ import SwiftUI
 
 final class SignInViewModel: ViewModelProtocol {
     @Published var state: ViewState = .idle
-    @Published var email: String = ""
-    @Published var password: String = ""
-    @Published var signed: Bool = false
     
+    @Published var email: FieldValue<String> = FieldValue("")
+    @Published var password: FieldValue<String> = FieldValue("")
+        
     func signIn() async -> Bool {
-        // MARK: save result to local storage
         do {
-            let result = try await AuthService.shared.signIn(email: email, password: password).get()
-            print(result)
+            let _ = try await AuthService.shared.signIn(email: email.value, password: password.value).get()
             return true
-        } catch {
+        }
+        catch {
             return false
         }
     }

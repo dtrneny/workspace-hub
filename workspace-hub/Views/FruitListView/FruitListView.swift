@@ -12,7 +12,7 @@ struct FruitListView: View {
     @StateObject private var viewModel = FruitListViewModel(accountService: AccountService())
     
     var body: some View {
-        VStack {
+        BaseLayout {
             Section {
                 HStack {
                     Button("Test") {
@@ -21,6 +21,7 @@ struct FruitListView: View {
                         }
                     }
                 }.padding(16)
+                
             }
             Divider()
             List(viewModel.accounts, id: \.id) { account in
@@ -36,6 +37,14 @@ struct FruitListView: View {
     }
 }
 
-#Preview {
-    FruitListView()
-}
+// MARK: add mock
+//#Preview {
+//
+//    struct Preview: View {
+//        var body: some View {
+//            FruitListView()
+//        }
+//    }
+//    
+//    return Preview()
+//}

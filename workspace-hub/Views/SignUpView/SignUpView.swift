@@ -10,7 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     
     @EnvironmentObject var router: Router
-    @StateObject private var viewModel = SignUpViewModel()
+    @StateObject private var viewModel = SignUpViewModel(accountService: AccountService())
     
     var body: some View {
         BaseLayout{
@@ -36,25 +36,30 @@ extension SignUpView {
     private var formView: some View {
         VStack(spacing: 19) {
             TextInput(
-                value: $viewModel.name,
+                fieldValue: $viewModel.fullname,
                 placeholder: "e. g. John Doe",
                 label: "Fullname"
             )
             TextInput(
-                value: $viewModel.email,
+                fieldValue: $viewModel.email,
                 placeholder: "e. g. example@workspacehub.com",
                 label: "E-mail address"
             )
             ProtectedInput(
-                value: $viewModel.password,
+                fieldValue: $viewModel.password,
                 placeholder: "Enter your password",
                 label: "Password"
             )
-            ProtectedInput(
-                value: $viewModel.passwordConfirmation,
-                placeholder: "Enter your password",
-                label: "Confirm password"
-            )
+            VStack(alignment: .leading, spacing: 8.0) {
+                ProtectedInput(
+                    fieldValue: $viewModel.confPassword,
+                    placeholder: "Enter your password",
+                    label: "Confirm password"
+                )
+                if(!viewModel.passwordsMatch) {
+                    ErrorMessage(error: "Passwords are not matching.")
+                }
+            }
         }
         .padding(.bottom, 38)
     }

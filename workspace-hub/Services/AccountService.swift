@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AccountServiceProtocol {
-    func getAccounts() async throws -> [Account]
+    func getAccounts() async -> [Account]
     func createAccount(account: Account, id: String) async -> Account?
     func getAccount(id: String) async -> Account?
 }
@@ -29,7 +29,7 @@ class AccountService: AccountServiceProtocol, ObservableObject {
     
     func createAccount(account: Account, id: String) async -> Account? {
         do {
-            let account = try await repository.create(data: account, id: id).get()
+            let account = try await repository.create(data: account).get()
             return account
         }
         catch {

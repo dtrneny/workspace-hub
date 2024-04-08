@@ -15,21 +15,12 @@ class FruitListViewModel: ViewModelProtocol {
 
     @Published var accounts: [Account] = []
     @Published var state: ViewState = .idle
-    @Published var fruitName: String = ""
-    @Published var name: String = ""
-    
+
     init(accountService: AccountServiceProtocol) {
         self.accountService = accountService
     }
     
-    
     func getAccounts() async {
-        do {
-            let data = try await accountService.getAccounts()
-            accounts = data
-        }
-        catch {
-            print(error)
-        }
+        accounts = await accountService.getAccounts()
     }
 }

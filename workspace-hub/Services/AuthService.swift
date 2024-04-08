@@ -12,25 +12,22 @@ final class AuthService {
     
     static let shared = AuthService()
     private let firebaseAuth = Auth.auth()
-    private let accountService: AccountServiceProtocol = AccountService()
         
     private init() { }
     
-    func signUp(email: String, password: String, fullname: String) async -> Result<Account?, Error> {
+    func signUp(email: String, password: String) async -> Result<User, Error> {
         do {
             let user = try await firebaseAuth.createUser(withEmail: email, password: password).user
-            let account = await accountService.createAccount(account: Account(id: user.uid, email: email, fullname: fullname), id: user.uid)
-            return .success(account ?? nil)
+            return .success(user)
         } catch {
             return .failure(error)
         }
     }
     
-    func signIn(email: String, password: String) async -> Result<Account?, Error> {
+    func signIn(email: String, password: String) async -> Result<User, Error> {
         do {
             let user = try await firebaseAuth.signIn(withEmail: email, password: password).user
-            let account = await accountService.getAccount(id: user.uid)
-            return .success(account)
+            return .success(user)
         } catch {
             return .failure(error)
         }
@@ -45,10 +42,11 @@ final class AuthService {
         }
     }
     
-    func getCurrentUser() async -> Result<User?, Error> {
+    func getCurrentUser() -> User? {
         guard let user = firebaseAuth.currentUser else {
-            return .success(nil)
+            return nil
         }
-        return .success(user)
+        
+        return user
     }
 }

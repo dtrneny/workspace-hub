@@ -43,6 +43,12 @@
 		63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF602BC056170075ABDA /* RepositoryProtocol.swift */; };
 		63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF622BC0563A0075ABDA /* FirestoreRepository.swift */; };
 		63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF642BC0571E0075ABDA /* AccountService.swift */; };
+		63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF692BC27E860075ABDA /* WorkspaceService.swift */; };
+		63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */; };
+		63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */; };
+		63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF722BC3EDD90075ABDA /* FieldValue.swift */; };
+		63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF752BC3F2070075ABDA /* NonEmpty.swift */; };
+		63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */; };
 		63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */; };
 		63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8C2BA42E0100166BCD /* FirebaseAuth */; };
 		63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */; };
@@ -113,6 +119,12 @@
 		63C9DF602BC056170075ABDA /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		63C9DF622BC0563A0075ABDA /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
 		63C9DF642BC0571E0075ABDA /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		63C9DF692BC27E860075ABDA /* WorkspaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceService.swift; sourceTree = "<group>"; };
+		63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
+		63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
+		63C9DF722BC3EDD90075ABDA /* FieldValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValue.swift; sourceTree = "<group>"; };
+		63C9DF752BC3F2070075ABDA /* NonEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmpty.swift; sourceTree = "<group>"; };
+		63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63ECEB932BA432AC00166BCD /* FruitListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListViewModel.swift; sourceTree = "<group>"; };
 		63ECEB982BA4376A00166BCD /* FruitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitListView.swift; sourceTree = "<group>"; };
@@ -317,6 +329,7 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				63EF08482BAE289300488B1C /* ViewTitle */,
 				638F24032BAD79FA00704CE0 /* BackArrow */,
 				638F24002BAD787400704CE0 /* BaseLayout */,
@@ -356,11 +369,30 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		63C9DF662BC070350075ABDA /* Helpers */ = {
+		63C9DF6D2BC3EBF80075ABDA /* Validation */ = {
 			isa = PBXGroup;
 			children = (
+				63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */,
+				63C9DF722BC3EDD90075ABDA /* FieldValue.swift */,
+				63C9DF742BC3F1F60075ABDA /* Rules */,
 			);
-			path = Helpers;
+			path = Validation;
+			sourceTree = "<group>";
+		};
+		63C9DF742BC3F1F60075ABDA /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				63C9DF752BC3F2070075ABDA /* NonEmpty.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		63C9DF7D2BC414920075ABDA /* ErrorMessage */ = {
+			isa = PBXGroup;
+			children = (
+				63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */,
+			);
+			path = ErrorMessage;
 			sourceTree = "<group>";
 		};
 		63ECEB882BA42AA500166BCD /* Views */ = {
@@ -380,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				63C9DF582BBFCD940075ABDA /* Account.swift */,
+				63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -389,6 +422,7 @@
 			children = (
 				638F23E92BACD92100704CE0 /* AuthService.swift */,
 				63C9DF642BC0571E0075ABDA /* AccountService.swift */,
+				63C9DF692BC27E860075ABDA /* WorkspaceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -421,7 +455,7 @@
 		63ECEBD02BA6F13C00166BCD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				63C9DF662BC070350075ABDA /* Helpers */,
+				63C9DF6D2BC3EBF80075ABDA /* Validation */,
 				63C467B72BA9A22C0081E7EA /* Fonts */,
 				638F24282BADBA4200704CE0 /* Styles */,
 				638D30D82BA8B3BB00105C6E /* Protocols */,
@@ -582,8 +616,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
+				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* RouterBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
+				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
 				63ECEB992BA4376A00166BCD /* FruitListView.swift in Sources */,
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
@@ -592,13 +628,16 @@
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
+				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				63BD38142BBDE80B00D62EAE /* Router.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
+				63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				63ECEB942BA432AC00166BCD /* FruitListViewModel.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
+				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				63BD38162BBDE82700D62EAE /* RouterPaths.swift in Sources */,
@@ -613,6 +652,7 @@
 				2E0AEBBB2BACA10300452744 /* OnboardingView.swift in Sources */,
 				638F24022BAD78FF00704CE0 /* BaseLayout.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
+				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				638F242E2BADC4CD00704CE0 /* FilledButtonStyle.swift in Sources */,
 			);

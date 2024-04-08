@@ -20,15 +20,14 @@ struct SignInView: View {
             
             Button("Sign in") {
                 Task {
-                    let success = await viewModel.signIn()
-                    if (success) {
+                    if (await viewModel.signIn()) {
                         router.navigate(route: .dashboard)
                     }
                 }
-            }.filledButtonStyle()
-            
-            Spacer()
-            
+            }
+            .filledButtonStyle()
+            .padding([.bottom], 76)
+                        
             dividerSignUpView
             
             Spacer()
@@ -36,24 +35,23 @@ struct SignInView: View {
     }
 }
 
-//#Preview {
-//    VStack {
-//        NavBar(showBack: false)
-//        SignInView()
-//    }
-//}
+#Preview {
+    RouterContainerView {
+        SignInView()
+    }
+}
 
 extension SignInView {
     
     private var formView: some View {
         VStack(spacing: 19) {
             TextInput(
-                value: $viewModel.email,
+                fieldValue: $viewModel.email,
                 placeholder: "Enter your e-mail",
                 label: "E-mail address"
             )
             ProtectedInput(
-                value: $viewModel.password,
+                fieldValue: $viewModel.password,
                 placeholder: "Enter your password",
                 label: "Password"
             )
@@ -69,7 +67,7 @@ extension SignInView {
                        .background(Color.grey300)
                 }
 
-                Text("Or with")
+                Text("Or")
                    .foregroundColor(.grey700)
                    .padding()
                    .font(.inter(16.0))

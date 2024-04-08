@@ -17,7 +17,8 @@ struct BaseLayout<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading) {
             content
-            .padding([.leading, .trailing])
+                .padding([.leading, .trailing])
+            
             Spacer()
         }
         .background(.white)
