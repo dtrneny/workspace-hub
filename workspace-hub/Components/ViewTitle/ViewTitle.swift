@@ -15,7 +15,7 @@ struct ViewTitle: View {
             .foregroundColor(.secondary900)
             .font(.inter(30.0))
             .fontWeight(.bold)
-            .padding([.bottom], 38)
+//            .padding([.bottom], 38)
     }
 }
 

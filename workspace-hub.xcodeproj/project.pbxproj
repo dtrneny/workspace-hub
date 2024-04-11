@@ -12,6 +12,11 @@
 		2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC12BACABAA00452744 /* SignInView.swift */; };
 		2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC42BACC13000452744 /* SignUpView.swift */; };
 		2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC62BACC13F00452744 /* SignUpViewModel.swift */; };
+		2E3280742BC8285700670DF8 /* WorkspacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280732BC8285700670DF8 /* WorkspacesView.swift */; };
+		2E3280772BC8289A00670DF8 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280762BC8289A00670DF8 /* ActivityRow.swift */; };
+		2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280792BC834F000670DF8 /* WorkspaceRow.swift */; };
+		2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E32807C2BC83A5700670DF8 /* SquareButton.swift */; };
+		2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */; };
 		6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */; };
 		635667A02BA2D5FD00A0AD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */; };
 		635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635667A22BA2D5FD00A0AD36 /* Preview Assets.xcassets */; };
@@ -85,6 +90,11 @@
 		2E0AEBC12BACABAA00452744 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2E0AEBC42BACC13000452744 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2E0AEBC62BACC13F00452744 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		2E3280732BC8285700670DF8 /* WorkspacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacesView.swift; sourceTree = "<group>"; };
+		2E3280762BC8289A00670DF8 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
+		2E3280792BC834F000670DF8 /* WorkspaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceRow.swift; sourceTree = "<group>"; };
+		2E32807C2BC83A5700670DF8 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacesViewModel.swift; sourceTree = "<group>"; };
 		635667982BA2D5FC00A0AD36 /* workspace-hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workspace-hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubApp.swift; sourceTree = "<group>"; };
 		6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,6 +198,39 @@
 				2E0AEBC62BACC13F00452744 /* SignUpViewModel.swift */,
 			);
 			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		2E3280722BC8283E00670DF8 /* WorkspacesView */ = {
+			isa = PBXGroup;
+			children = (
+				2E3280732BC8285700670DF8 /* WorkspacesView.swift */,
+				2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */,
+			);
+			path = WorkspacesView;
+			sourceTree = "<group>";
+		};
+		2E3280752BC8287900670DF8 /* ActivityRow */ = {
+			isa = PBXGroup;
+			children = (
+				2E3280762BC8289A00670DF8 /* ActivityRow.swift */,
+			);
+			path = ActivityRow;
+			sourceTree = "<group>";
+		};
+		2E3280782BC834C900670DF8 /* WorkspaceRow */ = {
+			isa = PBXGroup;
+			children = (
+				2E3280792BC834F000670DF8 /* WorkspaceRow.swift */,
+			);
+			path = WorkspaceRow;
+			sourceTree = "<group>";
+		};
+		2E32807B2BC83A4A00670DF8 /* SquareButton */ = {
+			isa = PBXGroup;
+			children = (
+				2E32807C2BC83A5700670DF8 /* SquareButton.swift */,
+			);
+			path = SquareButton;
 			sourceTree = "<group>";
 		};
 		6356678F2BA2D5FC00A0AD36 = {
@@ -329,6 +372,9 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E32807B2BC83A4A00670DF8 /* SquareButton */,
+				2E3280782BC834C900670DF8 /* WorkspaceRow */,
+				2E3280752BC8287900670DF8 /* ActivityRow */,
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				63EF08482BAE289300488B1C /* ViewTitle */,
 				638F24032BAD79FA00704CE0 /* BackArrow */,
@@ -398,6 +444,7 @@
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E3280722BC8283E00670DF8 /* WorkspacesView */,
 				2E0AEBC32BACC11D00452744 /* SignUpView */,
 				2E0AEBBE2BACAB1500452744 /* SingInView */,
 				2E0AEBB92BACA0B700452744 /* OnboardingView */,
@@ -615,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* RouterBar.swift in Sources */,
@@ -626,6 +674,7 @@
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
+				2E3280772BC8289A00670DF8 /* ActivityRow.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
@@ -639,7 +688,10 @@
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
+				2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
+				2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */,
+				2E3280742BC8285700670DF8 /* WorkspacesView.swift in Sources */,
 				63BD38162BBDE82700D62EAE /* RouterPaths.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
