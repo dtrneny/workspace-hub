@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct RouterBar: View {
+struct BaseNavigationBar: View {
     
-    @EnvironmentObject var router: Router
     let showBack: Bool
+    var action: () -> Void
     
     var body: some View {
         HStack {
             if(showBack) {
                 BackArrow {
-                    router.pop()
+                    action()
                 }
             }
             Spacer()
@@ -33,8 +33,9 @@ struct RouterBar: View {
 
 #Preview {
     VStack {
-        RouterBar(showBack: true)
+        BaseNavigationBar(showBack: true) {
+            print("back")
+        }
         Spacer()
     }
-    .environmentObject(Router())
 }

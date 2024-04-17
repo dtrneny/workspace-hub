@@ -9,11 +9,10 @@ import SwiftUI
 
 struct WorkspacesView: View {
     
-    @EnvironmentObject var router: Router
     @StateObject private var viewModel = RootTabViewModel()
     
     var body: some View {
-        BaseLayout {
+        VStack {
             TabView {
                 ZStack {
                     Color.white

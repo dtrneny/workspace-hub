@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var mainRouter: MainRouter
     @StateObject private var viewModel = SignInViewModel()
     
     var body: some View {
-        BaseLayout {
+        VStack(alignment: .leading) {
             ViewTitle(title: "Hi, Welcome!")
             
             formView
@@ -21,7 +21,7 @@ struct SignInView: View {
             Button("Sign in") {
                 Task {
                     if (await viewModel.signIn()) {
-                        router.navigate(route: .workspaces)
+                        mainRouter.replaceAll(with: .home)
                     }
                 }
             }
@@ -35,11 +35,11 @@ struct SignInView: View {
     }
 }
 
-#Preview {
-    RouterContainerView {
-        SignInView()
-    }
-}
+//#Preview {
+//    RouterContainerView {
+//        SignInView()
+//    }
+//}
 
 extension SignInView {
     
@@ -90,7 +90,7 @@ extension SignInView {
                     .font(.inter(16.0))
                     .fontWeight(.semibold)
                     .onTapGesture {
-                        router.navigate(route: .signUp)
+                        mainRouter.navigate(to: .signUp)
                     }
             }
         }

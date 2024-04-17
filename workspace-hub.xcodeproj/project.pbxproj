@@ -28,22 +28,31 @@
 		638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DF2BA8B8DC00105C6E /* SplashView.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
-		638F24022BAD78FF00704CE0 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24012BAD78FF00704CE0 /* BaseLayout.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
 		638F240A2BAD82CC00704CE0 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */; };
 		638F242A2BADBA5700704CE0 /* BorderedButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24292BADBA5700704CE0 /* BorderedButtonStyle.swift */; };
 		638F242E2BADC4CD00704CE0 /* FilledButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F242D2BADC4CD00704CE0 /* FilledButtonStyle.swift */; };
-		63BD38142BBDE80B00D62EAE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38132BBDE80B00D62EAE /* Router.swift */; };
-		63BD38162BBDE82700D62EAE /* RouterPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38152BBDE82700D62EAE /* RouterPaths.swift */; };
+		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
+		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
+		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
+		639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBFB2BCFD246003D24FB /* WorkspaceListView.swift */; };
+		639DBBFF2BCFD8EB003D24FB /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBFE2BCFD8EB003D24FB /* GroupListView.swift */; };
+		639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC022BCFE4ED003D24FB /* WorkspaceRootView.swift */; };
+		639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC042BCFE538003D24FB /* BaseTabCoordinator.swift */; };
+		639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC072BCFE5C4003D24FB /* TabCoordinatorProtocol.swift */; };
+		639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC0A2BCFE66F003D24FB /* TabSectionFactory.swift */; };
+		639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */; };
+		639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC0F2BCFEBC6003D24FB /* TabCoordinatorContainerView.swift */; };
+		639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC112BCFEC97003D24FB /* TabCoordinatorView.swift */; };
 		63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38192BBDE8FE00D62EAE /* RouterView.swift */; };
 		63C467B62BA99D840081E7EA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467B52BA99D840081E7EA /* TextInput.swift */; };
 		63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B82BAA05760081E7EA /* Inter-Medium.ttf */; };
 		63C467BC2BAA05770081E7EA /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B92BAA05770081E7EA /* Inter-Regular.ttf */; };
 		63C467BD2BAA05770081E7EA /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467BA2BAA05770081E7EA /* Inter-SemiBold.ttf */; };
-		63C9DF4A2BBF1F690075ABDA /* RouterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF492BBF1F690075ABDA /* RouterBar.swift */; };
+		63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF492BBF1F690075ABDA /* BaseNavigationBar.swift */; };
 		63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF4B2BBF20050075ABDA /* RouterContainerView.swift */; };
 		63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF4F2BBF2D100075ABDA /* RouterPreferenceKeys.swift */; };
-		63C9DF522BBF32820075ABDA /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF512BBF32820075ABDA /* ViewFactory.swift */; };
+		63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF512BBF32820075ABDA /* RouteFactory.swift */; };
 		63C9DF592BBFCD940075ABDA /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF582BBFCD940075ABDA /* Account.swift */; };
 		63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF602BC056170075ABDA /* RepositoryProtocol.swift */; };
 		63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF622BC0563A0075ABDA /* FirestoreRepository.swift */; };
@@ -109,22 +118,31 @@
 		638D30DF2BA8B8DC00105C6E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
-		638F24012BAD78FF00704CE0 /* BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
 		638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		638F24292BADBA5700704CE0 /* BorderedButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedButtonStyle.swift; sourceTree = "<group>"; };
 		638F242D2BADC4CD00704CE0 /* FilledButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilledButtonStyle.swift; sourceTree = "<group>"; };
-		63BD38132BBDE80B00D62EAE /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		63BD38152BBDE82700D62EAE /* RouterPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterPaths.swift; sourceTree = "<group>"; };
+		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		639DBBFB2BCFD246003D24FB /* WorkspaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceListView.swift; sourceTree = "<group>"; };
+		639DBBFE2BCFD8EB003D24FB /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		639DBC022BCFE4ED003D24FB /* WorkspaceRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceRootView.swift; sourceTree = "<group>"; };
+		639DBC042BCFE538003D24FB /* BaseTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabCoordinator.swift; sourceTree = "<group>"; };
+		639DBC072BCFE5C4003D24FB /* TabCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		639DBC0A2BCFE66F003D24FB /* TabSectionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSectionFactory.swift; sourceTree = "<group>"; };
+		639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceCoordinator.swift; sourceTree = "<group>"; };
+		639DBC0F2BCFEBC6003D24FB /* TabCoordinatorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinatorContainerView.swift; sourceTree = "<group>"; };
+		639DBC112BCFEC97003D24FB /* TabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinatorView.swift; sourceTree = "<group>"; };
 		63BD38192BBDE8FE00D62EAE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		63C467B52BA99D840081E7EA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		63C467B82BAA05760081E7EA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
 		63C467B92BAA05770081E7EA /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
 		63C467BA2BAA05770081E7EA /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
-		63C9DF492BBF1F690075ABDA /* RouterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterBar.swift; sourceTree = "<group>"; };
+		63C9DF492BBF1F690075ABDA /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBar.swift; sourceTree = "<group>"; };
 		63C9DF4B2BBF20050075ABDA /* RouterContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterContainerView.swift; sourceTree = "<group>"; };
 		63C9DF4F2BBF2D100075ABDA /* RouterPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterPreferenceKeys.swift; sourceTree = "<group>"; };
-		63C9DF512BBF32820075ABDA /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		63C9DF512BBF32820075ABDA /* RouteFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteFactory.swift; sourceTree = "<group>"; };
 		63C9DF582BBFCD940075ABDA /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		63C9DF602BC056170075ABDA /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		63C9DF622BC0563A0075ABDA /* FirestoreRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreRepository.swift; sourceTree = "<group>"; };
@@ -256,6 +274,7 @@
 		6356679A2BA2D5FC00A0AD36 /* workspace-hub */ = {
 			isa = PBXGroup;
 			children = (
+				639DBC002BCFE40D003D24FB /* TabCoordinator */,
 				63BD38122BBDE7FA00D62EAE /* Router */,
 				63ECEBD02BA6F13C00166BCD /* Utilities */,
 				63ECEBA12BA46CD600166BCD /* Repositories */,
@@ -332,14 +351,6 @@
 			path = ProtectedInput;
 			sourceTree = "<group>";
 		};
-		638F24002BAD787400704CE0 /* BaseLayout */ = {
-			isa = PBXGroup;
-			children = (
-				638F24012BAD78FF00704CE0 /* BaseLayout.swift */,
-			);
-			path = BaseLayout;
-			sourceTree = "<group>";
-		};
 		638F24032BAD79FA00704CE0 /* BackArrow */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,13 +368,83 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		639DBBF52BCFC807003D24FB /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				639DBBF62BCFC81C003D24FB /* MainRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		639DBBFA2BCFD235003D24FB /* WorkspaceListView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBBFB2BCFD246003D24FB /* WorkspaceListView.swift */,
+			);
+			path = WorkspaceListView;
+			sourceTree = "<group>";
+		};
+		639DBBFD2BCFD8DB003D24FB /* GroupListView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBBFE2BCFD8EB003D24FB /* GroupListView.swift */,
+			);
+			path = GroupListView;
+			sourceTree = "<group>";
+		};
+		639DBC002BCFE40D003D24FB /* TabCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC072BCFE5C4003D24FB /* TabCoordinatorProtocol.swift */,
+				639DBC042BCFE538003D24FB /* BaseTabCoordinator.swift */,
+				639DBC0A2BCFE66F003D24FB /* TabSectionFactory.swift */,
+				639DBC092BCFE634003D24FB /* TabCoordinators */,
+				639DBC062BCFE596003D24FB /* Components */,
+			);
+			path = TabCoordinator;
+			sourceTree = "<group>";
+		};
+		639DBC012BCFE4DF003D24FB /* WorkspaceRoot */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC022BCFE4ED003D24FB /* WorkspaceRootView.swift */,
+			);
+			path = WorkspaceRoot;
+			sourceTree = "<group>";
+		};
+		639DBC062BCFE596003D24FB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC0F2BCFEBC6003D24FB /* TabCoordinatorContainerView.swift */,
+				639DBC112BCFEC97003D24FB /* TabCoordinatorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		639DBC092BCFE634003D24FB /* TabCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */,
+			);
+			path = TabCoordinators;
+			sourceTree = "<group>";
+		};
+		639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				63C9DF492BBF1F690075ABDA /* BaseNavigationBar.swift */,
+			);
+			path = BaseNavigationBar;
+			sourceTree = "<group>";
+		};
 		63BD38122BBDE7FA00D62EAE /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				63BD38132BBDE80B00D62EAE /* Router.swift */,
-				63BD38152BBDE82700D62EAE /* RouterPaths.swift */,
+				639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */,
+				639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */,
 				63C9DF4F2BBF2D100075ABDA /* RouterPreferenceKeys.swift */,
-				63C9DF512BBF32820075ABDA /* ViewFactory.swift */,
+				63C9DF512BBF32820075ABDA /* RouteFactory.swift */,
+				639DBBF52BCFC807003D24FB /* Routers */,
 				63C9DF532BBF35210075ABDA /* Components */,
 			);
 			path = Router;
@@ -372,13 +453,13 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
 				2E32807B2BC83A4A00670DF8 /* SquareButton */,
 				2E3280782BC834C900670DF8 /* WorkspaceRow */,
 				2E3280752BC8287900670DF8 /* ActivityRow */,
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				63EF08482BAE289300488B1C /* ViewTitle */,
 				638F24032BAD79FA00704CE0 /* BackArrow */,
-				638F24002BAD787400704CE0 /* BaseLayout */,
 				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
 				63C467B42BA99D660081E7EA /* TextInput */,
 			);
@@ -408,9 +489,8 @@
 		63C9DF532BBF35210075ABDA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				63BD38192BBDE8FE00D62EAE /* RouterView.swift */,
 				63C9DF4B2BBF20050075ABDA /* RouterContainerView.swift */,
-				63C9DF492BBF1F690075ABDA /* RouterBar.swift */,
+				63BD38192BBDE8FE00D62EAE /* RouterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -444,6 +524,9 @@
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				639DBC012BCFE4DF003D24FB /* WorkspaceRoot */,
+				639DBBFD2BCFD8DB003D24FB /* GroupListView */,
+				639DBBFA2BCFD235003D24FB /* WorkspaceListView */,
 				2E3280722BC8283E00670DF8 /* WorkspacesView */,
 				2E0AEBC32BACC11D00452744 /* SignUpView */,
 				2E0AEBBE2BACAB1500452744 /* SingInView */,
@@ -665,10 +748,12 @@
 				2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
-				63C9DF4A2BBF1F690075ABDA /* RouterBar.swift in Sources */,
+				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
 				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
+				639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */,
 				63ECEB992BA4376A00166BCD /* RootTabView.swift in Sources */,
+				639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */,
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
@@ -676,11 +761,14 @@
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
 				2E3280772BC8289A00670DF8 /* ActivityRow.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
+				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
+				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
-				63BD38142BBDE80B00D62EAE /* Router.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
+				639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */,
 				63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */,
+				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */,
@@ -688,25 +776,29 @@
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
+				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */,
 				2E3280742BC8285700670DF8 /* WorkspacesView.swift in Sources */,
-				63BD38162BBDE82700D62EAE /* RouterPaths.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
+				639DBBFF2BCFD8EB003D24FB /* GroupListView.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
 				638F242A2BADBA5700704CE0 /* BorderedButtonStyle.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
-				63C9DF522BBF32820075ABDA /* ViewFactory.swift in Sources */,
+				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
 				63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */,
+				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,
 				2E0AEBBB2BACA10300452744 /* OnboardingView.swift in Sources */,
-				638F24022BAD78FF00704CE0 /* BaseLayout.swift in Sources */,
+				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
+				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				638F242E2BADC4CD00704CE0 /* FilledButtonStyle.swift in Sources */,
+				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

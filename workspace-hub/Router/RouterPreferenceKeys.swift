@@ -18,9 +18,7 @@ struct RouterBarBackArrowHiddenPreferenceKey: PreferenceKey {
 }
 
 extension View {
-
     func routerBarBackArrowHidden(_ hidden: Bool) -> some View {
         preference(key: RouterBarBackArrowHiddenPreferenceKey.self, value: hidden)
     }
-
 }

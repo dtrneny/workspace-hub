@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var mainRouter: MainRouter
     @StateObject private var viewModel = SignUpViewModel(accountService: AccountService())
     
     var body: some View {
-        BaseLayout{
+        VStack(alignment: .leading) {
             ViewTitle(title: "Sign up")
             
             formView
@@ -21,6 +21,7 @@ struct SignUpView: View {
             Button("Create account") {
                 Task {
                     await viewModel.signUp()
+                    mainRouter.pop()
                 }
             }.filledButtonStyle()
         }

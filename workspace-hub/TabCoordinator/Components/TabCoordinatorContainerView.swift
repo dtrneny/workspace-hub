@@ -1,28 +1,28 @@
 //
-//  RouterContainerView.swift
+//  TabCoordinatorContainerView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 04.04.2024.
+//  Created by Dalibor Trněný on 17.04.2024.
 //
 
 import SwiftUI
 
-struct RouterContainerView<Content: View>: View {
+struct TabCoordinatorContainerView<Content: View>: View {
     
     @State private var showBack: Bool = true
     
     let content: Content
-    let router: any RouterProtocol
+    let coordingator: any TabCoordinatorProtocol
     
-    init(@ViewBuilder content: () -> Content, router: any RouterProtocol) {
+    init(@ViewBuilder content: () -> Content, coordingator: any TabCoordinatorProtocol) {
         self.content = content()
-        self.router = router
+        self.coordingator = coordingator
     }
     
     var body: some View {
         VStack(spacing: 0) {
-            BaseNavigationBar(showBack: showBack && router.history.count > 1) {
-                router.pop()
+            BaseNavigationBar(showBack: showBack && coordingator.history.count > 1) {
+                coordingator.pop()
             }
             content
                 .frame(
@@ -30,7 +30,7 @@ struct RouterContainerView<Content: View>: View {
                     maxHeight: .infinity
                 )
         }
-        .toolbar(.hidden, for: .navigationBar)
+        .navigationBarHidden(true)
         .onPreferenceChange(
             RouterBarBackArrowHiddenPreferenceKey.self,
             perform: { value in

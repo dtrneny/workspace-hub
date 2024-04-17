@@ -9,46 +9,43 @@ import SwiftUI
 
 struct RootTabView: View {
     
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var mainRouter: MainRouter
     @StateObject private var viewModel = RootTabViewModel()
     
     var body: some View {
-        BaseLayout {
-            TabView {
-                ZStack {
-                    Color.white
-                        .ignoresSafeArea()
-                    
-                    VStack {
-                        Text("Menu")
-                        Button("Sign Out") {
-                            if (viewModel.signOut()) {
-                                router.navigate(route: .signIn)
-                            }
-                        }
-                        .filledButtonStyle()
-                    }
-                        .foregroundStyle(.secondary900)
-                }
-                .tabItem {
-                    Label("Menu", systemImage: "list.dash")
-                        .foregroundStyle(.secondary900)
-                }
-                
-                ZStack {
-                    Color.white
-                        .ignoresSafeArea()
-                    
-                    Text("Order")
-                        .foregroundStyle(.secondary900)
-                }
-                .routerBarBackArrowHidden(true)
-                .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
-                }
+        TabView {
+            
+            GroupListView()
+            .tabItem {
+                Label("Menu", systemImage: "list.dash")
+                    .foregroundStyle(.secondary900)
             }
-            .toolbarColorScheme(.light, for: .tabBar)
+            
+            WorkspaceRootView()
+            .tabItem {
+                Label("Order", systemImage: "square.and.pencil")
+            }
+            
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                
+                VStack {
+                    Button("Sign Out") {
+                        if (viewModel.signOut()) {
+                            mainRouter.replaceAll(with: .signIn)
+                        }
+                    }
+                    .filledButtonStyle()
+                }
+                    .foregroundStyle(.secondary900)
+            }
+            .tabItem {
+                Label("Menu", systemImage: "list.dash")
+                    .foregroundStyle(.secondary900)
+            }
         }
+        .toolbarColorScheme(.light, for: .tabBar)
     }
 }
 

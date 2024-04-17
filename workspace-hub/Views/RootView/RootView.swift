@@ -10,7 +10,7 @@ import SwiftUI
 struct RootView: View {
     
     @StateObject private var viewModel = RootViewModel()
-    @StateObject private var router = Router()
+    @ObservedObject var mainRouter: MainRouter = MainRouter()
     
     var body: some View {
         switch viewModel.state {
@@ -21,17 +21,18 @@ struct RootView: View {
                         viewModel.state = .idle
                         
                         if (viewModel.checkForCurrentUser()) {
-                            router.navigate(route: .workspaces)
+                            mainRouter.navigate(to: .home)
                             return
                         }
                         
-                        router.navigate(route: .signIn)
+                        mainRouter.navigate(to: .signIn)
                     }
                 }
         default:
-            RouterView()
-                .environmentObject(router)
-            
+            RouterView<MainRouter, MainRoutes, AnyView> { route in
+                AnyView(RouteFactory.viewForMainRouteDestination(route, router: mainRouter))
+            }
+            .environmentObject(mainRouter)
         }
     }
 }

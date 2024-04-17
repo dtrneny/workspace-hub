@@ -7,18 +7,20 @@
 
 import SwiftUI
 
-struct RouterView: View {
+struct RouterView<Router: RouterProtocol, Routes: Hashable, RenderedContent: View>: View {
     
     @EnvironmentObject var router: Router
     
+    let renderedContent: (Routes) -> RenderedContent
+    
     var body: some View {
         NavigationStack(path: $router.history) {
-            RouterContainerView {
-                EmptyView()
-                    .navigationDestination(for: RouterPaths.self){ path in
-                        ViewFactory.viewForDestination(path)
-                    }
-            }
+            RouterContainerView(content: {
+                Color.clear
+                .navigationDestination(for: Routes.self) { route in
+                    renderedContent(route)
+                }
+            }, router: router)
         }
     }
 }
