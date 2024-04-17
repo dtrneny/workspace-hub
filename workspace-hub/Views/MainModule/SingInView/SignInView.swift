@@ -10,7 +10,7 @@ import SwiftUI
 struct SignInView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
-    @StateObject private var viewModel = SignInViewModel()
+    @ObservedObject private var viewModel = SignInViewModel()
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -12,36 +12,32 @@ struct RootTabView: View {
     @EnvironmentObject var mainRouter: MainRouter
     @StateObject private var viewModel = RootTabViewModel()
     
+    init() {
+        UITabBar.appearance().unselectedItemTintColor = UIColor(Color.grey700)
+    }
+    
     var body: some View {
         TabView {
-            
-            GroupListView()
-            .tabItem {
-                Label("Menu", systemImage: "list.dash")
-                    .foregroundStyle(.secondary900)
-            }
-            
             WorkspaceRootView()
             .tabItem {
-                Label("Order", systemImage: "square.and.pencil")
+                Label("Workspaces", systemImage: "person.2.crop.square.stack")
             }
             
-            ZStack {
-                Color.white
-                    .ignoresSafeArea()
-                
-                VStack {
-                    Button("Sign Out") {
-                        if (viewModel.signOut()) {
-                            mainRouter.replaceAll(with: .signIn)
-                        }
-                    }
-                    .filledButtonStyle()
-                }
+            GroupRootView()
+            .tabItem {
+                Label("Groups", systemImage: "person.2")
                     .foregroundStyle(.secondary900)
             }
+            
+            TimelineRootView()
             .tabItem {
-                Label("Menu", systemImage: "list.dash")
+                Label("Timeline", systemImage: "calendar.day.timeline.left")
+                    .foregroundStyle(.secondary900)
+            }
+            
+            SettingRootView()
+            .tabItem {
+                Label("Settings", systemImage: "ellipsis")
                     .foregroundStyle(.secondary900)
             }
         }

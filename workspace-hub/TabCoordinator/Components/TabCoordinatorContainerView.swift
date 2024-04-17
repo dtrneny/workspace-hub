@@ -20,17 +20,22 @@ struct TabCoordinatorContainerView<Content: View>: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            BaseNavigationBar(showBack: showBack && coordingator.history.count > 1) {
-                coordingator.pop()
+        ZStack {
+            Color.white.ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                BaseNavigationBar(showBack: showBack && coordingator.history.count > 1) {
+                    coordingator.pop()
+                }
+                content
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
+                    .padding([.leading, .trailing])
             }
-            content
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity
-                )
         }
-        .navigationBarHidden(true)
+        .toolbar(.hidden, for: .navigationBar)
         .onPreferenceChange(
             RouterBarBackArrowHiddenPreferenceKey.self,
             perform: { value in

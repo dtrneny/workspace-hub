@@ -20,15 +20,20 @@ struct RouterContainerView<Content: View>: View {
     }
     
     var body: some View {
-        VStack(spacing: 0) {
-            BaseNavigationBar(showBack: showBack && router.history.count > 1) {
-                router.pop()
+        ZStack {
+            Color.white.ignoresSafeArea()
+            
+            VStack(spacing: 0) {
+                BaseNavigationBar(showBack: showBack && router.history.count > 1) {
+                    router.pop()
+                }
+                content
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
+                    .padding([.leading, .trailing])
             }
-            content
-                .frame(
-                    maxWidth: .infinity,
-                    maxHeight: .infinity
-                )
         }
         .toolbar(.hidden, for: .navigationBar)
         .onPreferenceChange(

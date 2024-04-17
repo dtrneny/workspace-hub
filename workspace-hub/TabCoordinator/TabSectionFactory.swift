@@ -22,4 +22,42 @@ enum TabSectionFactory {
             WorkspaceListView()
         }
     }
+    
+    @ViewBuilder
+    static func viewForGroupTabSection(history: [GroupTabSections]) -> some View {
+        if let currentSection = history.last {
+            switch currentSection {
+            case .list:
+                Text("List")
+            case .detail:
+                Text("Detail")
+            }
+        } else {
+            Text("Default")
+        }
+    }
+    
+    @ViewBuilder
+    static func viewForTimelineTabSection(history: [TimelineTabSections]) -> some View {
+        if let currentSection = history.last {
+            switch currentSection {
+            case .timeline:
+                Text("List")
+            }
+        } else {
+            Text("Default")
+        }
+    }
+    
+    @ViewBuilder
+    static func viewForSettingTabSection(history: [SettingTabSections]) -> some View {
+        if let currentSection = history.last {
+            switch currentSection {
+            case .list:
+                SettingListView()
+            }
+        } else {
+            Text("Default")
+        }
+    }
 }

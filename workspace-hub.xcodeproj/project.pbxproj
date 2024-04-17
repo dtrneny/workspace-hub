@@ -44,6 +44,14 @@
 		639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */; };
 		639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC0F2BCFEBC6003D24FB /* TabCoordinatorContainerView.swift */; };
 		639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC112BCFEC97003D24FB /* TabCoordinatorView.swift */; };
+		639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC172BD00C20003D24FB /* GroupRootView.swift */; };
+		639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC192BD00D66003D24FB /* GroupCoordinator.swift */; };
+		639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC1D2BD00EE5003D24FB /* TimelineRootView.swift */; };
+		639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC1F2BD00EF4003D24FB /* TimelineCoordinator.swift */; };
+		639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC232BD010A3003D24FB /* SettingRootView.swift */; };
+		639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC252BD010B1003D24FB /* SettingCoordinator.swift */; };
+		639DBC292BD01492003D24FB /* SettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC282BD01492003D24FB /* SettingListView.swift */; };
+		639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */; };
 		63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38192BBDE8FE00D62EAE /* RouterView.swift */; };
 		63C467B62BA99D840081E7EA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467B52BA99D840081E7EA /* TextInput.swift */; };
 		63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B82BAA05760081E7EA /* Inter-Medium.ttf */; };
@@ -134,6 +142,14 @@
 		639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceCoordinator.swift; sourceTree = "<group>"; };
 		639DBC0F2BCFEBC6003D24FB /* TabCoordinatorContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinatorContainerView.swift; sourceTree = "<group>"; };
 		639DBC112BCFEC97003D24FB /* TabCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinatorView.swift; sourceTree = "<group>"; };
+		639DBC172BD00C20003D24FB /* GroupRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRootView.swift; sourceTree = "<group>"; };
+		639DBC192BD00D66003D24FB /* GroupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCoordinator.swift; sourceTree = "<group>"; };
+		639DBC1D2BD00EE5003D24FB /* TimelineRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineRootView.swift; sourceTree = "<group>"; };
+		639DBC1F2BD00EF4003D24FB /* TimelineCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineCoordinator.swift; sourceTree = "<group>"; };
+		639DBC232BD010A3003D24FB /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
+		639DBC252BD010B1003D24FB /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		639DBC282BD01492003D24FB /* SettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListView.swift; sourceTree = "<group>"; };
+		639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewModel.swift; sourceTree = "<group>"; };
 		63BD38192BBDE8FE00D62EAE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		63C467B52BA99D840081E7EA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		63C467B82BAA05760081E7EA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -404,12 +420,12 @@
 			path = TabCoordinator;
 			sourceTree = "<group>";
 		};
-		639DBC012BCFE4DF003D24FB /* WorkspaceRoot */ = {
+		639DBC012BCFE4DF003D24FB /* WorkspaceRootView */ = {
 			isa = PBXGroup;
 			children = (
 				639DBC022BCFE4ED003D24FB /* WorkspaceRootView.swift */,
 			);
-			path = WorkspaceRoot;
+			path = WorkspaceRootView;
 			sourceTree = "<group>";
 		};
 		639DBC062BCFE596003D24FB /* Components */ = {
@@ -425,6 +441,9 @@
 			isa = PBXGroup;
 			children = (
 				639DBC0C2BCFE71A003D24FB /* WorkspaceCoordinator.swift */,
+				639DBC192BD00D66003D24FB /* GroupCoordinator.swift */,
+				639DBC1F2BD00EF4003D24FB /* TimelineCoordinator.swift */,
+				639DBC252BD010B1003D24FB /* SettingCoordinator.swift */,
 			);
 			path = TabCoordinators;
 			sourceTree = "<group>";
@@ -435,6 +454,88 @@
 				63C9DF492BBF1F690075ABDA /* BaseNavigationBar.swift */,
 			);
 			path = BaseNavigationBar;
+			sourceTree = "<group>";
+		};
+		639DBC132BD0020A003D24FB /* WorkspaceModule */ = {
+			isa = PBXGroup;
+			children = (
+				2E3280722BC8283E00670DF8 /* WorkspacesView */,
+				639DBC012BCFE4DF003D24FB /* WorkspaceRootView */,
+				639DBBFA2BCFD235003D24FB /* WorkspaceListView */,
+			);
+			path = WorkspaceModule;
+			sourceTree = "<group>";
+		};
+		639DBC142BD00218003D24FB /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				63ECEBB32BA5C40300166BCD /* RootView */,
+				638D30DC2BA8B8BF00105C6E /* SplashView */,
+				2E0AEBB92BACA0B700452744 /* OnboardingView */,
+				2E0AEBBE2BACAB1500452744 /* SingInView */,
+				2E0AEBC32BACC11D00452744 /* SignUpView */,
+				638D30D62BA8B2A500105C6E /* RootTabView */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		639DBC152BD00BD7003D24FB /* GroupModule */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC162BD00C04003D24FB /* GroupRootView */,
+				639DBBFD2BCFD8DB003D24FB /* GroupListView */,
+			);
+			path = GroupModule;
+			sourceTree = "<group>";
+		};
+		639DBC162BD00C04003D24FB /* GroupRootView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC172BD00C20003D24FB /* GroupRootView.swift */,
+			);
+			path = GroupRootView;
+			sourceTree = "<group>";
+		};
+		639DBC1B2BD00EB2003D24FB /* TimelineModule */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC1C2BD00ED2003D24FB /* TimelineRootView */,
+			);
+			path = TimelineModule;
+			sourceTree = "<group>";
+		};
+		639DBC1C2BD00ED2003D24FB /* TimelineRootView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC1D2BD00EE5003D24FB /* TimelineRootView.swift */,
+			);
+			path = TimelineRootView;
+			sourceTree = "<group>";
+		};
+		639DBC212BD01081003D24FB /* SettingModule */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC222BD0108E003D24FB /* SettingRootView */,
+				639DBC272BD01463003D24FB /* SettingListView */,
+			);
+			path = SettingModule;
+			sourceTree = "<group>";
+		};
+		639DBC222BD0108E003D24FB /* SettingRootView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC232BD010A3003D24FB /* SettingRootView.swift */,
+			);
+			path = SettingRootView;
+			sourceTree = "<group>";
+		};
+		639DBC272BD01463003D24FB /* SettingListView */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC282BD01492003D24FB /* SettingListView.swift */,
+				639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */,
+			);
+			path = SettingListView;
 			sourceTree = "<group>";
 		};
 		63BD38122BBDE7FA00D62EAE /* Router */ = {
@@ -524,16 +625,11 @@
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				639DBC012BCFE4DF003D24FB /* WorkspaceRoot */,
-				639DBBFD2BCFD8DB003D24FB /* GroupListView */,
-				639DBBFA2BCFD235003D24FB /* WorkspaceListView */,
-				2E3280722BC8283E00670DF8 /* WorkspacesView */,
-				2E0AEBC32BACC11D00452744 /* SignUpView */,
-				2E0AEBBE2BACAB1500452744 /* SingInView */,
-				2E0AEBB92BACA0B700452744 /* OnboardingView */,
-				638D30DC2BA8B8BF00105C6E /* SplashView */,
-				638D30D62BA8B2A500105C6E /* RootTabView */,
-				63ECEBB32BA5C40300166BCD /* RootView */,
+				639DBC142BD00218003D24FB /* MainModule */,
+				639DBC132BD0020A003D24FB /* WorkspaceModule */,
+				639DBC152BD00BD7003D24FB /* GroupModule */,
+				639DBC1B2BD00EB2003D24FB /* TimelineModule */,
+				639DBC212BD01081003D24FB /* SettingModule */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -747,6 +843,7 @@
 			files = (
 				2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
+				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
@@ -756,6 +853,7 @@
 				639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */,
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
+				639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
@@ -764,6 +862,7 @@
 				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
 				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
+				639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
 				639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */,
@@ -772,11 +871,14 @@
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */,
+				639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
+				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
+				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */,
@@ -794,8 +896,10 @@
 				2E0AEBBB2BACA10300452744 /* OnboardingView.swift in Sources */,
 				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
+				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
+				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				638F242E2BADC4CD00704CE0 /* FilledButtonStyle.swift in Sources */,
 				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,

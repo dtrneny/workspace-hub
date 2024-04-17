@@ -11,12 +11,10 @@ struct WorkspaceRootView: View {
     @ObservedObject private var coordinator: WorkspaceCoordinator = WorkspaceCoordinator()
 
     var body: some View {
-        VStack {
-            TabCoordinatorView(content: {
-                TabSectionFactory.viewForWorkspaceTabSection(history: coordinator.history)
-                    .environmentObject(coordinator)
-            }, coordinator: coordinator)
-        }
+        TabCoordinatorView(content: {
+            TabSectionFactory.viewForWorkspaceTabSection(history: coordinator.history)
+                .environmentObject(coordinator)
+        }, coordinator: coordinator)
     }
 }
 
