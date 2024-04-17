@@ -14,7 +14,11 @@ struct SignUpView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            ViewTitle(title: "Sign up")
+            Text("Sign up")
+                .foregroundColor(.secondary900)
+                .font(.inter(30.0))
+                .fontWeight(.bold)
+                .padding([.bottom], 38)
             
             formView
             

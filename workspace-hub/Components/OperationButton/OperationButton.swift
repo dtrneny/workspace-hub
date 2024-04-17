@@ -7,30 +7,29 @@
 
 import SwiftUI
 
-struct SquareButton: View {
+struct OperationButton: View {
     
+    var icon: String
+    var color: Color = .secondary900
+    var rounded: Bool? = false
     var action: () -> Void
-    var systemName: String
-    var color: Color?
-    var backgroundColor: Color?
-    var isRound: Bool?
 
     var body: some View {
         Button {
             action()
         } label: {
             ZStack {
-                if(isRound == true){
+                if(rounded == true){
                     Circle()
-                        .foregroundColor(backgroundColor ?? .grey200)
-                    .frame(width: 35, height: 35)
+                        .foregroundColor(color.opacity(0.05))
+                        .frame(width: 35, height: 35)
                 } else {
                     RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(backgroundColor ?? .grey200)
+                        .foregroundColor(color.opacity(0.05))
                         .frame(width: 35, height: 35)
                 }
-                Image(systemName: systemName)
-                    .foregroundColor(color ?? .secondary900)
+                Image(systemName: icon)
+                    .foregroundColor(color)
                     .font(.system(size: 20))
             }
         }
@@ -39,7 +38,7 @@ struct SquareButton: View {
 }
 
 #Preview {
-    SquareButton(action: {
+    OperationButton(icon: "chevron.right", color: .primaryRed700) {
         print("Button click")
-    }, systemName: "chevron.right", backgroundColor: .grey200, isRound: false)
+    }
 }

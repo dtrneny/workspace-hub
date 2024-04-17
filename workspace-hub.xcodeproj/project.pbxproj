@@ -12,11 +12,8 @@
 		2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC12BACABAA00452744 /* SignInView.swift */; };
 		2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC42BACC13000452744 /* SignUpView.swift */; };
 		2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0AEBC62BACC13F00452744 /* SignUpViewModel.swift */; };
-		2E3280742BC8285700670DF8 /* WorkspacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280732BC8285700670DF8 /* WorkspacesView.swift */; };
-		2E3280772BC8289A00670DF8 /* ActivityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280762BC8289A00670DF8 /* ActivityRow.swift */; };
-		2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280792BC834F000670DF8 /* WorkspaceRow.swift */; };
-		2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E32807C2BC83A5700670DF8 /* SquareButton.swift */; };
-		2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */; };
+		2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3280792BC834F000670DF8 /* WorkspaceListRow.swift */; };
+		2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E32807C2BC83A5700670DF8 /* OperationButton.swift */; };
 		6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */; };
 		635667A02BA2D5FD00A0AD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */; };
 		635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635667A22BA2D5FD00A0AD36 /* Preview Assets.xcassets */; };
@@ -52,6 +49,8 @@
 		639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC252BD010B1003D24FB /* SettingCoordinator.swift */; };
 		639DBC292BD01492003D24FB /* SettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC282BD01492003D24FB /* SettingListView.swift */; };
 		639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */; };
+		639DBC2E2BD02B79003D24FB /* WorkspaceAcitvityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC2D2BD02B79003D24FB /* WorkspaceAcitvityCard.swift */; };
+		639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC332BD03296003D24FB /* BaseLayout.swift */; };
 		63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38192BBDE8FE00D62EAE /* RouterView.swift */; };
 		63C467B62BA99D840081E7EA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467B52BA99D840081E7EA /* TextInput.swift */; };
 		63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B82BAA05760081E7EA /* Inter-Medium.ttf */; };
@@ -107,11 +106,8 @@
 		2E0AEBC12BACABAA00452744 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2E0AEBC42BACC13000452744 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		2E0AEBC62BACC13F00452744 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		2E3280732BC8285700670DF8 /* WorkspacesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacesView.swift; sourceTree = "<group>"; };
-		2E3280762BC8289A00670DF8 /* ActivityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRow.swift; sourceTree = "<group>"; };
-		2E3280792BC834F000670DF8 /* WorkspaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceRow.swift; sourceTree = "<group>"; };
-		2E32807C2BC83A5700670DF8 /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
-		2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspacesViewModel.swift; sourceTree = "<group>"; };
+		2E3280792BC834F000670DF8 /* WorkspaceListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceListRow.swift; sourceTree = "<group>"; };
+		2E32807C2BC83A5700670DF8 /* OperationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationButton.swift; sourceTree = "<group>"; };
 		635667982BA2D5FC00A0AD36 /* workspace-hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workspace-hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubApp.swift; sourceTree = "<group>"; };
 		6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +146,8 @@
 		639DBC252BD010B1003D24FB /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
 		639DBC282BD01492003D24FB /* SettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListView.swift; sourceTree = "<group>"; };
 		639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewModel.swift; sourceTree = "<group>"; };
+		639DBC2D2BD02B79003D24FB /* WorkspaceAcitvityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAcitvityCard.swift; sourceTree = "<group>"; };
+		639DBC332BD03296003D24FB /* BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		63BD38192BBDE8FE00D62EAE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		63C467B52BA99D840081E7EA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		63C467B82BAA05760081E7EA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -234,37 +232,20 @@
 			path = SignUpView;
 			sourceTree = "<group>";
 		};
-		2E3280722BC8283E00670DF8 /* WorkspacesView */ = {
+		2E3280782BC834C900670DF8 /* WorkspaceListRow */ = {
 			isa = PBXGroup;
 			children = (
-				2E3280732BC8285700670DF8 /* WorkspacesView.swift */,
-				2E32807E2BC8435700670DF8 /* WorkspacesViewModel.swift */,
+				2E3280792BC834F000670DF8 /* WorkspaceListRow.swift */,
 			);
-			path = WorkspacesView;
+			path = WorkspaceListRow;
 			sourceTree = "<group>";
 		};
-		2E3280752BC8287900670DF8 /* ActivityRow */ = {
+		2E32807B2BC83A4A00670DF8 /* OperationButton */ = {
 			isa = PBXGroup;
 			children = (
-				2E3280762BC8289A00670DF8 /* ActivityRow.swift */,
+				2E32807C2BC83A5700670DF8 /* OperationButton.swift */,
 			);
-			path = ActivityRow;
-			sourceTree = "<group>";
-		};
-		2E3280782BC834C900670DF8 /* WorkspaceRow */ = {
-			isa = PBXGroup;
-			children = (
-				2E3280792BC834F000670DF8 /* WorkspaceRow.swift */,
-			);
-			path = WorkspaceRow;
-			sourceTree = "<group>";
-		};
-		2E32807B2BC83A4A00670DF8 /* SquareButton */ = {
-			isa = PBXGroup;
-			children = (
-				2E32807C2BC83A5700670DF8 /* SquareButton.swift */,
-			);
-			path = SquareButton;
+			path = OperationButton;
 			sourceTree = "<group>";
 		};
 		6356678F2BA2D5FC00A0AD36 = {
@@ -459,7 +440,6 @@
 		639DBC132BD0020A003D24FB /* WorkspaceModule */ = {
 			isa = PBXGroup;
 			children = (
-				2E3280722BC8283E00670DF8 /* WorkspacesView */,
 				639DBC012BCFE4DF003D24FB /* WorkspaceRootView */,
 				639DBBFA2BCFD235003D24FB /* WorkspaceListView */,
 			);
@@ -538,6 +518,22 @@
 			path = SettingListView;
 			sourceTree = "<group>";
 		};
+		639DBC2C2BD02B65003D24FB /* WorkspaceAcitvityCard */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC2D2BD02B79003D24FB /* WorkspaceAcitvityCard.swift */,
+			);
+			path = WorkspaceAcitvityCard;
+			sourceTree = "<group>";
+		};
+		639DBC322BD03287003D24FB /* BaseLayout */ = {
+			isa = PBXGroup;
+			children = (
+				639DBC332BD03296003D24FB /* BaseLayout.swift */,
+			);
+			path = BaseLayout;
+			sourceTree = "<group>";
+		};
 		63BD38122BBDE7FA00D62EAE /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,15 +550,16 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
-				2E32807B2BC83A4A00670DF8 /* SquareButton */,
-				2E3280782BC834C900670DF8 /* WorkspaceRow */,
-				2E3280752BC8287900670DF8 /* ActivityRow */,
-				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
-				63EF08482BAE289300488B1C /* ViewTitle */,
-				638F24032BAD79FA00704CE0 /* BackArrow */,
-				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
 				63C467B42BA99D660081E7EA /* TextInput */,
+				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
+				2E32807B2BC83A4A00670DF8 /* OperationButton */,
+				638F24032BAD79FA00704CE0 /* BackArrow */,
+				63EF08482BAE289300488B1C /* ViewTitle */,
+				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
+				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
+				639DBC2C2BD02B65003D24FB /* WorkspaceAcitvityCard */,
+				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
+				639DBC322BD03287003D24FB /* BaseLayout */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -841,7 +838,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E32807A2BC834F000670DF8 /* WorkspaceRow.swift in Sources */,
+				2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
@@ -857,7 +854,6 @@
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
-				2E3280772BC8289A00670DF8 /* ActivityRow.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
 				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
@@ -877,12 +873,12 @@
 				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
+				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
+				639DBC2E2BD02B79003D24FB /* WorkspaceAcitvityCard.swift in Sources */,
 				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
 				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
-				2E32807D2BC83A5700670DF8 /* SquareButton.swift in Sources */,
+				2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
-				2E32807F2BC8435700670DF8 /* WorkspacesViewModel.swift in Sources */,
-				2E3280742BC8285700670DF8 /* WorkspacesView.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				639DBBFF2BCFD8EB003D24FB /* GroupListView.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,

@@ -13,9 +13,9 @@ struct ViewTitle: View {
     var body: some View {
         Text(title)
             .foregroundColor(.secondary900)
-            .font(.inter(30.0))
-            .fontWeight(.bold)
-            .padding([.bottom], 38)
+            .font(.inter(24.0))
+            .fontWeight(.medium)
+            .padding([.bottom], 19)
     }
 }
 
