@@ -27,12 +27,12 @@ struct RouterContainerView<Content: View>: View {
                 BaseNavigationBar(showBack: showBack && router.history.count > 1) {
                     router.pop()
                 }
-                content
-                    .frame(
-                        maxWidth: .infinity,
-                        maxHeight: .infinity
-                    )
-                    .padding([.leading, .trailing])
+                
+                ScrollView {
+                    content
+                        .frame(maxWidth: .infinity)
+                        .padding([.leading, .trailing])
+                }
             }
         }
         .toolbar(.hidden, for: .navigationBar)
