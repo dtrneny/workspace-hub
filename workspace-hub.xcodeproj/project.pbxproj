@@ -51,6 +51,9 @@
 		639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */; };
 		639DBC2E2BD02B79003D24FB /* WorkspaceAcitvityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC2D2BD02B79003D24FB /* WorkspaceAcitvityCard.swift */; };
 		639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC332BD03296003D24FB /* BaseLayout.swift */; };
+		639DBC372BD04473003D24FB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 639DBC362BD04473003D24FB /* FirebaseStorage */; };
+		639DBC392BD044A6003D24FB /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC382BD044A6003D24FB /* StorageService.swift */; };
+		639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBC3A2BD04857003D24FB /* StorageFolder.swift */; };
 		63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BD38192BBDE8FE00D62EAE /* RouterView.swift */; };
 		63C467B62BA99D840081E7EA /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C467B52BA99D840081E7EA /* TextInput.swift */; };
 		63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63C467B82BAA05760081E7EA /* Inter-Medium.ttf */; };
@@ -148,6 +151,8 @@
 		639DBC2A2BD014B6003D24FB /* SettingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListViewModel.swift; sourceTree = "<group>"; };
 		639DBC2D2BD02B79003D24FB /* WorkspaceAcitvityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAcitvityCard.swift; sourceTree = "<group>"; };
 		639DBC332BD03296003D24FB /* BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
+		639DBC382BD044A6003D24FB /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		639DBC3A2BD04857003D24FB /* StorageFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageFolder.swift; sourceTree = "<group>"; };
 		63BD38192BBDE8FE00D62EAE /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		63C467B52BA99D840081E7EA /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		63C467B82BAA05760081E7EA /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
@@ -184,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */,
+				639DBC372BD04473003D24FB /* FirebaseStorage in Frameworks */,
 				63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */,
 				63ECEB912BA42E0100166BCD /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -255,6 +261,7 @@
 				635667B02BA2D5FD00A0AD36 /* workspace-hubTests */,
 				635667BA2BA2D5FD00A0AD36 /* workspace-hubUITests */,
 				635667992BA2D5FC00A0AD36 /* Products */,
+				639DBC352BD04473003D24FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -534,6 +541,13 @@
 			path = BaseLayout;
 			sourceTree = "<group>";
 		};
+		639DBC352BD04473003D24FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63BD38122BBDE7FA00D62EAE /* Router */ = {
 			isa = PBXGroup;
 			children = (
@@ -644,6 +658,7 @@
 			isa = PBXGroup;
 			children = (
 				638F23E92BACD92100704CE0 /* AuthService.swift */,
+				639DBC382BD044A6003D24FB /* StorageService.swift */,
 				63C9DF642BC0571E0075ABDA /* AccountService.swift */,
 				63C9DF692BC27E860075ABDA /* WorkspaceService.swift */,
 			);
@@ -671,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				63ECEBCE2BA6E69400166BCD /* ViewState.swift */,
+				639DBC3A2BD04857003D24FB /* StorageFolder.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -715,6 +731,7 @@
 				63ECEB8C2BA42E0100166BCD /* FirebaseAuth */,
 				63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */,
 				63ECEB902BA42E0100166BCD /* FirebaseFirestoreSwift */,
+				639DBC362BD04473003D24FB /* FirebaseStorage */,
 			);
 			productName = "workspace-hub";
 			productReference = 635667982BA2D5FC00A0AD36 /* workspace-hub.app */;
@@ -839,8 +856,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */,
+				639DBC392BD044A6003D24FB /* StorageService.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
+				639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
@@ -1245,6 +1264,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		639DBC362BD04473003D24FB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 63ECEB8B2BA42E0100166BCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		63ECEB8C2BA42E0100166BCD /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 63ECEB8B2BA42E0100166BCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

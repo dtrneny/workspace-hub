@@ -12,4 +12,5 @@ struct Account: Identifiable, Codable {
     @DocumentID var id: String? = UUID().uuidString
     var email: String
     var fullname: String
+    var profileImage: String
 }
