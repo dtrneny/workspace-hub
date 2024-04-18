@@ -7,20 +7,26 @@
 
 import Foundation
 
-//protocol WorkspaceServiceProtocol {
+protocol WorkspaceServiceProtocol {
 //    func getWorkspaces() async -> [Workspace]
-//    func createWorkspace(workspace: Workspace) async -> Workspace?
-//}
-//
-//class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
-//    
-//    private var repository = FirestoreRepository<Account>(collection: "workspaces")
-//    
+    func createWorkspace(workspace: Workspace) async -> Workspace?
+}
+
+class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
+    
+    private var repository = FirestoreRepository<Workspace>(collection: "workspaces")
+    
 //    func getWorkspaces() async -> [Workspace] {
 //        <#code#>
 //    }
-//    
-//    func createWorkspace(workspace: Workspace) async -> Workspace? {
-//        <#code#>
-//    }
-//}
+    
+    func createWorkspace(workspace: Workspace) async -> Workspace? {
+        do {
+            let workspace = try await repository.create(data: workspace).get()
+            return workspace
+        }
+        catch {
+            return nil
+        }
+    }
+}

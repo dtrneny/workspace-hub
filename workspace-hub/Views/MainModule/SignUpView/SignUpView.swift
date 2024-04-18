@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct SignUpView: View {
     
@@ -19,6 +20,8 @@ struct SignUpView: View {
                 .font(.inter(30.0))
                 .fontWeight(.bold)
                 .padding([.bottom], 38)
+            
+            profilePicture
             
             formView
             
@@ -67,5 +70,35 @@ extension SignUpView {
             }
         }
         .padding(.bottom, 38)
+    }
+    
+    private var profilePicture: some View {
+        VStack (alignment: .center) {
+            picturePlaceholder
+        }
+        .frame(maxWidth: .infinity)
+    }
+    
+    private var picturePlaceholder: some View {
+        PhotosPicker(selection: $viewModel.photo, matching: .images, photoLibrary: .shared()) {
+            if let image = viewModel.loadedImage {
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 125, height: 125)
+                    .clipShape(Circle())
+            } else {
+                ZStack {
+                    Circle()
+                        .fill(.grey300)
+                        .frame(width: 125, height: 125)
+                    
+                    Image(systemName: "camera")
+                        .font(.system(size: 24))
+                }
+            }
+        }
+        .onChange(of: viewModel.photo, viewModel.loadImage)
+        .padding([.bottom], 19)
     }
 }
