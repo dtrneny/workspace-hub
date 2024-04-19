@@ -8,7 +8,7 @@
 import Foundation
 
 protocol WorkspaceServiceProtocol {
-//    func getWorkspaces() async -> [Workspace]
+    func getWorkspaces() async -> [Workspace]
     func createWorkspace(workspace: Workspace) async -> Workspace?
 }
 
@@ -16,13 +16,29 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
     
     private var repository = FirestoreRepository<Workspace>(collection: "workspaces")
     
-//    func getWorkspaces() async -> [Workspace] {
-//        <#code#>
-//    }
+    func getWorkspaces() async -> [Workspace] {
+        do {
+            let workspaces = try await repository.fetchData().get()
+            return workspaces
+        }
+        catch {
+            return []
+        }
+    }
     
     func createWorkspace(workspace: Workspace) async -> Workspace? {
         do {
             let workspace = try await repository.create(data: workspace).get()
+            return workspace
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    func getWorkspace(id: String) async -> Workspace? {
+        do {
+            let workspace = try await repository.getById(id: id).get()
             return workspace
         }
         catch {
