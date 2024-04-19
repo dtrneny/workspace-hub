@@ -42,7 +42,7 @@ enum TabSectionFactory {
         if let currentSection = history.last {
             switch currentSection {
             case .timeline:
-                Text("List")
+                TimelineView()
             }
         } else {
             Text("Default")
