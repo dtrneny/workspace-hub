@@ -36,6 +36,7 @@ struct WorkspaceListRow: View {
                         .lineLimit(1)
                         .truncationMode(.tail)
                     Text("New notifications: \(notificationCount)")
+                        .font(.inter(14.0))
                         .foregroundColor(.grey300)
                         .lineLimit(1)
                         .truncationMode(.tail)

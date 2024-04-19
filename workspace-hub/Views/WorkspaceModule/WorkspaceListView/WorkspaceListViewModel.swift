@@ -34,7 +34,7 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     func createWorkspace() async {
         do {
             if let user = AuthService.shared.getCurrentUser()?.uid {
-                let newWorkspace = Workspace(ownerId: user, name: name.value, icon: icon.value.lowercased())
+                let newWorkspace = Workspace(ownerId: user, name: name.value, icon: icon.value.lowercased(), groups: [])
                 
                 if let createdWorkspace = await workspaceService.createWorkspace(workspace: newWorkspace) {
                     workspaces.append(createdWorkspace)
