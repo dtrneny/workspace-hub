@@ -1,17 +1,17 @@
 //
-//  Workspace.swift
+//  Group.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 07.04.2024.
+//  Created by František on 19.04.2024.
 //
 
 import Foundation
 import FirebaseFirestoreSwift
 
-struct Workspace: Identifiable, Codable {
+struct Group: Identifiable, Codable {
     @DocumentID var id: String? = UUID().uuidString
     var ownerId: String
     var name: String
-    var icon: String
-    var groups: [String]
+    var members: [String]
+    var events: [Date]
 }

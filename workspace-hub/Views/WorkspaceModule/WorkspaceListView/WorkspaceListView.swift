@@ -44,7 +44,8 @@ struct WorkspaceListView: View {
                     
                     ScrollView {
                         if viewModel.workspaces.isEmpty {
-                            Text("Loading...")
+                            Text("There are no workspaces...")
+                                .font(.inter(14.0))
                                 .padding()
                         } else {
                             ForEach(viewModel.workspaces) { workspace in

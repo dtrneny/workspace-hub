@@ -16,6 +16,8 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
     
     private var repository = FirestoreRepository<Workspace>(collection: "workspaces")
     
+    private var groupRepository = FirestoreRepository<Group>(collection: "groups")
+    
     func getWorkspaces() async -> [Workspace] {
         do {
             let workspaces = try await repository.fetchData().get()
@@ -40,6 +42,27 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
         do {
             let workspace = try await repository.getById(id: id).get()
             return workspace
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    func getGroupsByWorkspaceId(id: String) async -> [Group]? {
+        do {
+            guard let workspace = try await repository.getById(id: id).get()
+            else {
+                return []
+            }
+
+            let groups = try await groupRepository.fetchData().get()
+            let groupsInWorkspace = groups.filter { group in
+                workspace.groups.contains { groupId in
+                    groupId == group.id
+                }
+            }
+            
+            return groupsInWorkspace
         }
         catch {
             return nil
