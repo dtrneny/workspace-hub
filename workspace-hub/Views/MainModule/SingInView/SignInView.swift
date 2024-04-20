@@ -49,16 +49,26 @@ extension SignInView {
     
     private var formView: some View {
         VStack(spacing: 19) {
-            TextInput(
-                fieldValue: $viewModel.email,
-                placeholder: "Enter your e-mail",
-                label: "E-mail address"
-            )
-            ProtectedInput(
-                fieldValue: $viewModel.password,
-                placeholder: "Enter your password",
-                label: "Password"
-            )
+            FormField {
+                TextInput(
+                    value: $viewModel.email,
+                    placeholder: "Enter your e-mail",
+                    label: "E-mail address"
+                )
+                if let error = viewModel.emailError {
+                    ErrorMessage(error: error)
+                }
+            }
+            FormField {
+                ProtectedInput(
+                    value: $viewModel.password,
+                    placeholder: "Enter your password",
+                    label: "Password"
+                )
+                if let error = viewModel.passwordError {
+                    ErrorMessage(error: error)
+                }
+            }
         }
         .padding(.bottom, 38)
     }

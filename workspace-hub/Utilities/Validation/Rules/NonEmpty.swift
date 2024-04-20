@@ -7,12 +7,8 @@
 
 import Foundation
 
-struct NonEmptyRule: ValidationRule {
-    typealias ValueType = String
-    
-    var errorMessage: String = "Field cannot be empty"
-    
-    func isValid(value: ValueType) -> Bool {
-        return !value.isEmpty
-    }
+func nonEmptyRule(value: String) -> String {
+    return !value.isEmpty
+        ? ""
+        : "Please do not leave this field empty."
 }

@@ -14,7 +14,9 @@ final class GroupListViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
     
-    @Published var name: FieldValue<String> = FieldValue("")
+    @Validated(rules: [nonEmptyRule])
+    var groupName: String = ""
+    @Published var groupNameError: String? = nil
     
     @Published var groups: [Group] = []
     
@@ -33,9 +35,15 @@ final class GroupListViewModel: ViewModelProtocol {
     }
     
     func createGroup() async {
+        
+        if (!$groupName.isValid()) {
+            groupNameError = $groupName.getError()
+            return
+        }
+        
         do {
             if let user = AuthService.shared.getCurrentUser()?.uid {
-                let newGroup = Group(ownerId: user, name: name.value, members: [], events: [])
+                let newGroup = Group(ownerId: user, name: groupName, members: [], events: [])
                 
                 if let createdGroup = await groupService.createGroup(group: newGroup) {
                     groups.append(createdGroup)

@@ -40,15 +40,21 @@ extension AddWorkspaceSheet {
     private var formView: some View {
         VStack(spacing: 19) {
             TextInput(
-                fieldValue: $viewModel.name,
+                value: $viewModel.workspaceName,
                 placeholder: "Your workspace",
                 label: "Name"
             )
+            if let error = viewModel.workspaceNameError {
+                ErrorMessage(error: error)
+            }
             TextInput(
-                fieldValue: $viewModel.icon,
+                value: $viewModel.workspaceIcon,
                 placeholder: "heart",
                 label: "Icon"
             )
+            if let error = viewModel.workspaceIconError {
+                ErrorMessage(error: error)
+            }
         }
         .padding(.bottom, 38)
     }

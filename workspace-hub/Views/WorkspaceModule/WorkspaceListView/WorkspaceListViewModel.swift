@@ -14,8 +14,13 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
     
-    @Published var name: FieldValue<String> = FieldValue("")
-    @Published var icon: FieldValue<String> = FieldValue("")
+    @Validated(rules: [nonEmptyRule])
+    var workspaceName: String = ""
+    @Published var workspaceNameError: String? = nil
+    
+    @Validated(rules: [nonEmptyRule])
+    var workspaceIcon: String = ""
+    @Published var workspaceIconError: String? = nil
     
     @Published var workspaces: [Workspace] = []
     
@@ -32,9 +37,16 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     }
     
     func createWorkspace() async {
+        
+        if (!$workspaceName.isValid() || !$workspaceIcon.isValid()) {
+            workspaceNameError = $workspaceName.getError()
+            workspaceIconError = $workspaceIcon.getError()
+            return
+        }
+        
         do {
             if let user = AuthService.shared.getCurrentUser()?.uid {
-                let newWorkspace = Workspace(ownerId: user, name: name.value, icon: icon.value.lowercased(), groups: [])
+                let newWorkspace = Workspace(ownerId: user, name: workspaceName, icon: workspaceIcon, groups: [])
                 
                 if let createdWorkspace = await workspaceService.createWorkspace(workspace: newWorkspace) {
                     workspaces.append(createdWorkspace)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProtectedInput: View {
     
-    @Binding var fieldValue: FieldValue<String>
+    @Binding var value: String
     @State private var isContentHidden = true
     @FocusState private var isFocused: Bool
 
@@ -40,14 +40,6 @@ struct ProtectedInput: View {
                 )
                 .onTapGesture { isFocused = true }
             }
-            
-            if (!fieldValue.isValid()) {
-                let errors = fieldValue.brokenRules()
-                
-                if (errors.count > 0) {
-                    ErrorMessage(error: errors[0])
-                }
-            }
         }
     }
 }
@@ -57,7 +49,7 @@ extension ProtectedInput {
     private var textFieldView: some View {
         TextField(
             "",
-            text: $fieldValue.value,
+            text: $value,
             prompt: Text(placeholder ?? "Enter text").foregroundStyle(.grey300)
         )
         .foregroundStyle(.grey700)
@@ -68,7 +60,7 @@ extension ProtectedInput {
     private var secureFieldView: some View {
         SecureField(
             "",
-            text: $fieldValue.value,
+            text: $value,
             prompt: Text(placeholder ?? "Enter text").foregroundStyle(.grey300)
         )
         .foregroundStyle(.grey700)
@@ -91,11 +83,11 @@ extension ProtectedInput {
 
 #Preview {
     struct Preview: View {
-        @State var testingValue: FieldValue<String> = FieldValue<String>("")
+        @State var testingValue: String = ""
 
         var body: some View {
             ProtectedInput(
-                fieldValue: $testingValue,
+                value: $testingValue,
                 placeholder: "Enter text",
                 label: "Label"
             )
