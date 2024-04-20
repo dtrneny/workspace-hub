@@ -33,6 +33,8 @@
 		635667BE2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */; };
 		638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DA2BA8B84F00105C6E /* RootViewModel.swift */; };
 		638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D30DF2BA8B8DC00105C6E /* SplashView.swift */; };
+		638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D939E2BD237F5006B0B3A /* ValidatedWrapper.swift */; };
+		638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93A12BD40B5F006B0B3A /* FormField.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
@@ -79,8 +81,6 @@
 		63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF642BC0571E0075ABDA /* AccountService.swift */; };
 		63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF692BC27E860075ABDA /* WorkspaceService.swift */; };
 		63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */; };
-		63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */; };
-		63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF722BC3EDD90075ABDA /* FieldValue.swift */; };
 		63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF752BC3F2070075ABDA /* NonEmpty.swift */; };
 		63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */; };
 		63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */; };
@@ -143,6 +143,8 @@
 		635667BD2BA2D5FD00A0AD36 /* workspace_hubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		638D30DA2BA8B84F00105C6E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		638D30DF2BA8B8DC00105C6E /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		638D939E2BD237F5006B0B3A /* ValidatedWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatedWrapper.swift; sourceTree = "<group>"; };
+		638D93A12BD40B5F006B0B3A /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
@@ -188,8 +190,6 @@
 		63C9DF642BC0571E0075ABDA /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		63C9DF692BC27E860075ABDA /* WorkspaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceService.swift; sourceTree = "<group>"; };
 		63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
-		63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationRule.swift; sourceTree = "<group>"; };
-		63C9DF722BC3EDD90075ABDA /* FieldValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValue.swift; sourceTree = "<group>"; };
 		63C9DF752BC3F2070075ABDA /* NonEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmpty.swift; sourceTree = "<group>"; };
 		63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -390,6 +390,14 @@
 				638D30DF2BA8B8DC00105C6E /* SplashView.swift */,
 			);
 			path = SplashView;
+			sourceTree = "<group>";
+		};
+		638D93A02BD40B4F006B0B3A /* FormField */ = {
+			isa = PBXGroup;
+			children = (
+				638D93A12BD40B5F006B0B3A /* FormField.swift */,
+			);
+			path = FormField;
 			sourceTree = "<group>";
 		};
 		638F23EB2BACD9F700704CE0 /* ProtectedInput */ = {
@@ -614,6 +622,7 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				638D93A02BD40B4F006B0B3A /* FormField */,
 				2E46547A2BD171D000BF2944 /* DateSwiper */,
 				63C467B42BA99D660081E7EA /* TextInput */,
 				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
@@ -662,8 +671,7 @@
 		63C9DF6D2BC3EBF80075ABDA /* Validation */ = {
 			isa = PBXGroup;
 			children = (
-				63C9DF6E2BC3EC040075ABDA /* ValidationRule.swift */,
-				63C9DF722BC3EDD90075ABDA /* FieldValue.swift */,
+				638D939E2BD237F5006B0B3A /* ValidatedWrapper.swift */,
 				63C9DF742BC3F1F60075ABDA /* Rules */,
 			);
 			path = Validation;
@@ -914,6 +922,7 @@
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
 				639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */,
+				638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
@@ -936,7 +945,6 @@
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
 				639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */,
-				63C9DF732BC3EDD90075ABDA /* FieldValue.swift in Sources */,
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
 				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
@@ -950,7 +958,6 @@
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				2E46548F2BD2A70100BF2944 /* GroupListViewModel.swift in Sources */,
-				63C9DF6F2BC3EC040075ABDA /* ValidationRule.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
@@ -968,6 +975,7 @@
 				2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */,
 				638F242A2BADBA5700704CE0 /* BorderedButtonStyle.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
+				638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */,
 				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
 				63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */,
 				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,

@@ -27,8 +27,10 @@ struct SignUpView: View {
             
             Button("Create account") {
                 Task {
-                    await viewModel.signUp()
-                    mainRouter.pop()
+                    let result = await viewModel.signUp()
+                    if (result) {
+                        mainRouter.pop()
+                    }
                 }
             }.filledButtonStyle()
         }
@@ -43,29 +45,44 @@ extension SignUpView {
     
     private var formView: some View {
         VStack(spacing: 19) {
-            TextInput(
-                fieldValue: $viewModel.fullname,
-                placeholder: "e. g. John Doe",
-                label: "Fullname"
-            )
-            TextInput(
-                fieldValue: $viewModel.email,
-                placeholder: "e. g. example@workspacehub.com",
-                label: "E-mail address"
-            )
-            ProtectedInput(
-                fieldValue: $viewModel.password,
-                placeholder: "Enter your password",
-                label: "Password"
-            )
-            VStack(alignment: .leading, spacing: 8.0) {
+            FormField {
+                TextInput(
+                    value: $viewModel.fullname,
+                    placeholder: "e. g. John Doe",
+                    label: "Fullname"
+                )
+                if let error = viewModel.fullnameError {
+                    ErrorMessage(error: error)
+                }
+            }
+            FormField {
+                TextInput(
+                    value: $viewModel.email,
+                    placeholder: "e. g. example@workspacehub.com",
+                    label: "E-mail address"
+                )
+                if let error = viewModel.emailError {
+                    ErrorMessage(error: error)
+                }
+            }
+            FormField {
                 ProtectedInput(
-                    fieldValue: $viewModel.confPassword,
+                    value: $viewModel.password,
+                    placeholder: "Enter your password",
+                    label: "Password"
+                )
+                if let error = viewModel.passwordError {
+                    ErrorMessage(error: error)
+                }
+            }
+            FormField {
+                ProtectedInput(
+                    value: $viewModel.confPassword,
                     placeholder: "Enter your password",
                     label: "Confirm password"
                 )
-                if((!viewModel.confPassword.value.isEmpty && !viewModel.password.value.isEmpty) && !viewModel.passwordsMatch) {
-                    ErrorMessage(error: "Passwords are not matching.")
+                if let error = viewModel.confPasswordError {
+                    ErrorMessage(error: error)
                 }
             }
         }

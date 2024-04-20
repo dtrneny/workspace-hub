@@ -12,15 +12,24 @@ struct SettingListView: View {
     @EnvironmentObject var mainRouter: MainRouter
     @ObservedObject private var viewModel = SettingListViewModel()
     
+    
     var body: some View {
         VStack {
-            Text("list")
             Button("Sign Out") {
                 if (viewModel.signOut()) {
                     mainRouter.replaceAll(with: .signIn)
                 }
             }
             .filledButtonStyle()
+            TextField("Test", text: $viewModel.username)
+                .foregroundStyle(.grey800)
+            
+            if (viewModel.usernameError != nil) {
+                ErrorMessage(error: viewModel.usernameError!)
+            }
+            Button("test") {
+                viewModel.submitForm()
+            }
         }
     }
 }

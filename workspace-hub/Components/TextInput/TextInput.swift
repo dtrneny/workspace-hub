@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TextInput: View {
     
-    @Binding var fieldValue: FieldValue<String>
+    @Binding var value: String
     @FocusState private var isFocused: Bool
     
     var placeholder: String? = nil
@@ -27,7 +27,7 @@ struct TextInput: View {
                 
                 TextField(
                     "",
-                    text: $fieldValue.value,
+                    text: $value,
                     prompt: Text(placeholder ?? "Enter text").foregroundStyle(.grey300)
                 )
                 .focused($isFocused)
@@ -41,25 +41,17 @@ struct TextInput: View {
                 )
                 .onTapGesture { isFocused = true }
             }
-            
-            if (!fieldValue.isValid()) {
-                let errors = fieldValue.brokenRules()
-                
-                if (errors.count > 0) {
-                    ErrorMessage(error: errors[0])
-                }
-            }
         }
     }
 }
 
 #Preview {
     struct Preview: View {
-        @State var testingValue: FieldValue<String> = FieldValue<String>("")
+        @State var testingValue: String = ""
 
         var body: some View {
             TextInput(
-                fieldValue: $testingValue,
+                value: $testingValue,
                 placeholder: "Enter text",
                 label: "Label"
             )

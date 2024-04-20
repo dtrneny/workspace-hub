@@ -14,18 +14,21 @@ class SignUpViewModel: ViewModelProtocol {
     @Published var state: ViewState = .idle
     let accountService: AccountServiceProtocol
 
-    @Published var fullname: FieldValue<String> = FieldValue("", rules: [
-        AnyValidationRule(NonEmptyRule())
-    ])
-    @Published var email: FieldValue<String> = FieldValue("", rules: [
-        AnyValidationRule(NonEmptyRule())
-    ])
-    @Published var password: FieldValue<String> = FieldValue("", rules: [
-        AnyValidationRule(NonEmptyRule())
-    ])
-    @Published var confPassword: FieldValue<String> = FieldValue("", rules: [
-        AnyValidationRule(NonEmptyRule())
-    ])
+    @Validated(rules: [nonEmptyRule])
+    var fullname: String = ""
+    @Published var fullnameError: String? = nil
+    
+    @Validated(rules: [nonEmptyRule])
+    var email: String = ""
+    @Published var emailError: String? = nil
+    
+    @Validated(rules: [nonEmptyRule])
+    var password: String = ""
+    @Published var passwordError: String? = nil
+    
+    @Validated(rules: [nonEmptyRule])
+    var confPassword: String = ""
+    @Published var confPasswordError: String? = nil
     
     @Published var photo: PhotosPickerItem? = nil
     @Published var loadedImage: UIImage? = nil
@@ -35,30 +38,46 @@ class SignUpViewModel: ViewModelProtocol {
     }
     
     var passwordsMatch: Bool {
-        return  password.value == confPassword.value
-
+        return  password == confPassword
     }
     
-    func signUp() async {
+    func signUp() async -> Bool {
+        if (!$fullname.isValid() || !$email.isValid() || !$password.isValid() || !$confPassword.isValid()) {
+            fullnameError = $fullname.getError()
+            emailError = $email.getError()
+            passwordError = $password.getError()
+            confPasswordError = $confPassword.getError()
+                        
+            return false
+        }
+        
+        if (password != confPassword) {
+            confPasswordError = "Passwords are not matching."
+            return false
+        }
+        
         do {
-            let user = try await AuthService.shared.signUp(email: email.value, password: password.value).get()
+            let user = try await AuthService.shared.signUp(email: email, password: password).get()
             
-            guard let photoData = try await photo?.loadTransferable(type: Data.self) else { return }
+            guard let photoData = try await photo?.loadTransferable(type: Data.self) else { return false }
             guard let (path, _) = try await StorageService.shared.saveImage(
                 data: photoData,
                 folder: StorageFolder.profilePictures,
                 path: user.uid
-            ).get() else { return }
+            ).get() else { return false }
                 
             let url = try await StorageService.shared.getUrlForImage(path: path).get()
             
             let _ = await accountService.createAccount(
-                account: Account(email: email.value, fullname: fullname.value, profileImage: url.absoluteString),
+                account: Account(email: email, fullname: fullname, profileImage: url.absoluteString),
                 id: user.uid
             )
+            
+            return true
         }
         catch {
             print(error)
+            return false
         }
     }
     
