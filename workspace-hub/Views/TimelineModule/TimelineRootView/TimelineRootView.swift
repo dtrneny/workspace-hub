@@ -18,12 +18,10 @@ struct TimelineRootView: View {
     }()
     
     var body: some View {
-        BaseLayout {
-            TabCoordinatorView(content: {
-                TabSectionFactory.viewForTimelineTabSection(history: coordinator.history)
-                    .environmentObject(coordinator)
-            }, coordinator: coordinator)
-        }
+        TabCoordinatorView(content: {
+            TabSectionFactory.viewForTimelineTabSection(history: coordinator.history)
+                .environmentObject(coordinator)
+        }, coordinator: coordinator)
     }
 }
 

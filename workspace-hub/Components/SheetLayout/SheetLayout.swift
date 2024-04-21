@@ -1,5 +1,5 @@
 //
-//  FormField.swift
+//  SheetLayout.swift
 //  workspace-hub
 //
 //  Created by Dalibor Trněný on 20.04.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FormField<Content: View>: View {
+struct SheetLayout<Content: View>: View {
     
     let content: Content
     
@@ -16,8 +16,17 @@ struct FormField<Content: View>: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8.0) {
+        VStack(alignment: .leading) {
             content
+            Spacer()
         }
+        .padding()
+        .presentationBackground(.white)
+    }
+}
+
+#Preview {
+    SheetLayout{
+        Text("testing")
     }
 }

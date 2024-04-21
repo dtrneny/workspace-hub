@@ -12,9 +12,7 @@ struct GroupListView: View {
     @EnvironmentObject var coordinator: GroupCoordinator
     
     @StateObject private var viewModel = GroupListViewModel(groupService: GroupService())
-    
-    @State private var isAddingItemSheetPresented = false
-    
+        
     var body: some View {
         BaseLayout {
             VStack {
@@ -24,7 +22,7 @@ struct GroupListView: View {
                     Spacer()
                     
                     OperationButton(icon: "plus") {
-                        isAddingItemSheetPresented.toggle()
+                        viewModel.presentAddition.toggle()
                     }
                 }
                 
@@ -41,8 +39,8 @@ struct GroupListView: View {
                 }
                 
             }
-        }.sheet(isPresented: $isAddingItemSheetPresented) {
-            AddGroupSheet(isAddingItemSheetPresented: $isAddingItemSheetPresented)
+        }.sheet(isPresented: $viewModel.presentAddition) {
+            GroupAdditionView(isPresented: $viewModel.presentAddition)
         }
         .task {
             await viewModel.getGroupsOfCurrentUser()
