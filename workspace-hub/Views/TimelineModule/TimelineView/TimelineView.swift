@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct TimelineView: View {
+    
     @ObservedObject private var coordinator: TimelineCoordinator = TimelineCoordinator()
+    private var today: Date = Date()
     @State private var selectedDate: Date = Date()
     @State private var selectedMonth: Date = {
         let calendar = Calendar.current
@@ -19,22 +21,28 @@ struct TimelineView: View {
 
     var body: some View {
         BaseLayout {
-                HStack(alignment: .firstTextBaseline) {
-                    ViewTitle(title: "Timeline")
-                    
-                    Spacer()
-                    
-                    OperationButton(icon: "line.3.horizontal.decrease") {
-                        print("list")
-                    }
-                    .padding(.trailing, 10)
-                    
-                    OperationButton(icon: "arrow.counterclockwise") {
-                        print("arrow counterclockwise icon")
-                    }
-                }
+            HStack(alignment: .firstTextBaseline) {
+                ViewTitle(title: "Timeline")
                 
-                DateSwiper(dates: generateDates(for: selectedMonth), itemWidth: 20, selectedDate: $selectedDate, selectedMonth: $selectedMonth)
+                Spacer()
+                
+                OperationButton(icon: "line.3.horizontal.decrease") {
+                    print("list")
+                }
+                .padding([.trailing], 10)
+                
+                OperationButton(icon: "arrow.counterclockwise") {
+                    print("arrow counterclockwise icon")
+                }
+            }
+            
+            DateSwiper(
+                dates: generateDates(for: selectedMonth),
+                itemWidth: 20,
+                initialDate: today,
+                selectedDate: $selectedDate,
+                selectedMonth: $selectedMonth
+            )
         }
     }
     

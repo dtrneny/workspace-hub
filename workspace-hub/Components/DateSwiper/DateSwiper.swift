@@ -12,17 +12,17 @@ struct DateSwiper: View {
     
     let itemWidth: CGFloat
     
+    let initialDate: Date
+    
     @Binding var selectedDate: Date
     
     @Binding var selectedMonth: Date
-        
-    @State private var scrollOffset: CGFloat = .zero
-    
+            
     @State private var shouldScrollToSelectedDate = false
     
     var body: some View {
         VStack {
-            HStack {
+            HStack() {
                 Spacer()
                 OperationButton(icon: "chevron.left") {
                     self.selectedMonth = self.previousMonth(from: self.selectedMonth)
@@ -32,6 +32,7 @@ struct DateSwiper: View {
                 
                 Text(monthName(from: selectedMonth))
                     .frame(width: 200)
+                    .foregroundStyle(.secondary900)
                 
                 Spacer()
                 
@@ -41,47 +42,24 @@ struct DateSwiper: View {
                 Spacer()
             }
             
-            ScrollViewReader { value in
-                ScrollView(.horizontal, showsIndicators: false) {
+            ScrollView(.horizontal, showsIndicators: false) {
+                ScrollViewReader { value in
                     HStack(spacing: 20) {
                         ForEach(dates, id: \.self) { date in
                             DateItem(date: date, selectedDate: $selectedDate)
-                                .id(date)
+                                .id(date.day)
                                 .onTapGesture {
-                                    self.selectedDate = date
+                                    selectedDate = date
                                 }
                         }
                     }
-                    .padding()
+                    .onAppear {
+                        value.scrollTo(selectedDate.day, anchor: .center)
+                    }
                 }
             }
         }
     }
-    
-//    private func swipeGesture(date: Date) -> some Gesture {
-//        DragGesture()
-//            .onEnded { value in
-//                let threshold: CGFloat = 50
-//                if value.translation.width > threshold {
-//                    selectPreviousDate()
-//                } else if value.translation.width < -threshold {
-//                    selectNextDate()
-//                }
-//            }
-//    }
-    
-//    private func selectPreviousDate() {
-//            if let index = dates.firstIndex(of: selectedDate), index > 0 {
-//                selectedDate = dates[index - 1]
-//            }
-//        }
-//        
-//    private func selectNextDate() {
-//        if let index = dates.firstIndex(of: selectedDate), index < dates.count - 1 {
-//            selectedDate = dates[index + 1]
-//        }
-//    }
-    
     
     private func monthName(from date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -108,22 +86,5 @@ extension Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "E"
         return dateFormatter.string(from: self)
-    }
-}
-
-struct ContentView: View {
-    @State private var selectedDate = Date()
-    @State private var selectedMonth = Date()
-    
-    var body: some View {
-        VStack {
-            DateSwiper(dates: [], itemWidth: 20, selectedDate: $selectedDate, selectedMonth: $selectedMonth)
-        }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

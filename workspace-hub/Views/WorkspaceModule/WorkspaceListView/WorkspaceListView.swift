@@ -11,17 +11,15 @@ struct WorkspaceListView: View {
     
     @State private var selectedOption: Int = 0
     @EnvironmentObject var coordinator: WorkspaceCoordinator
-    
     @StateObject private var viewModel = WorkspaceListViewModel(workspaceService: WorkspaceService())
     
-    @State private var isAddingItemSheetPresented = false
     
     var body: some View {
         BaseLayout {
             VStack(spacing: 38) {
                 VStack(alignment: .leading) {
                     ViewTitle(title: "Newest message")
-                    WorkspaceAcitvityCard (
+                    WorkspaceActivityCard (
                         title: "Naomi Foo",
                         text: "Hey there! Just wanted to touch base and say thanks for all your hard  work on editing the video. Really appreciate your dedication to making  it...",
                         image: "logo"
@@ -38,7 +36,7 @@ struct WorkspaceListView: View {
                         Spacer()
                         
                         OperationButton(icon: "plus") {
-                            isAddingItemSheetPresented.toggle()
+                            viewModel.presentAddition.toggle()
                         }
                     }
                     
@@ -55,8 +53,8 @@ struct WorkspaceListView: View {
                     }
                 }
             }
-        }.sheet(isPresented: $isAddingItemSheetPresented) {
-            AddWorkspaceSheet(isAddingItemSheetPresented: $isAddingItemSheetPresented)
+        }.sheet(isPresented: $viewModel.presentAddition) {
+            WorkspaceAdditionView(isPresented: $viewModel.presentAddition)
         }
         .task {
             await viewModel.getWorkspaces()

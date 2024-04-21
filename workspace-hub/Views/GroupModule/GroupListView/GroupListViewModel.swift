@@ -19,8 +19,9 @@ final class GroupListViewModel: ViewModelProtocol {
     @Published var groupNameError: String? = nil
     
     @Published var groups: [Group] = []
-    
     @Published var workspaceGroups: [Group] = []
+    @Published var presentAddition: Bool = false
+
     
     init(groupService: GroupServiceProtocol) {
         self.groupService = groupService
@@ -31,26 +32,6 @@ final class GroupListViewModel: ViewModelProtocol {
         do {
             groups = await groupService.getGroupsOfCurrentUser()
             state = .success
-        }
-    }
-    
-    func createGroup() async {
-        
-        if (!$groupName.isValid()) {
-            groupNameError = $groupName.getError()
-            return
-        }
-        
-        do {
-            if let user = AuthService.shared.getCurrentUser()?.uid {
-                let newGroup = Group(ownerId: user, name: groupName, members: [], events: [])
-                
-                if let createdGroup = await groupService.createGroup(group: newGroup) {
-                    groups.append(createdGroup)
-                }
-            } else {
-                print("User is not logged in or user ID is not available")
-            }
         }
     }
 }

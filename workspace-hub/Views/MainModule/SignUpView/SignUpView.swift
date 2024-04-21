@@ -14,7 +14,7 @@ struct SignUpView: View {
     @StateObject private var viewModel = SignUpViewModel(accountService: AccountService())
     
     var body: some View {
-        VStack(alignment: .leading) {
+        BaseLayout {
             Text("Sign up")
                 .foregroundColor(.secondary900)
                 .font(.inter(30.0))
@@ -27,8 +27,7 @@ struct SignUpView: View {
             
             Button("Create account") {
                 Task {
-                    let result = await viewModel.signUp()
-                    if (result) {
+                    if (await viewModel.signUp()) {
                         mainRouter.pop()
                     }
                 }

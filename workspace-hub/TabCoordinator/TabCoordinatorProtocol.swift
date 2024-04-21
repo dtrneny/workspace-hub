@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 protocol TabCoordinatorProtocol: ObservableObject  {
     associatedtype TabSection: Hashable
     

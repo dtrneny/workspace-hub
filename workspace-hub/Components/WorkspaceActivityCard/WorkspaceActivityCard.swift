@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorkspaceAcitvityCard: View {
+struct WorkspaceActivityCard: View {
     
     var title: String
     var text: String
@@ -48,7 +48,7 @@ struct WorkspaceAcitvityCard: View {
     }
 }
 
-extension WorkspaceAcitvityCard {
+extension WorkspaceActivityCard {
     private var decorativeCircles: some View {
         ZStack {
             Circle()
@@ -67,7 +67,7 @@ extension WorkspaceAcitvityCard {
 
 #Preview {
     VStack {
-        WorkspaceAcitvityCard(
+        WorkspaceActivityCard(
             title: "Naomi Foo",
             text: "Hey there! Just wanted to touch base and say thanks for all your hard  work on editing the video. Really appreciate your dedication to making  it...",
             image: "logo"
