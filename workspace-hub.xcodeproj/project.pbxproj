@@ -44,6 +44,10 @@
 		638DBF0A2BDB895E003A1795 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF092BDB895E003A1795 /* UIColorExtensions.swift */; };
 		638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF0B2BDB8DCC003A1795 /* HexColorsUtil.swift */; };
 		638DBF0F2BDBA013003A1795 /* WorkspaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF0E2BDBA013003A1795 /* WorkspaceDetailView.swift */; };
+		638DBF112BDBA510003A1795 /* WorkspaceDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF102BDBA510003A1795 /* WorkspaceDetailViewModel.swift */; };
+		638DBF162BDBA716003A1795 /* WorkspaceDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF152BDBA716003A1795 /* WorkspaceDetailCard.swift */; };
+		638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */; };
+		638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
@@ -160,6 +164,10 @@
 		638DBF092BDB895E003A1795 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		638DBF0B2BDB8DCC003A1795 /* HexColorsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorsUtil.swift; sourceTree = "<group>"; };
 		638DBF0E2BDBA013003A1795 /* WorkspaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceDetailView.swift; sourceTree = "<group>"; };
+		638DBF102BDBA510003A1795 /* WorkspaceDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceDetailViewModel.swift; sourceTree = "<group>"; };
+		638DBF152BDBA716003A1795 /* WorkspaceDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceDetailCard.swift; sourceTree = "<group>"; };
+		638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditView.swift; sourceTree = "<group>"; };
+		638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditViewModel.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
@@ -461,8 +469,26 @@
 			isa = PBXGroup;
 			children = (
 				638DBF0E2BDBA013003A1795 /* WorkspaceDetailView.swift */,
+				638DBF102BDBA510003A1795 /* WorkspaceDetailViewModel.swift */,
 			);
 			path = WorkspaceDetailView;
+			sourceTree = "<group>";
+		};
+		638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF152BDBA716003A1795 /* WorkspaceDetailCard.swift */,
+			);
+			path = WorkspaceDetailCard;
+			sourceTree = "<group>";
+		};
+		638DBF172BDBD462003A1795 /* WorkspaceEditView */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */,
+				638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */,
+			);
+			path = WorkspaceEditView;
 			sourceTree = "<group>";
 		};
 		638F23EB2BACD9F700704CE0 /* ProtectedInput */ = {
@@ -561,6 +587,7 @@
 				639DBC012BCFE4DF003D24FB /* WorkspaceRootView */,
 				639DBBFA2BCFD235003D24FB /* WorkspaceListView */,
 				638D93A32BD41544006B0B3A /* WorkspaceAdditionView */,
+				638DBF172BDBD462003A1795 /* WorkspaceEditView */,
 				638DBF0D2BDBA002003A1795 /* WorkspaceDetailView */,
 			);
 			path = WorkspaceModule;
@@ -690,6 +717,7 @@
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
 				639DBC2C2BD02B65003D24FB /* WorkspaceActivityCard */,
+				638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */,
 				2E4654922BD2AA9200BF2944 /* GroupListRow */,
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
@@ -1035,6 +1063,7 @@
 				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
 				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */,
+				638DBF112BDBA510003A1795 /* WorkspaceDetailViewModel.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				639DBBFF2BCFD8EB003D24FB /* GroupListView.swift in Sources */,
@@ -1044,7 +1073,9 @@
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
 				2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
+				638DBF162BDBA716003A1795 /* WorkspaceDetailCard.swift in Sources */,
 				638DBF0F2BDBA013003A1795 /* WorkspaceDetailView.swift in Sources */,
+				638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */,
 				638DBEF82BDAD5F7003A1795 /* ViewExtensions.swift in Sources */,
 				638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */,
 				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
@@ -1052,6 +1083,7 @@
 				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,
 				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
+				638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */,
 				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
 				638D93AF2BD50DD3006B0B3A /* GroupAdditionViewModel.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,

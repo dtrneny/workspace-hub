@@ -10,6 +10,8 @@ import Foundation
 protocol WorkspaceServiceProtocol {
     func getWorkspaces() async -> [Workspace]
     func createWorkspace(workspace: Workspace) async -> Workspace?
+    func getWorkspace(id: String) async -> Workspace?
+    func updateWorkspace(id: String, update: Workspace) async -> Workspace?
 }
 
 class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
@@ -41,6 +43,16 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
     func getWorkspace(id: String) async -> Workspace? {
         do {
             let workspace = try await repository.getById(id: id).get()
+            return workspace
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    func updateWorkspace(id: String, update: Workspace) async -> Workspace? {
+        do {
+            let workspace = try await repository.update(id: id, data: update).get()
             return workspace
         }
         catch {

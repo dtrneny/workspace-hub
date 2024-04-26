@@ -13,6 +13,7 @@ enum MainRoutes: Hashable {
     case signUp
     case home
     case workspaceAddition
+    case workspaceEdit(workspaceId: String)
 }
 
 class MainRouter: BaseRouter<MainRoutes> {}
