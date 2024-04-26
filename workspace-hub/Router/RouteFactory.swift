@@ -29,6 +29,10 @@ enum RouteFactory {
             RouterContainerView(content: {
                 WorkspaceAdditionView()
             }, router: router)
+        case .workspaceEdit(let id):
+            RouterContainerView(content: {
+                WorkspaceEditView(workspaceId: id)
+            }, router: router)
         }
     }
 }
