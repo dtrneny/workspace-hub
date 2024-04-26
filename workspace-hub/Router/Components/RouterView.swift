@@ -25,9 +25,11 @@ struct RouterView<Router: RouterProtocol, Routes: Hashable, RenderedContent: Vie
     }
 }
 
-extension UINavigationController {
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        interactivePopGestureRecognizer?.delegate = nil
-    }
-}
+// MARK: You can swipe out of home to empty page,
+// MARK: so this part should communicate with router
+//extension UINavigationController {
+//    open override func viewDidLoad() {
+//        super.viewDidLoad()
+//        interactivePopGestureRecognizer?.delegate = nil
+//    }
+//}

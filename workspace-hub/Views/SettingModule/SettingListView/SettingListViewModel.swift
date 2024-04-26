@@ -6,24 +6,10 @@
 //
 
 import Foundation
-import SwiftUI
 
-@MainActor
-class SettingListViewModel: ViewModelProtocol {
+final class SettingListViewModel: ViewModelProtocol {
+    
     @Published var state: ViewState = .idle
-    
-    @Validated(rules: [nonEmptyRule])
-    var username: String = ""
-    @Published var usernameError: String? = nil
-    
-    func submitForm() {
-        if (!$username.isValid()) {
-            usernameError = $username.getError()
-            return
-        }
-        
-        print(username)
-    }
 
     func signOut() -> Bool {
         do {

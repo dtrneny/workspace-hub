@@ -7,9 +7,9 @@
 
 import Foundation
 import Firebase
-import SwiftUI
 
-class RootViewModel: ViewModelProtocol {
+final class RootViewModel: ViewModelProtocol {
+    
     @Published var state: ViewState = .loading
 
     init() {

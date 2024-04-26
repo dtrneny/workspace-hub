@@ -10,8 +10,8 @@ import SwiftUI
 struct SettingListView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
-    @ObservedObject private var viewModel = SettingListViewModel()
     
+    @ObservedObject private var viewModel = SettingListViewModel()
     
     var body: some View {
         VStack {
@@ -21,15 +21,6 @@ struct SettingListView: View {
                 }
             } content: {
                 Text("Sign Out")
-            }
-            TextField("Test", text: $viewModel.username)
-                .foregroundStyle(.grey800)
-            
-            if (viewModel.usernameError != nil) {
-                ErrorMessage(error: viewModel.usernameError!)
-            }
-            Button("test") {
-                viewModel.submitForm()
             }
         }
     }

@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 final class SignInViewModel: ViewModelProtocol {
+    
     @Published var state: ViewState = .idle
+    
     @Published var singingIn: Bool = false
     
     @Validated(rules: [nonEmptyRule])

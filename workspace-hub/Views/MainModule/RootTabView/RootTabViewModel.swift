@@ -6,10 +6,9 @@
 //
 
 import Foundation
-import SwiftUI
 
-@MainActor
-class RootTabViewModel: ViewModelProtocol {
+final class RootTabViewModel: ViewModelProtocol {
+    
     @Published var state: ViewState = .idle
 
     func signOut() -> Bool {

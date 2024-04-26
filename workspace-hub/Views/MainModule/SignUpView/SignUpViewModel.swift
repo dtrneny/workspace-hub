@@ -9,12 +9,17 @@ import Foundation
 import SwiftUI
 import PhotosUI
 
-class SignUpViewModel: ViewModelProtocol {
+final class SignUpViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
-    @Published var singingUp: Bool = false
-
+    
     let accountService: AccountServiceProtocol
+    
+    init(accountService: AccountServiceProtocol) {
+        self.accountService = accountService
+    }
+    
+    @Published var singingUp: Bool = false
 
     @Validated(rules: [nonEmptyRule])
     var firstname: String = ""
@@ -38,10 +43,6 @@ class SignUpViewModel: ViewModelProtocol {
     
     @Published var photo: PhotosPickerItem? = nil
     @Published var loadedImage: UIImage? = nil
-    
-    init(accountService: AccountServiceProtocol) {
-        self.accountService = accountService
-    }
     
     var passwordsMatch: Bool {
         return  password == confPassword

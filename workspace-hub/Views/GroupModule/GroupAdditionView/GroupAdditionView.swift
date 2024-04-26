@@ -9,9 +9,13 @@ import SwiftUI
 
 struct GroupAdditionView: View {
     
-    @Binding var isPresented: Bool
     @EnvironmentObject var coordinator: GroupCoordinator
-    @StateObject private var viewModel = GroupAdditionViewModel(groupService: GroupService())
+    
+    @StateObject private var viewModel = GroupAdditionViewModel(
+        groupService: GroupService()
+    )
+    
+    @Binding var isPresented: Bool
     
     var body: some View {
         SheetLayout {

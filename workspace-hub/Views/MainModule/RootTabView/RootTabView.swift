@@ -10,6 +10,7 @@ import SwiftUI
 struct RootTabView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
+    
     @StateObject private var viewModel = RootTabViewModel()
     
     init() {

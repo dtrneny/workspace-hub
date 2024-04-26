@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TimelineView: View {
     
-    @ObservedObject private var coordinator: TimelineCoordinator = TimelineCoordinator()
+    @EnvironmentObject var coordinator: TimelineCoordinator
+    
     private var today: Date = Date()
     @State private var selectedDate: Date = Date()
     @State private var selectedMonth: Date = {

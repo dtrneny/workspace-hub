@@ -6,26 +6,24 @@
 //
 
 import Foundation
-import SwiftUI
 
 final class GroupListViewModel: ViewModelProtocol {
     
-    let groupService: GroupServiceProtocol
-    
     @Published var state: ViewState = .idle
     
-    @Validated(rules: [nonEmptyRule])
-    var groupName: String = ""
-    @Published var groupNameError: String? = nil
-    
-    @Published var groups: [Group] = []
-    @Published var workspaceGroups: [Group] = []
-    @Published var presentAddition: Bool = false
-
+    let groupService: GroupServiceProtocol
     
     init(groupService: GroupServiceProtocol) {
         self.groupService = groupService
     }
+    
+    @Published var groups: [Group] = []
+    @Published var workspaceGroups: [Group] = []
+    @Published var presentAddition: Bool = false
+        
+    @Validated(rules: [nonEmptyRule])
+    var groupName: String = ""
+    @Published var groupNameError: String? = nil
     
     func getGroupsOfCurrentUser() async {
         state = .loading

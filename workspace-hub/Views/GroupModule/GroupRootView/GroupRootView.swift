@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GroupRootView: View {
+    
     @ObservedObject private var coordinator: GroupCoordinator = GroupCoordinator()
 
     var body: some View {

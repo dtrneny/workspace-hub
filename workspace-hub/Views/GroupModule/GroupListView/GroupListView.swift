@@ -11,7 +11,9 @@ struct GroupListView: View {
     
     @EnvironmentObject var coordinator: GroupCoordinator
     
-    @StateObject private var viewModel = GroupListViewModel(groupService: GroupService())
+    @StateObject private var viewModel = GroupListViewModel(
+        groupService: GroupService()
+    )
         
     var body: some View {
         BaseLayout {
