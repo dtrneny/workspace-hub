@@ -25,13 +25,7 @@ struct SignUpView: View {
             
             formView
             
-            Button("Create account") {
-                Task {
-                    if (await viewModel.signUp()) {
-                        mainRouter.pop()
-                    }
-                }
-            }.filledButtonStyle()
+            signUpButton
         }
     }
 }
@@ -86,6 +80,23 @@ extension SignUpView {
             }
         }
         .padding(.bottom, 38)
+    }
+    
+    private var signUpButton: some View {
+        BaseButton {
+            Task {
+                if (await viewModel.signUp()) { mainRouter.pop() }
+            }
+        } content: {
+            HStack (spacing: 8) {
+                if (viewModel.singingUp) {
+                    ProgressView()
+                        .tint(.white)
+                }
+                Text("Sign up")
+            }
+        }
+        .padding([.bottom], 76)
     }
     
     private var profilePicture: some View {

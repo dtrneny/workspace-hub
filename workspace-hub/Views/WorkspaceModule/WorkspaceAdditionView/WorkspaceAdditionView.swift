@@ -19,13 +19,17 @@ struct WorkspaceAdditionView: View {
             
             formView
             
-            Button("Create workspace") {
+            Image(systemName: viewModel.selectedIcon)
+                        
+            BaseButton {
                 Task {
                     if(await viewModel.createWorkspace()) {
                         isPresented = false
                     }
                 }
-            }.filledButtonStyle()
+            } content: {
+                Text("Create workspace")
+            }
         }
     }
 }

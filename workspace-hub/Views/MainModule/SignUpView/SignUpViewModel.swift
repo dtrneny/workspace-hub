@@ -12,6 +12,8 @@ import PhotosUI
 class SignUpViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
+    @Published var singingUp: Bool = false
+
     let accountService: AccountServiceProtocol
 
     @Validated(rules: [nonEmptyRule])
@@ -57,6 +59,7 @@ class SignUpViewModel: ViewModelProtocol {
         }
         
         do {
+            singingUp = true
             let user = try await AuthService.shared.signUp(email: email, password: password).get()
             
             guard let photoData = try await photo?.loadTransferable(type: Data.self) else { return false }
@@ -73,6 +76,7 @@ class SignUpViewModel: ViewModelProtocol {
                 id: user.uid
             )
             
+            singingUp = false
             return true
         }
         catch {

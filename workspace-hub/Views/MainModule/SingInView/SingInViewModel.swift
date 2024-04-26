@@ -10,6 +10,7 @@ import SwiftUI
 
 final class SignInViewModel: ViewModelProtocol {
     @Published var state: ViewState = .idle
+    @Published var singingIn: Bool = false
     
     @Validated(rules: [nonEmptyRule])
     var email: String = ""
@@ -28,7 +29,9 @@ final class SignInViewModel: ViewModelProtocol {
         }
         
         do {
+            singingIn = true
             let _ = try await AuthService.shared.signIn(email: email, password: password).get()
+            singingIn = false
             return true
         }
         catch {
