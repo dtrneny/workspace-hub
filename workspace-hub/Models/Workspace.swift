@@ -13,5 +13,6 @@ struct Workspace: Identifiable, Codable {
     var ownerId: String
     var name: String
     var icon: String
+    var hexColor: String?
     var groups: [String]
 }

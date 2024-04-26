@@ -11,6 +11,7 @@ struct WorkspaceListView: View {
     
     @State private var selectedOption: Int = 0
     @EnvironmentObject var coordinator: WorkspaceCoordinator
+    @EnvironmentObject var mainRouter: MainRouter
     @StateObject private var viewModel = WorkspaceListViewModel(workspaceService: WorkspaceService())
     
     
@@ -36,7 +37,7 @@ struct WorkspaceListView: View {
                         Spacer()
                         
                         OperationButton(icon: "plus") {
-                            viewModel.presentAddition.toggle()
+                            mainRouter.navigate(to: .workspaceAddition)
                         }
                     }
                     
@@ -47,14 +48,21 @@ struct WorkspaceListView: View {
                                 .padding()
                         } else {
                             ForEach(viewModel.workspaces) { workspace in
-                                WorkspaceListRow(title: workspace.name, notificationCount: 5, icon: workspace.icon, imageColor: .primaryRed700)
+                                WorkspaceListRow(
+                                    title: workspace.name,
+                                    symbol: workspace.icon,
+                                    backgroundHexString: workspace.hexColor,
+                                    notificationCount: 5
+                                ) {
+                                    if let workspaceId = workspace.id {
+                                        coordinator.changeSection(to: .detail(id: workspaceId))
+                                    }
+                                }
                             }
                         }
                     }
                 }
             }
-        }.sheet(isPresented: $viewModel.presentAddition) {
-            WorkspaceAdditionView(isPresented: $viewModel.presentAddition)
         }
         .task {
             await viewModel.getWorkspaces()

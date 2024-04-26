@@ -15,8 +15,8 @@ enum TabSectionFactory {
             switch currentSection {
             case .list:
                 WorkspaceListView()
-            case .detail:
-                Text("Detail")
+            case .detail(let id):
+                WorkspaceDetailView(workspaceId: id)
             }
         } else {
             WorkspaceListView()

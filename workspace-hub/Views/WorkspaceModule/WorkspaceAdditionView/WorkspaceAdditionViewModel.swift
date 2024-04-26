@@ -6,41 +6,44 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class WorkspaceAdditionViewModel: ViewModelProtocol {
     
     let workspaceService: WorkspaceServiceProtocol
     
     @Published var state: ViewState = .idle
-    @Published var selectedIcon: String = "pencil"
-    
+    @Published var selectedIcon: String = "person.3.fill"
+    @Published var symbolSelectPresented: Bool = false
+    @Published var selectedColor: UIColor = UIColor(.primaryRed700)
+    @Published var creatingWorkspace: Bool = false
+
     @Validated(rules: [nonEmptyRule])
     var workspaceName: String = ""
     @Published var workspaceNameError: String? = nil
-    
-    @Validated(rules: [nonEmptyRule])
-    var workspaceIcon: String = ""
-    @Published var workspaceIconError: String? = nil
     
     init(workspaceService: WorkspaceServiceProtocol) {
         self.workspaceService = workspaceService
     }
     
     func createWorkspace() async -> Bool {
-        if (!$workspaceName.isValid() || !$workspaceIcon.isValid()) {
+        if (!$workspaceName.isValid()) {
             workspaceNameError = $workspaceName.getError()
-            workspaceIconError = $workspaceIcon.getError()
             
             return false
         }
         
+        creatingWorkspace = true
         guard let userId = AuthService.shared.getCurrentUser()?.uid else {
+            creatingWorkspace = false
             return false
         }
                     
-        let newWorkspace = Workspace(ownerId: userId, name: workspaceName, icon: workspaceIcon, groups: [])
+        let newWorkspace = Workspace(ownerId: userId, name: workspaceName, icon: selectedIcon, hexColor: selectedColor.hexString, groups: [])
         
         let _ = await workspaceService.createWorkspace(workspace: newWorkspace)
+        
+        creatingWorkspace = false
         return true
     }
 }

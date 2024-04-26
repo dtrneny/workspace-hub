@@ -16,5 +16,5 @@ protocol RouterProtocol: ObservableObject {
     
     func navigate(to route: Routes)
     func pop()
-    func replaceAll(with route: Routes)
+    func replaceAll(with routes: [Routes])
 }

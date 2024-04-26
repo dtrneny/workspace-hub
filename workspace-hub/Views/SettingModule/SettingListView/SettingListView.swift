@@ -17,7 +17,7 @@ struct SettingListView: View {
         VStack {
             BaseButton {
                 if (viewModel.signOut()) {
-                    mainRouter.replaceAll(with: .signIn)
+                    mainRouter.replaceAll(with: [.signIn])
                 }
             } content: {
                 Text("Sign Out")

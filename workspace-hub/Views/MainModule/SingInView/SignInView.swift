@@ -62,7 +62,7 @@ extension SignInView {
     private var signInButton: some View {
         BaseButton {
             Task {
-                if (await viewModel.signIn()) { mainRouter.replaceAll(with: .home) }
+                if (await viewModel.signIn()) { mainRouter.replaceAll(with: [.home]) }
             }
         } content: {
             HStack (spacing: 8) {

@@ -40,11 +40,21 @@ extension SignUpView {
         VStack(spacing: 19) {
             FormField {
                 TextInput(
-                    value: $viewModel.fullname,
-                    placeholder: "e. g. John Doe",
-                    label: "Fullname"
+                    value: $viewModel.firstname,
+                    placeholder: "e. g. John",
+                    label: "Firstname"
                 )
-                if let error = viewModel.fullnameError {
+                if let error = viewModel.firstnameError {
+                    ErrorMessage(error: error)
+                }
+            }
+            FormField {
+                TextInput(
+                    value: $viewModel.lastname,
+                    placeholder: "e. g. Doe",
+                    label: "Lastname"
+                )
+                if let error = viewModel.lastnameError {
                     ErrorMessage(error: error)
                 }
             }

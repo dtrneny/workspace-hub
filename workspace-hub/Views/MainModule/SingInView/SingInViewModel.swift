@@ -36,6 +36,7 @@ final class SignInViewModel: ViewModelProtocol {
         }
         catch {
             passwordError = "Please provide valid credentials."
+            singingIn = false
             return false
         }
     }

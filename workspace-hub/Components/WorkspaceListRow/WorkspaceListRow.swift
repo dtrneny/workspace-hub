@@ -10,24 +10,32 @@ import SwiftUI
 struct WorkspaceListRow: View {
     
     var title: String
+    var symbol: String
+    var backgroundHexString: String?
     var notificationCount: Int
-    var icon: String
-    var imageColor: Color
     var action: (() -> Void)?
+    
+    var circleColor: Color {
+        if let hexValue = backgroundHexString {
+            return Color(uiColor: HexColorsUtil.getUIColorByHexString(hexString: hexValue))
+        }
+        
+        return Color.primaryRed700
+    }
         
     var body: some View {
         VStack {
             HStack {
                 Circle()
-                .foregroundColor(imageColor)
-                .frame(width: 50, height: 50)
-                .overlay(
-                    Image(systemName: icon)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .foregroundColor(.secondary900)
-                        .frame(width: 30, height: 30)
-                )
+                    .foregroundColor(circleColor)
+                    .frame(width: 50, height: 50)
+                    .overlay(
+                        Image(systemName: symbol)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.secondary900)
+                            .frame(width: 30, height: 30)
+                    )
                             
                 VStack(alignment: .leading) {
                     Text(title)
@@ -49,9 +57,8 @@ struct WorkspaceListRow: View {
         .background(.secondary900)
         .cornerRadius(20)
         .padding([.bottom], 15)
+        .onTapGesture {
+            action?()
+        }
     }
-}
-
-#Preview {
-    WorkspaceListRow(title: "Video editing", notificationCount: 5, icon: "camera.fill", imageColor: .primaryRed700)
 }
