@@ -10,8 +10,10 @@ import SwiftUI
 struct WorkspaceDetailView: View {
     
     var workspaceId: String
+    
+    @EnvironmentObject var coordinator: WorkspaceCoordinator
+        
     @StateObject private var viewModel = WorkspaceDetailViewModel(workspaceService: WorkspaceService())
-    @EnvironmentObject var mainRouter: MainRouter
     
     var body: some View {
         BaseLayout {
@@ -24,7 +26,7 @@ struct WorkspaceDetailView: View {
                             Spacer()
                             
                             OperationButton(icon: "pencil") {
-                                mainRouter.navigate(to: .workspaceEdit(workspaceId: workspaceId))
+                                coordinator.changeSection(to: .edit(workspaceId: workspaceId))
                             }
                         }
                         

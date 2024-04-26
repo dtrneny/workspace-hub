@@ -11,9 +11,10 @@ import SFSymbolsPicker
 struct WorkspaceEditView: View {
     
     var workspaceId: String
-    @StateObject private var viewModel = WorkspaceEditViewModel(workspaceService: WorkspaceService())
+    
     @EnvironmentObject var coordinator: WorkspaceCoordinator
-    @EnvironmentObject var mainRouter: MainRouter
+    
+    @StateObject private var viewModel = WorkspaceEditViewModel(workspaceService: WorkspaceService())
     
     var body: some View {
         BaseLayout {
@@ -64,7 +65,7 @@ extension WorkspaceEditView {
         BaseButton {
             Task {
                 if(await viewModel.updateWorkspace()) {
-                    mainRouter.pop()
+                    coordinator.pop()
                 }
             }
         } content: {

@@ -11,6 +11,7 @@ import PhotosUI
 struct SignUpView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
+    
     @StateObject private var viewModel = SignUpViewModel(accountService: AccountService())
     
     var body: some View {

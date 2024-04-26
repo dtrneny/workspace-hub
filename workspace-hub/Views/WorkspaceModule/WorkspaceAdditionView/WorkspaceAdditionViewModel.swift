@@ -10,9 +10,14 @@ import SwiftUI
 
 final class WorkspaceAdditionViewModel: ViewModelProtocol {
     
+    @Published var state: ViewState = .idle
+    
     let workspaceService: WorkspaceServiceProtocol
     
-    @Published var state: ViewState = .idle
+    init(workspaceService: WorkspaceServiceProtocol) {
+        self.workspaceService = workspaceService
+    }
+    
     @Published var selectedIcon: String = "person.3.fill"
     @Published var symbolSelectPresented: Bool = false
     @Published var selectedColor: UIColor = UIColor(.primaryRed700)
@@ -22,9 +27,6 @@ final class WorkspaceAdditionViewModel: ViewModelProtocol {
     var workspaceName: String = ""
     @Published var workspaceNameError: String? = nil
     
-    init(workspaceService: WorkspaceServiceProtocol) {
-        self.workspaceService = workspaceService
-    }
     
     func createWorkspace() async -> Bool {
         if (!$workspaceName.isValid()) {

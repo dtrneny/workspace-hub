@@ -17,6 +17,12 @@ enum TabSectionFactory {
                 WorkspaceListView()
             case .detail(let id):
                 WorkspaceDetailView(workspaceId: id)
+            case .addition:
+                WorkspaceAdditionView()
+                    .toolbar(.hidden, for: .tabBar)
+            case .edit(let id):
+                WorkspaceEditView(workspaceId: id)
+                    .toolbar(.hidden, for: .tabBar)
             }
         } else {
             WorkspaceListView()

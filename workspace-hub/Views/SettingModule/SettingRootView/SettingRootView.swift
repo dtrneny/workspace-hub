@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SettingRootView: View {
+    
     @ObservedObject private var coordinator: SettingCoordinator = SettingCoordinator()
 
     var body: some View {

@@ -9,11 +9,11 @@ import SwiftUI
 
 struct WorkspaceListView: View {
     
-    @State private var selectedOption: Int = 0
     @EnvironmentObject var coordinator: WorkspaceCoordinator
-    @EnvironmentObject var mainRouter: MainRouter
-    @StateObject private var viewModel = WorkspaceListViewModel(workspaceService: WorkspaceService())
     
+    @StateObject private var viewModel = WorkspaceListViewModel(
+        workspaceService: WorkspaceService()
+    )
     
     var body: some View {
         BaseLayout {
@@ -37,7 +37,7 @@ struct WorkspaceListView: View {
                         Spacer()
                         
                         OperationButton(icon: "plus") {
-                            mainRouter.navigate(to: .workspaceAddition)
+                            coordinator.changeSection(to: .addition)
                         }
                     }
                     

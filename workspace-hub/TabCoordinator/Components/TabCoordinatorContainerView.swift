@@ -30,7 +30,6 @@ struct TabCoordinatorContainerView<Content: View>: View {
                 content
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding([.leading, .trailing])
-                
             }
         }
         .toolbar(.hidden, for: .navigationBar)

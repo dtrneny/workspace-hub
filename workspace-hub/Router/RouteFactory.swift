@@ -25,14 +25,6 @@ enum RouteFactory {
             RootTabView()
                 .routerBarBackArrowHidden(true)
                 .toolbar(.hidden, for: .navigationBar)
-        case .workspaceAddition:
-            RouterContainerView(content: {
-                WorkspaceAdditionView()
-            }, router: router)
-        case .workspaceEdit(let id):
-            RouterContainerView(content: {
-                WorkspaceEditView(workspaceId: id)
-            }, router: router)
         }
     }
 }

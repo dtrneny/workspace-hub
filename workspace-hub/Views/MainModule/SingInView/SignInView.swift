@@ -10,6 +10,7 @@ import SwiftUI
 struct SignInView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
+    
     @ObservedObject private var viewModel = SignInViewModel()
     
     var body: some View {

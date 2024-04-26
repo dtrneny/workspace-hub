@@ -10,9 +10,9 @@ import SFSymbolsPicker
 
 struct WorkspaceAdditionView: View {
     
-    @StateObject private var viewModel = WorkspaceAdditionViewModel(workspaceService: WorkspaceService())
     @EnvironmentObject var coordinator: WorkspaceCoordinator
-    @EnvironmentObject var mainRouter: MainRouter
+    
+    @StateObject private var viewModel = WorkspaceAdditionViewModel(workspaceService: WorkspaceService())
     
     var body: some View {
         BaseLayout {
@@ -58,7 +58,7 @@ extension WorkspaceAdditionView {
         BaseButton {
             Task {
                 if(await viewModel.createWorkspace()) {
-                    mainRouter.pop()
+                    coordinator.pop()
                 }
             }
         } content: {

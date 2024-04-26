@@ -9,17 +9,17 @@ import Foundation
 
 final class GroupAdditionViewModel: ViewModelProtocol {
     
-    let groupService: GroupServiceProtocol
-
     @Published var state: ViewState = .idle
     
-    @Validated(rules: [nonEmptyRule])
-    var groupName: String = ""
-    @Published var groupNameError: String? = nil
+    let groupService: GroupServiceProtocol
     
     init(groupService: GroupServiceProtocol) {
         self.groupService = groupService
     }
+    
+    @Validated(rules: [nonEmptyRule])
+    var groupName: String = ""
+    @Published var groupNameError: String? = nil
     
     func createGroup() async -> Bool {
         

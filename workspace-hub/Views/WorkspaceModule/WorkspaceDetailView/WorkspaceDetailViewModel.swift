@@ -6,18 +6,18 @@
 //
 
 import Foundation
-import SwiftUI
 
-class WorkspaceDetailViewModel: ViewModelProtocol {
-    
-    let workspaceService: WorkspaceServiceProtocol
+final class WorkspaceDetailViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
-    @Published var workspace: Workspace? = nil
+    
+    let workspaceService: WorkspaceServiceProtocol
     
     init(workspaceService: WorkspaceServiceProtocol) {
         self.workspaceService = workspaceService
     }
+    
+    @Published var workspace: Workspace? = nil
     
     func getWorkspace(workspaceId: String) async {
         state = .loading

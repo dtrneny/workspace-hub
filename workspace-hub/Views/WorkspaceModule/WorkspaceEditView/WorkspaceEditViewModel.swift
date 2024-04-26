@@ -10,23 +10,25 @@ import SwiftUI
 
 final class WorkspaceEditViewModel: ViewModelProtocol {
     
-    let workspaceService: WorkspaceServiceProtocol
-    
     @Published var state: ViewState = .idle
     
+    let workspaceService: WorkspaceServiceProtocol
+    
+    init(workspaceService: WorkspaceServiceProtocol) {
+        self.workspaceService = workspaceService
+    }
+        
     @Published var selectedIcon: String = "person.3.fill"
     @Published var symbolSelectPresented: Bool = false
     @Published var selectedColor: UIColor = UIColor(.primaryRed700)
     @Published var updatingWorkspace: Bool = false
+    
     var workspace: Workspace? = nil
 
     @Validated(rules: [nonEmptyRule])
     var workspaceName: String = ""
     @Published var workspaceNameError: String? = nil
     
-    init(workspaceService: WorkspaceServiceProtocol) {
-        self.workspaceService = workspaceService
-    }
     
     func getWorkspace(workspaceId: String) async {
         state = .loading
