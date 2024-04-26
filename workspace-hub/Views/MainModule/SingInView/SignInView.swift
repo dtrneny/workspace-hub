@@ -22,15 +22,7 @@ struct SignInView: View {
             
             formView
             
-            Button("Sign in") {
-                Task {
-                    if (await viewModel.signIn()) {
-                        mainRouter.replaceAll(with: .home)
-                    }
-                }
-            }
-            .filledButtonStyle()
-            .padding([.bottom], 76)
+            signInButton
                         
             dividerSignUpView
             
@@ -38,12 +30,6 @@ struct SignInView: View {
         }
     }
 }
-
-//#Preview {
-//    RouterContainerView {
-//        SignInView()
-//    }
-//}
 
 extension SignInView {
     
@@ -71,6 +57,23 @@ extension SignInView {
             }
         }
         .padding(.bottom, 38)
+    }
+    
+    private var signInButton: some View {
+        BaseButton {
+            Task {
+                if (await viewModel.signIn()) { mainRouter.replaceAll(with: .home) }
+            }
+        } content: {
+            HStack (spacing: 8) {
+                if (viewModel.singingIn) {
+                    ProgressView()
+                        .tint(.white)
+                }
+                Text("Sign in")
+            }
+        }
+        .padding([.bottom], 76)
     }
     
     private var dividerSignUpView: some View {

@@ -12,6 +12,7 @@ final class WorkspaceAdditionViewModel: ViewModelProtocol {
     let workspaceService: WorkspaceServiceProtocol
     
     @Published var state: ViewState = .idle
+    @Published var selectedIcon: String = "pencil"
     
     @Validated(rules: [nonEmptyRule])
     var workspaceName: String = ""

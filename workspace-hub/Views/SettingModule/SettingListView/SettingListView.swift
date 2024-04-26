@@ -15,12 +15,13 @@ struct SettingListView: View {
     
     var body: some View {
         VStack {
-            Button("Sign Out") {
+            BaseButton {
                 if (viewModel.signOut()) {
                     mainRouter.replaceAll(with: .signIn)
                 }
+            } content: {
+                Text("Sign Out")
             }
-            .filledButtonStyle()
             TextField("Test", text: $viewModel.username)
                 .foregroundStyle(.grey800)
             

@@ -18,14 +18,16 @@ struct GroupAdditionView: View {
             ViewTitle(title: "Add group")
             
             formView
-            
-            Button("Create group") {
+        
+            BaseButton {
                 Task {
                     if(await viewModel.createGroup()) {
                         isPresented = false
                     }
                 }
-            }.filledButtonStyle()
+            } content: {
+                Text("Create group")
+            }
         }
     }
 }
