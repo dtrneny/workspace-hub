@@ -56,6 +56,13 @@ struct DateSwiper: View {
                     .onAppear {
                         value.scrollTo(selectedDate.day, anchor: .center)
                     }
+                    .onChange(of: selectedMonth) { oldValue, newValue in
+                        if (selectedDate.month == newValue.month) {
+                            value.scrollTo(selectedDate.day, anchor: .center)
+                        } else {
+                            value.scrollTo(1, anchor: .center)
+                        }
+                    }
                 }
             }
         }
@@ -80,6 +87,10 @@ struct DateSwiper: View {
 extension Date {
     var day: Int {
         Calendar.current.component(.day, from: self)
+    }
+    
+    var month: Int {
+        Calendar.current.component(.month, from: self)
     }
     
     var dayName: String {

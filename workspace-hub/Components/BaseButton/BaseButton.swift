@@ -32,14 +32,14 @@ struct BaseButton<Content: View>: View {
         VStack(alignment: .center) {
             content
         }
-        .onTapGesture {
-            action()
-        }
         .if(style == .filled) { view in
             view.modifier(FilledBaseButton())
         }
         .if(style == .outlined) { view in
             view.modifier(OutlinedBaseButton())
+        }
+        .onTapGesture {
+            action()
         }
     }
 }

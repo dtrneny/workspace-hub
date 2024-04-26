@@ -17,8 +17,12 @@ class SignUpViewModel: ViewModelProtocol {
     let accountService: AccountServiceProtocol
 
     @Validated(rules: [nonEmptyRule])
-    var fullname: String = ""
-    @Published var fullnameError: String? = nil
+    var firstname: String = ""
+    @Published var firstnameError: String? = nil
+    
+    @Validated(rules: [nonEmptyRule])
+    var lastname: String = ""
+    @Published var lastnameError: String? = nil
     
     @Validated(rules: [nonEmptyRule])
     var email: String = ""
@@ -44,8 +48,9 @@ class SignUpViewModel: ViewModelProtocol {
     }
     
     func signUp() async -> Bool {
-        if (!$fullname.isValid() || !$email.isValid() || !$password.isValid() || !$confPassword.isValid()) {
-            fullnameError = $fullname.getError()
+        if (!$firstname.isValid() || !$email.isValid() || !$password.isValid() || !$confPassword.isValid() || !$lastname.isValid()) {
+            firstnameError = $firstname.getError()
+            lastnameError = $lastname.getError()
             emailError = $email.getError()
             passwordError = $password.getError()
             confPasswordError = $confPassword.getError()
@@ -72,7 +77,7 @@ class SignUpViewModel: ViewModelProtocol {
             let url = try await StorageService.shared.getUrlForImage(path: path).get()
             
             let _ = await accountService.createAccount(
-                account: Account(email: email, fullname: fullname, profileImage: url.absoluteString),
+                account: Account(email: email, firstname: firstname, lastname: lastname, profileImage: url.absoluteString),
                 id: user.uid
             )
             
@@ -81,6 +86,7 @@ class SignUpViewModel: ViewModelProtocol {
         }
         catch {
             print(error)
+            singingUp = false
             return false
         }
     }

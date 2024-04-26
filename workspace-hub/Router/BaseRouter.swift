@@ -24,8 +24,8 @@ class BaseRouter<Routes: Hashable>: ObservableObject, RouterProtocol {
         }
     }
     
-    func replaceAll(with route: Routes) {
-        history = .init([route])
-        currentRoute = route
+    func replaceAll(with routes: [Routes]) {
+        history = .init(routes)
+        currentRoute = routes.last
     }
 }
