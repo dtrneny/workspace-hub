@@ -29,7 +29,7 @@ class AccountService: AccountServiceProtocol, ObservableObject {
     
     func createAccount(account: Account, id: String) async -> Account? {
         do {
-            let account = try await repository.create(data: account).get()
+            let account = try await repository.create(data: account, id: id).get()
             return account
         }
         catch {
@@ -38,6 +38,16 @@ class AccountService: AccountServiceProtocol, ObservableObject {
     }
     
     func getAccount(id: String) async -> Account? {
+        do {
+            let account = try await repository.getById(id: id).get()
+            return account
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    func getAccountByOwnerId(id: String) async -> Account? {
         do {
             let account = try await repository.getById(id: id).get()
             return account

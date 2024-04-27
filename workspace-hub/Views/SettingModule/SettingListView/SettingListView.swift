@@ -11,16 +11,52 @@ struct SettingListView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
     
-    @ObservedObject private var viewModel = SettingListViewModel()
+    @ObservedObject private var viewModel = SettingListViewModel(accountService: AccountService())
     
     var body: some View {
-        VStack {
-            BaseButton {
-                if (viewModel.signOut()) {
-                    mainRouter.replaceAll(with: [.signIn])
+        BaseLayout {
+            VStack(spacing: 38) {
+                VStack(alignment: .leading) {
+                    HStack (alignment: .firstTextBaseline) {
+                        ViewTitle(title: "Account")
+                        
+                        Spacer()
+                        
+                        HStack (spacing: 10) {
+                            OperationButton(icon: "pencil") {
+                                print("edit")
+                            }
+                            OperationButton(icon: "rectangle.portrait.and.arrow.forward", color: .primaryRed700) {
+                                if (viewModel.signOut()) {
+                                    mainRouter.replaceAll(with: [.signIn])
+                                }
+                            }
+                        }
+                    }
+                    if let account = viewModel.account {
+                        SettingAccountCard(
+                            name: "\(account.firstname) \(account.lastname)",
+                            email: account.email,
+                            imageUrl: account.profileImage
+                        )
+                    }
                 }
-            } content: {
-                Text("Sign Out")
+                
+                VStack(alignment: .leading) {
+                    ViewTitle(title: "Settings")
+
+                    SettingListRow(label: "Notifications") {
+                        print("Clicked")
+                    }
+                    SettingListRow(label: "Language") {
+                        print("Clicked")
+                    }
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                await viewModel.getCurrentUsersAccount()
             }
         }
     }

@@ -48,6 +48,8 @@
 		638DBF162BDBA716003A1795 /* WorkspaceDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF152BDBA716003A1795 /* WorkspaceDetailCard.swift */; };
 		638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */; };
 		638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */; };
+		638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */; };
+		638DBF212BDC00F1003A1795 /* SettingAccountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
@@ -168,6 +170,8 @@
 		638DBF152BDBA716003A1795 /* WorkspaceDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceDetailCard.swift; sourceTree = "<group>"; };
 		638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditView.swift; sourceTree = "<group>"; };
 		638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditViewModel.swift; sourceTree = "<group>"; };
+		638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListRow.swift; sourceTree = "<group>"; };
+		638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountCard.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
@@ -491,6 +495,22 @@
 			path = WorkspaceEditView;
 			sourceTree = "<group>";
 		};
+		638DBF1C2BDBFDEF003A1795 /* SettingListRow */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */,
+			);
+			path = SettingListRow;
+			sourceTree = "<group>";
+		};
+		638DBF1F2BDC00CD003A1795 /* SettingAccountCard */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */,
+			);
+			path = SettingAccountCard;
+			sourceTree = "<group>";
+		};
 		638F23EB2BACD9F700704CE0 /* ProtectedInput */ = {
 			isa = PBXGroup;
 			children = (
@@ -718,8 +738,10 @@
 				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
 				639DBC2C2BD02B65003D24FB /* WorkspaceActivityCard */,
 				638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */,
-				2E4654922BD2AA9200BF2944 /* GroupListRow */,
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
+				2E4654922BD2AA9200BF2944 /* GroupListRow */,
+				638DBF1F2BDC00CD003A1795 /* SettingAccountCard */,
+				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
 				638D93A82BD42F72006B0B3A /* SheetLayout */,
 			);
@@ -1029,6 +1051,7 @@
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
+				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
@@ -1048,6 +1071,7 @@
 				63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */,
 				639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */,
 				2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */,
+				638DBF212BDC00F1003A1795 /* SettingAccountCard.swift in Sources */,
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
