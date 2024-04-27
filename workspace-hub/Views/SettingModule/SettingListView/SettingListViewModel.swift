@@ -10,6 +10,14 @@ import Foundation
 final class SettingListViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .idle
+    
+    let accountService: AccountServiceProtocol
+    
+    init(accountService: AccountServiceProtocol) {
+        self.accountService = accountService
+    }
+    
+    @Published var account: Account? = nil
 
     func signOut() -> Bool {
         do {
@@ -19,5 +27,22 @@ final class SettingListViewModel: ViewModelProtocol {
         catch {
             return false
         }
+    }
+    
+    func getCurrentUsersAccount() async -> Bool{
+        let user = AuthService.shared.getCurrentUser()
+        
+        guard let userId = user?.uid else {
+            return false
+        }
+        
+        let fetchedAccount = await accountService.getAccount(id: userId)
+        
+        guard let accountResult = fetchedAccount else {
+            return false
+        }
+        
+        account = accountResult
+        return true
     }
 }

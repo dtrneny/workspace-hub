@@ -27,6 +27,7 @@ struct TabCoordinatorContainerView<Content: View>: View {
                 BaseNavigationBar(showBack: showBack && coordingator.history.count > 1) {
                     coordingator.pop()
                 }
+                
                 content
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .padding([.leading, .trailing])
