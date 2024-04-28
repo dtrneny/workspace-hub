@@ -11,6 +11,8 @@ struct BaseLayout<Content: View>: View {
     
     let content: Content
     
+    @State private var didAppear = false
+    
     init(@ViewBuilder content: () -> Content) {
         self.content = content()
     }

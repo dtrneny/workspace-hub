@@ -11,7 +11,7 @@ import PhotosUI
 
 final class SettingAccountEditViewModel: ViewModelProtocol {
     
-    @Published var state: ViewState = .idle
+    @Published var state: ViewState = .loading
     
     let accountService: AccountServiceProtocol
     
@@ -32,6 +32,12 @@ final class SettingAccountEditViewModel: ViewModelProtocol {
     
     @Published var photo: PhotosPickerItem? = nil
     @Published var loadedImage: UIImage? = nil
+    
+    func fetchInitialData() async {
+        await getCurrentUsersAccount()
+        
+        state = .idle
+    }
     
     func updateAccount() async -> Bool {
         if (!$firstname.isValid() || !$lastname.isValid()) {
@@ -105,18 +111,15 @@ final class SettingAccountEditViewModel: ViewModelProtocol {
         }
     }
     
-    func getCurrentUsersAccount() async -> Bool{
+    func getCurrentUsersAccount() async {
+    
         let user = AuthService.shared.getCurrentUser()
         
-        guard let userId = user?.uid else {
-            return false
-        }
+        guard let userId = user?.uid else { return }
         
         let fetchedAccount = await accountService.getAccount(id: userId)
         
-        guard let accountResult = fetchedAccount else {
-            return false
-        }
+        guard let accountResult = fetchedAccount else { return }
         
         account = accountResult
         firstname = accountResult.firstname
@@ -124,7 +127,7 @@ final class SettingAccountEditViewModel: ViewModelProtocol {
         ImageUtil.loadImageFromUrl(urlString: accountResult.profileImage) { image in
             self.loadedImage = image
         }
-        
-        return true
+                
+        return
     }
 }

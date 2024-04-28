@@ -18,18 +18,23 @@ struct WorkspaceEditView: View {
     
     var body: some View {
         BaseLayout {
-            ViewTitle(title: "Edit workspace")
-            
-            workspaceImage
-            
-            formView
-            
-            createButton
-            
+            switch viewModel.state {
+            case .loading:
+                LoadingDots(type: .view)
+            default:
+                ViewTitle(title: "Edit workspace")
+                
+                workspaceImage
+                
+                formView
+                
+                createButton
+            }
         }
+        .routerBarBackArrowHidden(viewModel.updatingWorkspace)
         .onAppear {
             Task {
-                await viewModel.getWorkspace(workspaceId: workspaceId)
+                await viewModel.fetchInitialData(workspaceId: workspaceId)
             }
         }
         .sheet(isPresented: $viewModel.symbolSelectPresented) {

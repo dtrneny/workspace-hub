@@ -10,7 +10,7 @@ import SwiftUI
 
 final class WorkspaceEditViewModel: ViewModelProtocol {
     
-    @Published var state: ViewState = .idle
+    @Published var state: ViewState = .loading
     
     let workspaceService: WorkspaceServiceProtocol
     
@@ -29,6 +29,11 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
     var workspaceName: String = ""
     @Published var workspaceNameError: String? = nil
     
+    func fetchInitialData(workspaceId: String) async {
+        await getWorkspace(workspaceId: workspaceId)
+        
+        state = .idle
+    }
     
     func getWorkspace(workspaceId: String) async {
         state = .loading
