@@ -16,6 +16,9 @@ struct TimelineRootView: View {
             TabSectionFactory.viewForTimelineTabSection(history: coordinator.history)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
+        .onDisappear {
+            coordinator.replaceAll(with: [.timeline])
+        }
     }
 }
 

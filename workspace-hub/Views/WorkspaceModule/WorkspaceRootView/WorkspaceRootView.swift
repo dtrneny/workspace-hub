@@ -16,6 +16,9 @@ struct WorkspaceRootView: View {
             TabSectionFactory.viewForWorkspaceTabSection(history: coordinator.history)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
+        .onDisappear {
+            coordinator.replaceAll(with: [.list])
+        }
     }
 }
 

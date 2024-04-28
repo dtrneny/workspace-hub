@@ -16,6 +16,9 @@ struct GroupRootView: View {
             TabSectionFactory.viewForGroupTabSection(history: coordinator.history)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
+        .onDisappear {
+            coordinator.replaceAll(with: [.list])
+        }
     }
 }
 

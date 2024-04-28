@@ -16,6 +16,9 @@ struct SettingRootView: View {
             TabSectionFactory.viewForSettingTabSection(history: coordinator.history)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
+        .onDisappear {
+            coordinator.replaceAll(with: [.list])
+        }
     }
 }
 

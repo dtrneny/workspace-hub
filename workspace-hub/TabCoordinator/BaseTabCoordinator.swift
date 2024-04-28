@@ -7,7 +7,8 @@
 
 import Foundation
 
-class BaseTabCoordinator<TabSections: Hashable>: ObservableObject, TabCoordinatorProtocol {    
+class BaseTabCoordinator<TabSections: Hashable>: ObservableObject, TabCoordinatorProtocol {
+    
     typealias TabSection = TabSections
     
     @Published var history: [TabSections] = []
@@ -20,5 +21,9 @@ class BaseTabCoordinator<TabSections: Hashable>: ObservableObject, TabCoordinato
         if (!history.isEmpty) {
             history.removeLast()
         }
+    }
+    
+    func replaceAll(with sections: [TabSections]) {
+        history = sections
     }
 }
