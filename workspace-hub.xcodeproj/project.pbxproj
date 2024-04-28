@@ -673,8 +673,8 @@
 		639DBC1B2BD00EB2003D24FB /* TimelineModule */ = {
 			isa = PBXGroup;
 			children = (
-				2E4654892BD2546C00BF2944 /* TimelineView */,
 				639DBC1C2BD00ED2003D24FB /* TimelineRootView */,
+				2E4654892BD2546C00BF2944 /* TimelineView */,
 			);
 			path = TimelineModule;
 			sourceTree = "<group>";

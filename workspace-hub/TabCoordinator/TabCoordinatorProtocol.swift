@@ -14,4 +14,5 @@ protocol TabCoordinatorProtocol: ObservableObject  {
     
     func changeSection(to section: TabSection)
     func pop()
+    func replaceAll(with sections: [TabSection])
 }
