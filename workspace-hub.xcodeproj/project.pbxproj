@@ -50,6 +50,9 @@
 		638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */; };
 		638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */; };
 		638DBF212BDC00F1003A1795 /* SettingAccountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */; };
+		638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */; };
+		638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */; };
+		638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF272BDE39A2003A1795 /* ImageUtil.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
@@ -172,6 +175,9 @@
 		638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditViewModel.swift; sourceTree = "<group>"; };
 		638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListRow.swift; sourceTree = "<group>"; };
 		638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountCard.swift; sourceTree = "<group>"; };
+		638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditView.swift; sourceTree = "<group>"; };
+		638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditViewModel.swift; sourceTree = "<group>"; };
+		638DBF272BDE39A2003A1795 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
@@ -511,6 +517,15 @@
 			path = SettingAccountCard;
 			sourceTree = "<group>";
 		};
+		638DBF222BDD6AF7003A1795 /* SettingAccountEditView */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */,
+				638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */,
+			);
+			path = SettingAccountEditView;
+			sourceTree = "<group>";
+		};
 		638F23EB2BACD9F700704CE0 /* ProtectedInput */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +680,7 @@
 			children = (
 				639DBC222BD0108E003D24FB /* SettingRootView */,
 				639DBC272BD01463003D24FB /* SettingListView */,
+				638DBF222BDD6AF7003A1795 /* SettingAccountEditView */,
 			);
 			path = SettingModule;
 			sourceTree = "<group>";
@@ -871,6 +887,7 @@
 				638D30D82BA8B3BB00105C6E /* Protocols */,
 				63ECEBCD2BA6E68800166BCD /* Enums */,
 				638DBF0B2BDB8DCC003A1795 /* HexColorsUtil.swift */,
+				638DBF272BDE39A2003A1795 /* ImageUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1034,6 +1051,7 @@
 				639DBC392BD044A6003D24FB /* StorageService.swift in Sources */,
 				638D93AD2BD50DC5006B0B3A /* GroupAdditionView.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
+				638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
 				638D93A52BD4160B006B0B3A /* WorkspaceAdditionView.swift in Sources */,
 				639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */,
@@ -1051,6 +1069,7 @@
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
+				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
@@ -1111,6 +1130,7 @@
 				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
 				638D93AF2BD50DD3006B0B3A /* GroupAdditionViewModel.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
+				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
 				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,

@@ -72,7 +72,7 @@ final class SignUpViewModel: ViewModelProtocol {
             guard let (path, _) = try await StorageService.shared.saveImage(
                 data: photoData,
                 folder: StorageFolder.profilePictures,
-                path: user.uid
+                path: ImageUtil.getUniqueIdentifierForUserImage(userId: user.uid)
             ).get() else { return false }
                 
             let url = try await StorageService.shared.getUrlForImage(path: path).get()

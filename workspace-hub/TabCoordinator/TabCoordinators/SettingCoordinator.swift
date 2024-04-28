@@ -9,6 +9,7 @@ import Foundation
 
 enum SettingTabSections: Hashable {
     case list
+    case accountEdit
 }
 
 class SettingCoordinator: BaseTabCoordinator<SettingTabSections> {

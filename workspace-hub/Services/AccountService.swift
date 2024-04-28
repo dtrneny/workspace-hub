@@ -11,6 +11,7 @@ protocol AccountServiceProtocol {
     func getAccounts() async -> [Account]
     func createAccount(account: Account, id: String) async -> Account?
     func getAccount(id: String) async -> Account?
+    func updateAccount(account: Account) async -> Account?
 }
 
 class AccountService: AccountServiceProtocol, ObservableObject {
@@ -47,9 +48,13 @@ class AccountService: AccountServiceProtocol, ObservableObject {
         }
     }
     
-    func getAccountByOwnerId(id: String) async -> Account? {
+    func updateAccount(account: Account) async -> Account? {
         do {
-            let account = try await repository.getById(id: id).get()
+            guard let id = account.id else {
+                return nil
+            }
+            
+            let account = try await repository.update(id: id, data: account).get()
             return account
         }
         catch {
