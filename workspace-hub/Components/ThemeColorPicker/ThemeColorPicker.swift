@@ -10,16 +10,10 @@ import SwiftUI
 struct ThemeColorPicker: View {
     
     @Binding var selectedColor: UIColor
-    private let themeColors: [UIColor] = [
-        UIColor(.primaryRed700),
-        UIColor(.primaryGreen700),
-        UIColor(.primaryViolet700),
-        UIColor(.primaryYellow700),
-    ]
     
     var body: some View {
         HStack(spacing: 19) {
-            ForEach(themeColors, id: \.self) { color in
+            ForEach(ThemeColorUtil.getThemeUIColors(), id: \.self) { color in
                 Color(color)
                     .frame(width: 32, height: 32)
                     .clipShape(Circle())

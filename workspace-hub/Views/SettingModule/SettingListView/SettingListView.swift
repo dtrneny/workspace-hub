@@ -16,51 +16,68 @@ struct SettingListView: View {
     
     var body: some View {
         BaseLayout {
-            VStack(spacing: 38) {
-                VStack(alignment: .leading) {
-                    HStack (alignment: .firstTextBaseline) {
-                        ViewTitle(title: "Account")
-                        
-                        Spacer()
-                        
-                        HStack (spacing: 10) {
-                            OperationButton(icon: "pencil") {
-                                coordinator.changeSection(to: .accountEdit)
-                            }
-                            OperationButton(icon: "rectangle.portrait.and.arrow.forward", color: .primaryRed700) {
-                                if (viewModel.signOut()) {
-                                    mainRouter.replaceAll(with: [.signIn])
-                                }
-                            }
-                        }
-                    }
-                    if let account = viewModel.account {
-                        SettingAccountCard(
-                            name: "\(account.firstname) \(account.lastname)",
-                            email: account.email,
-                            imageUrl: account.profileImage
-                        )
-                    }
-                }
-                
-                VStack(alignment: .leading) {
-                    ViewTitle(title: "Settings")
-
-                    SettingListRow(label: "Notifications") {
-                        print("Clicked")
-                    }
-                    SettingListRow(label: "Language") {
-                        print("Clicked")
-                    }
+            switch viewModel.state {
+            case .loading:
+                LoadingDots(type: .view)
+            default:
+                VStack(spacing: 38) {
+                    accountOperations
+    
+                    settings
                 }
             }
         }
         .onAppear {
             Task {
-                await viewModel.getCurrentUsersAccount()
+                await viewModel.fetchInitialData()
             }
         }
     }
+}
+
+extension SettingListView {
+    
+    private var settings: some View {
+        VStack(alignment: .leading) {
+            ViewTitle(title: "Settings")
+
+            SettingListRow(label: "Notifications") {
+                print("Clicked")
+            }
+            SettingListRow(label: "Language") {
+                print("Clicked")
+            }
+        }
+    }
+    
+    private var accountOperations: some View {
+        VStack(alignment: .leading) {
+            HStack (alignment: .firstTextBaseline) {
+                ViewTitle(title: "Account")
+                
+                Spacer()
+                
+                HStack (spacing: 10) {
+                    OperationButton(icon: "pencil") {
+                        coordinator.changeSection(to: .accountEdit)
+                    }
+                    OperationButton(icon: "rectangle.portrait.and.arrow.forward", color: .primaryRed700) {
+                        if (viewModel.signOut()) {
+                            mainRouter.replaceAll(with: [.signIn])
+                        }
+                    }
+                }
+            }
+            if let account = viewModel.account {
+                SettingAccountCard(
+                    name: "\(account.firstname) \(account.lastname)",
+                    email: account.email,
+                    imageUrl: account.profileImage
+                )
+            }
+        }
+    }
+    
 }
 
 #Preview {

@@ -25,6 +25,7 @@ struct WorkspaceAdditionView: View {
             createButton
             
         }
+        .routerBarBackArrowHidden(viewModel.creatingWorkspace)
         .sheet(isPresented: $viewModel.symbolSelectPresented) {
             SymbolsPicker(selection:  $viewModel.selectedIcon, title: "Pick a symbol", autoDismiss: true) {
                 OperationButton(icon: "multiply") {

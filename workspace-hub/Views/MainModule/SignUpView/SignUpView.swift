@@ -28,6 +28,7 @@ struct SignUpView: View {
             
             signUpButton
         }
+        .routerBarBackArrowHidden(viewModel.singingUp)
     }
 }
 

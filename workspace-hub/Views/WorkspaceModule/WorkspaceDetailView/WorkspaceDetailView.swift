@@ -17,40 +17,57 @@ struct WorkspaceDetailView: View {
     
     var body: some View {
         BaseLayout {
-            if let workspace = viewModel.workspace {
-                VStack(spacing: 38) {
-                    VStack(alignment: .leading) {
-                        HStack(alignment: .firstTextBaseline) {
-                            ViewTitle(title: "Detail")
+            switch viewModel.state {
+            case .loading:
+                LoadingDots(type: .view)
+            default:
+                if let workspace = viewModel.workspace {
+                    VStack(spacing: 38) {
+                        VStack(alignment: .leading) {
+                            workspaceCardOperations
                             
-                            Spacer()
-                            
-                            OperationButton(icon: "pencil") {
-                                coordinator.changeSection(to: .edit(workspaceId: workspaceId))
-                            }
+                            WorkspaceDetailCard(name: workspace.name, icon: workspace.icon, hexColor: workspace.hexColor)
                         }
                         
-                        WorkspaceDetailCard(name: workspace.name, icon: workspace.icon, hexColor: workspace.hexColor)
-                    }
-                    
-                    VStack(alignment: .leading) {
-                        HStack(alignment: .firstTextBaseline) {
-                            ViewTitle(title: "Groups")
-                            
-                            Spacer()
-                            
-                            OperationButton(icon: "plus") {
-                                print("Add group")
-                            }
-                        }
+                        workspaceGroups
                     }
                 }
             }
         }
         .onAppear {
             Task {
-                await viewModel.getWorkspace(workspaceId: workspaceId)
+                await viewModel.fetchInitialData(workspaceId: workspaceId)
             }
         }
     }
+}
+
+extension WorkspaceDetailView {
+    
+    private var workspaceCardOperations: some View {
+        HStack(alignment: .firstTextBaseline) {
+            ViewTitle(title: "Detail")
+            
+            Spacer()
+            
+            OperationButton(icon: "pencil") {
+                coordinator.changeSection(to: .edit(workspaceId: workspaceId))
+            }
+        }
+    }
+    
+    private var workspaceGroups: some View {
+        VStack(alignment: .leading) {
+            HStack(alignment: .firstTextBaseline) {
+                ViewTitle(title: "Groups")
+                
+                Spacer()
+                
+                OperationButton(icon: "plus") {
+                    print("Add group")
+                }
+            }
+        }
+    }
+    
 }

@@ -53,6 +53,8 @@
 		638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */; };
 		638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */; };
 		638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF272BDE39A2003A1795 /* ImageUtil.swift */; };
+		638DBF2B2BDE59D7003A1795 /* LoadingDots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF2A2BDE59D7003A1795 /* LoadingDots.swift */; };
+		638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF2C2BDE5C4E003A1795 /* ThemeColorUtil.swift */; };
 		638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23E92BACD92100704CE0 /* AuthService.swift */; };
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
@@ -178,6 +180,8 @@
 		638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditView.swift; sourceTree = "<group>"; };
 		638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditViewModel.swift; sourceTree = "<group>"; };
 		638DBF272BDE39A2003A1795 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		638DBF2A2BDE59D7003A1795 /* LoadingDots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDots.swift; sourceTree = "<group>"; };
+		638DBF2C2BDE5C4E003A1795 /* ThemeColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColorUtil.swift; sourceTree = "<group>"; };
 		638F23E92BACD92100704CE0 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
@@ -526,6 +530,14 @@
 			path = SettingAccountEditView;
 			sourceTree = "<group>";
 		};
+		638DBF292BDE59C8003A1795 /* LoadingDots */ = {
+			isa = PBXGroup;
+			children = (
+				638DBF2A2BDE59D7003A1795 /* LoadingDots.swift */,
+			);
+			path = LoadingDots;
+			sourceTree = "<group>";
+		};
 		638F23EB2BACD9F700704CE0 /* ProtectedInput */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,6 +770,7 @@
 				2E4654922BD2AA9200BF2944 /* GroupListRow */,
 				638DBF1F2BDC00CD003A1795 /* SettingAccountCard */,
 				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
+				638DBF292BDE59C8003A1795 /* LoadingDots */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
 				638D93A82BD42F72006B0B3A /* SheetLayout */,
 			);
@@ -888,6 +901,7 @@
 				63ECEBCD2BA6E68800166BCD /* Enums */,
 				638DBF0B2BDB8DCC003A1795 /* HexColorsUtil.swift */,
 				638DBF272BDE39A2003A1795 /* ImageUtil.swift */,
+				638DBF2C2BDE5C4E003A1795 /* ThemeColorUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1070,6 +1084,7 @@
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
+				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
@@ -1085,6 +1100,7 @@
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
 				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
+				638DBF2B2BDE59D7003A1795 /* LoadingDots.swift in Sources */,
 				2E46547F2BD1735E00BF2944 /* DateItem.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				63ECEB942BA432AC00166BCD /* RootTabViewModel.swift in Sources */,

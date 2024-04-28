@@ -18,17 +18,23 @@ struct SettingAccountEditView: View {
     
     var body: some View {
         BaseLayout {
-            ViewTitle(title: "Edit account")
-            
-            profilePicture
-            
-            formView
-            
-            editButton
+            switch viewModel.state {
+            case .loading:
+                LoadingDots(type: .view)
+            default:
+                ViewTitle(title: "Edit account")
+                
+                profilePicture
+                
+                formView
+                
+                editButton
+            }
         }
+        .routerBarBackArrowHidden(viewModel.updatingUser)
         .onAppear {
             Task {
-                await viewModel.getCurrentUsersAccount()
+                await viewModel.fetchInitialData()
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 
 final class WorkspaceListViewModel: ViewModelProtocol {
     
-    @Published var state: ViewState = .idle
+    @Published var state: ViewState = .loading
     
     let workspaceService: WorkspaceServiceProtocol
     
@@ -19,6 +19,12 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     
     @Published var workspaces: [Workspace] = []
     @Published var presentAddition: Bool = false
+    
+    func fetchInitialData() async {
+        await getWorkspaces()
+        
+        state = .idle
+    }
     
     func getWorkspaces() async {
         state = .loading
