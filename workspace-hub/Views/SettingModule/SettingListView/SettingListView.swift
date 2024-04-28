@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingListView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
+    @EnvironmentObject var coordinator: SettingCoordinator
     
     @ObservedObject private var viewModel = SettingListViewModel(accountService: AccountService())
     
@@ -24,7 +25,7 @@ struct SettingListView: View {
                         
                         HStack (spacing: 10) {
                             OperationButton(icon: "pencil") {
-                                print("edit")
+                                coordinator.changeSection(to: .accountEdit)
                             }
                             OperationButton(icon: "rectangle.portrait.and.arrow.forward", color: .primaryRed700) {
                                 if (viewModel.signOut()) {

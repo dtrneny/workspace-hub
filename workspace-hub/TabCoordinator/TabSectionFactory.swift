@@ -61,9 +61,12 @@ enum TabSectionFactory {
             switch currentSection {
             case .list:
                 SettingListView()
+            case .accountEdit:
+                SettingAccountEditView()
+                    .toolbar(.hidden, for: .tabBar)
             }
         } else {
-            Text("Default")
+            SettingListView()
         }
     }
 }
