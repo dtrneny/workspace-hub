@@ -13,7 +13,10 @@ struct WorkspaceDetailView: View {
     
     @EnvironmentObject var coordinator: WorkspaceCoordinator
         
-    @StateObject private var viewModel = WorkspaceDetailViewModel(workspaceService: WorkspaceService())
+    @StateObject private var viewModel = WorkspaceDetailViewModel(
+        workspaceService: WorkspaceService(),
+        groupService: GroupService()
+    )
     
     var body: some View {
         BaseLayout {
@@ -64,8 +67,13 @@ extension WorkspaceDetailView {
                 Spacer()
                 
                 OperationButton(icon: "plus") {
-                    print("Add group")
+                    coordinator.changeSection(to: .groupAddition(workspaceId: workspaceId))
                 }
+            }
+            
+            ForEach(viewModel.workspaceGroups) { group in
+                Text(group.name)
+                    .foregroundStyle(.secondary900)
             }
         }
     }

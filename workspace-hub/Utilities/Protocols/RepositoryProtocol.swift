@@ -10,5 +10,5 @@ import Foundation
 protocol Repository {
     associatedtype Model: Codable
     
-    func fetchData() async throws -> Result<[Model], Error>
+    func fetchData(with options: QueryOptions?) async throws -> Result<[Model], Error>
 }

@@ -10,8 +10,9 @@ import Foundation
 enum WorkspaceTabSections: Hashable {
     case list
     case detail(id: String)
-    case addition
+    case workspaceAddition
     case edit(workspaceId: String)
+    case groupAddition(workspaceId: String)
 }
 
 class WorkspaceCoordinator: BaseTabCoordinator<WorkspaceTabSections> {
