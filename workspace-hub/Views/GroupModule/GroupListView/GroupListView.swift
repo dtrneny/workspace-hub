@@ -41,8 +41,6 @@ struct GroupListView: View {
                 }
                 
             }
-        }.sheet(isPresented: $viewModel.presentAddition) {
-            GroupAdditionView(isPresented: $viewModel.presentAddition)
         }
         .task {
             await viewModel.getGroupsOfCurrentUser()

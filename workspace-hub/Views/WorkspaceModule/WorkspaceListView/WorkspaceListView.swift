@@ -60,7 +60,7 @@ extension WorkspaceListView {
                 Spacer()
                 
                 OperationButton(icon: "plus") {
-                    coordinator.changeSection(to: .addition)
+                    coordinator.changeSection(to: .workspaceAddition)
                 }
             }
             
