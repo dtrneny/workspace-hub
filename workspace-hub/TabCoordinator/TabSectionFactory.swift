@@ -26,6 +26,9 @@ enum TabSectionFactory {
             case .groupAddition(let id):
                 WorkspaceGroupAdditionView(workspaceId: id)
                     .toolbar(.hidden, for: .tabBar)
+            case .groupDetail(let id):
+                GroupDetailView(groupId: id)
+                    .toolbar(.hidden, for: .tabBar)
             }
         } else {
             WorkspaceListView()

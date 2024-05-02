@@ -71,9 +71,18 @@ extension WorkspaceDetailView {
                 }
             }
             
-            ForEach(viewModel.workspaceGroups) { group in
-                Text(group.name)
-                    .foregroundStyle(.secondary900)
+            ScrollView {
+                if viewModel.workspaceGroups.isEmpty {
+                    EmptyListMessage(message: "There are no groups...")
+                } else {
+                    ForEach(viewModel.workspaceGroups) { group in
+                        WorkspaceGroupListRow(title: group.name, symbol: group.icon) {
+                            if let groupId = group.id {
+                                coordinator.changeSection(to: .groupDetail(groupId: groupId))
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -13,6 +13,7 @@ enum WorkspaceTabSections: Hashable {
     case workspaceAddition
     case edit(workspaceId: String)
     case groupAddition(workspaceId: String)
+    case groupDetail(groupId: String)
 }
 
 class WorkspaceCoordinator: BaseTabCoordinator<WorkspaceTabSections> {
