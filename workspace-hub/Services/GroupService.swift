@@ -16,9 +16,7 @@ protocol GroupServiceProtocol {
 
 class GroupService: GroupServiceProtocol, ObservableObject {
     private var repository = FirestoreRepository<Group>(collection: "groups")
-    
-    private var workspaceRepository = FirestoreRepository<Workspace>(collection: "workspaces")
-    
+        
     private let firebaseAuth = Auth.auth()
     
     func getGroupsOfCurrentUser() async -> [Group] {

@@ -12,6 +12,7 @@ struct Group: Identifiable, Codable {
     @DocumentID var id: String?
     var ownerId: String
     var name: String
+    var icon: String
     var members: [String]
     var events: [Date]
 }
