@@ -10,8 +10,8 @@ import SwiftUI
 
 enum TabSectionFactory {
     @ViewBuilder
-    static func viewForWorkspaceTabSection(history: [WorkspaceTabSections]) -> some View {
-        if let currentSection = history.last {
+    static func viewForWorkspaceTabSection(coordinator: WorkspaceCoordinator) -> some View {
+        if let currentSection = coordinator.history.last {
             switch currentSection {
             case .list:
                 WorkspaceListView()
@@ -27,7 +27,12 @@ enum TabSectionFactory {
                 WorkspaceGroupAdditionView(workspaceId: id)
                     .toolbar(.hidden, for: .tabBar)
             case .groupDetail(let id):
-                GroupDetailView(groupId: id)
+                GroupDetailView(groupId: id) {
+                    coordinator.changeSection(to: .groupSettingList(groupId: id))
+                }
+                .toolbar(.hidden, for: .tabBar)
+            case .groupSettingList(let id):
+                GroupSettingListView(groupId: id)
                     .toolbar(.hidden, for: .tabBar)
             }
         } else {

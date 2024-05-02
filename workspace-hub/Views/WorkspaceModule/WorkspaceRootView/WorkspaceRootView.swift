@@ -13,7 +13,7 @@ struct WorkspaceRootView: View {
 
     var body: some View {
         TabCoordinatorView(content: {
-            TabSectionFactory.viewForWorkspaceTabSection(history: coordinator.history)
+            TabSectionFactory.viewForWorkspaceTabSection(coordinator: coordinator)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
         .onDisappear {

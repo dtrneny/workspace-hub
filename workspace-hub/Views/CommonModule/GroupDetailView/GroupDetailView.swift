@@ -10,9 +10,11 @@ import SwiftUI
 struct GroupDetailView: View {
     
     let groupId: String
+    let navigateToSettings: () -> Void
     
     @StateObject private var viewModel = GroupDetailViewModel(
-        groupService: GroupService()
+        groupService: GroupService(),
+        messageService: MessageService()
     )
     
     var body: some View {
@@ -23,10 +25,26 @@ struct GroupDetailView: View {
             default:
                 VStack(spacing: 38) {
                     groupOperations
+                    
+                    ChatLayout {
+                        ScrollView {
+                            ForEach(viewModel.messages, id: \.id) { message in
+                                Text(message.text)
+                                    .foregroundStyle(.secondary900)
+                            }
+                        }
+                    } submitMessage: { message in
+                        Task {
+                            await viewModel.sentMessage(message: message)
+                        }
+                    }
+
                 }
             }
         }
         .onAppear {
+            viewModel.getMessages()
+            
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
             }
@@ -43,8 +61,8 @@ extension GroupDetailView {
                 
                 Spacer()
                 
-                OperationButton(icon: "plus") {
-                    print("tapped")
+                OperationButton(icon: "gearshape.fill") {
+                    navigateToSettings()
                 }
             }
         }
