@@ -32,7 +32,6 @@
 		638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93A12BD40B5F006B0B3A /* FormField.swift */; };
 		638D93A52BD4160B006B0B3A /* WorkspaceAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93A42BD4160B006B0B3A /* WorkspaceAdditionView.swift */; };
 		638D93A72BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93A62BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift */; };
-		638D93AA2BD4342A006B0B3A /* SheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93A92BD4342A006B0B3A /* SheetLayout.swift */; };
 		638D93AD2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93AC2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift */; };
 		638D93AF2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D93AE2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift */; };
 		638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBEF22BDAD080003A1795 /* BaseButton.swift */; };
@@ -61,6 +60,13 @@
 		6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9802BE4069A009F70B2 /* GroupDetailView.swift */; };
 		6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */; };
 		6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */; };
+		6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */; };
+		6392F98E2BE41F49009F70B2 /* GroupParticipantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */; };
+		6392F9902BE41F5F009F70B2 /* GroupParticipantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */; };
+		6392F9922BE4227B009F70B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9912BE4227B009F70B2 /* Message.swift */; };
+		6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9942BE424C2009F70B2 /* ChatLayout.swift */; };
+		6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9962BE42E58009F70B2 /* MessageService.swift */; };
+		6392F9992BE4374E009F70B2 /* ChatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9982BE4374E009F70B2 /* ChatItem.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -161,7 +167,6 @@
 		638D93A12BD40B5F006B0B3A /* FormField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormField.swift; sourceTree = "<group>"; };
 		638D93A42BD4160B006B0B3A /* WorkspaceAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdditionView.swift; sourceTree = "<group>"; };
 		638D93A62BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdditionViewModel.swift; sourceTree = "<group>"; };
-		638D93A92BD4342A006B0B3A /* SheetLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetLayout.swift; sourceTree = "<group>"; };
 		638D93AC2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupAdditionView.swift; sourceTree = "<group>"; };
 		638D93AE2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupAdditionViewModel.swift; sourceTree = "<group>"; };
 		638DBEF22BDAD080003A1795 /* BaseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
@@ -189,6 +194,13 @@
 		6392F9802BE4069A009F70B2 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListMessage.swift; sourceTree = "<group>"; };
 		6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewModel.swift; sourceTree = "<group>"; };
+		6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingListView.swift; sourceTree = "<group>"; };
+		6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupParticipantListView.swift; sourceTree = "<group>"; };
+		6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupParticipantListViewModel.swift; sourceTree = "<group>"; };
+		6392F9912BE4227B009F70B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		6392F9942BE424C2009F70B2 /* ChatLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLayout.swift; sourceTree = "<group>"; };
+		6392F9962BE42E58009F70B2 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		6392F9982BE4374E009F70B2 /* ChatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItem.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -431,14 +443,6 @@
 			path = WorkspaceAdditionView;
 			sourceTree = "<group>";
 		};
-		638D93A82BD42F72006B0B3A /* SheetLayout */ = {
-			isa = PBXGroup;
-			children = (
-				638D93A92BD4342A006B0B3A /* SheetLayout.swift */,
-			);
-			path = SheetLayout;
-			sourceTree = "<group>";
-		};
 		638D93AB2BD50DA8006B0B3A /* WorkspaceGroupAdditionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,7 +563,9 @@
 		6392F97B2BE40613009F70B2 /* CommonModule */ = {
 			isa = PBXGroup;
 			children = (
+				6392F98C2BE41F25009F70B2 /* GroupParticipantListView */,
 				6392F97F2BE40663009F70B2 /* GroupDetailView */,
+				6392F9872BE41AD0009F70B2 /* GroupSettingsView */,
 			);
 			path = CommonModule;
 			sourceTree = "<group>";
@@ -579,6 +585,38 @@
 				6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */,
 			);
 			path = EmptyListMessage;
+			sourceTree = "<group>";
+		};
+		6392F9872BE41AD0009F70B2 /* GroupSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */,
+			);
+			path = GroupSettingsView;
+			sourceTree = "<group>";
+		};
+		6392F98C2BE41F25009F70B2 /* GroupParticipantListView */ = {
+			isa = PBXGroup;
+			children = (
+				6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */,
+				6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */,
+			);
+			path = GroupParticipantListView;
+			sourceTree = "<group>";
+		};
+		6392F9932BE42493009F70B2 /* ChatLayout */ = {
+			isa = PBXGroup;
+			children = (
+				6392F9942BE424C2009F70B2 /* ChatLayout.swift */,
+			);
+			path = ChatLayout;
+			sourceTree = "<group>";
+		};
+		6392F99A2BE437B4009F70B2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
@@ -770,6 +808,7 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6392F99A2BE437B4009F70B2 /* New Group */,
 				6392F9822BE409B8009F70B2 /* EmptyListMessage */,
 				638DBF062BDB8164003A1795 /* ThemeColorPicker */,
 				638DBEF12BDAD068003A1795 /* BaseButton */,
@@ -790,7 +829,7 @@
 				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
 				638DBF292BDE59C8003A1795 /* LoadingDots */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
-				638D93A82BD42F72006B0B3A /* SheetLayout */,
+				6392F9932BE42493009F70B2 /* ChatLayout */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -868,6 +907,8 @@
 				63C9DF582BBFCD940075ABDA /* Account.swift */,
 				63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */,
 				2E46548C2BD2A61A00BF2944 /* Group.swift */,
+				6392F9912BE4227B009F70B2 /* Message.swift */,
+				6392F9982BE4374E009F70B2 /* ChatItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -880,6 +921,7 @@
 				63C9DF642BC0571E0075ABDA /* AccountService.swift */,
 				63C9DF692BC27E860075ABDA /* WorkspaceService.swift */,
 				2E4654902BD2A74000BF2944 /* GroupService.swift */,
+				6392F9962BE42E58009F70B2 /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1087,6 +1129,7 @@
 				638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
 				638D93A52BD4160B006B0B3A /* WorkspaceAdditionView.swift in Sources */,
+				6392F9922BE4227B009F70B2 /* Message.swift in Sources */,
 				639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */,
 				638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
@@ -1116,6 +1159,7 @@
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
 				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
 				6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */,
+				6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */,
 				639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
@@ -1133,8 +1177,10 @@
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
+				6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
+				6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
 				639DBC2E2BD02B79003D24FB /* WorkspaceActivityCard.swift in Sources */,
@@ -1148,7 +1194,8 @@
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
-				638D93AA2BD4342A006B0B3A /* SheetLayout.swift in Sources */,
+				6392F98E2BE41F49009F70B2 /* GroupParticipantListView.swift in Sources */,
+				6392F9902BE41F5F009F70B2 /* GroupParticipantListViewModel.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
 				2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
@@ -1169,6 +1216,7 @@
 				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
 				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
+				6392F9992BE4374E009F70B2 /* ChatItem.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,
 			);

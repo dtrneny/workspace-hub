@@ -120,6 +120,27 @@ class FirestoreRepository<T: Codable>: Repository {
         }
     }
     
+    func listenToCollection(completion: @escaping ([T], Error?) -> Void) {
+        firestore.collection(collection).addSnapshotListener { (querySnapshot, error) in
+            if let error = error {
+                completion([], error)
+                return
+            }
+
+            guard let documents = querySnapshot?.documents else {
+                completion([], nil)
+                return
+            }
+            
+
+            let data = documents.compactMap { queryDocumentSnapshot -> T? in
+                try? queryDocumentSnapshot.data(as: T.self)
+            }
+            
+            completion(data, nil)
+        }
+    }
+    
     private func applyQueryOptions(_ query: Query, options: QueryOptions) -> Query {
         var modifiedQuery = query
         
