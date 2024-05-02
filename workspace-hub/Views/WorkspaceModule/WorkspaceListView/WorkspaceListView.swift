@@ -66,9 +66,7 @@ extension WorkspaceListView {
             
             ScrollView {
                 if viewModel.workspaces.isEmpty {
-                    Text("There are no workspaces...")
-                        .font(.inter(14.0))
-                        .padding()
+                    EmptyListMessage(message: "There are no workspaces...")
                 } else {
                     ForEach(viewModel.workspaces) { workspace in
                         WorkspaceListRow(

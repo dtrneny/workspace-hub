@@ -59,6 +59,10 @@
 		638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */; };
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
 		638F240A2BAD82CC00704CE0 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */; };
+		6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9792BE4040F009F70B2 /* WorkspaceGroupListRow.swift */; };
+		6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9802BE4069A009F70B2 /* GroupDetailView.swift */; };
+		6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */; };
+		6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -186,6 +190,10 @@
 		638F23EC2BACDA1100704CE0 /* ProtectedInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtectedInput.swift; sourceTree = "<group>"; };
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
 		638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		6392F9792BE4040F009F70B2 /* WorkspaceGroupListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupListRow.swift; sourceTree = "<group>"; };
+		6392F9802BE4069A009F70B2 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
+		6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListMessage.swift; sourceTree = "<group>"; };
+		6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewModel.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -554,6 +562,39 @@
 			path = BackArrow;
 			sourceTree = "<group>";
 		};
+		6392F9782BE403F4009F70B2 /* WorkspaceGroupListRow */ = {
+			isa = PBXGroup;
+			children = (
+				6392F9792BE4040F009F70B2 /* WorkspaceGroupListRow.swift */,
+			);
+			path = WorkspaceGroupListRow;
+			sourceTree = "<group>";
+		};
+		6392F97B2BE40613009F70B2 /* CommonModule */ = {
+			isa = PBXGroup;
+			children = (
+				6392F97F2BE40663009F70B2 /* GroupDetailView */,
+			);
+			path = CommonModule;
+			sourceTree = "<group>";
+		};
+		6392F97F2BE40663009F70B2 /* GroupDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				6392F9802BE4069A009F70B2 /* GroupDetailView.swift */,
+				6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */,
+			);
+			path = GroupDetailView;
+			sourceTree = "<group>";
+		};
+		6392F9822BE409B8009F70B2 /* EmptyListMessage */ = {
+			isa = PBXGroup;
+			children = (
+				6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */,
+			);
+			path = EmptyListMessage;
+			sourceTree = "<group>";
+		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +794,7 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6392F9822BE409B8009F70B2 /* EmptyListMessage */,
 				638DBF062BDB8164003A1795 /* ThemeColorPicker */,
 				638DBEF12BDAD068003A1795 /* BaseButton */,
 				638D93A02BD40B4F006B0B3A /* FormField */,
@@ -767,6 +809,7 @@
 				639DBC2C2BD02B65003D24FB /* WorkspaceActivityCard */,
 				638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */,
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
+				6392F9782BE403F4009F70B2 /* WorkspaceGroupListRow */,
 				2E4654922BD2AA9200BF2944 /* GroupListRow */,
 				638DBF1F2BDC00CD003A1795 /* SettingAccountCard */,
 				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
@@ -834,6 +877,7 @@
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6392F97B2BE40613009F70B2 /* CommonModule */,
 				639DBC142BD00218003D24FB /* MainModule */,
 				639DBC132BD0020A003D24FB /* WorkspaceModule */,
 				639DBC152BD00BD7003D24FB /* GroupModule */,
@@ -1080,12 +1124,15 @@
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */,
+				6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
 				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
+				6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */,
+				6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
@@ -1093,6 +1140,7 @@
 				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
 				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
+				6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */,
 				639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
