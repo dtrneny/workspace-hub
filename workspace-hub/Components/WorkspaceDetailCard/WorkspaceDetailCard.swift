@@ -35,12 +35,6 @@ struct WorkspaceDetailCard: View {
                     Circle()
                         .fill(workspaceColor)
                         .frame(width: 64, height: 64)
-                    
-                    Circle()
-                        .fill(.clear)
-                        .stroke(workspaceColor, lineWidth: 2)
-                        .frame(width: 72, height: 72)
-
                 }
                 
                 Text(name)
