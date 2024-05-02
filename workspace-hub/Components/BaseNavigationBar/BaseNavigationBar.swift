@@ -26,7 +26,7 @@ struct BaseNavigationBar: View {
                 .frame(width: 50, height: 50)
         }
         .padding()
-        .padding([.bottom], 38)
+        .padding([.bottom], 19)
         .background(Color.white.ignoresSafeArea(edges: .top))
     }
 }

@@ -56,7 +56,7 @@ struct WorkspaceListRow: View {
         .frame(height: 85)
         .background(.secondary900)
         .cornerRadius(20)
-        .padding([.bottom], 15)
+        .padding([.bottom], 5)
         .onTapGesture {
             action?()
         }

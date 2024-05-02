@@ -40,9 +40,7 @@ enum TabSectionFactory {
         if let currentSection = history.last {
             switch currentSection {
             case .list:
-                GroupListView()
-            case .detail:
-                Text("Detail")
+                Text("List")
             }
         } else {
             Text("Default")
