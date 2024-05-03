@@ -86,7 +86,6 @@ final class SignUpViewModel: ViewModelProtocol {
             return true
         }
         catch {
-            print(error)
             singingUp = false
             return false
         }

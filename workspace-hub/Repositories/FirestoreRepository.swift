@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestore
 
 class FirestoreRepository<T: Codable>: Repository {
+
     private let collection: String
     private let firestore = Firestore.firestore()
     

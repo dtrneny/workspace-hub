@@ -21,16 +21,20 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     @Published var presentAddition: Bool = false
     
     func fetchInitialData() async {
+        state = .loading
+        
         await getWorkspaces()
         
         state = .idle
     }
     
     func getWorkspaces() async {
-        state = .loading
-        do {
-            workspaces = await workspaceService.getWorkspaces()
-            state = .success
+        guard let userId = AuthService.shared.getCurrentUser()?.uid else {
+            return
         }
+        
+        workspaces = await workspaceService.getWorkspaces(assembleQuery: { query in
+            query.whereField("ownerId", isEqualTo: userId)
+        })
     }
 }
