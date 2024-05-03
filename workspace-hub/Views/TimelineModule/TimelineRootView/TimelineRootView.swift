@@ -13,7 +13,7 @@ struct TimelineRootView: View {
     
     var body: some View {
         TabCoordinatorView(content: {
-            TabSectionFactory.viewForTimelineTabSection(history: coordinator.history)
+            TabSectionFactory.viewForTimelineTabSection(coordinator: coordinator)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
         .onDisappear {

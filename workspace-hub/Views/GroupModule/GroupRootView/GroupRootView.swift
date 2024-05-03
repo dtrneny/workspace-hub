@@ -13,7 +13,7 @@ struct GroupRootView: View {
 
     var body: some View {
         TabCoordinatorView(content: {
-            TabSectionFactory.viewForGroupTabSection(history: coordinator.history)
+            TabSectionFactory.viewForGroupTabSection(coordinator: coordinator)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
         .onDisappear {
