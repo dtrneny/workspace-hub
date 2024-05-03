@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 final class WorkspaceDetailViewModel: ViewModelProtocol {
     
@@ -28,7 +29,7 @@ final class WorkspaceDetailViewModel: ViewModelProtocol {
         await getWorkspace(workspaceId: workspaceId)
         
         if let groupIds = workspace?.groups {
-            async let groups = getWorkspaceGroups(ids: groupIds)
+            async let groups = getWorkspaceGroups(groupIds: groupIds)
             workspaceGroups = await groups
         }
         
@@ -36,21 +37,16 @@ final class WorkspaceDetailViewModel: ViewModelProtocol {
     }
     
     func getWorkspace(workspaceId: String) async {
-        do {
-            workspace = await workspaceService.getWorkspace(id: workspaceId)
-        }
+        workspace = await workspaceService.getWorkspace(id: workspaceId)
     }
     
-    func getWorkspaceGroups(ids: [String]) async -> [Group] {
-        var groups: [Group] = []
-            
-        for id in ids {
-            async let group = groupService.getGroup(id: id)
-            if let fetchedGroup = await group {
-                groups.append(fetchedGroup)
-            }
+    func getWorkspaceGroups(groupIds: [String]) async -> [Group] {
+        guard !groupIds.isEmpty else {
+            return []
         }
-        
-        return groups
+                        
+        return await groupService.getGroups { query in
+            query.whereField(FieldPath.documentID(), in: groupIds)
+        }
     }
 }

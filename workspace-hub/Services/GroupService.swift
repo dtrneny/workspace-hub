@@ -6,32 +6,21 @@
 //
 
 import Foundation
-import FirebaseAuth
+import FirebaseFirestore
 
 protocol GroupServiceProtocol {
-    func getGroupsOfCurrentUser() async -> [Group]
+    func getGroups(assembleQuery: @escaping (Query) -> Query) async -> [Group]
     func createGroup(group: Group) async -> Group?
     func getGroup(id: String) async -> Group?
 }
 
 class GroupService: GroupServiceProtocol, ObservableObject {
     private var repository = FirestoreRepository<Group>(collection: "groups")
-        
-    private let firebaseAuth = Auth.auth()
-    
-    func getGroupsOfCurrentUser() async -> [Group] {
-        do {
-            guard let user = firebaseAuth.currentUser else {
-                return []
-            }
             
-            let groups = try await repository.fetchData().get()
-            let groupsOfCurrentUser = groups.filter {
-                $0.members.contains(user.uid)
-            }
-            return groupsOfCurrentUser
-        }
-        catch {
+    func getGroups(assembleQuery: @escaping (Query) -> Query) async -> [Group] {
+        do {
+            return try await repository.fetchData(assembleQuery: assembleQuery).get()
+        } catch {
             return []
         }
     }

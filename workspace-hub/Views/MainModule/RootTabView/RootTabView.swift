@@ -10,9 +10,7 @@ import SwiftUI
 struct RootTabView: View {
     
     @EnvironmentObject var mainRouter: MainRouter
-    
-    @StateObject private var viewModel = RootTabViewModel()
-    
+        
     init() {
         UITabBar.appearance().unselectedItemTintColor = UIColor(Color.grey700)
         UITabBar.appearance().backgroundColor = .white
@@ -45,16 +43,4 @@ struct RootTabView: View {
         }
         .toolbarColorScheme(.light, for: .tabBar)
     }
-}
-
-// MARK: add mock
-#Preview {
-
-    struct Preview: View {
-        var body: some View {
-            RootTabView()
-        }
-    }
-    
-    return Preview()
 }

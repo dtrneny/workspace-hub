@@ -48,12 +48,10 @@ final class SettingAccountEditViewModel: ViewModelProtocol {
         }
         
         guard let fetchedAccount = account else {
-            // MARK: show error
             return false
         }
         
         guard let fetchedAccountId = fetchedAccount.id else {
-            // MARK: show error
             return false
         }
         

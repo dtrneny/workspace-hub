@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol WorkspaceServiceProtocol {
-    func getWorkspaces() async -> [Workspace]
+    func getWorkspaces(assembleQuery: @escaping (Query) -> Query) async -> [Workspace]
     func createWorkspace(workspace: Workspace) async -> Workspace?
     func getWorkspace(id: String) async -> Workspace?
     func updateWorkspace(id: String, update: Workspace) async -> Workspace?
@@ -20,12 +21,11 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
     
     private var groupRepository = FirestoreRepository<Group>(collection: "groups")
     
-    func getWorkspaces() async -> [Workspace] {
+    func getWorkspaces(assembleQuery: @escaping (Query) -> Query) async -> [Workspace] {
         do {
-            let workspaces = try await repository.fetchData().get()
-            return workspaces
-        }
-        catch {
+            return try await repository.fetchData(assembleQuery: assembleQuery).get()
+
+        } catch {
             return []
         }
     }
@@ -54,27 +54,6 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
         do {
             let workspace = try await repository.update(id: id, data: update).get()
             return workspace
-        }
-        catch {
-            return nil
-        }
-    }
-
-    func getGroupsByWorkspaceId(id: String) async -> [Group]? {
-        do {
-            guard let workspace = try await repository.getById(id: id).get()
-            else {
-                return []
-            }
-
-            let groups = try await groupRepository.fetchData().get()
-            let groupsInWorkspace = groups.filter { group in
-                workspace.groups.contains { groupId in
-                    groupId == group.id
-                }
-            }
-            
-            return groupsInWorkspace
         }
         catch {
             return nil

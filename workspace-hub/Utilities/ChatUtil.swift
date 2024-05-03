@@ -67,11 +67,6 @@ final class ChatUtil {
         }
         
         chatItemGroups.append(currentGroup)
-        
-        chatItemGroups.forEach { group in
-            print(group.chatItems)
-            print("next")
-        }
 
         return chatItemGroups
     }
