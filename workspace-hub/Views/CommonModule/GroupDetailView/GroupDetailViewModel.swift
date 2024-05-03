@@ -40,15 +40,28 @@ final class GroupDetailViewModel: ViewModelProtocol {
         return group
     }
     
-    func sentMessage(message: Message) async -> Bool {
-        let message = await messageService.createMessage(message: message)
+    func sentMessage(chatSubmit: ChatSubmit, groupId: String) async -> Bool {
+        let message = await messageService.createMessage(message: Message(
+            userId: "3DMOijappVXLZ4mBp4Dx8nLBKP73",
+            text: chatSubmit.text,
+            sentAt: chatSubmit.sentAt,
+            groupId: groupId
+        ))
         return message != nil
     }
     
-    func getMessages() {
-        messageService.getActiveMessages { [weak self] fetchedMessages, error in
+    func getMessages(groupId: String) {
+        messageService.getGroupMessages { query in
+            return query.whereField("groupId", isEqualTo: groupId)
+        } completion: { [weak self] fetchedMessages, error in
             guard let self = self else { return }
             messages = fetchedMessages
         }
+//
+//        
+//        messageService.getActiveMessages { [weak self] fetchedMessages, error in
+//            guard let self = self else { return }
+//            messages = fetchedMessages
+//        }
     }
 }

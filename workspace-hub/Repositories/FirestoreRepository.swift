@@ -8,15 +8,6 @@
 import Foundation
 import FirebaseFirestore
 
-struct QueryOptions {
-    var filters: [Filter]?
-}
-
-struct Filter {
-    var field: String
-    var value: Any
-}
-
 class FirestoreRepository<T: Codable>: Repository {
     private let collection: String
     private let firestore = Firestore.firestore()
@@ -25,13 +16,26 @@ class FirestoreRepository<T: Codable>: Repository {
         self.collection = collection
     }
     
-    func fetchData(with options: QueryOptions? = nil) async -> Result<[T], Error> {
-        var query: Query = firestore.collection(collection)
-            
-        if let options = options {
-            query = applyQueryOptions(query, options: options)
+    func fetchData() async -> Result<[T], Error> {
+        do {
+            let snapshot = try await firestore.collection(collection).getDocuments()
+            let models = snapshot.documents.compactMap { document -> T? in
+                do {
+                    let model = try document.data(as: T.self)
+                    return model
+                } catch {
+                    return nil
+                }
+            }
+            return .success(models)
+        } catch {
+            return .failure(error)
         }
+    }
     
+    func fetchData(assembleQuery: @escaping (Query) -> Query) async -> Result<[T], Error> {
+        let query = assembleQuery(firestore.collection(collection))
+        
         do {
             let snapshot = try await query.getDocuments()
             let models = snapshot.documents.compactMap { document -> T? in
@@ -98,19 +102,6 @@ class FirestoreRepository<T: Codable>: Repository {
         }
     }
     
-    func update(id: String, update: [String: Any]) async throws -> Result<Bool, Error> {
-        do {
-            try await firestore
-                .collection(collection)
-                .document(id)
-                .updateData(update)
-            
-            return .success(true)
-        } catch {
-            return .failure(error)
-        }
-    }
-    
     func delete(id: String) async throws -> Result<Bool, Error> {
         do {
             try await firestore.collection(collection).document(id).delete()
@@ -120,8 +111,10 @@ class FirestoreRepository<T: Codable>: Repository {
         }
     }
     
-    func listenToCollection(completion: @escaping ([T], Error?) -> Void) {
-        firestore.collection(collection).addSnapshotListener { (querySnapshot, error) in
+    func listenToCollection(assembleQuery: @escaping (Query) -> Query, completion: @escaping ([T], Error?) -> Void) {
+        let query = assembleQuery(firestore.collection(collection))
+        
+        query.addSnapshotListener { (querySnapshot, error) in
             if let error = error {
                 completion([], error)
                 return
@@ -139,17 +132,5 @@ class FirestoreRepository<T: Codable>: Repository {
             
             completion(data, nil)
         }
-    }
-    
-    private func applyQueryOptions(_ query: Query, options: QueryOptions) -> Query {
-        var modifiedQuery = query
-        
-        if let filters = options.filters {
-            for filter in filters {
-                modifiedQuery = modifiedQuery.whereField(filter.field, isEqualTo: filter.value)
-            }
-        }
-        
-        return modifiedQuery
     }
 }

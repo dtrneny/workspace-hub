@@ -612,13 +612,6 @@
 			path = ChatLayout;
 			sourceTree = "<group>";
 		};
-		6392F99A2BE437B4009F70B2 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,7 +801,6 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				6392F99A2BE437B4009F70B2 /* New Group */,
 				6392F9822BE409B8009F70B2 /* EmptyListMessage */,
 				638DBF062BDB8164003A1795 /* ThemeColorPicker */,
 				638DBEF12BDAD068003A1795 /* BaseButton */,

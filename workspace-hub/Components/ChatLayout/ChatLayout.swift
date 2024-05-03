@@ -7,15 +7,20 @@
 
 import SwiftUI
 
+struct ChatSubmit {
+    var text: String
+    var sentAt: Date
+}
+
 struct ChatLayout<Content: View>: View {
     
     let content: Content
-    let submitMessage: (_ message: Message) -> Void
+    let submitMessage: (_ message: ChatSubmit) -> Void
     
     @FocusState private var isFocused: Bool
     @State var text: String = ""
     
-    init(@ViewBuilder content: () -> Content, submitMessage: @escaping (_ message: Message) -> Void) {
+    init(@ViewBuilder content: () -> Content, submitMessage: @escaping (_ message: ChatSubmit) -> Void) {
         self.content = content()
         self.submitMessage = submitMessage
     }
@@ -62,8 +67,7 @@ extension ChatLayout {
                 
                 OperationButton(icon: "paperplane.fill") {
                     submitMessage(
-                        Message(
-                            userId: "3DMOijappVXLZ4mBp4Dx8nLBKP73",
+                        ChatSubmit(
                             text: text,
                             sentAt: Date()
                         )

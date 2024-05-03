@@ -33,9 +33,9 @@ struct GroupDetailView: View {
                                     .foregroundStyle(.secondary900)
                             }
                         }
-                    } submitMessage: { message in
+                    } submitMessage: { chatSubmit in
                         Task {
-                            await viewModel.sentMessage(message: message)
+                            await viewModel.sentMessage(chatSubmit: chatSubmit, groupId: groupId)
                         }
                     }
 
@@ -43,7 +43,7 @@ struct GroupDetailView: View {
             }
         }
         .onAppear {
-            viewModel.getMessages()
+            viewModel.getMessages(groupId: groupId)
             
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
