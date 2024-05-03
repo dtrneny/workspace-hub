@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol MessageServiceProtocol {
-    func getActiveMessages(completion: @escaping ([Message], Error?) -> Void)
+    func getGroupMessages(
+        assembleQuery: @escaping (Query) -> Query,
+        completion: @escaping ([Message], Error?
+    ) -> Void)
     func createMessage(message: Message) async -> Message?
 }
 
@@ -16,8 +20,11 @@ class MessageService: MessageServiceProtocol, ObservableObject {
 
     private var repository = FirestoreRepository<Message>(collection: "messages")
     
-    func getActiveMessages(completion: @escaping ([Message], Error?) -> Void) {
-        repository.listenToCollection(completion: completion)
+    func getGroupMessages(
+        assembleQuery: @escaping (Query) -> Query,
+        completion: @escaping ([Message], Error?) -> Void
+    ) {
+        repository.listenToCollection(assembleQuery: assembleQuery, completion: completion)
     }
     
     func createMessage(message: Message) async -> Message? {

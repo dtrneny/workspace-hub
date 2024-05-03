@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol Repository {
     associatedtype Model: Codable
     
-    func fetchData(with options: QueryOptions?) async throws -> Result<[Model], Error>
+    func fetchData() async throws -> Result<[Model], Error>
+    func fetchData(assembleQuery: @escaping (Query) -> Query) async throws -> Result<[Model], Error>
 }

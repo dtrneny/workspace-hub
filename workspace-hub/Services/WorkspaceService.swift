@@ -12,7 +12,6 @@ protocol WorkspaceServiceProtocol {
     func createWorkspace(workspace: Workspace) async -> Workspace?
     func getWorkspace(id: String) async -> Workspace?
     func updateWorkspace(id: String, update: Workspace) async -> Workspace?
-    func updateWorkspace(id: String, update: [String: Any]) async -> Bool
 }
 
 class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
@@ -60,17 +59,7 @@ class WorkspaceService: WorkspaceServiceProtocol, ObservableObject {
             return nil
         }
     }
-    
-    func updateWorkspace(id: String, update: [String: Any]) async -> Bool {
-        do {
-            let result = try await repository.update(id: id, update: update).get()
-            return result
-        }
-        catch {
-            return false
-        }
-    }
-    
+
     func getGroupsByWorkspaceId(id: String) async -> [Group]? {
         do {
             guard let workspace = try await repository.getById(id: id).get()

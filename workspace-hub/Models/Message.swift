@@ -13,4 +13,5 @@ struct Message: Identifiable, Codable {
     var userId: String
     var text: String
     var sentAt: Date
+    var groupId: String
 }
