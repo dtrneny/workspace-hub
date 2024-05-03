@@ -14,7 +14,8 @@ struct GroupDetailView: View {
     
     @StateObject private var viewModel = GroupDetailViewModel(
         groupService: GroupService(),
-        messageService: MessageService()
+        messageService: MessageService(),
+        accountService: AccountService()
     )
     
     var body: some View {
@@ -28,9 +29,20 @@ struct GroupDetailView: View {
                     
                     ChatLayout {
                         ScrollView {
-                            ForEach(viewModel.messages, id: \.id) { message in
-                                Text(message.text)
-                                    .foregroundStyle(.secondary900)
+                            ScrollViewReader { scrollView in
+                                ForEach(viewModel.chatItemGroups, id: \.id) { chatItemGroup in
+                                    VStack {
+                                        ForEach(chatItemGroup.chatItems, id: \.id) { chatItem in
+                                            ChatMessage(chatItem: chatItem)
+                                        }
+                                        VerticalSpacer(height: 15)
+                                    }
+                                    .onAppear {
+                                        if let lastItem = viewModel.lastChatItem {
+                                            scrollView.scrollTo(lastItem.id, anchor: .bottom)
+                                        }
+                                    }
+                                }
                             }
                         }
                     } submitMessage: { chatSubmit in
@@ -42,9 +54,7 @@ struct GroupDetailView: View {
                 }
             }
         }
-        .onAppear {
-            viewModel.getMessages(groupId: groupId)
-            
+        .onAppear {            
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
             }

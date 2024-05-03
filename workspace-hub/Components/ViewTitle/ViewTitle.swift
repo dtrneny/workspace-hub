@@ -12,7 +12,7 @@ struct ViewTitle: View {
     
     var body: some View {
         Text(title)
-            .foregroundColor(.secondary900)
+            .foregroundStyle(.secondary900)
             .font(.inter(24.0))
             .fontWeight(.medium)
             .padding([.bottom], 19)

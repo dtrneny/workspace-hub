@@ -10,5 +10,7 @@ import Foundation
 struct ChatItem: Identifiable {
     var id: String = UUID().uuidString
     var message: Message
-    var fromCurrentUser: Bool = false
+    var isRecieved: Bool = false
+    var isFirst: Bool = true
+    var isLast: Bool = true
 }
