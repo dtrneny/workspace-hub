@@ -41,8 +41,8 @@ enum TabSectionFactory {
     }
     
     @ViewBuilder
-    static func viewForGroupTabSection(history: [GroupTabSections]) -> some View {
-        if let currentSection = history.last {
+    static func viewForGroupTabSection(coordinator: GroupCoordinator) -> some View {
+        if let currentSection = coordinator.history.last {
             switch currentSection {
             case .list:
                 Text("List")
@@ -53,8 +53,8 @@ enum TabSectionFactory {
     }
     
     @ViewBuilder
-    static func viewForTimelineTabSection(history: [TimelineTabSections]) -> some View {
-        if let currentSection = history.last {
+    static func viewForTimelineTabSection(coordinator: TimelineCoordinator) -> some View {
+        if let currentSection = coordinator.history.last {
             switch currentSection {
             case .timeline:
                 TimelineView()
@@ -65,8 +65,8 @@ enum TabSectionFactory {
     }
     
     @ViewBuilder
-    static func viewForSettingTabSection(history: [SettingTabSections]) -> some View {
-        if let currentSection = history.last {
+    static func viewForSettingTabSection(coordinator: SettingCoordinator) -> some View {
+        if let currentSection = coordinator.history.last {
             switch currentSection {
             case .list:
                 SettingListView()

@@ -13,7 +13,7 @@ struct SettingRootView: View {
 
     var body: some View {
         TabCoordinatorView(content: {
-            TabSectionFactory.viewForSettingTabSection(history: coordinator.history)
+            TabSectionFactory.viewForSettingTabSection(coordinator: coordinator)
                 .environmentObject(coordinator)
         }, coordinator: coordinator)
         .onDisappear {
