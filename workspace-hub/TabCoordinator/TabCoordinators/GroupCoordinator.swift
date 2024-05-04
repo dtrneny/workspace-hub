@@ -10,6 +10,7 @@ import Foundation
 enum GroupTabSections: Hashable {
     case list
     case invitations
+    case groupDetail(groupId: String)
 }
 
 class GroupCoordinator: BaseTabCoordinator<GroupTabSections> {
