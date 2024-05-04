@@ -69,11 +69,11 @@ extension SettingListView {
                 }
             }
             if let account = viewModel.account {
-                SettingAccountCard(
+                CommonAccountListRow(
                     name: "\(account.firstname) \(account.lastname)",
-                    email: account.email,
+                     email: account.email,
                     imageUrl: account.profileImage
-                )
+                ) { EmptyView() }
             }
         }
     }

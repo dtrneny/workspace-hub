@@ -11,29 +11,20 @@ struct OperationButton: View {
     
     var icon: String
     var color: Color = .secondary900
-    var rounded: Bool? = false
     var action: () -> Void
 
     var body: some View {
         Button {
             action()
         } label: {
-            ZStack {
-                if(rounded == true){
-                    Circle()
-                        .foregroundColor(color.opacity(0.05))
-                        .frame(width: 35, height: 35)
-                } else {
-                    RoundedRectangle(cornerRadius: 8)
-                        .foregroundColor(color.opacity(0.05))
-                        .frame(width: 35, height: 35)
-                }
+            Button(action: action) {
                 Image(systemName: icon)
                     .foregroundColor(color)
                     .font(.system(size: 20))
+                    .frame(width: 30, height: 30)
+                    .background(RoundedRectangle(cornerRadius: 8).foregroundColor(color.opacity(0.05)))
             }
         }
-        .frame(width: 30, height: 30, alignment: .center)
     }
 }
 

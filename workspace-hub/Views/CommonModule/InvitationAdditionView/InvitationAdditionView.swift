@@ -15,7 +15,8 @@ struct InvitationAdditionView: View {
     
     @StateObject private var viewModel = InvitationAdditionViewModel(
         accountService: AccountService(),
-        invitationService: InvitationService()
+        invitationService: InvitationService(),
+        groupService: GroupService()
     )
     
     var body: some View {

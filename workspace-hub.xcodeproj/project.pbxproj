@@ -46,7 +46,6 @@
 		638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */; };
 		638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */; };
 		638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */; };
-		638DBF212BDC00F1003A1795 /* SettingAccountCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */; };
 		638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */; };
 		638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */; };
 		638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DBF272BDE39A2003A1795 /* ImageUtil.swift */; };
@@ -82,6 +81,8 @@
 		6399C57F2BE643E700EB068D /* InvitationAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */; };
 		6399C5812BE643F200EB068D /* InvitationAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5802BE643F200EB068D /* InvitationAdditionView.swift */; };
 		6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5822BE6442C00EB068D /* InvitationService.swift */; };
+		6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */; };
+		6399C5892BE6864F00EB068D /* InvitationAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5882BE6864F00EB068D /* InvitationAccount.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -194,7 +195,6 @@
 		638DBF182BDBD47B003A1795 /* WorkspaceEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditView.swift; sourceTree = "<group>"; };
 		638DBF1A2BDBD487003A1795 /* WorkspaceEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceEditViewModel.swift; sourceTree = "<group>"; };
 		638DBF1D2BDBFE06003A1795 /* SettingListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingListRow.swift; sourceTree = "<group>"; };
-		638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountCard.swift; sourceTree = "<group>"; };
 		638DBF232BDD6B17003A1795 /* SettingAccountEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditView.swift; sourceTree = "<group>"; };
 		638DBF252BDD6B3B003A1795 /* SettingAccountEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingAccountEditViewModel.swift; sourceTree = "<group>"; };
 		638DBF272BDE39A2003A1795 /* ImageUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
@@ -230,6 +230,8 @@
 		6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionViewModel.swift; sourceTree = "<group>"; };
 		6399C5802BE643F200EB068D /* InvitationAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionView.swift; sourceTree = "<group>"; };
 		6399C5822BE6442C00EB068D /* InvitationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationService.swift; sourceTree = "<group>"; };
+		6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAccountListRow.swift; sourceTree = "<group>"; };
+		6399C5882BE6864F00EB068D /* InvitationAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAccount.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -538,14 +540,6 @@
 			path = SettingListRow;
 			sourceTree = "<group>";
 		};
-		638DBF1F2BDC00CD003A1795 /* SettingAccountCard */ = {
-			isa = PBXGroup;
-			children = (
-				638DBF202BDC00F1003A1795 /* SettingAccountCard.swift */,
-			);
-			path = SettingAccountCard;
-			sourceTree = "<group>";
-		};
 		638DBF222BDD6AF7003A1795 /* SettingAccountEditView */ = {
 			isa = PBXGroup;
 			children = (
@@ -673,6 +667,22 @@
 				6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */,
 			);
 			path = InvitationAdditionView;
+			sourceTree = "<group>";
+		};
+		6399C5842BE67A5800EB068D /* CommonAccountListRow */ = {
+			isa = PBXGroup;
+			children = (
+				6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */,
+			);
+			path = CommonAccountListRow;
+			sourceTree = "<group>";
+		};
+		6399C5872BE6863D00EB068D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6399C5882BE6864F00EB068D /* InvitationAccount.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
@@ -878,11 +888,11 @@
 				63EF08482BAE289300488B1C /* ViewTitle */,
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
+				6399C5842BE67A5800EB068D /* CommonAccountListRow */,
 				639DBC2C2BD02B65003D24FB /* WorkspaceActivityCard */,
 				638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */,
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
 				6392F9782BE403F4009F70B2 /* WorkspaceGroupListRow */,
-				638DBF1F2BDC00CD003A1795 /* SettingAccountCard */,
 				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
 				638DBF292BDE59C8003A1795 /* LoadingDots */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
@@ -961,6 +971,7 @@
 		63ECEB952BA432DC00166BCD /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6399C5872BE6863D00EB068D /* Helper */,
 				63C9DF582BBFCD940075ABDA /* Account.swift */,
 				63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */,
 				6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */,
@@ -1203,6 +1214,7 @@
 				638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
+				6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
 				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
 				6399C5782BE63AF900EB068D /* WorkspaceAdministrator.swift in Sources */,
@@ -1246,7 +1258,6 @@
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */,
 				2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */,
-				638DBF212BDC00F1003A1795 /* SettingAccountCard.swift in Sources */,
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
@@ -1272,6 +1283,7 @@
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
 				2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */,
+				6399C5892BE6864F00EB068D /* InvitationAccount.swift in Sources */,
 				6399C5632BE50CE700EB068D /* ChatItemGroup.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
 				638DBF162BDBA716003A1795 /* WorkspaceDetailCard.swift in Sources */,
