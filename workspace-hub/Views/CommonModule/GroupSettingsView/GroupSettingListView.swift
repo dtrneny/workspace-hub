@@ -10,6 +10,9 @@ import SwiftUI
 struct GroupSettingListView: View {
     
     let groupId: String
+    let workspaceId: String
+    
+    let navigateToEdit: (_ groupId: String, _ workspaceId: String) -> Void
     
     var body: some View {
         BaseLayout {
@@ -29,7 +32,7 @@ extension GroupSettingListView {
             ViewTitle(title: "Group settings")
 
             SettingListRow(label: "General") {
-                print("Clicked")
+                navigateToEdit(groupId, workspaceId)
             }
             SettingListRow(label: "Participants") {
                 print("Clicked")

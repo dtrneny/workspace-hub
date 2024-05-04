@@ -22,6 +22,7 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
     @Published var symbolSelectPresented: Bool = false
     @Published var selectedColor: UIColor = UIColor(.primaryRed700)
     @Published var updatingWorkspace: Bool = false
+    @Published var deletingWorkspace: Bool = false
     
     var workspace: Workspace? = nil
 
@@ -36,19 +37,24 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
     }
     
     func getWorkspace(workspaceId: String) async {
-        state = .loading
-        do {
-            if let result = await workspaceService.getWorkspace(id: workspaceId) {
-                workspace = result
-                selectedIcon = result.icon
-                if let hex = result.hexColor {
-                    selectedColor = HexColorsUtil.getUIColorByHexString(hexString: hex)
-                }
-                workspaceName = result.name
+        if let result = await workspaceService.getWorkspace(id: workspaceId) {
+            workspace = result
+            selectedIcon = result.icon
+            if let hex = result.hexColor {
+                selectedColor = HexColorsUtil.getUIColorByHexString(hexString: hex)
             }
-            
-            state = .success
+            workspaceName = result.name
         }
+    }
+    
+    func deleteWorkspace() async -> Bool {
+        if let workspace = workspace {
+            deletingWorkspace = true
+            return await DeletionService().deleteWorkspace(workspace: workspace)
+        }
+        
+        deletingWorkspace = false
+        return false
     }
     
     func updateWorkspace() async -> Bool {

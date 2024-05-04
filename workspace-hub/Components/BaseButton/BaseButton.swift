@@ -10,6 +10,7 @@ import SwiftUI
 enum BaseButtonStyle {
     case filled
     case outlined
+    case danger
 }
 
 struct BaseButton<Content: View>: View {
@@ -37,6 +38,9 @@ struct BaseButton<Content: View>: View {
         }
         .if(style == .outlined) { view in
             view.modifier(OutlinedBaseButton())
+        }
+        .if(style == .danger) { view in
+            view.modifier(DangerBaseButton())
         }
         .onTapGesture {
             action()
@@ -69,6 +73,25 @@ struct OutlinedBaseButton: ViewModifier {
                     style: .continuous
                 )
                 .stroke(.secondary900, lineWidth: 1)
+            )
+            .font(.inter(16.0))
+            .fontWeight(.semibold)
+    }
+}
+
+struct DangerBaseButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(maxWidth: .infinity)
+            .foregroundColor(.primaryRed700)
+            .padding()
+            .background(
+                RoundedRectangle(
+                    cornerRadius: 10,
+                    style: .continuous
+                )
+                .stroke(.primaryRed700, lineWidth: 1)
+                .foregroundStyle(.primaryRed700.opacity(0.05))
             )
             .font(.inter(16.0))
             .fontWeight(.semibold)

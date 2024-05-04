@@ -71,6 +71,9 @@
 		6399C5612BE4DCA900EB068D /* ChatUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5602BE4DCA900EB068D /* ChatUtil.swift */; };
 		6399C5632BE50CE700EB068D /* ChatItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5622BE50CE700EB068D /* ChatItemGroup.swift */; };
 		6399C5662BE51D7600EB068D /* VerticalSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5652BE51D7600EB068D /* VerticalSpacer.swift */; };
+		6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5672BE566BF00EB068D /* DeletionService.swift */; };
+		6399C56B2BE56D5C00EB068D /* GroupEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56A2BE56D5C00EB068D /* GroupEditView.swift */; };
+		6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -208,6 +211,9 @@
 		6399C5602BE4DCA900EB068D /* ChatUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUtil.swift; sourceTree = "<group>"; };
 		6399C5622BE50CE700EB068D /* ChatItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemGroup.swift; sourceTree = "<group>"; };
 		6399C5652BE51D7600EB068D /* VerticalSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpacer.swift; sourceTree = "<group>"; };
+		6399C5672BE566BF00EB068D /* DeletionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionService.swift; sourceTree = "<group>"; };
+		6399C56A2BE56D5C00EB068D /* GroupEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditView.swift; sourceTree = "<group>"; };
+		6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditViewModel.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -570,6 +576,7 @@
 			children = (
 				6392F98C2BE41F25009F70B2 /* GroupParticipantListView */,
 				6392F97F2BE40663009F70B2 /* GroupDetailView */,
+				6399C5692BE56D4C00EB068D /* GroupEditView */,
 				6392F9872BE41AD0009F70B2 /* GroupSettingsView */,
 			);
 			path = CommonModule;
@@ -631,6 +638,15 @@
 				6399C5652BE51D7600EB068D /* VerticalSpacer.swift */,
 			);
 			path = VerticalSpacer;
+			sourceTree = "<group>";
+		};
+		6399C5692BE56D4C00EB068D /* GroupEditView */ = {
+			isa = PBXGroup;
+			children = (
+				6399C56A2BE56D5C00EB068D /* GroupEditView.swift */,
+				6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */,
+			);
+			path = GroupEditView;
 			sourceTree = "<group>";
 		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
@@ -938,6 +954,7 @@
 				63C9DF692BC27E860075ABDA /* WorkspaceService.swift */,
 				2E4654902BD2A74000BF2944 /* GroupService.swift */,
 				6392F9962BE42E58009F70B2 /* MessageService.swift */,
+				6399C5672BE566BF00EB068D /* DeletionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1161,6 +1178,7 @@
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */,
 				6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */,
+				6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
@@ -1229,6 +1247,7 @@
 				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,
 				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
+				6399C56B2BE56D5C00EB068D /* GroupEditView.swift in Sources */,
 				638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */,
 				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
 				638D93AF2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift in Sources */,
@@ -1236,6 +1255,7 @@
 				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
 				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
+				6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */,
 				6392F9992BE4374E009F70B2 /* ChatItem.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,

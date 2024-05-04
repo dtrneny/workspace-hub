@@ -13,27 +13,45 @@ enum TabSectionFactory {
     static func viewForWorkspaceTabSection(coordinator: WorkspaceCoordinator) -> some View {
         if let currentSection = coordinator.history.last {
             switch currentSection {
+                
             case .list:
                 WorkspaceListView()
+                
             case .detail(let id):
                 WorkspaceDetailView(workspaceId: id)
+                
             case .workspaceAddition:
                 WorkspaceAdditionView()
                     .toolbar(.hidden, for: .tabBar)
+                
             case .edit(let id):
                 WorkspaceEditView(workspaceId: id)
                     .toolbar(.hidden, for: .tabBar)
+                
             case .groupAddition(let id):
                 WorkspaceGroupAdditionView(workspaceId: id)
                     .toolbar(.hidden, for: .tabBar)
-            case .groupDetail(let id):
-                GroupDetailView(groupId: id) {
-                    coordinator.changeSection(to: .groupSettingList(groupId: id))
+                
+            case .groupDetail(let groupId, let workspaceId):
+                GroupDetailView(workspaceId: workspaceId, groupId: groupId) {
+                    coordinator.changeSection(to: .groupSettingList(groupId: groupId, workspaceId: workspaceId))
                 }
                 .toolbar(.hidden, for: .tabBar)
-            case .groupSettingList(let id):
-                GroupSettingListView(groupId: id)
-                    .toolbar(.hidden, for: .tabBar)
+                
+            case .groupSettingList(let groupId, let workspaceId):
+                GroupSettingListView(groupId: groupId, workspaceId: workspaceId) { groupId, workspaceId in
+                    coordinator.changeSection(to: .groupEdit(groupId: groupId, workspaceId: workspaceId))
+                }
+                .toolbar(.hidden, for: .tabBar)
+                
+            case .groupEdit(let groupId, let workspaceId):
+                GroupEditView(workspaceId: workspaceId, groupId: groupId) {
+                    coordinator.replaceAll(with: [.list, .detail(id: workspaceId)])
+                } navigateBack: {
+                    coordinator.pop()
+                }
+                .toolbar(.hidden, for: .tabBar)
+                
             }
         } else {
             WorkspaceListView()
