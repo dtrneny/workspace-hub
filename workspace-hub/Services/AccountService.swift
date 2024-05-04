@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 protocol AccountServiceProtocol {
-    func getAccounts() async -> [Account]
+    func getAccounts(assembleQuery: @escaping (Query) -> Query) async -> [Account]
     func createAccount(account: Account, id: String) async -> Account?
     func getAccount(id: String) async -> Account?
     func updateAccount(account: Account) async -> Account?
@@ -18,12 +19,10 @@ class AccountService: AccountServiceProtocol, ObservableObject {
     
     private var repository = FirestoreRepository<Account>(collection: "accounts")
     
-    func getAccounts() async -> [Account] {
+    func getAccounts(assembleQuery: @escaping (Query) -> Query) async -> [Account] {
         do {
-            let accounts = try await repository.fetchData().get()
-            return accounts
-        }
-        catch {
+            return try await repository.fetchData(assembleQuery: assembleQuery).get()
+        } catch {
             return []
         }
     }

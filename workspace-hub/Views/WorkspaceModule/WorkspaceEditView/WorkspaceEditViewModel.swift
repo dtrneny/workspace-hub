@@ -76,7 +76,14 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
             return false
         }
         
-        let update = Workspace(ownerId: fetchedWorkspace.ownerId, name: workspaceName, icon: selectedIcon, hexColor: selectedColor.hexString, groups: fetchedWorkspace.groups)
+        let update = Workspace(
+            ownerId: fetchedWorkspace.ownerId,
+            administrators: fetchedWorkspace.administrators,
+            name: workspaceName,
+            icon: selectedIcon,
+            hexColor: selectedColor.hexString,
+            groups: fetchedWorkspace.groups
+        )
                         
         let _ = await workspaceService.updateWorkspace(id: workspaceId, update: update)
         

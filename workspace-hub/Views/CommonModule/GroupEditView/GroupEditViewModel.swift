@@ -69,7 +69,7 @@ final class GroupEditViewModel: ViewModelProtocol {
             return false
         }
         
-        let update = Group(ownerId: group.ownerId, name: groupName, icon: selectedIcon, members: group.members, events: group.events)
+        let update = Group(name: groupName, icon: selectedIcon, members: group.members, events: group.events)
                                 
         let _ = await groupService.updateGroup(id: groupId, update: update)
         

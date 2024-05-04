@@ -41,7 +41,14 @@ final class WorkspaceAdditionViewModel: ViewModelProtocol {
             return false
         }
                     
-        let newWorkspace = Workspace(ownerId: userId, name: workspaceName, icon: selectedIcon, hexColor: selectedColor.hexString, groups: [])
+        let newWorkspace = Workspace(
+            ownerId: userId,
+            administrators: [WorkspaceAdministrator(id: userId, role: .owner)],
+            name: workspaceName,
+            icon: selectedIcon,
+            hexColor: selectedColor.hexString,
+            groups: []
+        )
         
         let _ = await workspaceService.createWorkspace(workspace: newWorkspace)
         
