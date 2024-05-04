@@ -51,6 +51,11 @@ extension GroupListView {
                         variableText: "New notifications: 0",
                         symbol: group.icon
                     ) { EmptyView()}
+                    .onTapGesture {
+                        if let groupId = group.id {
+                            coordinator.changeSection(to: .groupDetail(groupId: groupId))
+                        }
+                    }
                 }
             }
         }

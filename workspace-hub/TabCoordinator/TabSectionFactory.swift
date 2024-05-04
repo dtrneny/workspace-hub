@@ -33,7 +33,7 @@ enum TabSectionFactory {
                     .toolbar(.hidden, for: .tabBar)
                 
             case .groupDetail(let groupId, let workspaceId):
-                GroupDetailView(workspaceId: workspaceId, groupId: groupId) {
+                GroupDetailView(groupId: groupId) {
                     coordinator.changeSection(to: .groupSettingList(groupId: groupId, workspaceId: workspaceId))
                 }
                 .toolbar(.hidden, for: .tabBar)
@@ -80,6 +80,11 @@ enum TabSectionFactory {
                 GroupListView()
             case .invitations:
                 GroupInvitationListView()
+            case .groupDetail(let groupId):
+                GroupDetailView(groupId: groupId) {
+//                    coordinator.changeSection(to: .groupSettingList(groupId: groupId, workspaceId: workspaceId))
+                }
+                .toolbar(.hidden, for: .tabBar)
             }
         } else {
             Text("Default")

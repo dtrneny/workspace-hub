@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GroupDetailView: View {
     
-    let workspaceId: String
     let groupId: String
     let navigateToSettings: () -> Void
     
