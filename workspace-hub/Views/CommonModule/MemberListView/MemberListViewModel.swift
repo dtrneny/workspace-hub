@@ -14,13 +14,21 @@ final class MemberListViewModel: ViewModelProtocol {
     
     let accountService: AccountServiceProtocol
     let groupService: GroupServiceProtocol
+    let invitationService: InvitationServiceProtocol
     
-    init(accountService: AccountServiceProtocol, groupService: GroupServiceProtocol) {
+    init(
+        accountService: AccountServiceProtocol,
+        groupService: GroupServiceProtocol,
+        invitationService: InvitationServiceProtocol
+    ) {
         self.accountService = accountService
         self.groupService = groupService
+        self.invitationService = invitationService
     }
     
     @Published var participantAccounts: [Account] = []
+    @Published var invitationAccounts: [InvitationAccount] = []
+    @Published var ownerMember: GroupMember? = nil
     
     func fetchInitialData(groupId: String) async {
         state = .loading
@@ -31,22 +39,65 @@ final class MemberListViewModel: ViewModelProtocol {
         }
         
         let memberIds = fetchedGroup.members.map { groupMember in
-            groupMember.id
+            if(groupMember.role == .owner) {
+                ownerMember = groupMember
+            }
+            
+            return groupMember.id
         }
         
-        let fetchedAccounts = await getParticipantAccounts(participantIds: memberIds)
+        let fetchedAccounts = await getAccounts(ids: memberIds)
         participantAccounts = fetchedAccounts
+        
+        let fetchedInvitations = await getInvitations(groupId: groupId)
+        let invitationsAccountIds = fetchedInvitations.map { invitation in
+            invitation.invitedId
+        }
+        
+        let fetchedInvitationAccounts = await getAccounts(ids: invitationsAccountIds)
+        
+        let mergedAccounts: [InvitationAccount?] = fetchedInvitations.map({ invitation in
+            guard let invitationId = invitation.id else {
+                return nil
+            }
+            
+            guard let foundAccount = fetchedInvitationAccounts.first(where: { account in
+                account.id == invitation.invitedId
+            }) else {
+                return nil
+            }
+            
+            return InvitationAccount(account: foundAccount, invitationId: invitationId)
+        })
+        
+        invitationAccounts = mergedAccounts.compactMap { $0 }
         
         state = .idle
     }
     
-    func getParticipantAccounts(participantIds: [String]) async -> [Account] {
-        guard !participantIds.isEmpty else {
+    func getAccounts(ids: [String]) async -> [Account] {
+        guard !ids.isEmpty else {
             return []
         }
         
         return await accountService.getAccounts(assembleQuery: { query in
-            query.whereField(FieldPath.documentID(), in: participantIds)
+            query.whereField(FieldPath.documentID(), in: ids)
         })
+    }
+    
+    func getInvitations(groupId: String) async -> [Invitation] {
+        return await invitationService.getInvitations(assembleQuery: { query in
+            query.whereField("groupId", isEqualTo: groupId)
+        })
+    }
+    
+    func deleteInvitation(id: String) async -> Bool {
+        let result = await invitationService.deleteInvitation(id: id)
+        
+        if (result) {
+            invitationAccounts = invitationAccounts.filter{ $0.invitationId != id }
+        }
+        
+        return result
     }
 }

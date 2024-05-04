@@ -11,6 +11,7 @@ import FirebaseFirestore
 protocol InvitationServiceProtocol {
     func getInvitations(assembleQuery: @escaping (Query) -> Query) async -> [Invitation]
     func createInvitation(invitation: Invitation) async -> Invitation?
+    func deleteInvitation(id: String) async -> Bool
 }
     
 class InvitationService: InvitationServiceProtocol, ObservableObject {
@@ -32,6 +33,15 @@ class InvitationService: InvitationServiceProtocol, ObservableObject {
         }
         catch {
             return nil
+        }
+    }
+    
+    func deleteInvitation(id: String) async -> Bool {
+        do {
+            return try await repository.delete(id: id).get()
+        }
+        catch {
+            return false
         }
     }
 }

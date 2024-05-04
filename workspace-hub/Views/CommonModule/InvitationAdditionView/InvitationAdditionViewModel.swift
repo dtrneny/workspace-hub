@@ -6,18 +6,23 @@
 //
 
 import Foundation
-//import FirebaseFirestore
 
 final class InvitationAdditionViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .loading
     
     let accountService: AccountServiceProtocol
-    let invitationService: InvitationService
+    let invitationService: InvitationServiceProtocol
+    let groupService: GroupServiceProtocol
     
-    init(accountService: AccountServiceProtocol, invitationService: InvitationService) {
+    init(
+        accountService: AccountServiceProtocol,
+        invitationService: InvitationServiceProtocol,
+        groupService: GroupServiceProtocol
+    ) {
         self.accountService = accountService
         self.invitationService = invitationService
+        self.groupService = groupService
     }
     
     @Published var creatingInvitation: Bool = false
@@ -45,11 +50,23 @@ final class InvitationAdditionViewModel: ViewModelProtocol {
             return false
         }
         
-        let inivtationsForGroup = await invitationService.getInvitations { query in
+        let group = await groupService.getGroup(id: groupId)
+        guard let group = group else {
+            creatingInvitation = false
+            return false
+        }
+        
+        if (group.members.allSatisfy { $0.id != userId }) {
+            emailError = "User is already member of group."
+            creatingInvitation = false
+            return false
+        }
+        
+        let invitationsForGroup = await invitationService.getInvitations { query in
             query.whereField("groupId", isEqualTo: groupId)
         }
         
-        let existingInvitations = inivtationsForGroup.filter {$0.invitedId == userId }
+        let existingInvitations = invitationsForGroup.filter {$0.invitedId == userId }
         
         if (!existingInvitations.isEmpty) { return true }
         
