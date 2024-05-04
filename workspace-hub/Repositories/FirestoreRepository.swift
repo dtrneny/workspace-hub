@@ -112,6 +112,22 @@ class FirestoreRepository<T: Codable>: Repository {
         }
     }
     
+    func delete(assembleQuery: @escaping (Query) -> Query) async throws -> Result<Bool, Error> {
+        let query = assembleQuery(firestore.collection(collection))
+        
+        do {
+            let snapshot = try await query.getDocuments()
+           
+            for document in snapshot.documents {
+                try await document.reference.delete()
+            }
+            
+            return .success(true)
+        } catch {
+            return .failure(error)
+        }
+    }
+    
     func listenToCollection(assembleQuery: @escaping (Query) -> Query, completion: @escaping ([T], Error?) -> Void) {
         let query = assembleQuery(firestore.collection(collection))
         

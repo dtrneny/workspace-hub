@@ -1,20 +1,22 @@
 //
-//  WorkspaceEditView.swift
+//  GroupEditView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 26.04.2024.
+//  Created by Dalibor Trněný on 03.05.2024.
 //
 
 import SwiftUI
 import SFSymbolsPicker
 
-struct WorkspaceEditView: View {
+struct GroupEditView: View {
+
+    let workspaceId: String
+    let groupId: String
     
-    var workspaceId: String
+    let navigateToRoot: () -> Void
+    let navigateBack: () -> Void
     
-    @EnvironmentObject var coordinator: WorkspaceCoordinator
-    
-    @StateObject private var viewModel = WorkspaceEditViewModel(workspaceService: WorkspaceService())
+    @StateObject private var viewModel = GroupEditViewModel(groupService: GroupService())
     
     var body: some View {
         BaseLayout {
@@ -22,7 +24,7 @@ struct WorkspaceEditView: View {
             case .loading:
                 LoadingDots(type: .view)
             default:
-                ViewTitle(title: "Edit workspace")
+                ViewTitle(title: "Edit group")
                 
                 workspaceImage
                 
@@ -35,10 +37,10 @@ struct WorkspaceEditView: View {
                 }
             }
         }
-        .routerBarBackArrowHidden(viewModel.updatingWorkspace || viewModel.deletingWorkspace)
+        .routerBarBackArrowHidden(viewModel.updatingGroup || viewModel.deletingGroup)
         .onAppear {
             Task {
-                await viewModel.fetchInitialData(workspaceId: workspaceId)
+                await viewModel.fetchInitialData(groupId: groupId)
             }
         }
         .sheet(isPresented: $viewModel.symbolSelectPresented) {
@@ -52,17 +54,17 @@ struct WorkspaceEditView: View {
     }
 }
 
-extension WorkspaceEditView {
+extension GroupEditView {
     
     private var formView: some View {
         VStack(spacing: 19) {
             FormField {
                 TextInput(
-                    value: $viewModel.workspaceName,
+                    value: $viewModel.groupName,
                     placeholder: "Your workspace",
                     label: "Name"
                 )
-                if let error = viewModel.workspaceNameError {
+                if let error = viewModel.groupNameError {
                     ErrorMessage(error: error)
                 }
             }
@@ -73,17 +75,17 @@ extension WorkspaceEditView {
     private var createButton: some View {
         BaseButton {
             Task {
-                if(await viewModel.updateWorkspace()) {
-                    coordinator.pop()
+                if(await viewModel.updateGroup()) {
+                    navigateBack()
                 }
             }
         } content: {
             HStack (spacing: 8) {
-                if (viewModel.updatingWorkspace) {
+                if (viewModel.updatingGroup) {
                     ProgressView()
                         .tint(.white)
                 }
-                Text("Update workspace")
+                Text("Update group")
             }
         }
     }
@@ -91,16 +93,16 @@ extension WorkspaceEditView {
     private var deleteButton: some View {
         BaseButton(action: {
             Task {
-                let _ = await viewModel.deleteWorkspace()
-                coordinator.replaceAll(with: [.list])
+                let _ = await viewModel.deleteGroup(workspaceId: workspaceId)
+                navigateToRoot()
             }
         }, content: {
             HStack (spacing: 8) {
-                if (viewModel.deletingWorkspace) {
+                if (viewModel.deletingGroup) {
                     ProgressView()
                         .tint(.primaryRed700)
                 }
-                Text("Delete workspace")
+                Text("Delete group")
             }
         }, style: .danger)
     }
@@ -112,7 +114,7 @@ extension WorkspaceEditView {
                     
                 ZStack {
                     Circle()
-                        .fill(Color(uiColor: viewModel.selectedColor))
+                        .fill(.grey300)
                         .frame(width: 125, height: 125)
                     
                     Image(systemName: viewModel.selectedIcon)
@@ -125,8 +127,6 @@ extension WorkspaceEditView {
                 
                 Spacer()
             }
-            
-            ThemeColorPicker(selectedColor: $viewModel.selectedColor)
         }
         .padding([.bottom], 19)
     }

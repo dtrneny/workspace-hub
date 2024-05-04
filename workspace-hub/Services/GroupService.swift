@@ -12,6 +12,9 @@ protocol GroupServiceProtocol {
     func getGroups(assembleQuery: @escaping (Query) -> Query) async -> [Group]
     func createGroup(group: Group) async -> Group?
     func getGroup(id: String) async -> Group?
+    func updateGroup(id: String, update: Group) async -> Group?
+    func deleteGroups(assembleQuery: @escaping (Query) -> Query) async -> Bool
+    func deleteGroup(id: String) async -> Bool
 }
 
 class GroupService: GroupServiceProtocol, ObservableObject {
@@ -42,6 +45,33 @@ class GroupService: GroupServiceProtocol, ObservableObject {
         }
         catch {
             return nil
+        }
+    }
+    
+    func updateGroup(id: String, update: Group) async -> Group? {
+        do {
+            return try await repository.update(id: id, data: update).get()
+        }
+        catch {
+            return nil
+        }
+    }
+    
+    func deleteGroups(assembleQuery: @escaping (Query) -> Query) async -> Bool {
+        do {
+            return try await repository.delete(assembleQuery: assembleQuery).get()
+        }
+        catch {
+            return false
+        }
+    }
+    
+    func deleteGroup(id: String) async -> Bool {
+        do {
+            return try await repository.delete(id: id).get()
+        }
+        catch {
+            return false
         }
     }
 }

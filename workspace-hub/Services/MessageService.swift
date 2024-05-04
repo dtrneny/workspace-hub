@@ -14,6 +14,7 @@ protocol MessageServiceProtocol {
         completion: @escaping ([Message], Error?
     ) -> Void)
     func createMessage(message: Message) async -> Message?
+    func deleteMessages(assembleQuery: @escaping (Query) -> Query) async -> Bool
 }
 
 class MessageService: MessageServiceProtocol, ObservableObject {
@@ -34,6 +35,15 @@ class MessageService: MessageServiceProtocol, ObservableObject {
         }
         catch {
             return nil
+        }
+    }
+    
+    func deleteMessages(assembleQuery: @escaping (Query) -> Query) async -> Bool {
+        do {
+            return try await repository.delete(assembleQuery: assembleQuery).get()
+        }
+        catch {
+            return false
         }
     }
 }
