@@ -29,7 +29,6 @@ struct InvitationAdditionView: View {
             
         }
         .routerBarBackArrowHidden(viewModel.creatingInvitation)
-        .preferredColorScheme(.light)
     }
 }
 

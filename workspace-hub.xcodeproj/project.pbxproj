@@ -83,6 +83,12 @@
 		6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5822BE6442C00EB068D /* InvitationService.swift */; };
 		6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */; };
 		6399C5892BE6864F00EB068D /* InvitationAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5882BE6864F00EB068D /* InvitationAccount.swift */; };
+		6399C58C2BE691AD00EB068D /* GroupListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C58B2BE691AD00EB068D /* GroupListView.swift */; };
+		6399C58E2BE691B600EB068D /* GroupListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C58D2BE691B600EB068D /* GroupListViewModel.swift */; };
+		6399C5912BE6990100EB068D /* GroupInvitationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5902BE6990100EB068D /* GroupInvitationListView.swift */; };
+		6399C5932BE6990900EB068D /* GroupInvitationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5922BE6990900EB068D /* GroupInvitationListViewModel.swift */; };
+		6399C5952BE69B8E00EB068D /* InvitationGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5942BE69B8E00EB068D /* InvitationGroup.swift */; };
+		6399C5982BE69DF000EB068D /* CommonGroupListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5972BE69DF000EB068D /* CommonGroupListRow.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -232,6 +238,12 @@
 		6399C5822BE6442C00EB068D /* InvitationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationService.swift; sourceTree = "<group>"; };
 		6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAccountListRow.swift; sourceTree = "<group>"; };
 		6399C5882BE6864F00EB068D /* InvitationAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAccount.swift; sourceTree = "<group>"; };
+		6399C58B2BE691AD00EB068D /* GroupListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListView.swift; sourceTree = "<group>"; };
+		6399C58D2BE691B600EB068D /* GroupListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupListViewModel.swift; sourceTree = "<group>"; };
+		6399C5902BE6990100EB068D /* GroupInvitationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInvitationListView.swift; sourceTree = "<group>"; };
+		6399C5922BE6990900EB068D /* GroupInvitationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupInvitationListViewModel.swift; sourceTree = "<group>"; };
+		6399C5942BE69B8E00EB068D /* InvitationGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationGroup.swift; sourceTree = "<group>"; };
+		6399C5972BE69DF000EB068D /* CommonGroupListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonGroupListRow.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -681,8 +693,35 @@
 			isa = PBXGroup;
 			children = (
 				6399C5882BE6864F00EB068D /* InvitationAccount.swift */,
+				6399C5942BE69B8E00EB068D /* InvitationGroup.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		6399C58A2BE6919800EB068D /* GroupListView */ = {
+			isa = PBXGroup;
+			children = (
+				6399C58B2BE691AD00EB068D /* GroupListView.swift */,
+				6399C58D2BE691B600EB068D /* GroupListViewModel.swift */,
+			);
+			path = GroupListView;
+			sourceTree = "<group>";
+		};
+		6399C58F2BE698E100EB068D /* GroupInvitationListView */ = {
+			isa = PBXGroup;
+			children = (
+				6399C5902BE6990100EB068D /* GroupInvitationListView.swift */,
+				6399C5922BE6990900EB068D /* GroupInvitationListViewModel.swift */,
+			);
+			path = GroupInvitationListView;
+			sourceTree = "<group>";
+		};
+		6399C5962BE69DC600EB068D /* CommonGroupListRow */ = {
+			isa = PBXGroup;
+			children = (
+				6399C5972BE69DF000EB068D /* CommonGroupListRow.swift */,
+			);
+			path = CommonGroupListRow;
 			sourceTree = "<group>";
 		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
@@ -779,6 +818,8 @@
 			isa = PBXGroup;
 			children = (
 				639DBC162BD00C04003D24FB /* GroupRootView */,
+				6399C58A2BE6919800EB068D /* GroupListView */,
+				6399C58F2BE698E100EB068D /* GroupInvitationListView */,
 			);
 			path = GroupModule;
 			sourceTree = "<group>";
@@ -889,6 +930,7 @@
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
 				639DBC0E2BCFEB3C003D24FB /* BaseNavigationBar */,
 				6399C5842BE67A5800EB068D /* CommonAccountListRow */,
+				6399C5962BE69DC600EB068D /* CommonGroupListRow */,
 				639DBC2C2BD02B65003D24FB /* WorkspaceActivityCard */,
 				638DBF122BDBA6F0003A1795 /* WorkspaceDetailCard */,
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
@@ -1218,6 +1260,7 @@
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
 				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
 				6399C5782BE63AF900EB068D /* WorkspaceAdministrator.swift in Sources */,
+				6399C5932BE6990900EB068D /* GroupInvitationListViewModel.swift in Sources */,
 				639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */,
 				63ECEB992BA4376A00166BCD /* RootTabView.swift in Sources */,
 				639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */,
@@ -1227,11 +1270,13 @@
 				6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */,
 				6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
+				6399C5982BE69DF000EB068D /* CommonGroupListRow.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				6399C5612BE4DCA900EB068D /* ChatUtil.swift in Sources */,
 				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
 				6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */,
+				6399C5952BE69B8E00EB068D /* InvitationGroup.swift in Sources */,
 				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */,
@@ -1248,6 +1293,7 @@
 				6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */,
 				639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
+				6399C58C2BE691AD00EB068D /* GroupListView.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
 				639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */,
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
@@ -1257,6 +1303,7 @@
 				2E46547F2BD1735E00BF2944 /* DateItem.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */,
+				6399C5912BE6990100EB068D /* GroupInvitationListView.swift in Sources */,
 				2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */,
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
@@ -1294,6 +1341,7 @@
 				638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */,
 				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
 				63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */,
+				6399C58E2BE691B600EB068D /* GroupListViewModel.swift in Sources */,
 				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,
 				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
