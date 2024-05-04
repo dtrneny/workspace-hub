@@ -29,9 +29,8 @@ final class WorkspaceListViewModel: ViewModelProtocol {
     }
     
     func getWorkspaces() async {
-        guard let userId = AuthService.shared.getCurrentUser()?.uid else {
-            return
-        }
+        let user = AuthService.shared.getCurrentUser()
+        guard let userId = user?.uid else { return }
         
         workspaces = await workspaceService.getWorkspaces(assembleQuery: { query in
             query.whereField("ownerId", isEqualTo: userId)

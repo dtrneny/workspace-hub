@@ -59,7 +59,7 @@ final class WorkspaceGroupAdditionViewModel: ViewModelProtocol {
             return false
         }
         
-        let newGroup = Group(ownerId: userId, name: groupName, icon: selectedIcon, members: [], events: [])
+        let newGroup = Group(name: groupName, icon: selectedIcon, members: [ GroupMember(id: userId, role: .owner) ], events: [])
         
         guard let groupId = await groupService.createGroup(group: newGroup)?.id else {
             creatingGroup = false
@@ -68,7 +68,15 @@ final class WorkspaceGroupAdditionViewModel: ViewModelProtocol {
         
         workspace.groups += [groupId]
         
-        let workspaceUpdate = Workspace(ownerId: workspace.ownerId, name: workspace.name, icon: workspace.icon, hexColor: workspace.hexColor, groups: workspace.groups)
+        let workspaceUpdate = Workspace(
+            ownerId: userId,
+            administrators: workspace.administrators,
+            name: workspace.name,
+            icon: workspace.icon,
+            hexColor: workspace.hexColor,
+            groups: workspace.groups
+        )
+        
         let _ = await workspaceService.updateWorkspace(id: workspaceId, update: workspaceUpdate)
         
         creatingGroup = false

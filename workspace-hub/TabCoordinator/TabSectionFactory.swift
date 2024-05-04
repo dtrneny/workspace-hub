@@ -41,6 +41,8 @@ enum TabSectionFactory {
             case .groupSettingList(let groupId, let workspaceId):
                 GroupSettingListView(groupId: groupId, workspaceId: workspaceId) { groupId, workspaceId in
                     coordinator.changeSection(to: .groupEdit(groupId: groupId, workspaceId: workspaceId))
+                } navigateToMembers: { groupId in
+                    coordinator.changeSection(to: .memberList(groupId: groupId))
                 }
                 .toolbar(.hidden, for: .tabBar)
                 
@@ -48,6 +50,18 @@ enum TabSectionFactory {
                 GroupEditView(workspaceId: workspaceId, groupId: groupId) {
                     coordinator.replaceAll(with: [.list, .detail(id: workspaceId)])
                 } navigateBack: {
+                    coordinator.pop()
+                }
+                .toolbar(.hidden, for: .tabBar)
+                
+            case .memberList(let groupId):
+                MemberListView(groupId: groupId) { groupId in
+                    coordinator.changeSection(to: .memberInvitation(groupId: groupId))
+                }
+                .toolbar(.hidden, for: .tabBar)
+                
+            case .memberInvitation(let groupId):
+                InvitationAdditionView(groupId: groupId) {
                     coordinator.pop()
                 }
                 .toolbar(.hidden, for: .tabBar)

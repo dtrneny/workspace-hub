@@ -61,8 +61,6 @@
 		6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */; };
 		6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */; };
 		6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */; };
-		6392F98E2BE41F49009F70B2 /* GroupParticipantListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */; };
-		6392F9902BE41F5F009F70B2 /* GroupParticipantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */; };
 		6392F9922BE4227B009F70B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9912BE4227B009F70B2 /* Message.swift */; };
 		6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9942BE424C2009F70B2 /* ChatLayout.swift */; };
 		6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9962BE42E58009F70B2 /* MessageService.swift */; };
@@ -74,6 +72,16 @@
 		6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5672BE566BF00EB068D /* DeletionService.swift */; };
 		6399C56B2BE56D5C00EB068D /* GroupEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56A2BE56D5C00EB068D /* GroupEditView.swift */; };
 		6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */; };
+		6399C5702BE62C0F00EB068D /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56F2BE62C0F00EB068D /* MemberListView.swift */; };
+		6399C5722BE62C2400EB068D /* MemberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5712BE62C2400EB068D /* MemberListViewModel.swift */; };
+		6399C5742BE638C000EB068D /* GroupMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5732BE638C000EB068D /* GroupMember.swift */; };
+		6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5752BE6396B00EB068D /* GroupMemberType.swift */; };
+		6399C5782BE63AF900EB068D /* WorkspaceAdministrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */; };
+		6399C57A2BE63B0D00EB068D /* WorkspaceAdministratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */; };
+		6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C57B2BE642CB00EB068D /* Invitation.swift */; };
+		6399C57F2BE643E700EB068D /* InvitationAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */; };
+		6399C5812BE643F200EB068D /* InvitationAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5802BE643F200EB068D /* InvitationAdditionView.swift */; };
+		6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5822BE6442C00EB068D /* InvitationService.swift */; };
 		639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */; };
 		639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */; };
 		639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639DBBF62BCFC81C003D24FB /* MainRouter.swift */; };
@@ -201,8 +209,6 @@
 		6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListMessage.swift; sourceTree = "<group>"; };
 		6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewModel.swift; sourceTree = "<group>"; };
 		6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingListView.swift; sourceTree = "<group>"; };
-		6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupParticipantListView.swift; sourceTree = "<group>"; };
-		6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupParticipantListViewModel.swift; sourceTree = "<group>"; };
 		6392F9912BE4227B009F70B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6392F9942BE424C2009F70B2 /* ChatLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLayout.swift; sourceTree = "<group>"; };
 		6392F9962BE42E58009F70B2 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -214,6 +220,16 @@
 		6399C5672BE566BF00EB068D /* DeletionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionService.swift; sourceTree = "<group>"; };
 		6399C56A2BE56D5C00EB068D /* GroupEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditView.swift; sourceTree = "<group>"; };
 		6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditViewModel.swift; sourceTree = "<group>"; };
+		6399C56F2BE62C0F00EB068D /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
+		6399C5712BE62C2400EB068D /* MemberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewModel.swift; sourceTree = "<group>"; };
+		6399C5732BE638C000EB068D /* GroupMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMember.swift; sourceTree = "<group>"; };
+		6399C5752BE6396B00EB068D /* GroupMemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberType.swift; sourceTree = "<group>"; };
+		6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdministrator.swift; sourceTree = "<group>"; };
+		6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdministratorType.swift; sourceTree = "<group>"; };
+		6399C57B2BE642CB00EB068D /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
+		6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionViewModel.swift; sourceTree = "<group>"; };
+		6399C5802BE643F200EB068D /* InvitationAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionView.swift; sourceTree = "<group>"; };
+		6399C5822BE6442C00EB068D /* InvitationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationService.swift; sourceTree = "<group>"; };
 		639DBBF12BCFC7EB003D24FB /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		639DBBF32BCFC7FD003D24FB /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		639DBBF62BCFC81C003D24FB /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
@@ -574,10 +590,11 @@
 		6392F97B2BE40613009F70B2 /* CommonModule */ = {
 			isa = PBXGroup;
 			children = (
-				6392F98C2BE41F25009F70B2 /* GroupParticipantListView */,
 				6392F97F2BE40663009F70B2 /* GroupDetailView */,
 				6399C5692BE56D4C00EB068D /* GroupEditView */,
-				6392F9872BE41AD0009F70B2 /* GroupSettingsView */,
+				6392F9872BE41AD0009F70B2 /* GroupSettingListView */,
+				6399C56E2BE62BE400EB068D /* MemberListView */,
+				6399C57D2BE643C700EB068D /* InvitationAdditionView */,
 			);
 			path = CommonModule;
 			sourceTree = "<group>";
@@ -599,21 +616,12 @@
 			path = EmptyListMessage;
 			sourceTree = "<group>";
 		};
-		6392F9872BE41AD0009F70B2 /* GroupSettingsView */ = {
+		6392F9872BE41AD0009F70B2 /* GroupSettingListView */ = {
 			isa = PBXGroup;
 			children = (
 				6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */,
 			);
-			path = GroupSettingsView;
-			sourceTree = "<group>";
-		};
-		6392F98C2BE41F25009F70B2 /* GroupParticipantListView */ = {
-			isa = PBXGroup;
-			children = (
-				6392F98D2BE41F49009F70B2 /* GroupParticipantListView.swift */,
-				6392F98F2BE41F5F009F70B2 /* GroupParticipantListViewModel.swift */,
-			);
-			path = GroupParticipantListView;
+			path = GroupSettingListView;
 			sourceTree = "<group>";
 		};
 		6392F9932BE42493009F70B2 /* ChatLayout */ = {
@@ -647,6 +655,24 @@
 				6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */,
 			);
 			path = GroupEditView;
+			sourceTree = "<group>";
+		};
+		6399C56E2BE62BE400EB068D /* MemberListView */ = {
+			isa = PBXGroup;
+			children = (
+				6399C56F2BE62C0F00EB068D /* MemberListView.swift */,
+				6399C5712BE62C2400EB068D /* MemberListViewModel.swift */,
+			);
+			path = MemberListView;
+			sourceTree = "<group>";
+		};
+		6399C57D2BE643C700EB068D /* InvitationAdditionView */ = {
+			isa = PBXGroup;
+			children = (
+				6399C5802BE643F200EB068D /* InvitationAdditionView.swift */,
+				6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */,
+			);
+			path = InvitationAdditionView;
 			sourceTree = "<group>";
 		};
 		639DBBF52BCFC807003D24FB /* Routers */ = {
@@ -937,7 +963,10 @@
 			children = (
 				63C9DF582BBFCD940075ABDA /* Account.swift */,
 				63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */,
+				6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */,
 				2E46548C2BD2A61A00BF2944 /* Group.swift */,
+				6399C5732BE638C000EB068D /* GroupMember.swift */,
+				6399C57B2BE642CB00EB068D /* Invitation.swift */,
 				6392F9912BE4227B009F70B2 /* Message.swift */,
 				6392F9982BE4374E009F70B2 /* ChatItem.swift */,
 				6399C5622BE50CE700EB068D /* ChatItemGroup.swift */,
@@ -953,6 +982,7 @@
 				63C9DF642BC0571E0075ABDA /* AccountService.swift */,
 				63C9DF692BC27E860075ABDA /* WorkspaceService.swift */,
 				2E4654902BD2A74000BF2944 /* GroupService.swift */,
+				6399C5822BE6442C00EB068D /* InvitationService.swift */,
 				6392F9962BE42E58009F70B2 /* MessageService.swift */,
 				6399C5672BE566BF00EB068D /* DeletionService.swift */,
 			);
@@ -981,6 +1011,8 @@
 			children = (
 				63ECEBCE2BA6E69400166BCD /* ViewState.swift */,
 				639DBC3A2BD04857003D24FB /* StorageFolder.swift */,
+				6399C5752BE6396B00EB068D /* GroupMemberType.swift */,
+				6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1159,9 +1191,11 @@
 				2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */,
 				639DBC392BD044A6003D24FB /* StorageService.swift in Sources */,
 				638D93AD2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift in Sources */,
+				6399C57A2BE63B0D00EB068D /* WorkspaceAdministratorType.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
+				6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */,
 				638D93A52BD4160B006B0B3A /* WorkspaceAdditionView.swift in Sources */,
 				6399C55F2BE4D3B700EB068D /* ChatMessage.swift in Sources */,
 				6392F9922BE4227B009F70B2 /* Message.swift in Sources */,
@@ -1171,6 +1205,7 @@
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
 				63C9DF6A2BC27E860075ABDA /* WorkspaceService.swift in Sources */,
+				6399C5782BE63AF900EB068D /* WorkspaceAdministrator.swift in Sources */,
 				639DBBF22BCFC7EB003D24FB /* RouterProtocol.swift in Sources */,
 				63ECEB992BA4376A00166BCD /* RootTabView.swift in Sources */,
 				639DBBF42BCFC7FD003D24FB /* BaseRouter.swift in Sources */,
@@ -1184,6 +1219,7 @@
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
 				6399C5612BE4DCA900EB068D /* ChatUtil.swift in Sources */,
 				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
+				6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */,
 				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */,
@@ -1193,6 +1229,7 @@
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
 				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
+				6399C57F2BE643E700EB068D /* InvitationAdditionViewModel.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
 				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
 				6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */,
@@ -1213,6 +1250,7 @@
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
+				6399C5742BE638C000EB068D /* GroupMember.swift in Sources */,
 				6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */,
 				6399C5662BE51D7600EB068D /* VerticalSpacer.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
@@ -1220,6 +1258,7 @@
 				6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
+				6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */,
 				639DBC2E2BD02B79003D24FB /* WorkspaceActivityCard.swift in Sources */,
 				638D93A72BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift in Sources */,
 				638DBF0A2BDB895E003A1795 /* UIColorExtensions.swift in Sources */,
@@ -1231,8 +1270,6 @@
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
-				6392F98E2BE41F49009F70B2 /* GroupParticipantListView.swift in Sources */,
-				6392F9902BE41F5F009F70B2 /* GroupParticipantListViewModel.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,
 				2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */,
 				6399C5632BE50CE700EB068D /* ChatItemGroup.swift in Sources */,
@@ -1241,6 +1278,7 @@
 				638DBF0F2BDBA013003A1795 /* WorkspaceDetailView.swift in Sources */,
 				638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */,
 				638DBEF82BDAD5F7003A1795 /* ViewExtensions.swift in Sources */,
+				6399C5812BE643F200EB068D /* InvitationAdditionView.swift in Sources */,
 				638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */,
 				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
 				63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */,
@@ -1254,8 +1292,10 @@
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
 				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
+				6399C5702BE62C0F00EB068D /* MemberListView.swift in Sources */,
 				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
 				6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */,
+				6399C5722BE62C2400EB068D /* MemberListViewModel.swift in Sources */,
 				6392F9992BE4374E009F70B2 /* ChatItem.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
 				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,

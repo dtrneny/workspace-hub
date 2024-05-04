@@ -13,6 +13,7 @@ struct GroupSettingListView: View {
     let workspaceId: String
     
     let navigateToEdit: (_ groupId: String, _ workspaceId: String) -> Void
+    let navigateToMembers: (_ groupId: String) -> Void
     
     var body: some View {
         BaseLayout {
@@ -34,8 +35,8 @@ extension GroupSettingListView {
             SettingListRow(label: "General") {
                 navigateToEdit(groupId, workspaceId)
             }
-            SettingListRow(label: "Participants") {
-                print("Clicked")
+            SettingListRow(label: "Members") {
+                navigateToMembers(groupId)
             }
         }
     }
