@@ -59,7 +59,7 @@ final class WorkspaceGroupAdditionViewModel: ViewModelProtocol {
             return false
         }
         
-        let newGroup = Group(name: groupName, icon: selectedIcon, members: [ GroupMember(id: userId, role: .owner) ], events: [])
+        let newGroup = Group(name: groupName, icon: selectedIcon, members: [ GroupMember(id: userId, role: .owner) ], memberIds: [userId], events: [])
         
         guard let groupId = await groupService.createGroup(group: newGroup)?.id else {
             creatingGroup = false

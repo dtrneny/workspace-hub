@@ -56,7 +56,7 @@ final class InvitationAdditionViewModel: ViewModelProtocol {
             return false
         }
         
-        if (group.members.allSatisfy { $0.id != userId }) {
+        if (group.members.allSatisfy { $0.id == userId }) {
             emailError = "User is already member of group."
             creatingInvitation = false
             return false

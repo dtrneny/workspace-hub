@@ -77,7 +77,9 @@ enum TabSectionFactory {
         if let currentSection = coordinator.history.last {
             switch currentSection {
             case .list:
-                Text("List")
+                GroupListView()
+            case .invitations:
+                GroupInvitationListView()
             }
         } else {
             Text("Default")

@@ -14,7 +14,6 @@ enum LoadingDotsType {
 struct LoadingDots: View {
     
     @State var animate = false
-    @State var display = false
     
     var type: LoadingDotsType? = nil
     
@@ -22,27 +21,22 @@ struct LoadingDots: View {
     
     var body: some View {
         VStack {
-            if (display) {
-                switch type {
-                case .view:
-                    VStack {
-                        Spacer()
-                        
-                        dots
-                            .padding([.bottom], 120)
-                        
-                        Spacer()
-                    }
-                default:
+            switch type {
+            case .view:
+                VStack {
+                    Spacer()
+                    
                     dots
+                        .padding([.bottom], 120)
+                    
+                    Spacer()
                 }
+            default:
+                dots
             }
         }
         .onAppear {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                display = true
-                animate = true
-            }
+            animate = true
         }
     }
 }

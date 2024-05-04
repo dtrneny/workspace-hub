@@ -13,5 +13,6 @@ struct Group: Identifiable, Codable {
     var name: String
     var icon: String
     var members: [GroupMember]
+    var memberIds: [String]
     var events: [Date]
 }
