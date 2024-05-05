@@ -34,6 +34,17 @@ struct WorkspaceGroupMemberListView: View {
                 }
             }
         }
+        .confirmationDialog(
+            "Do you want to remove this invitation?",
+            isPresented: $viewModel.deleteInvitationConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                Task {
+                   await viewModel.deleteInvitation()
+                }
+            }
+        }
         .onAppear {
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
@@ -88,9 +99,8 @@ extension WorkspaceGroupMemberListView {
                         imageUrl: invAccount.account.profileImage
                     ) {
                         OperationButton(icon: "location.slash.fill", color: .primaryRed700) {
-                            Task {
-                               await viewModel.deleteInvitation(id: invAccount.invitationId)
-                            }
+                            viewModel.deletedInvitation = invAccount.invitationId
+                            viewModel.deleteInvitationConfirmation = true
                         }
                     }
                 }

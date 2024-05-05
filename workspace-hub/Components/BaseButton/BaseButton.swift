@@ -15,24 +15,19 @@ enum BaseButtonStyle {
 
 struct BaseButton<Content: View>: View {
     
-    let action: () -> Void
     let content: Content
     let style: BaseButtonStyle
     
     init(
-        action: @escaping () -> Void,
         content: () -> Content,
         style: BaseButtonStyle = .filled
     ) {
-        self.action = action
         self.content = content()
         self.style = style
     }
     
     var body: some View {
-        VStack(alignment: .center) {
-            content
-        }
+        content
         .if(style == .filled) { view in
             view.modifier(FilledBaseButton())
         }
@@ -41,9 +36,6 @@ struct BaseButton<Content: View>: View {
         }
         .if(style == .danger) { view in
             view.modifier(DangerBaseButton())
-        }
-        .onTapGesture {
-            action()
         }
     }
 }
@@ -85,14 +77,12 @@ struct DangerBaseButton: ViewModifier {
             .frame(maxWidth: .infinity)
             .foregroundColor(.primaryRed700)
             .padding()
-            .background(
-                RoundedRectangle(
-                    cornerRadius: 10,
-                    style: .continuous
-                )
-                .stroke(.primaryRed700, lineWidth: 1)
-                .foregroundStyle(.primaryRed700.opacity(0.05))
+            .background(.primaryRed700.opacity(0.2))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.primaryRed700, lineWidth: 2)
             )
+            .cornerRadius(10)
             .font(.inter(16.0))
             .fontWeight(.semibold)
     }
@@ -100,8 +90,6 @@ struct DangerBaseButton: ViewModifier {
 
 #Preview {
     BaseButton {
-        print("touched")
-    } content: {
         HStack (spacing: 8) {
             ProgressView()
                 .tint(.white)

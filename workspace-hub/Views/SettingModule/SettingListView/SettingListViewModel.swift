@@ -18,10 +18,12 @@ final class SettingListViewModel: ViewModelProtocol {
     }
     
     @Published var account: Account? = nil
+    @Published var signOutConfirmation: Bool = false
 
     func signOut() -> Bool {
         do {
             let result = try AuthService.shared.signOut().get()
+            signOutConfirmation = false
             return result
         }
         catch {

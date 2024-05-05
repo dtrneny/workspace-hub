@@ -70,16 +70,17 @@ extension SettingAccountEditView {
     
     private var editButton: some View {
         BaseButton {
-            Task {
-                if (await viewModel.updateAccount()) { coordinator.pop() }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.updatingUser) {
                     ProgressView()
                         .tint(.white)
                 }
                 Text("Edit account")
+            }
+        }
+        .onTapGesture {
+            Task {
+                if (await viewModel.updateAccount()) { coordinator.pop() }
             }
         }
         .padding([.bottom], 76)

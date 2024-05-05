@@ -96,16 +96,17 @@ extension SignUpView {
     
     private var signUpButton: some View {
         BaseButton {
-            Task {
-                if (await viewModel.signUp()) { mainRouter.pop() }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.singingUp) {
                     ProgressView()
                         .tint(.white)
                 }
                 Text("Sign up")
+            }
+        }
+        .onTapGesture {
+            Task {
+                if (await viewModel.signUp()) { mainRouter.pop() }
             }
         }
         .padding([.bottom], 76)

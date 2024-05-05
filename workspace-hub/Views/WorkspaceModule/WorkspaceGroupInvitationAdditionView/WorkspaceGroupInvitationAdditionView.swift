@@ -52,18 +52,19 @@ extension WorkspaceGroupInvitationAdditionView {
     
     private var createButton: some View {
         BaseButton {
-            Task {
-                if(await viewModel.inviteMember(groupId: groupId)) {
-                    coordinator.pop()
-                }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.creatingInvitation) {
                     ProgressView()
                         .tint(.white)
                 }
                 Text("Invite member")
+            }
+        }
+        .onTapGesture {
+            Task {
+                if(await viewModel.inviteMember(groupId: groupId)) {
+                    coordinator.pop()
+                }
             }
         }
     }

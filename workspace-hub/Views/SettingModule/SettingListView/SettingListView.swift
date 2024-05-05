@@ -27,6 +27,17 @@ struct SettingListView: View {
                 }
             }
         }
+        .confirmationDialog(
+            "Do you want to sign out?",
+            isPresented: $viewModel.signOutConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                if (viewModel.signOut()) {
+                    mainRouter.replaceAll(with: [.signIn])
+                }
+            }
+        }
         .onAppear {
             Task {
                 await viewModel.fetchInitialData()
@@ -41,9 +52,6 @@ extension SettingListView {
         VStack(alignment: .leading) {
             ViewTitle(title: "Settings")
 
-            SettingListRow(label: "Notifications") {
-                print("Clicked")
-            }
             SettingListRow(label: "Language") {
                 print("Clicked")
             }
@@ -62,9 +70,7 @@ extension SettingListView {
                         coordinator.changeSection(to: .accountEdit)
                     }
                     OperationButton(icon: "rectangle.portrait.and.arrow.forward", color: .primaryRed700) {
-                        if (viewModel.signOut()) {
-                            mainRouter.replaceAll(with: [.signIn])
-                        }
+                        viewModel.signOutConfirmation = true
                     }
                 }
             }

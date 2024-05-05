@@ -34,6 +34,19 @@ struct GroupGeneralView: View {
                 }
             }
         }
+        .confirmationDialog(
+            "Do you want to leave this group?",
+            isPresented: $viewModel.leaveConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                Task {
+                    let _ = await viewModel.leaveGroup(groupId: groupId)
+                    coordinator.replaceAll(with: [.list])
+                }
+            }
+        }
+        .routerBarBackArrowHidden(viewModel.leavingGroup)
         .onAppear {
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
@@ -50,26 +63,20 @@ extension GroupGeneralView {
                 Text(group.name)
                     .foregroundStyle(.secondary900)
                     .font(.inter(18.0))
+                    .fontWeight(.bold)
             }
         }
+        .frame(maxWidth: .infinity)
         .padding([.bottom], 38)
     }
     
     private var leaveButton: some View {
-        BaseButton(action: {
-            Task {
-                let _ = await viewModel.leaveGroup(groupId: groupId)
-                coordinator.replaceAll(with: [.list])
-            }
-        }, content: {
-            HStack (spacing: 8) {
-                if (viewModel.leavingGroup) {
-                    ProgressView()
-                        .tint(.primaryRed700)
-                }
-                Text("Leave group")
-            }
+        BaseButton(content: {
+            Text("Leave group")
         }, style: .danger)
+        .onTapGesture {
+            viewModel.leaveConfirmation = true
+        }
     }
     
     private var groupImage: some View {

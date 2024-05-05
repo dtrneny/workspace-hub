@@ -23,6 +23,7 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
     @Published var selectedColor: UIColor = UIColor(.primaryRed700)
     @Published var updatingWorkspace: Bool = false
     @Published var deletingWorkspace: Bool = false
+    @Published var deleteConfirmation: Bool = false
     
     var workspace: Workspace? = nil
 
@@ -50,10 +51,12 @@ final class WorkspaceEditViewModel: ViewModelProtocol {
     func deleteWorkspace() async -> Bool {
         if let workspace = workspace {
             deletingWorkspace = true
+            deleteConfirmation = false
             return await DeletionService().deleteWorkspace(workspace: workspace)
         }
         
         deletingWorkspace = false
+        deleteConfirmation = false
         return false
     }
     

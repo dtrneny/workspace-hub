@@ -35,6 +35,18 @@ struct WorkspaceEditView: View {
                 }
             }
         }
+        .confirmationDialog(
+            "Do you want to remove this workspace?",
+            isPresented: $viewModel.deleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                Task {
+                    let _ = await viewModel.deleteWorkspace()
+                    coordinator.replaceAll(with: [.list])
+                }
+            }
+        }
         .routerBarBackArrowHidden(viewModel.updatingWorkspace || viewModel.deletingWorkspace)
         .onAppear {
             Task {
@@ -72,12 +84,6 @@ extension WorkspaceEditView {
     
     private var createButton: some View {
         BaseButton {
-            Task {
-                if(await viewModel.updateWorkspace()) {
-                    coordinator.pop()
-                }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.updatingWorkspace) {
                     ProgressView()
@@ -86,23 +92,22 @@ extension WorkspaceEditView {
                 Text("Update workspace")
             }
         }
+        .onTapGesture {
+            Task {
+                if(await viewModel.updateWorkspace()) {
+                    coordinator.pop()
+                }
+            }
+        }
     }
     
     private var deleteButton: some View {
-        BaseButton(action: {
-            Task {
-                let _ = await viewModel.deleteWorkspace()
-                coordinator.replaceAll(with: [.list])
-            }
-        }, content: {
-            HStack (spacing: 8) {
-                if (viewModel.deletingWorkspace) {
-                    ProgressView()
-                        .tint(.primaryRed700)
-                }
-                Text("Delete workspace")
-            }
+        BaseButton(content: {
+            Text("Delete workspace")
         }, style: .danger)
+        .onTapGesture {
+            viewModel.deleteConfirmation = true
+        }
     }
     
     private var workspaceImage: some View {
