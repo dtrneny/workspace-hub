@@ -19,6 +19,8 @@ struct GroupChatView: View {
         accountService: AccountService()
     )
     
+    @State var changedChatFocus: Bool = false
+
     var body: some View {
         BaseLayout {
             switch viewModel.state {
@@ -29,17 +31,24 @@ struct GroupChatView: View {
                     groupOperations
                     
                     ChatLayout {
-                        ScrollView {
-                            ScrollViewReader { scrollView in
-                                ForEach(viewModel.chatItemGroups, id: \.id) { chatItemGroup in
-                                    VStack {
-                                        ForEach(chatItemGroup.chatItems, id: \.id) { chatItem in
-                                            ChatMessage(chatItem: chatItem)
+                        if (viewModel.chatItemGroups.isEmpty) {
+                            EmptyChatPlaceholder()
+                        } else {
+                            ScrollView {
+                                ScrollViewReader { scrollView in
+                                    ForEach(viewModel.chatItemGroups, id: \.id) { chatItemGroup in
+                                        VStack {
+                                            ForEach(chatItemGroup.chatItems, id: \.id) { chatItem in
+                                                ChatMessage(chatItem: chatItem)
+                                            }
+                                            VerticalSpacer(height: 15)
                                         }
-                                        VerticalSpacer(height: 15)
+                                        .if(viewModel.lastChatGroup != nil && viewModel.lastChatGroup!.id == chatItemGroup.id) { stack in
+                                            stack.padding([.bottom], 28)
+                                        }
                                     }
                                     .onAppear {
-                                        if let lastItem = viewModel.lastChatItem {
+                                        if let lastItem = viewModel.lastChatGroup {
                                             scrollView.scrollTo(lastItem.id, anchor: .bottom)
                                         }
                                     }

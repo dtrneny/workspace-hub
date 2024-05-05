@@ -28,8 +28,8 @@ final class WorkspaceGroupChatViewModel: ViewModelProtocol {
     @Published var group: Group? = nil
     @Published var currentUserAccount: Account? = nil
     @Published var chatItemGroups: [ChatItemGroup] = []
-    @Published var lastChatItem: ChatItem? = nil
-    
+    @Published var lastChatGroup: ChatItemGroup? = nil
+
     func fetchInitialData(groupId: String) async {
         state = .loading
         
@@ -78,7 +78,7 @@ final class WorkspaceGroupChatViewModel: ViewModelProtocol {
         } completion: { [weak self] fetchedMessages, error in
             guard let self = self else { return }
             chatItemGroups = ChatUtil.getChatItemGroupsFromMessages(messages: fetchedMessages, currentUserId: userId)
-            lastChatItem = getLastChatItem(groups: chatItemGroups)
+            lastChatGroup = getLastChatItemGroup(groups: chatItemGroups)
         }
     }
     
@@ -92,12 +92,10 @@ final class WorkspaceGroupChatViewModel: ViewModelProtocol {
         currentUserAccount = account
     }
     
-    private func getLastChatItem (groups: [ChatItemGroup]) -> ChatItem? {
+    private func getLastChatItemGroup (groups: [ChatItemGroup]) -> ChatItemGroup? {
         
         if let lastGroup = groups.last {
-            if let lastItem = lastGroup.chatItems.last {
-                return lastItem
-            }
+            return lastGroup
         }
         
         return nil
