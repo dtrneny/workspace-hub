@@ -1,18 +1,19 @@
 //
-//  GroupDetailView.swift
+//  GroupChatView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 02.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import SwiftUI
 
-struct GroupDetailView: View {
+struct GroupChatView: View {
     
     let groupId: String
-    let navigateToSettings: () -> Void
     
-    @StateObject private var viewModel = GroupDetailViewModel(
+    @EnvironmentObject var coordinator: GroupCoordinator
+    
+    @StateObject private var viewModel = GroupChatViewModel(
         groupService: GroupService(),
         messageService: MessageService(),
         accountService: AccountService()
@@ -54,7 +55,7 @@ struct GroupDetailView: View {
                 }
             }
         }
-        .onAppear {            
+        .onAppear {
             Task {
                 await viewModel.fetchInitialData(groupId: groupId)
             }
@@ -62,7 +63,7 @@ struct GroupDetailView: View {
     }
 }
 
-extension GroupDetailView {
+extension GroupChatView {
     
     private var groupOperations: some View {
         HStack(alignment: .firstTextBaseline) {
@@ -72,7 +73,7 @@ extension GroupDetailView {
                 Spacer()
                 
                 OperationButton(icon: "gearshape.fill") {
-                    navigateToSettings()
+                    coordinator.changeSection(to: .groupSettings(groupId: groupId))
                 }
             }
         }

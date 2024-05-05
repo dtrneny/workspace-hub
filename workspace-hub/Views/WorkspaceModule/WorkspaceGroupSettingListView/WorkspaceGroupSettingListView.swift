@@ -1,42 +1,39 @@
 //
-//  GroupSettingsView.swift
+//  WorkspaceGroupSettingListView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 02.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import SwiftUI
 
-struct GroupSettingListView: View {
+struct WorkspaceGroupSettingListView: View {
     
     let groupId: String
     let workspaceId: String
     
-    let navigateToEdit: (_ groupId: String, _ workspaceId: String) -> Void
-    let navigateToMembers: (_ groupId: String) -> Void
-    
+    @EnvironmentObject var coordinator: WorkspaceCoordinator
+
     var body: some View {
         BaseLayout {
             VStack(spacing: 38) {
-                
                 settings
-                
             }
         }
     }
 }
 
-extension GroupSettingListView {
+extension WorkspaceGroupSettingListView {
     
     private var settings: some View {
         VStack(alignment: .leading) {
             ViewTitle(title: "Group settings")
 
             SettingListRow(label: "General") {
-                navigateToEdit(groupId, workspaceId)
+                coordinator.changeSection(to: .groupEdit(groupId: groupId, workspaceId: workspaceId))
             }
             SettingListRow(label: "Members") {
-                navigateToMembers(groupId)
+                coordinator.changeSection(to: .memberList(groupId: groupId))
             }
         }
     }

@@ -1,13 +1,13 @@
 //
-//  InvitationAdditionViewModel.swift
+//  WorkspaceGroupInvitationAdditionViewModel.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 04.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import Foundation
 
-final class InvitationAdditionViewModel: ViewModelProtocol {
+final class WorkspaceGroupInvitationAdditionViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .loading
     

@@ -1,13 +1,13 @@
 //
-//  GroupEditViewModel.swift
+//  WorkspaceGroupEditViewModel.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 03.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import Foundation
 
-final class GroupEditViewModel: ViewModelProtocol {
+final class WorkspaceGroupEditViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .loading
     

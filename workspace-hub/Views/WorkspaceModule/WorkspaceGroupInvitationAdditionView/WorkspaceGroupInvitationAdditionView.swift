@@ -1,19 +1,19 @@
 //
-//  InvitationAdditionView.swift
+//  WorkspaceGroupInvitationAdditionView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 04.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import SwiftUI
 
-struct InvitationAdditionView: View {
+struct WorkspaceGroupInvitationAdditionView: View {
     
     let groupId: String
     
-    let navigateBack: () -> Void
-    
-    @StateObject private var viewModel = InvitationAdditionViewModel(
+    @EnvironmentObject var coordinator: WorkspaceCoordinator
+        
+    @StateObject private var viewModel = WorkspaceGroupInvitationAdditionViewModel(
         accountService: AccountService(),
         invitationService: InvitationService(),
         groupService: GroupService()
@@ -32,7 +32,7 @@ struct InvitationAdditionView: View {
     }
 }
 
-extension InvitationAdditionView {
+extension WorkspaceGroupInvitationAdditionView {
     
     private var formView: some View {
         VStack(spacing: 19) {
@@ -54,7 +54,7 @@ extension InvitationAdditionView {
         BaseButton {
             Task {
                 if(await viewModel.inviteMember(groupId: groupId)) {
-                    navigateBack()
+                    coordinator.pop()
                 }
             }
         } content: {
