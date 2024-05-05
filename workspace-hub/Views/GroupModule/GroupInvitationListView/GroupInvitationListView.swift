@@ -23,6 +23,17 @@ struct GroupInvitationListView: View {
                 invitationList
             }
         }
+        .confirmationDialog(
+            "Do you want to remove this invitation?",
+            isPresented: $viewModel.deleteInvitationConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                Task {
+                    await viewModel.deleteInvitation()
+                }
+            }
+        }
         .onAppear {
             Task {
                 await viewModel.fetchInitialData()
@@ -50,9 +61,8 @@ extension GroupInvitationListView {
                     ) {
                         HStack(spacing: 10) {
                             OperationButton(icon: "trash", color: .primaryRed700) {
-                                Task {
-                                    await viewModel.deleteInvitation(id: invGroup.invitationId)
-                                }
+                                viewModel.deletedInvitation = invGroup.invitationId
+                                viewModel.deleteInvitationConfirmation = true
                             }
                             
                             OperationButton(icon: "checkmark", color: .primaryGreen700) {

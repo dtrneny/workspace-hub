@@ -57,18 +57,19 @@ extension WorkspaceAdditionView {
     
     private var createButton: some View {
         BaseButton {
-            Task {
-                if(await viewModel.createWorkspace()) {
-                    coordinator.pop()
-                }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.creatingWorkspace) {
                     ProgressView()
                         .tint(.white)
                 }
                 Text("Create workspace")
+            }
+        }
+        .onTapGesture {
+            Task {
+                if(await viewModel.createWorkspace()) {
+                    coordinator.pop()
+                }
             }
         }
     }

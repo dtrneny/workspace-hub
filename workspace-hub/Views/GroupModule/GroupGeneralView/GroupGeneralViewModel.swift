@@ -19,6 +19,7 @@ final class GroupGeneralViewModel: ViewModelProtocol {
         
     @Published var group: Group? = nil
     @Published var leavingGroup: Bool = false
+    @Published var leaveConfirmation: Bool = false
     
     func fetchInitialData(groupId: String) async {
         state = .loading
@@ -50,6 +51,7 @@ final class GroupGeneralViewModel: ViewModelProtocol {
         let result = await groupService.updateGroup(id: groupId, update: update)
         
         leavingGroup = true
+        leaveConfirmation = false
         return result != nil
     }
 }

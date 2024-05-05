@@ -67,18 +67,19 @@ extension WorkspaceGroupAdditionView {
     
     private var createButton: some View {
         BaseButton {
-            Task {
-                if(await viewModel.createGroup(workspaceId: workspaceId)) {
-                    coordinator.pop()
-                }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.creatingGroup) {
                     ProgressView()
                         .tint(.white)
                 }
                 Text("Create group")
+            }
+        }
+        .onTapGesture {
+            Task {
+                if(await viewModel.createGroup(workspaceId: workspaceId)) {
+                    coordinator.pop()
+                }
             }
         }
     }

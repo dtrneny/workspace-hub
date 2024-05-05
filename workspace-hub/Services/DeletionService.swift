@@ -28,6 +28,10 @@ final class DeletionService {
     }
     
     func deleteGroups(groupIds: [String]) async -> Bool {
+        if (groupIds.isEmpty) {
+            return false
+        }
+        
         let messagesDeleted = await messageService.deleteMessages { query in
             query.whereField("groupId", in: groupIds)
         }

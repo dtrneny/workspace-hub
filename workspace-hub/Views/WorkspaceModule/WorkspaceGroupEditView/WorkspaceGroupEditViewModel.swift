@@ -21,6 +21,7 @@ final class WorkspaceGroupEditViewModel: ViewModelProtocol {
     @Published var symbolSelectPresented: Bool = false
     @Published var updatingGroup: Bool = false
     @Published var deletingGroup: Bool = false
+    @Published var deleteConfirmation: Bool = false
     
     var group: Group? = nil
 
@@ -47,10 +48,12 @@ final class WorkspaceGroupEditViewModel: ViewModelProtocol {
     func deleteGroup(workspaceId: String) async -> Bool {
         if let group = group {
             deletingGroup = true
+            deleteConfirmation = false
             return await DeletionService().deleteGroup(group: group, workspaceId: workspaceId)
         }
         
         deletingGroup = false
+        deleteConfirmation = false
         return false
     }
     

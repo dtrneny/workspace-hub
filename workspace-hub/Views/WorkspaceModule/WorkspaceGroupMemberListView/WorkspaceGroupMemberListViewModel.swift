@@ -29,6 +29,8 @@ final class WorkspaceGroupMemberListViewModel: ViewModelProtocol {
     @Published var participantAccounts: [Account] = []
     @Published var invitationAccounts: [InvitationAccount] = []
     @Published var ownerMember: GroupMember? = nil
+    @Published var deleteInvitationConfirmation: Bool = false
+    @Published var deletedInvitation: String? = nil
     
     func fetchInitialData(groupId: String) async {
         state = .loading
@@ -91,13 +93,20 @@ final class WorkspaceGroupMemberListViewModel: ViewModelProtocol {
         })
     }
     
-    func deleteInvitation(id: String) async -> Bool {
-        let result = await invitationService.deleteInvitation(id: id)
-        
-        if (result) {
-            invitationAccounts = invitationAccounts.filter{ $0.invitationId != id }
+    func deleteInvitation() async -> Bool {
+        guard let invitationId = deletedInvitation else {
+            deleteInvitationConfirmation = false
+            return false
         }
         
+        let result = await invitationService.deleteInvitation(id: invitationId)
+        
+        if (result) {
+            invitationAccounts = invitationAccounts.filter{ $0.invitationId != invitationId }
+        }
+        
+        deleteInvitationConfirmation = false
+        deletedInvitation = nil
         return result
     }
 }

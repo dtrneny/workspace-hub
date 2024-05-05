@@ -36,6 +36,18 @@ struct WorkspaceGroupEditView: View {
                 }
             }
         }
+        .confirmationDialog(
+            "Do you want to remove this group?",
+            isPresented: $viewModel.deleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Confirm", role: .destructive) {
+                Task {
+                    let _ = await viewModel.deleteGroup(workspaceId: workspaceId)
+                    coordinator.replaceAll(with: [.detail(id: workspaceId)])
+                }
+            }
+        }
         .routerBarBackArrowHidden(viewModel.updatingGroup || viewModel.deletingGroup)
         .onAppear {
             Task {
@@ -73,12 +85,6 @@ extension WorkspaceGroupEditView {
     
     private var createButton: some View {
         BaseButton {
-            Task {
-                if(await viewModel.updateGroup()) {
-                    coordinator.pop()
-                }
-            }
-        } content: {
             HStack (spacing: 8) {
                 if (viewModel.updatingGroup) {
                     ProgressView()
@@ -87,23 +93,22 @@ extension WorkspaceGroupEditView {
                 Text("Update group")
             }
         }
+        .onTapGesture {
+            Task {
+                if(await viewModel.updateGroup()) {
+                    coordinator.pop()
+                }
+            }
+        }
     }
     
     private var deleteButton: some View {
-        BaseButton(action: {
-            Task {
-                let _ = await viewModel.deleteGroup(workspaceId: workspaceId)
-                coordinator.replaceAll(with: [.detail(id: workspaceId)])
-            }
-        }, content: {
-            HStack (spacing: 8) {
-                if (viewModel.deletingGroup) {
-                    ProgressView()
-                        .tint(.primaryRed700)
-                }
-                Text("Delete group")
-            }
+        BaseButton(content: {
+            Text("Delete group")
         }, style: .danger)
+        .onTapGesture {
+            viewModel.deleteConfirmation = true
+        }
     }
     
     private var groupImage: some View {

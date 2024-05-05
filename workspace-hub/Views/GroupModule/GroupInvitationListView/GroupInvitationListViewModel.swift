@@ -21,6 +21,8 @@ final class GroupInvitationListViewModel: ViewModelProtocol {
     }
         
     @Published var invitationGroups: [InvitationGroup] = []
+    @Published var deleteInvitationConfirmation: Bool = false
+    @Published var deletedInvitation: String? = nil
     
     func fetchInitialData() async {
         state = .loading
@@ -74,13 +76,20 @@ final class GroupInvitationListViewModel: ViewModelProtocol {
         return invitations
     }
     
-    func deleteInvitation(id: String) async -> Bool {
-        let result = await invitationService.deleteInvitation(id: id)
-        
-        if (result) {
-            invitationGroups = invitationGroups.filter{ $0.invitationId != id }
+    func deleteInvitation() async -> Bool {
+        guard let deletedId = deletedInvitation else {
+            deleteInvitationConfirmation = false
+            return false
         }
         
+        let result = await invitationService.deleteInvitation(id: deletedId)
+        
+        if (result) {
+            invitationGroups = invitationGroups.filter{ $0.invitationId != deletedId }
+        }
+        
+        deletedInvitation = nil
+        deleteInvitationConfirmation = false
         return result
     }
     
@@ -102,7 +111,9 @@ final class GroupInvitationListViewModel: ViewModelProtocol {
         
         if (groupResult == nil) { return false }
         
-        let deletionResult = await deleteInvitation(id: invitationGroup.invitationId)
+        deletedInvitation = invitationGroup.invitationId
+        
+        let deletionResult = await deleteInvitation()
         
         return deletionResult
     }
