@@ -22,6 +22,8 @@
 		2E8FBC062BE8FBDB008B19C5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FBC052BE8FBDB008B19C5 /* Localizable.xcstrings */; };
 		2E8FBC092BE8FF6D008B19C5 /* DynamicViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */; };
 		63075A8A2BE7EC190097624E /* EmailFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63075A892BE7EC190097624E /* EmailFormat.swift */; };
+		63075A8D2BE7EF0B0097624E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63075A8C2BE7EF0B0097624E /* ImageCache.swift */; };
+		63075A902BE7F7AE0097624E /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63075A8F2BE7F7AE0097624E /* SequenceExtensions.swift */; };
 		630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E732BE79377004EABD5 /* GroupGeneralView.swift */; };
 		630E3E762BE79384004EABD5 /* GroupGeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */; };
 		630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */; };
@@ -186,6 +188,8 @@
 		2E8FBC052BE8FBDB008B19C5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewTitle.swift; sourceTree = "<group>"; };
 		63075A892BE7EC190097624E /* EmailFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormat.swift; sourceTree = "<group>"; };
+		63075A8C2BE7EF0B0097624E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		63075A8F2BE7F7AE0097624E /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
 		630E3E732BE79377004EABD5 /* GroupGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralView.swift; sourceTree = "<group>"; };
 		630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralViewModel.swift; sourceTree = "<group>"; };
 		630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupSettingListView.swift; sourceTree = "<group>"; };
@@ -403,6 +407,14 @@
 				2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */,
 			);
 			path = DynamicViewTitle;
+			sourceTree = "<group>";
+		};
+		63075A8B2BE7EF010097624E /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				63075A8C2BE7EF0B0097624E /* ImageCache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		630E3E722BE79356004EABD5 /* GroupGeneralView */ = {
@@ -624,6 +636,7 @@
 			children = (
 				638DBEF72BDAD5F7003A1795 /* ViewExtensions.swift */,
 				638DBF092BDB895E003A1795 /* UIColorExtensions.swift */,
+				63075A8F2BE7F7AE0097624E /* SequenceExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1146,6 +1159,7 @@
 		63ECEBD02BA6F13C00166BCD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				63075A8B2BE7EF010097624E /* Cache */,
 				638DBEF62BDAD5E5003A1795 /* Extensions */,
 				63C9DF6D2BC3EBF80075ABDA /* Validation */,
 				63C467B72BA9A22C0081E7EA /* Fonts */,
@@ -1350,6 +1364,7 @@
 				6399C5612BE4DCA900EB068D /* ChatUtil.swift in Sources */,
 				638DBF242BDD6B17003A1795 /* SettingAccountEditView.swift in Sources */,
 				6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */,
+				63075A8D2BE7EF0B0097624E /* ImageCache.swift in Sources */,
 				6399C5952BE69B8E00EB068D /* InvitationGroup.swift in Sources */,
 				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
 				630E3E9C2BE7AF1B004EABD5 /* GroupMemberListView.swift in Sources */,
@@ -1434,6 +1449,7 @@
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
 				638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */,
 				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
+				63075A902BE7F7AE0097624E /* SequenceExtensions.swift in Sources */,
 				638D93AF2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
 				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,

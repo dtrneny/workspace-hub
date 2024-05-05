@@ -112,13 +112,25 @@ extension ChatMessage {
     }
     
     private var userAvatar: some View {
-        AsyncImage(url: URL(string: chatItem.message.userPhotoUrlString), content: { image in
-            image.image?
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 45, height: 45)
-                .clipShape(Circle())
-        })
+        VStack {
+            if let cachedImage = ImageCache.shared.getImage(urlString: chatItem.message.userPhotoUrlString) {
+                Image(uiImage: cachedImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 45, height: 45)
+                    .clipShape(Circle())
+            } else {
+                Circle()
+                    .foregroundColor(.secondary900)
+                    .frame(width: 45, height: 45)
+                    .overlay(
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25, height: 25)
+                    )
+            }
+        }
     }
     
 }

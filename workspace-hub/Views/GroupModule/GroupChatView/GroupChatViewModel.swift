@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 final class GroupChatViewModel: ViewModelProtocol {
     
@@ -34,7 +35,6 @@ final class GroupChatViewModel: ViewModelProtocol {
         state = .loading
         
         guard let fetchedGroup = await getGroup(groupId: groupId) else  {
-            state = .error(message: NSLocalizedString("Group not found.", comment: ""))
             return
         }
         
@@ -43,12 +43,14 @@ final class GroupChatViewModel: ViewModelProtocol {
         
         group = fetchedGroup
         
+        let photoUrls = await getMembersAccountPhotoUrls()
+        await ImageUtil.loadImagesFromUrlsAsync(imageUrls: photoUrls.sorted())
+        
         state = .idle
     }
     
     func getGroup(groupId: String) async -> Group? {
-        let group = await groupService.getGroup(id: groupId)
-        return group
+        return await groupService.getGroup(id: groupId)
     }
     
     func sentMessage(chatSubmit: ChatSubmit, groupId: String) async -> Bool {
@@ -56,7 +58,7 @@ final class GroupChatViewModel: ViewModelProtocol {
         guard let account = currentUserAccount, let userId = currentUserAccount?.id else {
             return false
         }
-        
+                
         let message = await messageService.createMessage(message: Message(
             userId: userId,
             text: chatSubmit.text,
@@ -72,11 +74,12 @@ final class GroupChatViewModel: ViewModelProtocol {
         guard let userId = currentUserAccount?.id else {
             return
         }
-        
+                
         messageService.getGroupMessages { query in
             return query.whereField("groupId", isEqualTo: groupId)
         } completion: { [weak self] fetchedMessages, error in
             guard let self = self else { return }
+            
             chatItemGroups = ChatUtil.getChatItemGroupsFromMessages(messages: fetchedMessages, currentUserId: userId)
             lastChatGroup = getLastChatItemGroup(groups: chatItemGroups)
         }
@@ -99,5 +102,24 @@ final class GroupChatViewModel: ViewModelProtocol {
         }
         
         return nil
+    }
+    
+    private func getMembersAccountPhotoUrls () async -> [String] {
+        guard let members = group?.members else {
+            return []
+        }
+        
+        let ids = members.map { $0.id }
+        
+        guard !ids.isEmpty else {
+            return []
+        }
+        
+        return await accountService.getAccounts { query in
+            query.whereField(FieldPath.documentID(), in: ids)
+        }.map { account in
+            account.profileImage
+        }
+        
     }
 }

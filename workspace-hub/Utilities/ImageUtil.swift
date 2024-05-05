@@ -32,7 +32,33 @@ final class ImageUtil {
         }.resume()
     }
     
+    static func loadImageFromUrlAsyncToCache(urlString: String) async {
+        if let _ = ImageCache.shared.getImage(urlString: urlString) {
+            return
+        }
+                
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            if let loadedImage = UIImage(data: data) {
+                ImageCache.shared.setImage(image: loadedImage, urlString: urlString)
+            }
+        } catch {
+            return
+        }
+    }
+    
     static func getUniqueIdentifierForUserImage(userId: String) -> String {
         return "\(userId)_\(UUID().uuidString)"
     }
+    
+    static func loadImagesFromUrlsAsync(imageUrls: [String]) async {        
+        await imageUrls.asyncForEach { url in
+            await loadImageFromUrlAsyncToCache(urlString: url)
+        }
+    }
+
 }

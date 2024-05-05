@@ -32,6 +32,8 @@ final class SettingListViewModel: ViewModelProtocol {
     }
     
     func fetchInitialData() async {
+        state = .loading
+        
         await getCurrentUsersAccount()
         
         state = .idle
@@ -44,9 +46,12 @@ final class SettingListViewModel: ViewModelProtocol {
         
         let fetchedAccount = await accountService.getAccount(id: userId)
         
-        guard let accountResult = fetchedAccount else { return }
         
-        account = accountResult
+        if let fetchedAccount = fetchedAccount {
+            await ImageUtil.loadImageFromUrlAsyncToCache(urlString: fetchedAccount.profileImage)
+            account = fetchedAccount
+        }
+        
         return
     }
 }
