@@ -19,6 +19,7 @@
 		2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548A2BD2548400BF2944 /* TimelineView.swift */; };
 		2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548C2BD2A61A00BF2944 /* Group.swift */; };
 		2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4654902BD2A74000BF2944 /* GroupService.swift */; };
+		63075A8A2BE7EC190097624E /* EmailFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63075A892BE7EC190097624E /* EmailFormat.swift */; };
 		630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E732BE79377004EABD5 /* GroupGeneralView.swift */; };
 		630E3E762BE79384004EABD5 /* GroupGeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */; };
 		630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */; };
@@ -180,6 +181,7 @@
 		2E46548A2BD2548400BF2944 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		2E46548C2BD2A61A00BF2944 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		2E4654902BD2A74000BF2944 /* GroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
+		63075A892BE7EC190097624E /* EmailFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormat.swift; sourceTree = "<group>"; };
 		630E3E732BE79377004EABD5 /* GroupGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralView.swift; sourceTree = "<group>"; };
 		630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralViewModel.swift; sourceTree = "<group>"; };
 		630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupSettingListView.swift; sourceTree = "<group>"; };
@@ -1042,6 +1044,7 @@
 			isa = PBXGroup;
 			children = (
 				63C9DF752BC3F2070075ABDA /* NonEmpty.swift */,
+				63075A892BE7EC190097624E /* EmailFormat.swift */,
 			);
 			path = Rules;
 			sourceTree = "<group>";
@@ -1358,6 +1361,7 @@
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
 				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
+				63075A8A2BE7EC190097624E /* EmailFormat.swift in Sources */,
 				638DBF2B2BDE59D7003A1795 /* LoadingDots.swift in Sources */,
 				2E46547F2BD1735E00BF2944 /* DateItem.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,

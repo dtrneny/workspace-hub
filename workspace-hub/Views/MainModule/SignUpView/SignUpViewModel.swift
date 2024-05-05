@@ -29,7 +29,7 @@ final class SignUpViewModel: ViewModelProtocol {
     var lastname: String = ""
     @Published var lastnameError: String? = nil
     
-    @Validated(rules: [nonEmptyRule])
+    @Validated(rules: [nonEmptyRule, emailRule])
     var email: String = ""
     @Published var emailError: String? = nil
     
