@@ -27,7 +27,7 @@ final class WorkspaceGroupInvitationAdditionViewModel: ViewModelProtocol {
     
     @Published var creatingInvitation: Bool = false
         
-    @Validated(rules: [nonEmptyRule])
+    @Validated(rules: [nonEmptyRule, emailRule])
     var email: String = ""
     @Published var emailError: String? = nil
     
