@@ -1,22 +1,21 @@
 //
-//  GroupEditView.swift
+//  WorkspaceGroupEditView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 03.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import SwiftUI
 import SFSymbolsPicker
 
-struct GroupEditView: View {
-
+struct WorkspaceGroupEditView: View {
+    
     let workspaceId: String
     let groupId: String
     
-    let navigateToRoot: () -> Void
-    let navigateBack: () -> Void
+    @EnvironmentObject var coordinator: WorkspaceCoordinator
     
-    @StateObject private var viewModel = GroupEditViewModel(groupService: GroupService())
+    @StateObject private var viewModel = WorkspaceGroupEditViewModel(groupService: GroupService())
     
     var body: some View {
         BaseLayout {
@@ -26,7 +25,7 @@ struct GroupEditView: View {
             default:
                 ViewTitle(title: "Edit group")
                 
-                workspaceImage
+                groupImage
                 
                 formView
                 
@@ -54,14 +53,14 @@ struct GroupEditView: View {
     }
 }
 
-extension GroupEditView {
+extension WorkspaceGroupEditView {
     
     private var formView: some View {
         VStack(spacing: 19) {
             FormField {
                 TextInput(
                     value: $viewModel.groupName,
-                    placeholder: "Your workspace",
+                    placeholder: "Your group name",
                     label: "Name"
                 )
                 if let error = viewModel.groupNameError {
@@ -76,7 +75,7 @@ extension GroupEditView {
         BaseButton {
             Task {
                 if(await viewModel.updateGroup()) {
-                    navigateBack()
+                    coordinator.pop()
                 }
             }
         } content: {
@@ -94,7 +93,7 @@ extension GroupEditView {
         BaseButton(action: {
             Task {
                 let _ = await viewModel.deleteGroup(workspaceId: workspaceId)
-                navigateToRoot()
+                coordinator.replaceAll(with: [.detail(id: workspaceId)])
             }
         }, content: {
             HStack (spacing: 8) {
@@ -107,7 +106,7 @@ extension GroupEditView {
         }, style: .danger)
     }
     
-    private var workspaceImage: some View {
+    private var groupImage: some View {
         VStack(alignment: .center) {
             HStack {
                 Spacer()

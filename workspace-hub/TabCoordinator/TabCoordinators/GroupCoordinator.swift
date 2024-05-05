@@ -10,7 +10,10 @@ import Foundation
 enum GroupTabSections: Hashable {
     case list
     case invitations
-    case groupDetail(groupId: String)
+    case groupChat(groupId: String)
+    case groupSettings(groupId: String)
+    case groupGeneral(groupId: String)
+    case groupMembers(groupId: String)
 }
 
 class GroupCoordinator: BaseTabCoordinator<GroupTabSections> {

@@ -1,14 +1,14 @@
 //
-//  ParticipantListViewModel.swift
+//  WorkspaceGroupMemberListViewModel.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 04.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import Foundation
 import FirebaseFirestore
 
-final class MemberListViewModel: ViewModelProtocol {
+final class WorkspaceGroupMemberListViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .loading
     

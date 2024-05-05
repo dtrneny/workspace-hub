@@ -1,20 +1,19 @@
 //
-//  ParticipantListView.swift
+//  WorkspaceGroupMemberListView.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 04.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import SwiftUI
 
-struct MemberListView: View {
+struct WorkspaceGroupMemberListView: View {
     
     let groupId: String
     
-    let navigateToInvitation: (_ groupId: String) -> Void
-
+    @EnvironmentObject var coordinator: WorkspaceCoordinator
     
-    @StateObject private var viewModel = MemberListViewModel(
+    @StateObject private var viewModel = WorkspaceGroupMemberListViewModel(
         accountService: AccountService(),
         groupService: GroupService(),
         invitationService: InvitationService()
@@ -43,7 +42,7 @@ struct MemberListView: View {
     }
 }
 
-extension MemberListView {
+extension WorkspaceGroupMemberListView {
     
     private var memberList: some View {
         VStack(alignment: .leading) {
@@ -53,7 +52,7 @@ extension MemberListView {
                 Spacer()
                 
                 OperationButton(icon: "plus") {
-                    navigateToInvitation(groupId)
+                    coordinator.changeSection(to: .memberInvitation(groupId: groupId))
                 }
             }
             

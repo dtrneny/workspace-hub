@@ -53,7 +53,7 @@ extension GroupListView {
                     ) { EmptyView()}
                     .onTapGesture {
                         if let groupId = group.id {
-                            coordinator.changeSection(to: .groupDetail(groupId: groupId))
+                            coordinator.changeSection(to: .groupChat(groupId: groupId))
                         }
                     }
                 }

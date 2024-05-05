@@ -19,6 +19,22 @@
 		2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548A2BD2548400BF2944 /* TimelineView.swift */; };
 		2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548C2BD2A61A00BF2944 /* Group.swift */; };
 		2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4654902BD2A74000BF2944 /* GroupService.swift */; };
+		630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E732BE79377004EABD5 /* GroupGeneralView.swift */; };
+		630E3E762BE79384004EABD5 /* GroupGeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */; };
+		630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */; };
+		630E3E7E2BE79835004EABD5 /* WorkspaceGroupMemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E7D2BE79835004EABD5 /* WorkspaceGroupMemberListView.swift */; };
+		630E3E802BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E7F2BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift */; };
+		630E3E832BE79CE0004EABD5 /* WorkspaceGroupEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E822BE79CE0004EABD5 /* WorkspaceGroupEditView.swift */; };
+		630E3E852BE79D5D004EABD5 /* WorkspaceGroupEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E842BE79D5D004EABD5 /* WorkspaceGroupEditViewModel.swift */; };
+		630E3E882BE79E44004EABD5 /* WorkspaceGroupInvitationAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E872BE79E44004EABD5 /* WorkspaceGroupInvitationAdditionView.swift */; };
+		630E3E8A2BE79E53004EABD5 /* WorkspaceGroupInvitationAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E892BE79E53004EABD5 /* WorkspaceGroupInvitationAdditionViewModel.swift */; };
+		630E3E8D2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E8C2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift */; };
+		630E3E8F2BE7A0A3004EABD5 /* WorkspaceGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E8E2BE7A0A3004EABD5 /* WorkspaceGroupChatView.swift */; };
+		630E3E922BE7AC4C004EABD5 /* GroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E912BE7AC4C004EABD5 /* GroupChatView.swift */; };
+		630E3E942BE7AC5C004EABD5 /* GroupChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E932BE7AC5C004EABD5 /* GroupChatViewModel.swift */; };
+		630E3E972BE7AD4B004EABD5 /* GroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E962BE7AD4B004EABD5 /* GroupSettingListView.swift */; };
+		630E3E9C2BE7AF1B004EABD5 /* GroupMemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E9B2BE7AF1B004EABD5 /* GroupMemberListView.swift */; };
+		630E3E9E2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E9D2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift */; };
 		6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */; };
 		635667A02BA2D5FD00A0AD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */; };
 		635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635667A22BA2D5FD00A0AD36 /* Preview Assets.xcassets */; };
@@ -56,10 +72,7 @@
 		638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638F24042BAD7A0D00704CE0 /* BackArrow.swift */; };
 		638F240A2BAD82CC00704CE0 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */; };
 		6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9792BE4040F009F70B2 /* WorkspaceGroupListRow.swift */; };
-		6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9802BE4069A009F70B2 /* GroupDetailView.swift */; };
 		6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */; };
-		6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */; };
-		6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */; };
 		6392F9922BE4227B009F70B2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9912BE4227B009F70B2 /* Message.swift */; };
 		6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9942BE424C2009F70B2 /* ChatLayout.swift */; };
 		6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392F9962BE42E58009F70B2 /* MessageService.swift */; };
@@ -69,17 +82,11 @@
 		6399C5632BE50CE700EB068D /* ChatItemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5622BE50CE700EB068D /* ChatItemGroup.swift */; };
 		6399C5662BE51D7600EB068D /* VerticalSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5652BE51D7600EB068D /* VerticalSpacer.swift */; };
 		6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5672BE566BF00EB068D /* DeletionService.swift */; };
-		6399C56B2BE56D5C00EB068D /* GroupEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56A2BE56D5C00EB068D /* GroupEditView.swift */; };
-		6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */; };
-		6399C5702BE62C0F00EB068D /* MemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C56F2BE62C0F00EB068D /* MemberListView.swift */; };
-		6399C5722BE62C2400EB068D /* MemberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5712BE62C2400EB068D /* MemberListViewModel.swift */; };
 		6399C5742BE638C000EB068D /* GroupMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5732BE638C000EB068D /* GroupMember.swift */; };
 		6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5752BE6396B00EB068D /* GroupMemberType.swift */; };
 		6399C5782BE63AF900EB068D /* WorkspaceAdministrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */; };
 		6399C57A2BE63B0D00EB068D /* WorkspaceAdministratorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */; };
 		6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C57B2BE642CB00EB068D /* Invitation.swift */; };
-		6399C57F2BE643E700EB068D /* InvitationAdditionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */; };
-		6399C5812BE643F200EB068D /* InvitationAdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5802BE643F200EB068D /* InvitationAdditionView.swift */; };
 		6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5822BE6442C00EB068D /* InvitationService.swift */; };
 		6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */; };
 		6399C5892BE6864F00EB068D /* InvitationAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6399C5882BE6864F00EB068D /* InvitationAccount.swift */; };
@@ -172,6 +179,22 @@
 		2E46548A2BD2548400BF2944 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		2E46548C2BD2A61A00BF2944 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		2E4654902BD2A74000BF2944 /* GroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
+		630E3E732BE79377004EABD5 /* GroupGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralView.swift; sourceTree = "<group>"; };
+		630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralViewModel.swift; sourceTree = "<group>"; };
+		630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupSettingListView.swift; sourceTree = "<group>"; };
+		630E3E7D2BE79835004EABD5 /* WorkspaceGroupMemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupMemberListView.swift; sourceTree = "<group>"; };
+		630E3E7F2BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupMemberListViewModel.swift; sourceTree = "<group>"; };
+		630E3E822BE79CE0004EABD5 /* WorkspaceGroupEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupEditView.swift; sourceTree = "<group>"; };
+		630E3E842BE79D5D004EABD5 /* WorkspaceGroupEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupEditViewModel.swift; sourceTree = "<group>"; };
+		630E3E872BE79E44004EABD5 /* WorkspaceGroupInvitationAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupInvitationAdditionView.swift; sourceTree = "<group>"; };
+		630E3E892BE79E53004EABD5 /* WorkspaceGroupInvitationAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupInvitationAdditionViewModel.swift; sourceTree = "<group>"; };
+		630E3E8C2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupChatViewModel.swift; sourceTree = "<group>"; };
+		630E3E8E2BE7A0A3004EABD5 /* WorkspaceGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupChatView.swift; sourceTree = "<group>"; };
+		630E3E912BE7AC4C004EABD5 /* GroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatView.swift; sourceTree = "<group>"; };
+		630E3E932BE7AC5C004EABD5 /* GroupChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewModel.swift; sourceTree = "<group>"; };
+		630E3E962BE7AD4B004EABD5 /* GroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingListView.swift; sourceTree = "<group>"; };
+		630E3E9B2BE7AF1B004EABD5 /* GroupMemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberListView.swift; sourceTree = "<group>"; };
+		630E3E9D2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemeberListViewModel.swift; sourceTree = "<group>"; };
 		635667982BA2D5FC00A0AD36 /* workspace-hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workspace-hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubApp.swift; sourceTree = "<group>"; };
 		6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -211,10 +234,7 @@
 		638F24042BAD7A0D00704CE0 /* BackArrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackArrow.swift; sourceTree = "<group>"; };
 		638F24092BAD82CC00704CE0 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
 		6392F9792BE4040F009F70B2 /* WorkspaceGroupListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceGroupListRow.swift; sourceTree = "<group>"; };
-		6392F9802BE4069A009F70B2 /* GroupDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailView.swift; sourceTree = "<group>"; };
 		6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListMessage.swift; sourceTree = "<group>"; };
-		6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailViewModel.swift; sourceTree = "<group>"; };
-		6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingListView.swift; sourceTree = "<group>"; };
 		6392F9912BE4227B009F70B2 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		6392F9942BE424C2009F70B2 /* ChatLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLayout.swift; sourceTree = "<group>"; };
 		6392F9962BE42E58009F70B2 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -224,17 +244,11 @@
 		6399C5622BE50CE700EB068D /* ChatItemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatItemGroup.swift; sourceTree = "<group>"; };
 		6399C5652BE51D7600EB068D /* VerticalSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSpacer.swift; sourceTree = "<group>"; };
 		6399C5672BE566BF00EB068D /* DeletionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletionService.swift; sourceTree = "<group>"; };
-		6399C56A2BE56D5C00EB068D /* GroupEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditView.swift; sourceTree = "<group>"; };
-		6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupEditViewModel.swift; sourceTree = "<group>"; };
-		6399C56F2BE62C0F00EB068D /* MemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListView.swift; sourceTree = "<group>"; };
-		6399C5712BE62C2400EB068D /* MemberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewModel.swift; sourceTree = "<group>"; };
 		6399C5732BE638C000EB068D /* GroupMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMember.swift; sourceTree = "<group>"; };
 		6399C5752BE6396B00EB068D /* GroupMemberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberType.swift; sourceTree = "<group>"; };
 		6399C5772BE63AF900EB068D /* WorkspaceAdministrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdministrator.swift; sourceTree = "<group>"; };
 		6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceAdministratorType.swift; sourceTree = "<group>"; };
 		6399C57B2BE642CB00EB068D /* Invitation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invitation.swift; sourceTree = "<group>"; };
-		6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionViewModel.swift; sourceTree = "<group>"; };
-		6399C5802BE643F200EB068D /* InvitationAdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAdditionView.swift; sourceTree = "<group>"; };
 		6399C5822BE6442C00EB068D /* InvitationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationService.swift; sourceTree = "<group>"; };
 		6399C5852BE67A9800EB068D /* CommonAccountListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAccountListRow.swift; sourceTree = "<group>"; };
 		6399C5882BE6864F00EB068D /* InvitationAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationAccount.swift; sourceTree = "<group>"; };
@@ -373,6 +387,85 @@
 				2E46548A2BD2548400BF2944 /* TimelineView.swift */,
 			);
 			path = TimelineView;
+			sourceTree = "<group>";
+		};
+		630E3E722BE79356004EABD5 /* GroupGeneralView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E732BE79377004EABD5 /* GroupGeneralView.swift */,
+				630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */,
+			);
+			path = GroupGeneralView;
+			sourceTree = "<group>";
+		};
+		630E3E772BE79790004EABD5 /* WorkspaceGroupSettingListView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E782BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift */,
+			);
+			path = WorkspaceGroupSettingListView;
+			sourceTree = "<group>";
+		};
+		630E3E7C2BE7981E004EABD5 /* WorkspaceGroupMemberListView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E7D2BE79835004EABD5 /* WorkspaceGroupMemberListView.swift */,
+				630E3E7F2BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift */,
+			);
+			path = WorkspaceGroupMemberListView;
+			sourceTree = "<group>";
+		};
+		630E3E812BE79CAD004EABD5 /* WorkspaceGroupEditView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E822BE79CE0004EABD5 /* WorkspaceGroupEditView.swift */,
+				630E3E842BE79D5D004EABD5 /* WorkspaceGroupEditViewModel.swift */,
+			);
+			path = WorkspaceGroupEditView;
+			sourceTree = "<group>";
+		};
+		630E3E862BE79E21004EABD5 /* WorkspaceGroupInvitationAdditionView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E872BE79E44004EABD5 /* WorkspaceGroupInvitationAdditionView.swift */,
+				630E3E892BE79E53004EABD5 /* WorkspaceGroupInvitationAdditionViewModel.swift */,
+			);
+			path = WorkspaceGroupInvitationAdditionView;
+			sourceTree = "<group>";
+		};
+		630E3E8B2BE7A073004EABD5 /* WorkspaceGroupChatView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E8E2BE7A0A3004EABD5 /* WorkspaceGroupChatView.swift */,
+				630E3E8C2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift */,
+			);
+			path = WorkspaceGroupChatView;
+			sourceTree = "<group>";
+		};
+		630E3E902BE7AC3B004EABD5 /* GroupChatView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E912BE7AC4C004EABD5 /* GroupChatView.swift */,
+				630E3E932BE7AC5C004EABD5 /* GroupChatViewModel.swift */,
+			);
+			path = GroupChatView;
+			sourceTree = "<group>";
+		};
+		630E3E952BE7AD33004EABD5 /* GroupSettingListView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E962BE7AD4B004EABD5 /* GroupSettingListView.swift */,
+			);
+			path = GroupSettingListView;
+			sourceTree = "<group>";
+		};
+		630E3E9A2BE7AEFF004EABD5 /* GroupMemberListView */ = {
+			isa = PBXGroup;
+			children = (
+				630E3E9B2BE7AF1B004EABD5 /* GroupMemberListView.swift */,
+				630E3E9D2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift */,
+			);
+			path = GroupMemberListView;
 			sourceTree = "<group>";
 		};
 		6356678F2BA2D5FC00A0AD36 = {
@@ -593,41 +686,12 @@
 			path = WorkspaceGroupListRow;
 			sourceTree = "<group>";
 		};
-		6392F97B2BE40613009F70B2 /* CommonModule */ = {
-			isa = PBXGroup;
-			children = (
-				6392F97F2BE40663009F70B2 /* GroupDetailView */,
-				6399C5692BE56D4C00EB068D /* GroupEditView */,
-				6392F9872BE41AD0009F70B2 /* GroupSettingListView */,
-				6399C56E2BE62BE400EB068D /* MemberListView */,
-				6399C57D2BE643C700EB068D /* InvitationAdditionView */,
-			);
-			path = CommonModule;
-			sourceTree = "<group>";
-		};
-		6392F97F2BE40663009F70B2 /* GroupDetailView */ = {
-			isa = PBXGroup;
-			children = (
-				6392F9802BE4069A009F70B2 /* GroupDetailView.swift */,
-				6392F9852BE40DCB009F70B2 /* GroupDetailViewModel.swift */,
-			);
-			path = GroupDetailView;
-			sourceTree = "<group>";
-		};
 		6392F9822BE409B8009F70B2 /* EmptyListMessage */ = {
 			isa = PBXGroup;
 			children = (
 				6392F9832BE409C9009F70B2 /* EmptyListMessage.swift */,
 			);
 			path = EmptyListMessage;
-			sourceTree = "<group>";
-		};
-		6392F9872BE41AD0009F70B2 /* GroupSettingListView */ = {
-			isa = PBXGroup;
-			children = (
-				6392F9882BE41AE6009F70B2 /* GroupSettingListView.swift */,
-			);
-			path = GroupSettingListView;
 			sourceTree = "<group>";
 		};
 		6392F9932BE42493009F70B2 /* ChatLayout */ = {
@@ -652,33 +716,6 @@
 				6399C5652BE51D7600EB068D /* VerticalSpacer.swift */,
 			);
 			path = VerticalSpacer;
-			sourceTree = "<group>";
-		};
-		6399C5692BE56D4C00EB068D /* GroupEditView */ = {
-			isa = PBXGroup;
-			children = (
-				6399C56A2BE56D5C00EB068D /* GroupEditView.swift */,
-				6399C56C2BE56D6600EB068D /* GroupEditViewModel.swift */,
-			);
-			path = GroupEditView;
-			sourceTree = "<group>";
-		};
-		6399C56E2BE62BE400EB068D /* MemberListView */ = {
-			isa = PBXGroup;
-			children = (
-				6399C56F2BE62C0F00EB068D /* MemberListView.swift */,
-				6399C5712BE62C2400EB068D /* MemberListViewModel.swift */,
-			);
-			path = MemberListView;
-			sourceTree = "<group>";
-		};
-		6399C57D2BE643C700EB068D /* InvitationAdditionView */ = {
-			isa = PBXGroup;
-			children = (
-				6399C5802BE643F200EB068D /* InvitationAdditionView.swift */,
-				6399C57E2BE643E700EB068D /* InvitationAdditionViewModel.swift */,
-			);
-			path = InvitationAdditionView;
 			sourceTree = "<group>";
 		};
 		6399C5842BE67A5800EB068D /* CommonAccountListRow */ = {
@@ -798,6 +835,11 @@
 				638DBF172BDBD462003A1795 /* WorkspaceEditView */,
 				638DBF0D2BDBA002003A1795 /* WorkspaceDetailView */,
 				638D93AB2BD50DA8006B0B3A /* WorkspaceGroupAdditionView */,
+				630E3E8B2BE7A073004EABD5 /* WorkspaceGroupChatView */,
+				630E3E772BE79790004EABD5 /* WorkspaceGroupSettingListView */,
+				630E3E7C2BE7981E004EABD5 /* WorkspaceGroupMemberListView */,
+				630E3E812BE79CAD004EABD5 /* WorkspaceGroupEditView */,
+				630E3E862BE79E21004EABD5 /* WorkspaceGroupInvitationAdditionView */,
 			);
 			path = WorkspaceModule;
 			sourceTree = "<group>";
@@ -819,6 +861,10 @@
 			children = (
 				639DBC162BD00C04003D24FB /* GroupRootView */,
 				6399C58A2BE6919800EB068D /* GroupListView */,
+				630E3E902BE7AC3B004EABD5 /* GroupChatView */,
+				630E3E952BE7AD33004EABD5 /* GroupSettingListView */,
+				630E3E722BE79356004EABD5 /* GroupGeneralView */,
+				630E3E9A2BE7AEFF004EABD5 /* GroupMemberListView */,
 				6399C58F2BE698E100EB068D /* GroupInvitationListView */,
 			);
 			path = GroupModule;
@@ -1000,7 +1046,6 @@
 		63ECEB882BA42AA500166BCD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6392F97B2BE40613009F70B2 /* CommonModule */,
 				639DBC142BD00218003D24FB /* MainModule */,
 				639DBC132BD0020A003D24FB /* WorkspaceModule */,
 				639DBC152BD00BD7003D24FB /* GroupModule */,
@@ -1267,9 +1312,8 @@
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */,
-				6392F9812BE4069A009F70B2 /* GroupDetailView.swift in Sources */,
-				6399C56D2BE56D6600EB068D /* GroupEditViewModel.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
+				630E3E802BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift in Sources */,
 				6399C5982BE69DF000EB068D /* CommonGroupListRow.swift in Sources */,
 				2E4654862BD1B9E200BF2944 /* WorkspaceListViewModel.swift in Sources */,
 				638F23EA2BACD92100704CE0 /* AuthService.swift in Sources */,
@@ -1278,24 +1322,27 @@
 				6399C57C2BE642CB00EB068D /* Invitation.swift in Sources */,
 				6399C5952BE69B8E00EB068D /* InvitationGroup.swift in Sources */,
 				638DBF2D2BDE5C4E003A1795 /* ThemeColorUtil.swift in Sources */,
+				630E3E9C2BE7AF1B004EABD5 /* GroupMemberListView.swift in Sources */,
 				638DBF1E2BDBFE06003A1795 /* SettingListRow.swift in Sources */,
 				6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */,
 				6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
+				630E3E922BE7AC4C004EABD5 /* GroupChatView.swift in Sources */,
 				2E0AEBC02BACAB9F00452744 /* SingInViewModel.swift in Sources */,
 				639DBC0D2BCFE71A003D24FB /* WorkspaceCoordinator.swift in Sources */,
-				6399C57F2BE643E700EB068D /* InvitationAdditionViewModel.swift in Sources */,
 				2E0AEBC52BACC13000452744 /* SignUpView.swift in Sources */,
+				630E3E8F2BE7A0A3004EABD5 /* WorkspaceGroupChatView.swift in Sources */,
 				639DBBF72BCFC81C003D24FB /* MainRouter.swift in Sources */,
-				6392F9862BE40DCB009F70B2 /* GroupDetailViewModel.swift in Sources */,
 				6392F9972BE42E58009F70B2 /* MessageService.swift in Sources */,
 				639DBC202BD00EF4003D24FB /* TimelineCoordinator.swift in Sources */,
 				63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */,
 				6399C58C2BE691AD00EB068D /* GroupListView.swift in Sources */,
 				638F24052BAD7A0D00704CE0 /* BackArrow.swift in Sources */,
 				639DBC082BCFE5C4003D24FB /* TabCoordinatorProtocol.swift in Sources */,
+				630E3E942BE7AC5C004EABD5 /* GroupChatViewModel.swift in Sources */,
+				630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */,
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
 				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
@@ -1303,27 +1350,33 @@
 				2E46547F2BD1735E00BF2944 /* DateItem.swift in Sources */,
 				63C467B62BA99D840081E7EA /* TextInput.swift in Sources */,
 				639DBC242BD010A3003D24FB /* SettingRootView.swift in Sources */,
+				630E3E9E2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift in Sources */,
+				630E3E852BE79D5D004EABD5 /* WorkspaceGroupEditViewModel.swift in Sources */,
 				6399C5912BE6990100EB068D /* GroupInvitationListView.swift in Sources */,
 				2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */,
 				638DBEF32BDAD080003A1795 /* BaseButton.swift in Sources */,
 				2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */,
 				63C9DF4C2BBF20050075ABDA /* RouterContainerView.swift in Sources */,
 				6399C5742BE638C000EB068D /* GroupMember.swift in Sources */,
+				630E3E762BE79384004EABD5 /* GroupGeneralViewModel.swift in Sources */,
 				6392F9952BE424C2009F70B2 /* ChatLayout.swift in Sources */,
 				6399C5662BE51D7600EB068D /* VerticalSpacer.swift in Sources */,
+				630E3E882BE79E44004EABD5 /* WorkspaceGroupInvitationAdditionView.swift in Sources */,
+				630E3E7E2BE79835004EABD5 /* WorkspaceGroupMemberListView.swift in Sources */,
 				2E0AEBC22BACABAA00452744 /* SignInView.swift in Sources */,
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
-				6392F9892BE41AE6009F70B2 /* GroupSettingListView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
 				6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */,
 				639DBC2E2BD02B79003D24FB /* WorkspaceActivityCard.swift in Sources */,
 				638D93A72BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift in Sources */,
 				638DBF0A2BDB895E003A1795 /* UIColorExtensions.swift in Sources */,
+				630E3E8D2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift in Sources */,
 				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
 				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */,
 				638DBF112BDBA510003A1795 /* WorkspaceDetailViewModel.swift in Sources */,
+				630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
@@ -1333,31 +1386,30 @@
 				6399C5892BE6864F00EB068D /* InvitationAccount.swift in Sources */,
 				6399C5632BE50CE700EB068D /* ChatItemGroup.swift in Sources */,
 				638D30DB2BA8B84F00105C6E /* RootViewModel.swift in Sources */,
+				630E3E8A2BE79E53004EABD5 /* WorkspaceGroupInvitationAdditionViewModel.swift in Sources */,
 				638DBF162BDBA716003A1795 /* WorkspaceDetailCard.swift in Sources */,
 				638DBF0F2BDBA013003A1795 /* WorkspaceDetailView.swift in Sources */,
 				638DBF1B2BDBD487003A1795 /* WorkspaceEditViewModel.swift in Sources */,
 				638DBEF82BDAD5F7003A1795 /* ViewExtensions.swift in Sources */,
-				6399C5812BE643F200EB068D /* InvitationAdditionView.swift in Sources */,
 				638D939F2BD237F5006B0B3A /* ValidatedWrapper.swift in Sources */,
 				63C9DF522BBF32820075ABDA /* RouteFactory.swift in Sources */,
 				63C9DF502BBF2D100075ABDA /* RouterPreferenceKeys.swift in Sources */,
 				6399C58E2BE691B600EB068D /* GroupListViewModel.swift in Sources */,
 				639DBC032BCFE4ED003D24FB /* WorkspaceRootView.swift in Sources */,
+				630E3E972BE7AD4B004EABD5 /* GroupSettingListView.swift in Sources */,
 				639DBC052BCFE538003D24FB /* BaseTabCoordinator.swift in Sources */,
 				63C9DF652BC0571E0075ABDA /* AccountService.swift in Sources */,
-				6399C56B2BE56D5C00EB068D /* GroupEditView.swift in Sources */,
 				638DBF192BDBD47B003A1795 /* WorkspaceEditView.swift in Sources */,
 				639DBC2B2BD014B6003D24FB /* SettingListViewModel.swift in Sources */,
 				638D93AF2BD50DD3006B0B3A /* WorkspaceGroupAdditionViewModel.swift in Sources */,
 				63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */,
 				638DBF282BDE39A2003A1795 /* ImageUtil.swift in Sources */,
 				639DBC102BCFEBC6003D24FB /* TabCoordinatorContainerView.swift in Sources */,
-				6399C5702BE62C0F00EB068D /* MemberListView.swift in Sources */,
 				639DBC292BD01492003D24FB /* SettingListView.swift in Sources */,
 				6399C5682BE566BF00EB068D /* DeletionService.swift in Sources */,
-				6399C5722BE62C2400EB068D /* MemberListViewModel.swift in Sources */,
 				6392F9992BE4374E009F70B2 /* ChatItem.swift in Sources */,
 				635667A82BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld in Sources */,
+				630E3E832BE79CE0004EABD5 /* WorkspaceGroupEditView.swift in Sources */,
 				639DBBFC2BCFD246003D24FB /* WorkspaceListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

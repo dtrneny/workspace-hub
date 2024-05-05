@@ -1,13 +1,13 @@
 //
-//  GroupDetailViewModel.swift
+//  WorkspaceGroupChatViewModel.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 02.05.2024.
+//  Created by Dalibor Trněný on 05.05.2024.
 //
 
 import Foundation
 
-final class GroupDetailViewModel: ViewModelProtocol {
+final class WorkspaceGroupChatViewModel: ViewModelProtocol {
     
     @Published var state: ViewState = .loading
     

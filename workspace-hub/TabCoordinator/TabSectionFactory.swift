@@ -33,38 +33,24 @@ enum TabSectionFactory {
                     .toolbar(.hidden, for: .tabBar)
                 
             case .groupDetail(let groupId, let workspaceId):
-                GroupDetailView(groupId: groupId) {
-                    coordinator.changeSection(to: .groupSettingList(groupId: groupId, workspaceId: workspaceId))
-                }
-                .toolbar(.hidden, for: .tabBar)
+                WorkspaceGroupChatView(groupId: groupId, workspaceId: workspaceId)
+                    .toolbar(.hidden, for: .tabBar)
                 
             case .groupSettingList(let groupId, let workspaceId):
-                GroupSettingListView(groupId: groupId, workspaceId: workspaceId) { groupId, workspaceId in
-                    coordinator.changeSection(to: .groupEdit(groupId: groupId, workspaceId: workspaceId))
-                } navigateToMembers: { groupId in
-                    coordinator.changeSection(to: .memberList(groupId: groupId))
-                }
-                .toolbar(.hidden, for: .tabBar)
+                WorkspaceGroupSettingListView(groupId: groupId, workspaceId: workspaceId)
+                    .toolbar(.hidden, for: .tabBar)
                 
             case .groupEdit(let groupId, let workspaceId):
-                GroupEditView(workspaceId: workspaceId, groupId: groupId) {
-                    coordinator.replaceAll(with: [.list, .detail(id: workspaceId)])
-                } navigateBack: {
-                    coordinator.pop()
-                }
-                .toolbar(.hidden, for: .tabBar)
+                WorkspaceGroupEditView(workspaceId: workspaceId, groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
                 
             case .memberList(let groupId):
-                MemberListView(groupId: groupId) { groupId in
-                    coordinator.changeSection(to: .memberInvitation(groupId: groupId))
-                }
-                .toolbar(.hidden, for: .tabBar)
+                WorkspaceGroupMemberListView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
                 
             case .memberInvitation(let groupId):
-                InvitationAdditionView(groupId: groupId) {
-                    coordinator.pop()
-                }
-                .toolbar(.hidden, for: .tabBar)
+                WorkspaceGroupInvitationAdditionView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
                 
             }
         } else {
@@ -78,16 +64,29 @@ enum TabSectionFactory {
             switch currentSection {
             case .list:
                 GroupListView()
+                
             case .invitations:
                 GroupInvitationListView()
-            case .groupDetail(let groupId):
-                GroupDetailView(groupId: groupId) {
-//                    coordinator.changeSection(to: .groupSettingList(groupId: groupId, workspaceId: workspaceId))
-                }
-                .toolbar(.hidden, for: .tabBar)
+                
+            case .groupChat(let groupId):
+                GroupChatView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
+            
+            case .groupSettings(let groupId):
+                GroupSettingListView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
+                
+            case .groupGeneral(let groupId):
+                GroupGeneralView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
+                
+            case .groupMembers(let groupId):
+                GroupMemberListView(groupId: groupId)
+                    .toolbar(.hidden, for: .tabBar)
+                
             }
         } else {
-            Text("Default")
+            GroupListView()
         }
     }
     
@@ -99,7 +98,7 @@ enum TabSectionFactory {
                 TimelineView()
             }
         } else {
-            Text("Default")
+            TimelineView()
         }
     }
     
