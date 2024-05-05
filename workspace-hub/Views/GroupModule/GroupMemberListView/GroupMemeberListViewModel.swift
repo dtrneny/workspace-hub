@@ -45,7 +45,22 @@ final class GroupMemeberListViewModel: ViewModelProtocol {
         memberAccounts = await getAccounts(ids: memberIds)
         administratorAccounts = await getAccounts(ids: adminIds)
         
+        await prefetchImages()
+        
         state = .idle
+    }
+    
+    func prefetchImages() async {
+        let memberAccountPhotos = memberAccounts.map { account in
+            account.profileImage
+        }
+        
+        let adminAccountPhotos = administratorAccounts.map { account in
+            account.profileImage
+        }
+        
+        await ImageUtil.loadImagesFromUrlsAsync(imageUrls: memberAccountPhotos)
+        await ImageUtil.loadImagesFromUrlsAsync(imageUrls: adminAccountPhotos)
     }
     
     func getAccounts(ids: [String]) async -> [Account] {

@@ -74,6 +74,8 @@ final class WorkspaceGroupMemberListViewModel: ViewModelProtocol {
         
         invitationAccounts = mergedAccounts.compactMap { $0 }
         
+        await prefetchImages()
+        
         state = .idle
     }
     
@@ -91,6 +93,19 @@ final class WorkspaceGroupMemberListViewModel: ViewModelProtocol {
         return await invitationService.getInvitations(assembleQuery: { query in
             query.whereField("groupId", isEqualTo: groupId)
         })
+    }
+    
+    func prefetchImages() async {
+        let participantAccountPhotos = participantAccounts.map { account in
+            account.profileImage
+        }
+        
+        let invitationAccountPhotos = invitationAccounts.map { invAccount in
+            invAccount.account.profileImage
+        }
+        
+        await ImageUtil.loadImagesFromUrlsAsync(imageUrls: participantAccountPhotos)
+        await ImageUtil.loadImagesFromUrlsAsync(imageUrls: invitationAccountPhotos)
     }
     
     func deleteInvitation() async -> Bool {

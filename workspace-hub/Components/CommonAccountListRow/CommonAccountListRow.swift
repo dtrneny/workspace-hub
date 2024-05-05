@@ -24,13 +24,24 @@ struct CommonAccountListRow<Content: View>: View {
     
     var body: some View {
         HStack (alignment: .center, spacing: 10) {
-            AsyncImage(url: URL(string: imageUrl), content: { image in
-                image.image?
+            
+            if let cachedImage = ImageCache.shared.getImage(urlString: imageUrl) {
+                Image(uiImage: cachedImage)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 45, height: 45)
                     .clipShape(Circle())
-            })
+            } else {
+                Circle()
+                    .foregroundColor(.secondary900)
+                    .frame(width: 45, height: 45)
+                    .overlay(
+                        Image("logo")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25, height: 25)
+                    )
+            }
             
             VStack (alignment: .leading) {
                 Text(name)
