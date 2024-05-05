@@ -19,8 +19,8 @@ struct ChatMessage: View {
     
     var messageInfo: String {
         return chatItem.isRecieved
-            ? "\(chatItem.message.sentAt.formatted()) | \(chatItem.message.fullname)"
-            : "\(chatItem.message.fullname) | \(chatItem.message.sentAt.formatted())"
+        ? "\(ChatUtil.formatDateString(value: chatItem.message.sentAt)) | \(chatItem.message.fullname)"
+            : "\(chatItem.message.fullname) | \(ChatUtil.formatDateString(value: chatItem.message.sentAt))"
     }
     
     var body: some View {

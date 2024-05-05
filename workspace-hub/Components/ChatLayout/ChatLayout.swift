@@ -32,6 +32,8 @@ struct ChatLayout<Content: View>: View {
                 .onTapGesture {
                     isFocused = false
                 }
+            
+            Spacer()
 
             controls
         }
@@ -80,12 +82,4 @@ extension ChatLayout {
         .padding([.top])
     }
     
-}
-
-#Preview {
-    ChatLayout {
-        Text("Testing")
-    } submitMessage: { message in
-        print(message)
-    }
 }

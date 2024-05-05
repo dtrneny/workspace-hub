@@ -9,6 +9,28 @@ import Foundation
 
 final class ChatUtil {
     
+    static func formatDateString(value: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        
+        let calendar = Calendar.current
+        let currentDate = Date()
+        
+        if calendar.isDateInToday(value) {
+            dateFormatter.dateStyle = .none
+            return dateFormatter.string(from: value)
+            
+        } else if calendar.component(.year, from: currentDate) != calendar.component(.year, from: value) {
+            dateFormatter.dateStyle = .short
+            dateFormatter.timeStyle = .short
+            return dateFormatter.string(from: value)
+            
+        } else {
+            return dateFormatter.string(from: value)
+        }
+    }
+    
     static func getChatItemsFromMessages(messages: [Message], currentUserId: String? = nil) -> [ChatItem] {
         let sortedMessages = messages.sorted { message1, message2 in
             message1.sentAt < message2.sentAt
@@ -66,7 +88,9 @@ final class ChatUtil {
             }
         }
         
-        chatItemGroups.append(currentGroup)
+        if (!messages.isEmpty) {
+            chatItemGroups.append(currentGroup)
+        }
 
         return chatItemGroups
     }
