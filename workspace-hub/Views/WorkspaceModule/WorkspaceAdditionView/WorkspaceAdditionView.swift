@@ -66,6 +66,7 @@ extension WorkspaceAdditionView {
                         .tint(.white)
                 }
                 Text("Create workspace")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {

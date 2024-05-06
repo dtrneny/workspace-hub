@@ -92,6 +92,7 @@ extension WorkspaceEditView {
                         .tint(.white)
                 }
                 Text("Update workspace")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {
@@ -106,6 +107,7 @@ extension WorkspaceEditView {
     private var deleteButton: some View {
         BaseButton(content: {
             Text("Delete workspace")
+                .font(.inter(16.0))
         }, style: .danger)
         .onTapGesture {
             viewModel.deleteConfirmation = true
