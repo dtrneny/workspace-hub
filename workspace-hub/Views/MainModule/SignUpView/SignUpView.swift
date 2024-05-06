@@ -102,6 +102,7 @@ extension SignUpView {
                         .tint(.white)
                 }
                 Text("Sign up")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {
@@ -126,16 +127,30 @@ extension SignUpView {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 125, height: 125)
-                    .clipShape(Circle())
+                    .clipShape(
+                        Circle()
+                    )
             } else {
-                ZStack {
-                    Circle()
-                        .fill(.grey300)
-                        .frame(width: 125, height: 125)
+                VStack {
+                    ZStack {
+                        Circle()
+                            .fill(.grey300)
+                            .if(viewModel.imageError != nil, transform: { circle in
+                                circle
+                                    .stroke(.primaryRed700, lineWidth: 2)
+                            })
+                            .frame(width: 125, height: 125)
+                        
+                        Image(systemName: "camera")
+                            .font(.system(size: 24))
+                    }
+                    .padding([.bottom], 10)
                     
-                    Image(systemName: "camera")
-                        .font(.system(size: 24))
+                    if let error = viewModel.imageError {
+                        ErrorMessage(error: error)
+                    }
                 }
+                
             }
         }
         .onChange(of: viewModel.photo, viewModel.loadImage)

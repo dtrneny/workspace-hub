@@ -595,6 +595,9 @@
         }
       }
     },
+    "Passwords are not matching." : {
+
+    },
     "Pick a symbol" : {
       "localizations" : {
         "cs" : {
@@ -604,6 +607,9 @@
           }
         }
       }
+    },
+    "Please choose your profile image." : {
+
     },
     "Please do not leave this field empty." : {
       "localizations" : {
