@@ -43,12 +43,16 @@ final class SignUpViewModel: ViewModelProtocol {
     
     @Published var photo: PhotosPickerItem? = nil
     @Published var loadedImage: UIImage? = nil
+    @Published var imageError: String? = nil
     
     var passwordsMatch: Bool {
         return  password == confPassword
     }
     
     func signUp() async -> Bool {
+        confPasswordError = nil
+        imageError = nil
+        
         if (!$firstname.isValid() || !$email.isValid() || !$password.isValid() || !$confPassword.isValid() || !$lastname.isValid()) {
             firstnameError = $firstname.getError()
             lastnameError = $lastname.getError()
@@ -59,8 +63,13 @@ final class SignUpViewModel: ViewModelProtocol {
             return false
         }
         
+        if (photo == nil) {
+            imageError = NSLocalizedString("Please choose your profile image.", comment: "")
+            return false
+        }
+        
         if (password != confPassword) {
-            confPasswordError = "Passwords are not matching."
+            confPasswordError = NSLocalizedString("Passwords are not matching.", comment: "")
             return false
         }
         
