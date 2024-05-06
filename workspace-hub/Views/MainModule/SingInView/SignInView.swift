@@ -68,6 +68,7 @@ extension SignInView {
                         .tint(.white)
                 }
                 Text("Sign in")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {

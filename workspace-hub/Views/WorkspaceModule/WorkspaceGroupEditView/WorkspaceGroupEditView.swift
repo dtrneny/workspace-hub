@@ -93,6 +93,7 @@ extension WorkspaceGroupEditView {
                         .tint(.white)
                 }
                 Text("Update group")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {
@@ -107,6 +108,7 @@ extension WorkspaceGroupEditView {
     private var deleteButton: some View {
         BaseButton(content: {
             Text("Delete group")
+                .font(.inter(16.0))
         }, style: .danger)
         .onTapGesture {
             viewModel.deleteConfirmation = true

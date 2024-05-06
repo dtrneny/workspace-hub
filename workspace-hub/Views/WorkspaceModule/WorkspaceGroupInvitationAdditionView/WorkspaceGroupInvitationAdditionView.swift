@@ -58,6 +58,7 @@ extension WorkspaceGroupInvitationAdditionView {
                         .tint(.white)
                 }
                 Text("Invite member")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {

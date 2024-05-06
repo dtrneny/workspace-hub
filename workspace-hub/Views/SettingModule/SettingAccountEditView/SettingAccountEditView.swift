@@ -76,6 +76,7 @@ extension SettingAccountEditView {
                         .tint(.white)
                 }
                 Text("Edit account")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {

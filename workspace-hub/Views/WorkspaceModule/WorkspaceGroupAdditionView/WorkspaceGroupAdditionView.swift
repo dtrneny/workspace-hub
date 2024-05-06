@@ -75,6 +75,7 @@ extension WorkspaceGroupAdditionView {
                         .tint(.white)
                 }
                 Text("Create group")
+                    .font(.inter(16.0))
             }
         }
         .onTapGesture {

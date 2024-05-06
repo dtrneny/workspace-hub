@@ -73,6 +73,7 @@ extension GroupGeneralView {
     private var leaveButton: some View {
         BaseButton(content: {
             Text("Leave group")
+                .font(.inter(16.0))
         }, style: .danger)
         .onTapGesture {
             viewModel.leaveConfirmation = true
