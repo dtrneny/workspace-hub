@@ -28,7 +28,8 @@ struct TextInput: View {
                 TextField(
                     "",
                     text: $value,
-                    prompt: Text(placeholder ?? "Enter text").foregroundStyle(.grey300)
+                    prompt: Text(verbatim: String(localized: placeholder ?? "Enter text"))
+                        .foregroundStyle(.grey300)
                 )
                 .focused($isFocused)
                 .tint(.black)
