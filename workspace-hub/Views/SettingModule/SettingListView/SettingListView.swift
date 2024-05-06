@@ -53,7 +53,7 @@ extension SettingListView {
             ViewTitle(title: "Settings")
 
             SettingListRow(label: "Language") {
-                print("Clicked")
+                UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
             }
         }
     }

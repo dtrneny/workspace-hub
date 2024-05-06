@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmptyListMessage: View {
     
-    var message: String? = nil
+    var message: LocalizedStringResource? = nil
     
     var body: some View {
         HStack {

@@ -37,7 +37,7 @@ final class SignInViewModel: ViewModelProtocol {
             return true
         }
         catch {
-            passwordError = "Please provide valid credentials."
+            passwordError = NSLocalizedString("Please provide valid credentials.", comment: "")
             singingIn = false
             return false
         }

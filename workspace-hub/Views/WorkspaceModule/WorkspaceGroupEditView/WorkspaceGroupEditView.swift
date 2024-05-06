@@ -17,6 +17,8 @@ struct WorkspaceGroupEditView: View {
     
     @StateObject private var viewModel = WorkspaceGroupEditViewModel(groupService: GroupService())
     
+    private let pickerTitle = NSLocalizedString("Pick a symbol", comment: "")
+    
     var body: some View {
         BaseLayout {
             switch viewModel.state {
@@ -55,7 +57,7 @@ struct WorkspaceGroupEditView: View {
             }
         }
         .sheet(isPresented: $viewModel.symbolSelectPresented) {
-            SymbolsPicker(selection:  $viewModel.selectedIcon, title: "Pick a symbol", autoDismiss: true) {
+            SymbolsPicker(selection:  $viewModel.selectedIcon, title: pickerTitle, autoDismiss: true) {
                 OperationButton(icon: "multiply") {
                     viewModel.symbolSelectPresented = false
                 }

@@ -12,5 +12,5 @@ func emailRule(value: String) -> String {
     let emailPredicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
     return emailPredicate.evaluate(with: value)
         ? ""
-        : "Please enter a valid email address."
+        : NSLocalizedString("Please enter a valid email address.", comment: "")
 }

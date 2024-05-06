@@ -19,6 +19,8 @@
 		2E46548B2BD2548400BF2944 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548A2BD2548400BF2944 /* TimelineView.swift */; };
 		2E46548D2BD2A61A00BF2944 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E46548C2BD2A61A00BF2944 /* Group.swift */; };
 		2E4654912BD2A74000BF2944 /* GroupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4654902BD2A74000BF2944 /* GroupService.swift */; };
+		2E8FBC062BE8FBDB008B19C5 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FBC052BE8FBDB008B19C5 /* Localizable.xcstrings */; };
+		2E8FBC092BE8FF6D008B19C5 /* DynamicViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */; };
 		63075A8A2BE7EC190097624E /* EmailFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63075A892BE7EC190097624E /* EmailFormat.swift */; };
 		630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E732BE79377004EABD5 /* GroupGeneralView.swift */; };
 		630E3E762BE79384004EABD5 /* GroupGeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */; };
@@ -181,6 +183,8 @@
 		2E46548A2BD2548400BF2944 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		2E46548C2BD2A61A00BF2944 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		2E4654902BD2A74000BF2944 /* GroupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupService.swift; sourceTree = "<group>"; };
+		2E8FBC052BE8FBDB008B19C5 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewTitle.swift; sourceTree = "<group>"; };
 		63075A892BE7EC190097624E /* EmailFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFormat.swift; sourceTree = "<group>"; };
 		630E3E732BE79377004EABD5 /* GroupGeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralView.swift; sourceTree = "<group>"; };
 		630E3E752BE79384004EABD5 /* GroupGeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupGeneralViewModel.swift; sourceTree = "<group>"; };
@@ -393,6 +397,14 @@
 			path = TimelineView;
 			sourceTree = "<group>";
 		};
+		2E8FBC072BE8FF50008B19C5 /* DynamicViewTitle */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FBC082BE8FF6D008B19C5 /* DynamicViewTitle.swift */,
+			);
+			path = DynamicViewTitle;
+			sourceTree = "<group>";
+		};
 		630E3E722BE79356004EABD5 /* GroupGeneralView */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +530,7 @@
 				635667A62BA2D5FD00A0AD36 /* workspace_hub.xcdatamodeld */,
 				63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */,
 				635667A12BA2D5FD00A0AD36 /* Preview Content */,
+				2E8FBC052BE8FBDB008B19C5 /* Localizable.xcstrings */,
 			);
 			path = "workspace-hub";
 			sourceTree = "<group>";
@@ -973,6 +986,7 @@
 		63C467B32BA99D580081E7EA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2E8FBC072BE8FF50008B19C5 /* DynamicViewTitle */,
 				6399C5642BE51D6700EB068D /* VerticalSpacer */,
 				6399C55D2BE4D3A000EB068D /* ChatMessage */,
 				6392F9822BE409B8009F70B2 /* EmptyListMessage */,
@@ -1246,6 +1260,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 6356678F2BA2D5FC00A0AD36;
 			packageReferences = (
@@ -1271,6 +1286,7 @@
 			files = (
 				63C467BD2BAA05770081E7EA /* Inter-SemiBold.ttf in Resources */,
 				63C467BB2BAA05770081E7EA /* Inter-Medium.ttf in Resources */,
+				2E8FBC062BE8FBDB008B19C5 /* Localizable.xcstrings in Resources */,
 				63C467BC2BAA05770081E7EA /* Inter-Regular.ttf in Resources */,
 				638F240A2BAD82CC00704CE0 /* Inter-Bold.ttf in Resources */,
 				635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */,
@@ -1383,6 +1399,7 @@
 				63BD381A2BBDE8FE00D62EAE /* RouterView.swift in Sources */,
 				639DBC1E2BD00EE5003D24FB /* TimelineRootView.swift in Sources */,
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
+				2E8FBC092BE8FF6D008B19C5 /* DynamicViewTitle.swift in Sources */,
 				6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */,
 				639DBC2E2BD02B79003D24FB /* WorkspaceActivityCard.swift in Sources */,
 				638D93A72BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift in Sources */,

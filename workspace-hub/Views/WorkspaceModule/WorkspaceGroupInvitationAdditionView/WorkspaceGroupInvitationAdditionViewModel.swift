@@ -45,7 +45,7 @@ final class WorkspaceGroupInvitationAdditionViewModel: ViewModelProtocol {
         }
         
         guard let userId = matchingAccounts.first?.id else {
-            emailError = "User with specified e-mail does not exist."
+            emailError = NSLocalizedString("User with specified e-mail does not exist.", comment: "")
             creatingInvitation = false
             return false
         }
@@ -57,7 +57,7 @@ final class WorkspaceGroupInvitationAdditionViewModel: ViewModelProtocol {
         }
         
         if (group.members.allSatisfy { $0.id == userId }) {
-            emailError = "User is already member of group."
+            emailError = NSLocalizedString("User is already member of group.", comment: "")
             creatingInvitation = false
             return false
         }

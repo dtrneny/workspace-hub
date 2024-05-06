@@ -77,7 +77,7 @@ extension WorkspaceGroupChatView {
     private var groupOperations: some View {
         HStack(alignment: .firstTextBaseline) {
             if let group = viewModel.group {
-                ViewTitle(title: group.name)
+                DynamicViewTitle(title: group.name)
                 
                 Spacer()
                 

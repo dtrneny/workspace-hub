@@ -34,7 +34,7 @@ final class WorkspaceGroupChatViewModel: ViewModelProtocol {
         state = .loading
         
         guard let fetchedGroup = await getGroup(groupId: groupId) else  {
-            state = .error(message: "Group not found.")
+            state = .error(message: NSLocalizedString("Group not found.", comment: ""))
             return
         }
         

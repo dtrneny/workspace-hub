@@ -13,8 +13,8 @@ struct ProtectedInput: View {
     @State private var isContentHidden = true
     @FocusState private var isFocused: Bool
 
-    var placeholder: String? = nil
-    var label: String? = nil
+    var placeholder: LocalizedStringResource? = nil
+    var label: LocalizedStringResource? = nil
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8.0) {

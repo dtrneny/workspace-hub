@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingListRow: View {
     
-    var label: String
+    var label: LocalizedStringResource
     var action: () -> Void
     
     var body: some View {

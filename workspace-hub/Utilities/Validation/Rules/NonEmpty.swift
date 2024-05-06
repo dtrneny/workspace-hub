@@ -10,5 +10,5 @@ import Foundation
 func nonEmptyRule(value: String) -> String {
     return !value.isEmpty
         ? ""
-        : "Please do not leave this field empty."
+        : NSLocalizedString("Please do not leave this field empty.", comment: "")
 }

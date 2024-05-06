@@ -1,14 +1,14 @@
 //
-//  ViewTitle.swift
+//  DynamicViewTitle.swift
 //  workspace-hub
 //
-//  Created by Dalibor Trněný on 22.03.2024.
+//  Created by František on 06.05.2024.
 //
 
 import SwiftUI
 
-struct ViewTitle: View {
-    var title: LocalizedStringResource
+struct DynamicViewTitle: View {
+    var title: String
     
     var body: some View {
         Text(title)
@@ -20,5 +20,6 @@ struct ViewTitle: View {
 }
 
 #Preview {
-    ViewTitle(title: "View title")
+    DynamicViewTitle(title: "View title")
 }
+

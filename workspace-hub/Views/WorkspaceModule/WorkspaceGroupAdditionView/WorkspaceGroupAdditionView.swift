@@ -18,6 +18,8 @@ struct WorkspaceGroupAdditionView: View {
         groupService: GroupService(),
         workspaceService: WorkspaceService()
     )
+    
+    private let pickerTitle = NSLocalizedString("Pick a symbol", comment: "")
         
     var body: some View {
         BaseLayout {
@@ -37,7 +39,7 @@ struct WorkspaceGroupAdditionView: View {
         }
         .routerBarBackArrowHidden(viewModel.creatingGroup)
         .sheet(isPresented: $viewModel.symbolSelectPresented) {
-            SymbolsPicker(selection:  $viewModel.selectedIcon, title: "Pick a symbol", autoDismiss: true) {
+            SymbolsPicker(selection:  $viewModel.selectedIcon, title: pickerTitle, autoDismiss: true) {
                 OperationButton(icon: "multiply") {
                     viewModel.symbolSelectPresented = false
                 }

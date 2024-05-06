@@ -1,0 +1,816 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "(Empty string)"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "Account" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Účet"
+          }
+        }
+      }
+    },
+    "Add group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat skupinu"
+          }
+        }
+      }
+    },
+    "Add workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat pracovní prostor"
+          }
+        }
+      }
+    },
+    "Confirm" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Potvrdit"
+          }
+        }
+      }
+    },
+    "Confirm password" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Potvrzení hesla"
+          }
+        }
+      }
+    },
+    "Create group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvořit skupinu"
+          }
+        }
+      }
+    },
+    "Create invitation" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvořit pozvánku"
+          }
+        }
+      }
+    },
+    "Create workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvořit pracovní prostor"
+          }
+        }
+      }
+    },
+    "Czech" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Česky"
+          }
+        }
+      }
+    },
+    "Delete group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat skupinu"
+          }
+        }
+      }
+    },
+    "Delete workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat pracovní prostor"
+          }
+        }
+      }
+    },
+    "Detail" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Detail"
+          }
+        }
+      }
+    },
+    "Do you want to leave this group?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si opustit tuto skupinu?"
+          }
+        }
+      }
+    },
+    "Do you want to remove this group?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tuto skupinu?"
+          }
+        }
+      }
+    },
+    "Do you want to remove this invitation?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tuto pozvánku?"
+          }
+        }
+      }
+    },
+    "Do you want to remove this workspace?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tento pracovní prostor?"
+          }
+        }
+      }
+    },
+    "Do you want to sign out?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si odhlásit se?"
+          }
+        }
+      }
+    },
+    "Don't have an account?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nemáte účet?"
+          }
+        }
+      }
+    },
+    "E-mail" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        }
+      }
+    },
+    "E-mail address" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mailová adresa"
+          }
+        }
+      }
+    },
+    "e. g. Doe" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "např. Doe"
+          }
+        }
+      }
+    },
+    "e. g. example@workspacehub.com" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "např. example@workspacehub.com"
+          }
+        }
+      }
+    },
+    "e. g. John" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "např. John"
+          }
+        }
+      }
+    },
+    "e. g. john.doe@email.com" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "např. john.doe@email.com"
+          }
+        }
+      }
+    },
+    "Edit account" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit účet"
+          }
+        }
+      }
+    },
+    "Edit group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit skupinu"
+          }
+        }
+      }
+    },
+    "Edit workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upravit pracovní prostor"
+          }
+        }
+      }
+    },
+    "English" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anglicky"
+          }
+        }
+      }
+    },
+    "Enter message" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napsat zprávu"
+          }
+        }
+      }
+    },
+    "Enter text" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadejte text"
+          }
+        }
+      }
+    },
+    "Enter your e-mail" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadejte Váš e-mail"
+          }
+        }
+      }
+    },
+    "Enter your password" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadejte Vaše heslo"
+          }
+        }
+      }
+    },
+    "Firstname" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jméno"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obecné"
+          }
+        }
+      }
+    },
+    "Group administrators" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Správci skupiny"
+          }
+        }
+      }
+    },
+    "Group informations" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Informace o skupině"
+          }
+        }
+      }
+    },
+    "Group invitations" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozvánky do skupiny"
+          }
+        }
+      }
+    },
+    "Group members" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Členové skupiny"
+          }
+        }
+      }
+    },
+    "Group name" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název skupiny"
+          }
+        }
+      }
+    },
+    "Group not found." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skupina nenalezena."
+          }
+        }
+      }
+    },
+    "Group settings" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení skupiny"
+          }
+        }
+      }
+    },
+    "Groups" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skupiny"
+          }
+        }
+      }
+    },
+    "Hi, Welcome!" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vítejte!"
+          }
+        }
+      }
+    },
+    "Invite member" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozvat člena"
+          }
+        }
+      }
+    },
+    "Label" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Štítek"
+          }
+        }
+      }
+    },
+    "Language" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jazyk"
+          }
+        }
+      }
+    },
+    "Language not supported" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nepodporovaný jazyk"
+          }
+        }
+      }
+    },
+    "Lastname" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Příjmení"
+          }
+        }
+      }
+    },
+    "Leave group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opustit skupinu"
+          }
+        }
+      }
+    },
+    "Members" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Členové"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
+          }
+        }
+      }
+    },
+    "New notifications: %lld" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nové notifikace: %lld"
+          }
+        }
+      }
+    },
+    "Newest message" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nejnovější zpráva"
+          }
+        }
+      }
+    },
+    "No chat messages found" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádné zprávy nenalezeny"
+          }
+        }
+      }
+    },
+    "No results found" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenalezeny žádné výsledky"
+          }
+        }
+      }
+    },
+    "Or" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nebo"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Heslo"
+          }
+        }
+      }
+    },
+    "Pick a symbol" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte symbol"
+          }
+        }
+      }
+    },
+    "Please do not leave this field empty." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyplňte toto pole."
+          }
+        }
+      }
+    },
+    "Please enter a valid email address." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zadejte platnou e-mailovou adresu."
+          }
+        }
+      }
+    },
+    "Please provide valid credentials." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím zadejte platné údaje."
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení"
+          }
+        }
+      }
+    },
+    "Sign in" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přihlásit se"
+          }
+        }
+      }
+    },
+    "Sign up" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaregistrovat se"
+          }
+        }
+      }
+    },
+    "Slovak" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slovensky"
+          }
+        }
+      }
+    },
+    "Testing" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testování"
+          }
+        }
+      }
+    },
+    "Testing button" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testovací tlačítko"
+          }
+        }
+      }
+    },
+    "There are no groups..." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nejsou tu žádné skupiny..."
+          }
+        }
+      }
+    },
+    "There are no workspaces..." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nejsou tu žádné pracovní prostory..."
+          }
+        }
+      }
+    },
+    "Timeline" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Časová osa"
+          }
+        }
+      }
+    },
+    "Update group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizovat skupinu"
+          }
+        }
+      }
+    },
+    "Update workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualizovat pracovní prostor"
+          }
+        }
+      }
+    },
+    "User is already member of group." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uživatel se v této skupině již nachází."
+          }
+        }
+      }
+    },
+    "User with specified e-mail does not exist." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uživatel s daným e-mailem neexistuje."
+          }
+        }
+      }
+    },
+    "View title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název pohledu"
+          }
+        }
+      }
+    },
+    "Workspaces" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pracovní prostory"
+          }
+        }
+      }
+    },
+    "You can start the conversation" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Můžete zahájit konverzaci"
+          }
+        }
+      }
+    },
+    "Your group name" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název Vaší skupiny"
+          }
+        }
+      }
+    },
+    "Your workspace" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Váš pracovní prostor"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
