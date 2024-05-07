@@ -163,6 +163,7 @@
 		63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF08462BADFF3C00488B1C /* FontExtension.swift */; };
 		63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF08492BAE28AE00488B1C /* ViewTitle.swift */; };
 		63F51D712BEA3A2800C8A86B /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D702BEA3A2800C8A86B /* Checkbox.swift */; };
+		63F51D742BEA5F7C00C8A86B /* ScheduledEventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D732BEA5F7C00C8A86B /* ScheduledEventRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -338,6 +339,7 @@
 		63EF08462BADFF3C00488B1C /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		63EF08492BAE28AE00488B1C /* ViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTitle.swift; sourceTree = "<group>"; };
 		63F51D702BEA3A2800C8A86B /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		63F51D732BEA5F7C00C8A86B /* ScheduledEventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1065,6 +1067,7 @@
 				2E3280782BC834C900670DF8 /* WorkspaceListRow */,
 				6392F9782BE403F4009F70B2 /* WorkspaceGroupListRow */,
 				638DBF1C2BDBFDEF003A1795 /* SettingListRow */,
+				63F51D722BEA5F6500C8A86B /* ScheduledEventRow */,
 				638DBF292BDE59C8003A1795 /* LoadingDots */,
 				639DBC322BD03287003D24FB /* BaseLayout */,
 				6392F9932BE42493009F70B2 /* ChatLayout */,
@@ -1235,6 +1238,14 @@
 			path = Checkbox;
 			sourceTree = "<group>";
 		};
+		63F51D722BEA5F6500C8A86B /* ScheduledEventRow */ = {
+			isa = PBXGroup;
+			children = (
+				63F51D732BEA5F7C00C8A86B /* ScheduledEventRow.swift */,
+			);
+			path = ScheduledEventRow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1401,6 +1412,7 @@
 				638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
 				6342868F2BE94D780057349B /* ScheduledEvent.swift in Sources */,
+				63F51D742BEA5F7C00C8A86B /* ScheduledEventRow.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,

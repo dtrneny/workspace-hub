@@ -42,4 +42,14 @@ final class DateUtil {
             return false
         }
     }
+    
+    static func formatTimespan(from: Date, to: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        
+        let fromTime = dateFormatter.string(from: from)
+        let toTime = dateFormatter.string(from: to)
+        
+        return "\(fromTime) - \(toTime)"
+    }
 }

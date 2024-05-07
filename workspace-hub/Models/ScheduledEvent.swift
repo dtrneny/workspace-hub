@@ -13,6 +13,7 @@ struct ScheduledEvent: Identifiable, Codable {
     var workspaceId: String
     var groupId: String? = nil
     var userIds: [String] = []
+    var userImageUrls: [String] = []
     var startAt: Date
     var endAt: Date
     var title: String
