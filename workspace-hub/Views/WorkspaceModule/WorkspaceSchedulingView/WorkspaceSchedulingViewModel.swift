@@ -190,10 +190,19 @@ final class WorkspaceSchedulingViewModel: ViewModelProtocol {
         
         schedulingEvent = true
         
+        let imageUrls = presentedAccounts.compactMap { account in
+            if let accountId = account.id, selectedAccountIds.contains(accountId) {
+                return account.profileImage
+            }
+            return nil
+        }
+        
+        
         let _ = await scheduledEventService.scheduleEvent(event: ScheduledEvent(
             workspaceId: workspaceId,
             groupId: groupId,
             userIds: selectedAccountIds,
+            userImageUrls: imageUrls,
             startAt: startAt,
             endAt: endAt,
             title: eventTitle,

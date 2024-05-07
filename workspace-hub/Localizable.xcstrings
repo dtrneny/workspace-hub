@@ -11,6 +11,9 @@
         }
       }
     },
+    "/" : {
+
+    },
     "%@ %@" : {
       "localizations" : {
         "en" : {
@@ -700,6 +703,12 @@
           }
         }
       }
+    },
+    "Planned" : {
+
+    },
+    "Planned from others" : {
+
     },
     "Please choose a color" : {
       "extractionState" : "stale",
