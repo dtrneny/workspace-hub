@@ -166,6 +166,7 @@
 		63F51D742BEA5F7C00C8A86B /* ScheduledEventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D732BEA5F7C00C8A86B /* ScheduledEventRow.swift */; };
 		63F51D772BEA799D00C8A86B /* TimelineEventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D762BEA799D00C8A86B /* TimelineEventDetailView.swift */; };
 		63F51D792BEA79AD00C8A86B /* TimelineEventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D782BEA79AD00C8A86B /* TimelineEventDetailViewModel.swift */; };
+		63F51D7C2BEA875400C8A86B /* EmptyEventListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D7B2BEA875400C8A86B /* EmptyEventListMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -344,6 +345,7 @@
 		63F51D732BEA5F7C00C8A86B /* ScheduledEventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventRow.swift; sourceTree = "<group>"; };
 		63F51D762BEA799D00C8A86B /* TimelineEventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEventDetailView.swift; sourceTree = "<group>"; };
 		63F51D782BEA79AD00C8A86B /* TimelineEventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineEventDetailViewModel.swift; sourceTree = "<group>"; };
+		63F51D7B2BEA875400C8A86B /* EmptyEventListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyEventListMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1051,6 +1053,7 @@
 				6399C5642BE51D6700EB068D /* VerticalSpacer */,
 				6399C55D2BE4D3A000EB068D /* ChatMessage */,
 				6392F9822BE409B8009F70B2 /* EmptyListMessage */,
+				63F51D7A2BEA873C00C8A86B /* EmptyEventListMessage */,
 				630E3E9F2BE7BEB6004EABD5 /* EmptyChatPlaceholder */,
 				638DBF062BDB8164003A1795 /* ThemeColorPicker */,
 				638DBEF12BDAD068003A1795 /* BaseButton */,
@@ -1258,6 +1261,14 @@
 				63F51D782BEA79AD00C8A86B /* TimelineEventDetailViewModel.swift */,
 			);
 			path = TimelineEventDetailView;
+			sourceTree = "<group>";
+		};
+		63F51D7A2BEA873C00C8A86B /* EmptyEventListMessage */ = {
+			isa = PBXGroup;
+			children = (
+				63F51D7B2BEA875400C8A86B /* EmptyEventListMessage.swift */,
+			);
+			path = EmptyEventListMessage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1513,6 +1524,7 @@
 				634286922BE94E9A0057349B /* WorkspaceSchedulingView.swift in Sources */,
 				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */,
+				63F51D7C2BEA875400C8A86B /* EmptyEventListMessage.swift in Sources */,
 				638DBF112BDBA510003A1795 /* WorkspaceDetailViewModel.swift in Sources */,
 				634286992BE95B070057349B /* TextArea.swift in Sources */,
 				630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */,

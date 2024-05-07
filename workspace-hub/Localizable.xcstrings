@@ -11,7 +11,11 @@
         }
       }
     },
+    "-" : {
+
+    },
     "/" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -665,6 +669,9 @@
         }
       }
     },
+    "No events found" : {
+
+    },
     "No results found" : {
       "localizations" : {
         "cs" : {
@@ -694,6 +701,9 @@
           }
         }
       }
+    },
+    "Others" : {
+
     },
     "Password" : {
       "localizations" : {
@@ -736,6 +746,7 @@
       }
     },
     "Planned" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -746,6 +757,7 @@
       }
     },
     "Planned from others" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -1037,6 +1049,9 @@
           }
         }
       }
+    },
+    "Yours" : {
+
     }
   },
   "version" : "1.0"

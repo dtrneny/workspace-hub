@@ -48,9 +48,9 @@ struct TimelineView: View {
                 )
                 .padding([.bottom], 19)
                 
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
                     HStack(spacing: 10) {
-                        Text("Planned")
+                        Text("Yours")
                             .foregroundStyle(.secondary900)
                             .font(.inter(18.0))
                             .fontWeight(.medium)
@@ -58,13 +58,13 @@ struct TimelineView: View {
                             .onTapGesture {
                                 viewModel.presentedFromOthers = false
                             }
-                        
-                        Text("/")
+                    
+                        Text("-")
                             .foregroundStyle(.secondary900)
                             .font(.inter(18.0))
                             .fontWeight(.medium)
                         
-                        Text("Planned from others")
+                        Text("Others")
                             .foregroundStyle(.secondary900)
                             .font(.inter(18.0))
                             .fontWeight(.medium)
@@ -76,9 +76,35 @@ struct TimelineView: View {
                     .padding([.bottom], 5)
 
                     if (!viewModel.presentedFromOthers) {
-                        plannedByUser
+                        if (!viewModel.plannedByUserPresented.isEmpty) {
+                            plannedByUser
+                        } else {
+                            VStack(alignment: .center) {
+                                HStack {
+                                    Spacer()
+                                    EmptyEventListMessage()
+                                    Spacer()
+                                }
+                                .padding([.top], 38)
+                                Spacer()
+
+                            }
+                        }
                     } else {
-                        plannedFromOthers
+                        if (!viewModel.plannedFromOthersPresented.isEmpty) {
+                            plannedFromOthers
+                        } else {
+                            VStack(alignment: .center) {
+                                HStack {
+                                    Spacer()
+                                    EmptyEventListMessage()
+                                    Spacer()
+                                }
+                                .padding([.top], 38)
+                                Spacer()
+
+                            }
+                        }
                     }
                     
                 }
