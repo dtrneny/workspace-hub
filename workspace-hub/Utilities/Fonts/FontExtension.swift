@@ -8,12 +8,6 @@
 import Foundation
 import SwiftUI
 
-//enum BaseFontSize: CGFloat {
-//    case label = 14.0
-//    case base = 16.0
-//    case viewTitle = 30.0
-//}
-
 extension Font {
     static func inter(_ size: CGFloat) -> Font {
         return Font.custom("Inter", size: size)

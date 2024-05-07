@@ -12,7 +12,14 @@
       }
     },
     "/" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "/"
+          }
+        }
+      }
     },
     "%@ %@" : {
       "localizations" : {
@@ -65,7 +72,14 @@
       }
     },
     "Base infromation" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zákládní informace"
+          }
+        }
+      }
     },
     "Confirm" : {
       "localizations" : {
@@ -440,7 +454,14 @@
       }
     },
     "Group and members" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skupina a členové"
+          }
+        }
+      }
     },
     "Group informations" : {
       "localizations" : {
@@ -705,10 +726,24 @@
       }
     },
     "Planned" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naplánováno"
+          }
+        }
+      }
     },
     "Planned from others" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naplánováno ostatními"
+          }
+        }
+      }
     },
     "Please choose a color" : {
       "extractionState" : "stale",
@@ -722,10 +757,34 @@
       }
     },
     "Please choose a date which is atlest 5 minutes after start." : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím vyberte datum, které začíná alespoň 5 minut po začátku."
+          }
+        }
+      }
     },
     "Please choose a group." : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím vyberte skupinu."
+          }
+        }
+      }
+    },
+    "Please choose atleast one user for event." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím zvolte alespoň jednoho uživatele pro událost."
+          }
+        }
+      }
     },
     "Please choose your profile image." : {
       "localizations" : {

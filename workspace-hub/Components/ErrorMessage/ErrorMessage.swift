@@ -13,7 +13,7 @@ struct ErrorMessage: View {
     
     var body: some View {
         Text(error)
-            .font(.inter(10.0))
+            .font(.inter(12.0))
             .foregroundColor(.red)
     }
 }

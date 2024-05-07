@@ -38,7 +38,6 @@ final class WorkspaceSchedulingViewModel: ViewModelProtocol {
     @Published var eventDescriptionError: String? = nil
     
     @Published var startAt: Date = Date()
-    @Published var startAtError: String? = nil
     
     @Published var endAt: Date = Date()
     @Published var endAtError: String? = nil
@@ -62,6 +61,9 @@ final class WorkspaceSchedulingViewModel: ViewModelProtocol {
     @Published var workspace: Workspace? = nil
     @Published var groups: [Group] = []
     @Published var selectedAccountIds: [String] = []
+    
+    @Published var selectedAccountError: String? = nil
+
     
     private var allAccounts: [Account] = []
     
@@ -164,7 +166,7 @@ final class WorkspaceSchedulingViewModel: ViewModelProtocol {
         eventTitleError = nil
         eventDescriptionError = nil
         groupError = nil
-
+        selectedAccountError = nil
         
         if (!$eventTitle.isValid() || !$eventDescription.isValid()) {
             eventTitleError = $eventTitle.getError()
@@ -180,6 +182,11 @@ final class WorkspaceSchedulingViewModel: ViewModelProtocol {
         
         guard let groupId = selectedGroup?.id else {
             groupError = NSLocalizedString("Please choose a group.", comment: "")
+            return false
+        }
+        
+        guard !selectedAccountIds.isEmpty else {
+            selectedAccountError = NSLocalizedString("Please choose atleast one user for event.", comment: "")
             return false
         }
         

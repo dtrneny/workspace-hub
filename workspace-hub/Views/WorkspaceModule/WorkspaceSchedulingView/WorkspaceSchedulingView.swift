@@ -90,22 +90,30 @@ extension WorkspaceSchedulingView {
                     HStack() {
                         Text("Event start")
                             .foregroundStyle(.secondary900)
-                            .font(.inter(14.0))
+                            .font(.inter(16.0))
                         
                         Spacer()
                         
                         DatePicker(selection: $viewModel.startAt, displayedComponents: [.date, .hourAndMinute]) {}
+                            .datePickerStyle(.compact)
+                            .onTapGesture(count: 99, perform: {
+                                // overrides tap gesture to fix ios 17.1 bug
+                            })
                     }
                     
                     FormField {
                         HStack() {
                             Text("Event end")
                                 .foregroundStyle(.secondary900)
-                                .font(.inter(14.0))
+                                .font(.inter(16.0))
                             
                             Spacer()
                             
                             DatePicker(selection: $viewModel.endAt, displayedComponents: [.date, .hourAndMinute]) {}
+                                .datePickerStyle(.compact)
+                                .onTapGesture(count: 99, perform: {
+                                    // overrides tap gesture to fix ios 17.1 bug
+                                })
                         }
 
                         if let error = viewModel.endAtError {
@@ -131,7 +139,7 @@ extension WorkspaceSchedulingView {
                         HStack() {
                             Text("Group")
                                 .foregroundStyle(.secondary900)
-                                .font(.inter(14.0))
+                                .font(.inter(16.0))
                             
                             Spacer()
                             
@@ -153,45 +161,50 @@ extension WorkspaceSchedulingView {
                     }
                     
                     if(!viewModel.presentedAccounts.isEmpty) {
-                        ScrollView {
-                            ForEach(viewModel.presentedAccounts) { account in
-                                HStack {
-                                    HStack (spacing: 10) {
-                                        if let cachedImage = ImageCache.shared.getImage(urlString: account.profileImage) {
-                                            Image(uiImage: cachedImage)
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fill)
-                                                .frame(width: 40, height: 40)
-                                                .clipShape(Circle())
-                                        } else {
-                                            Circle()
-                                                .foregroundColor(.secondary900)
-                                                .frame(width: 40, height: 40)
-                                                .overlay(
-                                                    Image("logo")
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .frame(width: 20, height: 20)
-                                                )
-                                        }
-                                        
-                                        
-                                        Text("\(account.firstname) \(account.lastname)")
-                                    }
-                                    
-                                    Spacer()
-                                    
-                                    Checkbox(action: { value in
-                                        if let id = account.id {
-                                            if (value) {
-                                                viewModel.fillterOutAccountId(accountId: id)
+                        FormField {
+                            ScrollView {
+                                ForEach(viewModel.presentedAccounts) { account in
+                                    HStack {
+                                        HStack (spacing: 10) {
+                                            if let cachedImage = ImageCache.shared.getImage(urlString: account.profileImage) {
+                                                Image(uiImage: cachedImage)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fill)
+                                                    .frame(width: 40, height: 40)
+                                                    .clipShape(Circle())
                                             } else {
-                                                viewModel.appendAccountId(accountId: id)
+                                                Circle()
+                                                    .foregroundColor(.secondary900)
+                                                    .frame(width: 40, height: 40)
+                                                    .overlay(
+                                                        Image("logo")
+                                                            .resizable()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .frame(width: 20, height: 20)
+                                                    )
                                             }
+                                            
+                                            
+                                            Text("\(account.firstname) \(account.lastname)")
                                         }
-                                    }, initialState: false)
-                                    .padding([.trailing], 10)
+                                        
+                                        Spacer()
+                                        
+                                        Checkbox(action: { value in
+                                            if let id = account.id {
+                                                if (value) {
+                                                    viewModel.fillterOutAccountId(accountId: id)
+                                                } else {
+                                                    viewModel.appendAccountId(accountId: id)
+                                                }
+                                            }
+                                        }, initialState: false)
+                                        .padding([.trailing], 10)
+                                    }
                                 }
+                            }
+                            if let error = viewModel.selectedAccountError {
+                                ErrorMessage(error: error)
                             }
                         }
                     }
