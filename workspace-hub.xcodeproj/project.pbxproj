@@ -148,7 +148,6 @@
 		63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */; };
 		63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF752BC3F2070075ABDA /* NonEmpty.swift */; };
 		63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */; };
-		63EADAF32BEA0D880008E047 /* ScheduledEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */; };
 		63EADAF52BEA10E40008E047 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF42BEA10E40008E047 /* CalendarExtensions.swift */; };
 		63EADAF72BEA11050008E047 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF62BEA11050008E047 /* DateUtil.swift */; };
 		63EADAF92BEA13C20008E047 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF82BEA13C20008E047 /* DateExtensions.swift */; };
@@ -163,6 +162,7 @@
 		63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63ECEBCE2BA6E69400166BCD /* ViewState.swift */; };
 		63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF08462BADFF3C00488B1C /* FontExtension.swift */; };
 		63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF08492BAE28AE00488B1C /* ViewTitle.swift */; };
+		63F51D712BEA3A2800C8A86B /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F51D702BEA3A2800C8A86B /* Checkbox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -325,7 +325,6 @@
 		63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		63C9DF752BC3F2070075ABDA /* NonEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmpty.swift; sourceTree = "<group>"; };
 		63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
-		63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventType.swift; sourceTree = "<group>"; };
 		63EADAF42BEA10E40008E047 /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
 		63EADAF62BEA11050008E047 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		63EADAF82BEA13C20008E047 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -338,6 +337,7 @@
 		63EF083E2BADCA0500488B1C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63EF08462BADFF3C00488B1C /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		63EF08492BAE28AE00488B1C /* ViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTitle.swift; sourceTree = "<group>"; };
+		63F51D702BEA3A2800C8A86B /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1053,6 +1053,7 @@
 				634286972BE95AEC0057349B /* TextArea */,
 				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
 				2E32807B2BC83A4A00670DF8 /* OperationButton */,
+				63F51D6F2BEA3A1400C8A86B /* Checkbox */,
 				638F24032BAD79FA00704CE0 /* BackArrow */,
 				63EF08482BAE289300488B1C /* ViewTitle */,
 				63C9DF7D2BC414920075ABDA /* ErrorMessage */,
@@ -1196,7 +1197,6 @@
 				639DBC3A2BD04857003D24FB /* StorageFolder.swift */,
 				6399C5752BE6396B00EB068D /* GroupMemberType.swift */,
 				6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */,
-				63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1225,6 +1225,14 @@
 				63EF08492BAE28AE00488B1C /* ViewTitle.swift */,
 			);
 			path = ViewTitle;
+			sourceTree = "<group>";
+		};
+		63F51D6F2BEA3A1400C8A86B /* Checkbox */ = {
+			isa = PBXGroup;
+			children = (
+				63F51D702BEA3A2800C8A86B /* Checkbox.swift */,
+			);
+			path = Checkbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1376,11 +1384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63EADAF32BEA0D880008E047 /* ScheduledEventType.swift in Sources */,
 				2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */,
 				639DBC392BD044A6003D24FB /* StorageService.swift in Sources */,
 				638D93AD2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift in Sources */,
 				6399C57A2BE63B0D00EB068D /* WorkspaceAdministratorType.swift in Sources */,
+				63F51D712BEA3A2800C8A86B /* Checkbox.swift in Sources */,
 				63C9DF632BC0563A0075ABDA /* FirestoreRepository.swift in Sources */,
 				638DBF262BDD6B3B003A1795 /* SettingAccountEditViewModel.swift in Sources */,
 				639DBC1A2BD00D66003D24FB /* GroupCoordinator.swift in Sources */,
