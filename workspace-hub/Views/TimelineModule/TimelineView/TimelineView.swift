@@ -11,64 +11,35 @@ struct TimelineView: View {
     
     @EnvironmentObject var coordinator: TimelineCoordinator
     
-    private var today: Date = Date()
-    @State private var selectedDate: Date = Date()
-    @State private var selectedMonth: Date = {
-        let calendar = Calendar.current
-        let currentDate = Date()
-        let components = calendar.dateComponents([.year, .month], from: currentDate)
-        return calendar.date(from: components)!
-    }()
+    @StateObject private var viewModel = TimelineViewModel()
 
     var body: some View {
         BaseLayout {
             HStack(alignment: .firstTextBaseline) {
-                ViewTitle(title: "Timeline")
+                DynamicViewTitle(title: DateUtil.monthName(from: viewModel.selectedMonth))
                 
                 Spacer()
                 
-                OperationButton(icon: "line.3.horizontal.decrease") {
-                    print("list")
-                }
-                .padding([.trailing], 10)
-                
-                OperationButton(icon: "arrow.counterclockwise") {
-                    print("arrow counterclockwise icon")
+                HStack (spacing: 10) {
+                    OperationButton(icon: "chevron.left") {
+                        viewModel.previousMonth()
+                    }
+                    
+                    OperationButton(icon: "chevron.right") {
+                        viewModel.nextMonth()
+                    }
+                    
+                    OperationButton(icon: "arrow.counterclockwise") {
+                        viewModel.resetTimeline()
+                    }
                 }
             }
             
             DateSwiper(
-                dates: generateDates(for: selectedMonth),
-                itemWidth: 20,
-                initialDate: today,
-                selectedDate: $selectedDate,
-                selectedMonth: $selectedMonth
+                dates: DateUtil.generateMonthDates(for: viewModel.selectedMonth),
+                selectedDate: $viewModel.selectedDate,
+                selectedMonth: $viewModel.selectedMonth
             )
         }
     }
-    
-    private func generateDates(for month: Date) -> [Date] {
-        let calendar = Calendar.current
-        let startOfMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: month))!
-        let endOfMonth = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: startOfMonth)!
-        
-        let dates = calendar.generateDatesBasedOnMonth(from: startOfMonth, to: endOfMonth)
-        return dates
-    }
-}
-
-extension Calendar {
-    func generateDatesBasedOnMonth(from startDate: Date, to endDate: Date) -> [Date] {
-        var dates: [Date] = []
-        var currentDate = startDate
-        while currentDate <= endDate {
-            dates.append(currentDate)
-            currentDate = self.date(byAdding: .day, value: 1, to: currentDate)!
-        }
-        return dates
-    }
-}
-
-#Preview {
-    TimelineView()
 }
