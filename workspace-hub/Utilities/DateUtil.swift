@@ -27,7 +27,7 @@ final class DateUtil {
     static func previousMonth(from date: Date) -> Date {
         Calendar.current.date(byAdding: .month, value: -1, to: date)!
     }
-        
+    
     static func nextMonth(from date: Date) -> Date {
         Calendar.current.date(byAdding: .month, value: 1, to: date)!
     }
@@ -51,5 +51,15 @@ final class DateUtil {
         let toTime = dateFormatter.string(from: to)
         
         return "\(fromTime) - \(toTime)"
+    }
+    
+    static func formatTimespanWithDates(from: Date, to: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
+        
+        let fromDateFormatted = dateFormatter.string(from: from)
+        let toDateFormatted = dateFormatter.string(from: to)
+        
+        return "\(fromDateFormatted) - \(toDateFormatted)"
     }
 }

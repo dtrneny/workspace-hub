@@ -100,6 +100,9 @@ enum TabSectionFactory {
             switch currentSection {
             case .timeline:
                 TimelineView()
+            case .eventDetail(let eventId):
+                TimelineEventDetailView(eventId: eventId)
+                    .toolbar(.hidden, for: .tabBar)
             }
         } else {
             TimelineView()

@@ -101,6 +101,11 @@ extension TimelineView {
             ScrollView {
                 ForEach(viewModel.plannedByUserPresented, id: \.id) { event in
                     ScheduledEventRow(event: event)
+                        .onTapGesture {
+                            if let id = event.id {
+                                coordinator.changeSection(to: .eventDetail(eventId: id))
+                            }
+                        }
                 }
             }
         }
@@ -109,20 +114,16 @@ extension TimelineView {
     private var plannedFromOthers: some View {
         VStack(alignment: .leading) {
 
-//            ScrollView {
-//                ForEach(viewModel.invitationAccounts, id: \.id) { invAccount in
-//                    CommonAccountListRow(
-//                        name: "\(invAccount.account.firstname) \(invAccount.account.lastname)",
-//                        email: invAccount.account.email,
-//                        imageUrl: invAccount.account.profileImage
-//                    ) {
-//                        OperationButton(icon: "location.slash.fill", color: .primaryRed700) {
-//                            viewModel.deletedInvitation = invAccount.invitationId
-//                            viewModel.deleteInvitationConfirmation = true
-//                        }
-//                    }
-//                }
-//            }
+            ScrollView {
+                ForEach(viewModel.plannedFromOthersPresented, id: \.id) { event in
+                    ScheduledEventRow(event: event)
+                        .onTapGesture {
+                            if let id = event.id {
+                                coordinator.changeSection(to: .eventDetail(eventId: id))
+                            }
+                        }
+                }
+            }
         }
     }
     
