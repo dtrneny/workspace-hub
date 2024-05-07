@@ -20,9 +20,6 @@ struct WorkspaceSchedulingView: View {
         accountService: AccountService()
     )
     
-    var colors = ["Red", "Green", "Blue", "Tartan"]
-    @State private var selectedColor = "Red"
-    
     var body: some View {
         BaseLayout {
             switch viewModel.state {

@@ -9,6 +9,7 @@ import Foundation
 
 enum TimelineTabSections: Hashable {
     case timeline
+    case eventDetail(eventId: String)
 }
 
 class TimelineCoordinator: BaseTabCoordinator<TimelineTabSections> {

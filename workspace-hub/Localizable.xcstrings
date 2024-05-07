@@ -182,6 +182,16 @@
         }
       }
     },
+    "Do you want to remove this event?" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejete si smazat tuto událost?"
+          }
+        }
+      }
+    },
     "Do you want to remove this group?" : {
       "localizations" : {
         "cs" : {
