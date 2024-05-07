@@ -343,6 +343,46 @@
         }
       }
     },
+    "Event description" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Popis události"
+          }
+        }
+      }
+    },
+    "Event end" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Začátek události"
+          }
+        }
+      }
+    },
+    "Event start" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konec události"
+          }
+        }
+      }
+    },
+    "Event title" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název události"
+          }
+        }
+      }
+    },
     "Firstname" : {
       "localizations" : {
         "cs" : {
@@ -596,7 +636,14 @@
       }
     },
     "Passwords are not matching." : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hesla se neshodují."
+          }
+        }
+      }
     },
     "Pick a symbol" : {
       "localizations" : {
@@ -609,7 +656,14 @@
       }
     },
     "Please choose your profile image." : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím nahrajte profilový obrázek."
+          }
+        }
+      }
     },
     "Please do not leave this field empty." : {
       "localizations" : {
@@ -637,6 +691,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prosím zadejte platné údaje."
+          }
+        }
+      }
+    },
+    "Schedule event" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naplánovat událost"
           }
         }
       }

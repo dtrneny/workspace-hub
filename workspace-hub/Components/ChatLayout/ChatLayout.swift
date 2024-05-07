@@ -63,9 +63,9 @@ extension ChatLayout {
             .lineLimit(5)
             
             HStack(spacing: 14) {
-                OperationButton(icon: "paperclip") {
-                    print("clipped")
-                }
+//                OperationButton(icon: "paperclip") {
+//                    print("clipped")
+//                }
                 
                 OperationButton(icon: "paperplane.fill") {
                     submitMessage(
@@ -83,3 +83,4 @@ extension ChatLayout {
     }
     
 }
+

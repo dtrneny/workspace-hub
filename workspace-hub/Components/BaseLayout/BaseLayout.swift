@@ -22,6 +22,9 @@ struct BaseLayout<Content: View>: View {
             content
             Spacer()
         }
+        .onTapGesture {
+            self.endTextEditing()
+        }
     }
 }
 

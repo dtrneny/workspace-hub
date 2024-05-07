@@ -41,6 +41,11 @@
 		630E3E9C2BE7AF1B004EABD5 /* GroupMemberListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E9B2BE7AF1B004EABD5 /* GroupMemberListView.swift */; };
 		630E3E9E2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3E9D2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift */; };
 		630E3EA12BE7BED1004EABD5 /* EmptyChatPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630E3EA02BE7BED1004EABD5 /* EmptyChatPlaceholder.swift */; };
+		6342868F2BE94D780057349B /* ScheduledEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6342868E2BE94D780057349B /* ScheduledEvent.swift */; };
+		634286922BE94E9A0057349B /* WorkspaceSchedulingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634286912BE94E9A0057349B /* WorkspaceSchedulingView.swift */; };
+		634286942BE94EA70057349B /* WorkspaceSchedulingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634286932BE94EA70057349B /* WorkspaceSchedulingViewModel.swift */; };
+		634286962BE94FF90057349B /* ScheduledEventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634286952BE94FF90057349B /* ScheduledEventService.swift */; };
+		634286992BE95B070057349B /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634286982BE95B070057349B /* TextArea.swift */; };
 		6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */; };
 		635667A02BA2D5FD00A0AD36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */; };
 		635667A32BA2D5FD00A0AD36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635667A22BA2D5FD00A0AD36 /* Preview Assets.xcassets */; };
@@ -143,6 +148,11 @@
 		63C9DF6C2BC2B68D0075ABDA /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */; };
 		63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF752BC3F2070075ABDA /* NonEmpty.swift */; };
 		63C9DF7F2BC414A10075ABDA /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */; };
+		63EADAF32BEA0D880008E047 /* ScheduledEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */; };
+		63EADAF52BEA10E40008E047 /* CalendarExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF42BEA10E40008E047 /* CalendarExtensions.swift */; };
+		63EADAF72BEA11050008E047 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF62BEA11050008E047 /* DateUtil.swift */; };
+		63EADAF92BEA13C20008E047 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAF82BEA13C20008E047 /* DateExtensions.swift */; };
+		63EADAFB2BEA16550008E047 /* TimelineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EADAFA2BEA16550008E047 /* TimelineViewModel.swift */; };
 		63ECEB8A2BA42BD200166BCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */; };
 		63ECEB8D2BA42E0100166BCD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8C2BA42E0100166BCD /* FirebaseAuth */; };
 		63ECEB8F2BA42E0100166BCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 63ECEB8E2BA42E0100166BCD /* FirebaseFirestore */; };
@@ -207,6 +217,11 @@
 		630E3E9B2BE7AF1B004EABD5 /* GroupMemberListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemberListView.swift; sourceTree = "<group>"; };
 		630E3E9D2BE7AF27004EABD5 /* GroupMemeberListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMemeberListViewModel.swift; sourceTree = "<group>"; };
 		630E3EA02BE7BED1004EABD5 /* EmptyChatPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChatPlaceholder.swift; sourceTree = "<group>"; };
+		6342868E2BE94D780057349B /* ScheduledEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEvent.swift; sourceTree = "<group>"; };
+		634286912BE94E9A0057349B /* WorkspaceSchedulingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceSchedulingView.swift; sourceTree = "<group>"; };
+		634286932BE94EA70057349B /* WorkspaceSchedulingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceSchedulingViewModel.swift; sourceTree = "<group>"; };
+		634286952BE94FF90057349B /* ScheduledEventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventService.swift; sourceTree = "<group>"; };
+		634286982BE95B070057349B /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		635667982BA2D5FC00A0AD36 /* workspace-hub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workspace-hub.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6356679B2BA2D5FC00A0AD36 /* workspace_hubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workspace_hubApp.swift; sourceTree = "<group>"; };
 		6356679F2BA2D5FD00A0AD36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -310,6 +325,11 @@
 		63C9DF6B2BC2B68D0075ABDA /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		63C9DF752BC3F2070075ABDA /* NonEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonEmpty.swift; sourceTree = "<group>"; };
 		63C9DF7E2BC414A10075ABDA /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventType.swift; sourceTree = "<group>"; };
+		63EADAF42BEA10E40008E047 /* CalendarExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtensions.swift; sourceTree = "<group>"; };
+		63EADAF62BEA11050008E047 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		63EADAF82BEA13C20008E047 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		63EADAFA2BEA16550008E047 /* TimelineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineViewModel.swift; sourceTree = "<group>"; };
 		63ECEB892BA42BD200166BCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63ECEB982BA4376A00166BCD /* RootTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabView.swift; sourceTree = "<group>"; };
 		63ECEBB62BA5C47700166BCD /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -397,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				2E46548A2BD2548400BF2944 /* TimelineView.swift */,
+				63EADAFA2BEA16550008E047 /* TimelineViewModel.swift */,
 			);
 			path = TimelineView;
 			sourceTree = "<group>";
@@ -502,6 +523,23 @@
 				630E3EA02BE7BED1004EABD5 /* EmptyChatPlaceholder.swift */,
 			);
 			path = EmptyChatPlaceholder;
+			sourceTree = "<group>";
+		};
+		634286902BE94E6B0057349B /* WorkspaceSchedulingView */ = {
+			isa = PBXGroup;
+			children = (
+				634286912BE94E9A0057349B /* WorkspaceSchedulingView.swift */,
+				634286932BE94EA70057349B /* WorkspaceSchedulingViewModel.swift */,
+			);
+			path = WorkspaceSchedulingView;
+			sourceTree = "<group>";
+		};
+		634286972BE95AEC0057349B /* TextArea */ = {
+			isa = PBXGroup;
+			children = (
+				634286982BE95B070057349B /* TextArea.swift */,
+			);
+			path = TextArea;
 			sourceTree = "<group>";
 		};
 		6356678F2BA2D5FC00A0AD36 = {
@@ -637,6 +675,8 @@
 				638DBEF72BDAD5F7003A1795 /* ViewExtensions.swift */,
 				638DBF092BDB895E003A1795 /* UIColorExtensions.swift */,
 				63075A8F2BE7F7AE0097624E /* SequenceExtensions.swift */,
+				63EADAF42BEA10E40008E047 /* CalendarExtensions.swift */,
+				63EADAF82BEA13C20008E047 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -878,6 +918,7 @@
 				630E3E7C2BE7981E004EABD5 /* WorkspaceGroupMemberListView */,
 				630E3E812BE79CAD004EABD5 /* WorkspaceGroupEditView */,
 				630E3E862BE79E21004EABD5 /* WorkspaceGroupInvitationAdditionView */,
+				634286902BE94E6B0057349B /* WorkspaceSchedulingView */,
 			);
 			path = WorkspaceModule;
 			sourceTree = "<group>";
@@ -1009,6 +1050,7 @@
 				638D93A02BD40B4F006B0B3A /* FormField */,
 				2E46547A2BD171D000BF2944 /* DateSwiper */,
 				63C467B42BA99D660081E7EA /* TextInput */,
+				634286972BE95AEC0057349B /* TextArea */,
 				638F23EB2BACD9F700704CE0 /* ProtectedInput */,
 				2E32807B2BC83A4A00670DF8 /* OperationButton */,
 				638F24032BAD79FA00704CE0 /* BackArrow */,
@@ -1109,6 +1151,7 @@
 				6392F9912BE4227B009F70B2 /* Message.swift */,
 				6392F9982BE4374E009F70B2 /* ChatItem.swift */,
 				6399C5622BE50CE700EB068D /* ChatItemGroup.swift */,
+				6342868E2BE94D780057349B /* ScheduledEvent.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1124,6 +1167,7 @@
 				6399C5822BE6442C00EB068D /* InvitationService.swift */,
 				6392F9962BE42E58009F70B2 /* MessageService.swift */,
 				6399C5672BE566BF00EB068D /* DeletionService.swift */,
+				634286952BE94FF90057349B /* ScheduledEventService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1152,6 +1196,7 @@
 				639DBC3A2BD04857003D24FB /* StorageFolder.swift */,
 				6399C5752BE6396B00EB068D /* GroupMemberType.swift */,
 				6399C5792BE63B0D00EB068D /* WorkspaceAdministratorType.swift */,
+				63EADAF22BEA0D880008E047 /* ScheduledEventType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -1169,6 +1214,7 @@
 				638DBF272BDE39A2003A1795 /* ImageUtil.swift */,
 				638DBF2C2BDE5C4E003A1795 /* ThemeColorUtil.swift */,
 				6399C5602BE4DCA900EB068D /* ChatUtil.swift */,
+				63EADAF62BEA11050008E047 /* DateUtil.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1330,6 +1376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63EADAF32BEA0D880008E047 /* ScheduledEventType.swift in Sources */,
 				2E32807A2BC834F000670DF8 /* WorkspaceListRow.swift in Sources */,
 				639DBC392BD044A6003D24FB /* StorageService.swift in Sources */,
 				638D93AD2BD50DC5006B0B3A /* WorkspaceGroupAdditionView.swift in Sources */,
@@ -1340,10 +1387,12 @@
 				6399C5832BE6442C00EB068D /* InvitationService.swift in Sources */,
 				638D93A52BD4160B006B0B3A /* WorkspaceAdditionView.swift in Sources */,
 				6399C55F2BE4D3B700EB068D /* ChatMessage.swift in Sources */,
+				634286942BE94EA70057349B /* WorkspaceSchedulingViewModel.swift in Sources */,
 				6392F9922BE4227B009F70B2 /* Message.swift in Sources */,
 				639DBC3B2BD04857003D24FB /* StorageFolder.swift in Sources */,
 				638D93A22BD40B5F006B0B3A /* FormField.swift in Sources */,
 				63C9DF762BC3F2070075ABDA /* NonEmpty.swift in Sources */,
+				6342868F2BE94D780057349B /* ScheduledEvent.swift in Sources */,
 				63C9DF4A2BBF1F690075ABDA /* BaseNavigationBar.swift in Sources */,
 				6399C5862BE67A9800EB068D /* CommonAccountListRow.swift in Sources */,
 				638F23ED2BACDA1100704CE0 /* ProtectedInput.swift in Sources */,
@@ -1356,6 +1405,7 @@
 				2E0AEBC72BACC13F00452744 /* SignUpViewModel.swift in Sources */,
 				63C9DF612BC056170075ABDA /* RepositoryProtocol.swift in Sources */,
 				639DBC182BD00C20003D24FB /* GroupRootView.swift in Sources */,
+				63EADAFB2BEA16550008E047 /* TimelineViewModel.swift in Sources */,
 				63EF084A2BAE28AE00488B1C /* ViewTitle.swift in Sources */,
 				630E3E802BE79846004EABD5 /* WorkspaceGroupMemberListViewModel.swift in Sources */,
 				6399C5982BE69DF000EB068D /* CommonGroupListRow.swift in Sources */,
@@ -1372,6 +1422,7 @@
 				6392F97A2BE4040F009F70B2 /* WorkspaceGroupListRow.swift in Sources */,
 				6392F9842BE409C9009F70B2 /* EmptyListMessage.swift in Sources */,
 				638DBF0C2BDB8DCC003A1795 /* HexColorsUtil.swift in Sources */,
+				63EADAF72BEA11050008E047 /* DateUtil.swift in Sources */,
 				638DBF082BDB8191003A1795 /* ThemeColorPicker.swift in Sources */,
 				63C9DF592BBFCD940075ABDA /* Account.swift in Sources */,
 				630E3E922BE7AC4C004EABD5 /* GroupChatView.swift in Sources */,
@@ -1391,6 +1442,7 @@
 				630E3E742BE79377004EABD5 /* GroupGeneralView.swift in Sources */,
 				2E46547C2BD171E200BF2944 /* DateSwiper.swift in Sources */,
 				639DBC122BCFEC97003D24FB /* TabCoordinatorView.swift in Sources */,
+				63EADAF92BEA13C20008E047 /* DateExtensions.swift in Sources */,
 				63ECEBCC2BA6E67E00166BCD /* ViewModelProtocol.swift in Sources */,
 				63075A8A2BE7EC190097624E /* EmailFormat.swift in Sources */,
 				638DBF2B2BDE59D7003A1795 /* LoadingDots.swift in Sources */,
@@ -1416,17 +1468,21 @@
 				639DBC342BD03296003D24FB /* BaseLayout.swift in Sources */,
 				2E8FBC092BE8FF6D008B19C5 /* DynamicViewTitle.swift in Sources */,
 				6399C5762BE6396B00EB068D /* GroupMemberType.swift in Sources */,
+				63EADAF52BEA10E40008E047 /* CalendarExtensions.swift in Sources */,
 				639DBC2E2BD02B79003D24FB /* WorkspaceActivityCard.swift in Sources */,
 				638D93A72BD41AFE006B0B3A /* WorkspaceAdditionViewModel.swift in Sources */,
 				638DBF0A2BDB895E003A1795 /* UIColorExtensions.swift in Sources */,
 				630E3E8D2BE7A099004EABD5 /* WorkspaceGroupChatViewModel.swift in Sources */,
 				639DBC0B2BCFE66F003D24FB /* TabSectionFactory.swift in Sources */,
+				634286922BE94E9A0057349B /* WorkspaceSchedulingView.swift in Sources */,
 				639DBC262BD010B1003D24FB /* SettingCoordinator.swift in Sources */,
 				2E32807D2BC83A5700670DF8 /* OperationButton.swift in Sources */,
 				638DBF112BDBA510003A1795 /* WorkspaceDetailViewModel.swift in Sources */,
+				634286992BE95B070057349B /* TextArea.swift in Sources */,
 				630E3E792BE797BD004EABD5 /* WorkspaceGroupSettingListView.swift in Sources */,
 				63ECEBB72BA5C47700166BCD /* RootView.swift in Sources */,
 				63EF08472BADFF3C00488B1C /* FontExtension.swift in Sources */,
+				634286962BE94FF90057349B /* ScheduledEventService.swift in Sources */,
 				638D30E02BA8B8DC00105C6E /* SplashView.swift in Sources */,
 				63ECEBCF2BA6E69400166BCD /* ViewState.swift in Sources */,
 				6356679C2BA2D5FC00A0AD36 /* workspace_hubApp.swift in Sources */,

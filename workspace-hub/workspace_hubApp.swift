@@ -10,15 +10,10 @@ import Firebase
 
 @main
 struct workspace_hubApp: App {
-    
-//    @State var languageSettings = LanguageSetting()
-    
     var body: some Scene {
         WindowGroup {
             RootView()
                 .background(.white)
-//                .environment(languageSettings)
-//                .environment(\.locale, languageSettings.locale)
         }
     }
 }
