@@ -11,6 +11,16 @@
         }
       }
     },
+    "%@ %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@"
+          }
+        }
+      }
+    },
     "%lld" : {
       "localizations" : {
         "cs" : {
@@ -50,6 +60,9 @@
           }
         }
       }
+    },
+    "Base infromation" : {
+
     },
     "Confirm" : {
       "localizations" : {
@@ -403,6 +416,16 @@
         }
       }
     },
+    "Group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skupina"
+          }
+        }
+      }
+    },
     "Group administrators" : {
       "localizations" : {
         "cs" : {
@@ -412,6 +435,9 @@
           }
         }
       }
+    },
+    "Group and members" : {
+
     },
     "Group informations" : {
       "localizations" : {
@@ -615,6 +641,16 @@
         }
       }
     },
+    "None" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádná"
+          }
+        }
+      }
+    },
     "Or" : {
       "localizations" : {
         "cs" : {
@@ -645,6 +681,16 @@
         }
       }
     },
+    "Pick a group" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyberte skupinu"
+          }
+        }
+      }
+    },
     "Pick a symbol" : {
       "localizations" : {
         "cs" : {
@@ -654,6 +700,23 @@
           }
         }
       }
+    },
+    "Please choose a color" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosím zvolte barvu"
+          }
+        }
+      }
+    },
+    "Please choose a date which is atlest 5 minutes after start." : {
+
+    },
+    "Please choose a group." : {
+
     },
     "Please choose your profile image." : {
       "localizations" : {
@@ -701,6 +764,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naplánovat událost"
+          }
+        }
+      }
+    },
+    "Selected group" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvolená skupina"
           }
         }
       }

@@ -52,6 +52,10 @@ enum TabSectionFactory {
                 WorkspaceGroupInvitationAdditionView(groupId: groupId)
                     .toolbar(.hidden, for: .tabBar)
                 
+            case .scheduleWorkspaceEvent(let workspaceId):
+                WorkspaceSchedulingView(workspaceId: workspaceId)
+                    .toolbar(.hidden, for: .tabBar)
+
             }
         } else {
             WorkspaceListView()

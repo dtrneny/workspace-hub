@@ -31,4 +31,15 @@ final class DateUtil {
     static func nextMonth(from date: Date) -> Date {
         Calendar.current.date(byAdding: .month, value: 1, to: date)!
     }
+    
+    static func isAfterByAtLeast(date2: Date, date1: Date, atlest: Int) -> Bool {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.minute], from: date1, to: date2)
+        
+        if let minutes = components.minute {
+            return minutes >= atlest
+        } else {
+            return false
+        }
+    }
 }

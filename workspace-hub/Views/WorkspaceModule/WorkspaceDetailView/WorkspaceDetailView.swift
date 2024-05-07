@@ -53,8 +53,14 @@ extension WorkspaceDetailView {
             
             Spacer()
             
-            OperationButton(icon: "pencil") {
-                coordinator.changeSection(to: .edit(workspaceId: workspaceId))
+            HStack (spacing: 10) {
+                OperationButton(icon: "pencil") {
+                    coordinator.changeSection(to: .edit(workspaceId: workspaceId))
+                }
+                
+                OperationButton(icon: "calendar.badge.plus") {
+                    coordinator.changeSection(to: .scheduleWorkspaceEvent(workspaceId: workspaceId))
+                }
             }
         }
     }
