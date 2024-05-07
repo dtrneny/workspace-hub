@@ -12,7 +12,14 @@
       }
     },
     "-" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        }
+      }
     },
     "/" : {
       "extractionState" : "stale",
@@ -21,6 +28,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "/"
+          }
+        }
+      }
+    },
+    "%@ - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
           }
         }
       }
@@ -336,6 +353,16 @@
         }
       }
     },
+    "End: %@" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konec: %@"
+          }
+        }
+      }
+    },
     "English" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -548,6 +575,26 @@
         }
       }
     },
+    "Hey there! Just wanted to touch base and say thanks for all your hard  work on editing the video. Really appreciate your dedication to making  it..." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vítej! Jsme nesmírně rádi, že tě můžeme přivítat v naší aplikaci"
+          }
+        }
+      }
+    },
+    "Hey there! We are happy to welcome you to our app." : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vítej! Jsme nesmírně rádi, že tě můžeme přivítat v naší aplikaci"
+          }
+        }
+      }
+    },
     "Hi, Welcome!" : {
       "localizations" : {
         "cs" : {
@@ -639,7 +686,11 @@
         }
       }
     },
+    "Naomi Foo" : {
+
+    },
     "New notifications: %lld" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -650,6 +701,7 @@
       }
     },
     "Newest message" : {
+      "extractionState" : "stale",
       "localizations" : {
         "cs" : {
           "stringUnit" : {
@@ -670,7 +722,14 @@
       }
     },
     "No events found" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nebyly nalezeny žádné události"
+          }
+        }
+      }
     },
     "No results found" : {
       "localizations" : {
@@ -703,7 +762,14 @@
       }
     },
     "Others" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ostatní"
+          }
+        }
+      }
     },
     "Password" : {
       "localizations" : {
@@ -910,6 +976,16 @@
         }
       }
     },
+    "Start: %@" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Začátek: %@"
+          }
+        }
+      }
+    },
     "Testing" : {
       "localizations" : {
         "cs" : {
@@ -1010,6 +1086,16 @@
         }
       }
     },
+    "Workspace Hub" : {
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Workspace hub"
+          }
+        }
+      }
+    },
     "Workspaces" : {
       "localizations" : {
         "cs" : {
@@ -1051,7 +1137,14 @@
       }
     },
     "Yours" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaše"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -25,7 +25,7 @@ struct TimelineEventDetailView: View {
             case .loading:
                 LoadingDots(type: .view)
             default:
-                VStack(alignment: .leading, spacing: 38) {
+                VStack(alignment: .leading) {
                     if let event = viewModel.event, let group = viewModel.group {
                         HStack (alignment: .firstTextBaseline) {
                             DynamicViewTitle(title: event.title)
@@ -40,7 +40,17 @@ struct TimelineEventDetailView: View {
                         }
                                 
                         ScrollView {
-                            VStack(alignment: .leading) {
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("Start: \(DateUtil.formatFullDate(date: event.startAt))")
+                                    .foregroundStyle(.secondary900)
+                                    .font(.inter(16.0))
+                                    .fontWeight(.medium)
+                                
+                                Text("End: \(DateUtil.formatFullDate(date: event.endAt))")
+                                    .foregroundStyle(.secondary900)
+                                    .font(.inter(16.0))
+                                    .fontWeight(.medium)
+                                
                                 if let description = event.description {
                                     Text(description)
                                         .foregroundStyle(.secondary900)

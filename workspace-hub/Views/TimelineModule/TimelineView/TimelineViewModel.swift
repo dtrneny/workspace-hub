@@ -86,9 +86,20 @@ final class TimelineViewModel: ViewModelProtocol {
         let selectedDayAndMonthComponents = calendar.dateComponents([.day, .month], from: selectedDate)
 
         let filteredEvents = events.filter { event in
-            let eventDayAndMonthComponents = calendar.dateComponents([.day, .month], from: event.startAt)
-            return eventDayAndMonthComponents.day == selectedDayAndMonthComponents.day &&
-                   eventDayAndMonthComponents.month == selectedDayAndMonthComponents.month
+            let eventStartComponents = calendar.dateComponents([.day, .month], from: event.startAt)
+            let eventEndComponents = calendar.dateComponents([.day, .month], from: event.endAt)
+
+            let selectedDay = selectedDayAndMonthComponents.day
+            let selectedMonth = selectedDayAndMonthComponents.month
+            let eventStartDay = eventStartComponents.day
+            let eventStartMonth = eventStartComponents.month
+            let eventEndDay = eventEndComponents.day
+            let eventEndMonth = eventEndComponents.month
+
+            let isStartDayEqual = selectedDay == eventStartDay && selectedMonth == eventStartMonth
+            let isEndDayEqual = selectedDay == eventEndDay && selectedMonth == eventEndMonth
+
+            return (event.startAt <= selectedDate && event.endAt > selectedDate) || isStartDayEqual || isEndDayEqual
         }
 
         let sortedEvents = filteredEvents.sorted { $0.startAt < $1.startAt }
@@ -116,6 +127,10 @@ final class TimelineViewModel: ViewModelProtocol {
     
     func previousMonth () {
         selectedMonth = DateUtil.previousMonth(from: selectedMonth)
+        
+        if let firstDay = firstDateOfMonth(year: selectedMonth.year, month: selectedMonth.month) {
+            selectedDate = firstDay
+        }
     }
     
     func firstDateOfMonth(year: Int, month: Int) -> Date? {

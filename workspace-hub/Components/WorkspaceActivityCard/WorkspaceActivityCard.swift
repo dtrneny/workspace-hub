@@ -9,8 +9,8 @@ import SwiftUI
 
 struct WorkspaceActivityCard: View {
     
-    var title: String
-    var text: String
+    var title: LocalizedStringResource
+    var text: LocalizedStringResource
     var image: String
     var action: () -> Void
     

@@ -48,7 +48,7 @@ extension GroupListView {
                 ForEach(viewModel.groups, id: \.id) { group in
                     CommonGroupListRow(
                         name: group.name,
-                        variableText: "New notifications: 0",
+                        variableText: "",
                         symbol: group.icon
                     ) { EmptyView()}
                     .onTapGesture {
