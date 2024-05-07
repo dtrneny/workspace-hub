@@ -53,13 +53,12 @@ final class DateUtil {
         return "\(fromTime) - \(toTime)"
     }
     
-    static func formatTimespanWithDates(from: Date, to: Date) -> String {
+    static func formatFullDate(date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMMM yyyy, HH:mm"
+        dateFormatter.dateFormat = "d. MMMM yyyy, HH:mm"
         
-        let fromDateFormatted = dateFormatter.string(from: from)
-        let toDateFormatted = dateFormatter.string(from: to)
+        let dateFormated = dateFormatter.string(from: date)
         
-        return "\(fromDateFormatted) - \(toDateFormatted)"
+        return "\(dateFormated)"
     }
 }

@@ -14,36 +14,45 @@ struct ScheduledEventRow: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 8) {
             
-            HStack {
-                VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 5) {
+                if (checkIfSameDate()) {
                     Text(DateUtil.formatTimespan(from: event.startAt, to: event.endAt))
                         .foregroundColor(.grey300)
                         .font(.inter(12.0))
                         .fontWeight(.regular)
-                    
-                    Text(event.title)
-                        .foregroundColor(.white)
-                        .font(.inter(16.0))
-                        .fontWeight(.semibold)
+                } else {
+                    Text("\(DateUtil.formatFullDate(date: event.startAt)) - \(DateUtil.formatFullDate(date: event.endAt))")
+                        .foregroundColor(.grey300)
+                        .font(.inter(12.0))
+                        .fontWeight(.regular)
                 }
                 
-                Spacer()
+                Text(event.title)
+                    .foregroundColor(.white)
+                    .font(.inter(16.0))
+                    .fontWeight(.semibold)
+                    .padding([.bottom], 5)
                 
-                users
+                if let description = event.description {
+                    Text(description)
+                        .foregroundColor(.grey300)
+                        .font(.inter(14.0))
+                        .fontWeight(.regular)
+                        .lineLimit(2)
+                }
             }
+            .padding([.bottom], 15)
             
-            if let description = event.description {
-                Text(description)
-                    .foregroundColor(.grey300)
-                    .font(.inter(14.0))
-                    .fontWeight(.regular)
-                    .lineLimit(3)
-            }
+            users
         }
-        .padding(14)
+        .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(.secondary900)
-        .cornerRadius(15)
+        .cornerRadius(18)
+    }
+                        
+    func checkIfSameDate() -> Bool {
+        return event.startAt.day == event.endAt.day && event.startAt.month == event.endAt.month
     }
 }
 
@@ -76,8 +85,8 @@ extension ScheduledEventRow {
                         }
                     }
                 }
-                .offset(x: CGFloat(index) * -20)
-                .zIndex(Double(3 - index))
+                .offset(x: CGFloat(index) * 20)
+                .zIndex(Double(index))
             }
         }
     }

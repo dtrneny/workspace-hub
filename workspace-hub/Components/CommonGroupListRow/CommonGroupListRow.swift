@@ -40,10 +40,12 @@ struct CommonGroupListRow<Content: View>: View {
                     .foregroundColor(.white)
                     .font(.inter(16.0))
                     .fontWeight(.semibold)
-                Text(variableText)
-                    .foregroundColor(.grey300)
-                    .font(.inter(14.0))
-                    .fontWeight(.regular)
+                if (!variableText.isEmpty) {
+                    Text(variableText)
+                        .foregroundColor(.grey300)
+                        .font(.inter(14.0))
+                        .fontWeight(.regular)
+                }
             }
             
             Spacer()

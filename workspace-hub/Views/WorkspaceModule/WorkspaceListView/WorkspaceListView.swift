@@ -40,14 +40,11 @@ extension WorkspaceListView {
     
     private var newestMessage: some View {
         VStack(alignment: .leading) {
-            ViewTitle(title: "Newest message")
             WorkspaceActivityCard (
-                title: "Naomi Foo",
-                text: "Hey there! Just wanted to touch base and say thanks for all your hard  work on editing the video. Really appreciate your dedication to making  it...",
+                title: "Workspace Hub",
+                text: "Hey there! We are happy to welcome you to our app.",
                 image: "logo"
-            ) {
-                print("clicked")
-            }
+            ) {}
         }
     }
     
@@ -72,8 +69,7 @@ extension WorkspaceListView {
                         WorkspaceListRow(
                             title: workspace.name,
                             symbol: workspace.icon,
-                            backgroundHexString: workspace.hexColor,
-                            notificationCount: 5
+                            backgroundHexString: workspace.hexColor
                         ) {
                             if let workspaceId = workspace.id {
                                 coordinator.changeSection(to: .detail(id: workspaceId))

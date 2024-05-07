@@ -12,7 +12,6 @@ struct WorkspaceListRow: View {
     var title: String
     var symbol: String
     var backgroundHexString: String?
-    var notificationCount: Int
     var action: (() -> Void)?
     
     var circleColor: Color {
@@ -41,11 +40,6 @@ struct WorkspaceListRow: View {
                     Text(title)
                         .foregroundColor(.white)
                         .fontWeight(.semibold)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                    Text("New notifications: \(notificationCount)")
-                        .font(.inter(14.0))
-                        .foregroundColor(.grey300)
                         .lineLimit(1)
                         .truncationMode(.tail)
                 }
