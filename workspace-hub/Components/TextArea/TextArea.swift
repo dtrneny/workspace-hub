@@ -21,7 +21,7 @@ struct TextArea: View {
                 if let labelText = label {
                     Text(labelText)
                         .foregroundStyle(.secondary900)
-                        .font(.inter(14.0))
+                        .font(.inter(16.0))
                 }
                 
                 TextEditor(text: $value)
