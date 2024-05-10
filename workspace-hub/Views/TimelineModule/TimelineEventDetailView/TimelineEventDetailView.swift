@@ -40,24 +40,28 @@ struct TimelineEventDetailView: View {
                         }
                                 
                         ScrollView {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Text("Start: \(DateUtil.formatFullDate(date: event.startAt))")
-                                    .foregroundStyle(.secondary900)
-                                    .font(.inter(16.0))
-                                    .fontWeight(.medium)
-                                
-                                Text("End: \(DateUtil.formatFullDate(date: event.endAt))")
-                                    .foregroundStyle(.secondary900)
-                                    .font(.inter(16.0))
-                                    .fontWeight(.medium)
-                                
-                                if let description = event.description {
-                                    Text(description)
+                            HStack {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    Text("Start: \(DateUtil.formatFullDate(date: event.startAt))")
                                         .foregroundStyle(.secondary900)
                                         .font(.inter(16.0))
-                                        .fontWeight(.regular)
-                                        .padding([.bottom], 19)
+                                        .fontWeight(.medium)
+                                    
+                                    Text("End: \(DateUtil.formatFullDate(date: event.endAt))")
+                                        .foregroundStyle(.secondary900)
+                                        .font(.inter(16.0))
+                                        .fontWeight(.medium)
+                                    
+                                    if let description = event.description {
+                                        Text(description)
+                                            .foregroundStyle(.secondary900)
+                                            .font(.inter(16.0))
+                                            .fontWeight(.regular)
+                                            .padding([.bottom], 19)
+                                    }
                                 }
+                                
+                                Spacer()
                             }
                             
                             VStack (alignment: .leading, spacing: 38) {
@@ -72,7 +76,7 @@ struct TimelineEventDetailView: View {
                                 }
                                 
                                 VStack(alignment: .leading) {
-                                    Text("Group and members")
+                                    Text("Group members")
                                         .foregroundStyle(.secondary900)
                                         .font(.inter(18.0))
                                         .fontWeight(.medium)

@@ -687,7 +687,14 @@
       }
     },
     "Naomi Foo" : {
-
+      "localizations" : {
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naomi Foo"
+          }
+        }
+      }
     },
     "New notifications: %lld" : {
       "extractionState" : "stale",
